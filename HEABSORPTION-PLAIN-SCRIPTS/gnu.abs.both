@@ -1,0 +1,41 @@
+#!/bin/bash
+
+echo '
+
+set title "Photoabsorption cross section He 5 orbitals"
+
+set xlabel "Energy (eV)"
+set ylabel "emission/absorption\ncross section (Mb)"
+
+set term unknown
+set style data lines
+
+set key top right
+
+set yrange [0.1:100]
+
+set xrange [0:40]
+
+set logscale y
+
+plot "Dat/ZDipoleft.Dat" using (27.2114*$1):($9) lt 7 lw 10 title "Parallel"
+replot "Dat/XDipoleft.perp.Dat" using (27.2114*$1):($9) lt 3 lw 6 title "Perpendicular"
+
+set term x11
+replot
+
+set out "Absorption.he.both.eps"
+set term post enhanced eps solid color 28
+replot
+
+unset logscale y
+
+set xrange [20:40]
+set yrange [0:8]
+set out
+set term x11 2
+replot
+
+' | gnuplot -persist
+
+
