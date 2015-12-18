@@ -1,0 +1,64 @@
+$pulse
+
+ pulsetype=2
+
+ omega2=1d0
+ omega=0.2d0
+
+ intensity=1d-5
+
+ velflag=0
+
+ pulsetheta=1.5707963268d0
+
+/
+
+
+
+$parinp
+
+loadavectorflag=1
+avectorfile="Bin/avector.bin.relax"
+loadspfflag=1
+spffile="Bin/spfs.bin.relax"
+
+avectoroutfile="Bin/avector.bin.afterpulse.perp"
+spfoutfile="Bin/spfs.bin.afterpulse.perp"
+
+numelec=2
+
+sparseconfigflag=0
+
+nspf=5
+
+spfrestrictflag=0
+
+spfmvals =  0, 0,   0, 1,-1
+
+restrictflag=1
+restrictms=0
+
+mrestrictflag=0
+
+tdflag=1
+
+par_timestep=0.05d0
+
+/
+
+$heparinp
+
+NucCharge1=2d0
+
+LBIG=6,MBIG=2
+
+henumpoints=12
+henumelements=7
+hecelement=6
+heecstheta=0.4d0
+heelementsizes=7d0,7d0,7d0,7d0,7d0,  7d0,14d0
+
+
+
+/
+

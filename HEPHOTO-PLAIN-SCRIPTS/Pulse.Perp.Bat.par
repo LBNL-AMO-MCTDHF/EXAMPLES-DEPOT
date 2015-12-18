@@ -1,0 +1,5 @@
+#!/bin/bash
+
+export OMP_NUM_THREADS=1
+mpirun -n 5 chmctdhf_atom.mpi Inp=Input.Inp.Pulse.perp |tee Outs/Out.pulse.perp
+
