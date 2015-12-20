@@ -19,6 +19,8 @@ $pulse
 
 $parinp
 
+fttriwindow=1
+
 numactions=2
 actions=1,21
 eground = -1.159611729729d0
@@ -44,7 +46,7 @@ numelec=2
 
 sparseconfigflag=0
 
-nspf=3
+nspf=7
 
 spfrestrictflag=0
 
@@ -57,8 +59,8 @@ mrestrictflag=0
 
 tdflag=1
 
-par_timestep=1d0
-littlesteps=10
+par_timestep=0.25d0
+littlesteps=5
 
 /
 
@@ -67,13 +69,13 @@ $h2parinp
 NucCharge1=1d0
 NucCharge2=1d0
 
-LBIG=6,MBIG=1
+LBIG=9,MBIG=2
 
-xinumpoints=12
-xinumelements=7
-xicelement=6
-xiecstheta=0.4d0
-xielementsizes=7d0,7d0,7d0,7d0,7d0,  7d0,14d0
+xinumpoints=10
+xinumelements=12
+xicelement=10
+xiecstheta=0.5d0
+xielementsizes=5d0,5d0,5d0, 5d0,5d0,5d0, 5d0,5d0,5d0,   5d0,7d0,12d0
 
 rstart=1.4d0
 

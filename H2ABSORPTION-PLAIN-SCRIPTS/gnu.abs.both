@@ -1,29 +1,31 @@
+#!/bin/bash
 
 echo '
 
+set title "Photoabsorption cross section H2 fixed nuclei 7 orbitals"
+
 set xlabel "Energy (eV)"
-set ylabel "emission/absorption\ncross section (arb units)"
+set ylabel "emission/absorption\ncross section (Mb)"
 
 set term unknown
 set style data lines
 
-set key top left
+set key top right
 
-#set yrange [*:*]
-#set xrange [0:30]
-#set logscale y
-
-set xrange [10:30]
+set xrange [10:40]
 set yrange [0:20]
 
-plot "Dat/XDipoleft.Dat.perp" using (27.2114*$1):($7/($4**2+$5**2)) lt 3 lw 10 title "Perp"
+set ytics 2
 
-replot "Dat/ZDipoleft.Dat" using (27.2114*$1):($7/($4**2+$5**2)) lt 7 lw 10 title "Par"
+plot "Dat/ZDipoleft.Dat" using (27.2114*$1):($9) lt 7 lw 10 title "Par"
+
+replot "Dat/XDipoleft.Dat.perp" using (27.2114*$1):($9) lt 3 lw 7 title "Perp"
+
 
 set term x11
 replot
 
-set out "Absorption.perp.eps"
+set out "Absorption.h2.both.eps"
 set term post enhanced eps solid color 28
 replot
 

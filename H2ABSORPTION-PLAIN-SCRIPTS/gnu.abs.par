@@ -18,12 +18,12 @@ set xrange [10:40]
 
 set logscale y
 
-plot "Dat/XDipoleft.Dat.perp" using (27.2114*$1):($9) lt 3 lw 10 title "Perpendicular"
+plot "Dat/ZDipoleft.Dat" using (27.2114*$1):($9) lt 7 lw 10 title "Parallel"
 
 set term x11
 replot
 
-set out "Absorption.h2.perp.eps"
+set out "Absorption.h2.par.eps"
 set term post enhanced eps solid color 28
 replot
 
