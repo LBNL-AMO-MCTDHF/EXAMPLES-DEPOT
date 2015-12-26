@@ -2,6 +2,8 @@
 
 &parinp
 
+lanthresh=1d-11
+
 messflag=1
 messamount=1d-4
 

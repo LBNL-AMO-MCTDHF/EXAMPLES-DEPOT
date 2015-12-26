@@ -2,7 +2,7 @@
 
 &parinp
 
-energyshift=(0d0, -0.00000439788717989d0)
+energyshift=(0d0, -0.000004397884d0)
 
 aorder=20
 
@@ -17,7 +17,7 @@ maxbiodim=200
 
 corrdatfile="Dat/Correlation.Dat.ICD"
 corrftfile="Dat/Corrft.Dat.ICD"
-eground = -103.60888561d0
+eground = -101.598311349d0
 
 fluxinterval=25
 fluxskipmult=2

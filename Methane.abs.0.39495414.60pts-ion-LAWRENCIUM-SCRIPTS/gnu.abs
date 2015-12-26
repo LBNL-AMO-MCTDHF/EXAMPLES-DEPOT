@@ -4,7 +4,7 @@ echo '
 
 
 set xlabel "Photon energy (eV)"
-set ylabel "absorption cross section (arb units)"
+set ylabel "absorption cross section (Mb)"
 
 set term unknown
 set style data lines
@@ -13,21 +13,14 @@ set style data lines
 
 set key top left
 
-#unset ytics
-#set ytics 0,250,250
-
-set yrange [0:100]
 set yrange [0:60]
+set y2range [0:*]
 
-set xrange [4:45]
-set xrange [7:30]
 set xrange [6:26]
 
-plot "Dat/ZDipoleft.Dat" using (27.2114*$1):($7/($4**2+$5**2)) lt 3 lw 10 title "Absorption"
+plot "Dat/ZDipoleft.Dat" using (27.2114*$1):($9) lt 3 lw 10 notitle
 
-BB=200000
-
-replot "Dat/ZDipoleft.Dat" using (27.2114*$1):(BB*($4**2+$5**2)) with points pt 7 ps 2 lt -1 title "FT"
+replot "Dat/ZDipoleft.Dat" using (27.2114*$1):(($4**2+$5**2)) with points pt 7 ps 2 lt -1 title "pulse intensity" axes x1y2
 
 set term x11
 replot

@@ -1,11 +1,67 @@
-Wed Sep  9 16:03:25 PDT 2015
-Wed Sep  9 16:03:25 PDT 2015
-Wed Sep  9 16:03:25 PDT 2015
-Wed Sep  9 16:03:25 PDT 2015
-Wed Sep  9 16:03:25 PDT 2015
-Wed Sep  9 16:03:25 PDT 2015
-Wed Sep  9 16:03:25 PDT 2015
-Wed Sep  9 16:03:25 PDT 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
+Wed Dec 23 12:19:54 PST 2015
  
   ****************************************************************************
   **********************  BEGIN LBNL-AMO-MCTDHF ******************************
@@ -21,7 +77,7 @@ Wed Sep  9 16:03:25 PDT 2015
  
                 This is CHMCTDH: HERM-normed ECS version.
  
-                PROCESSOR            1  OF            8
+                PROCESSOR            1  OF           64
  
  Inpfile is Input.Inp.ShiftNeon  
  
@@ -47,7 +103,7 @@ Wed Sep  9 16:03:25 PDT 2015
  
  ********  SINC DVR PARAMS ******** 
  griddim,spacing           3  0.400000000000000     
- numpoints          48          48          48
+ numpoints          24          24          24
  numcenters           1
  nuccharge   10.0000000000000     
  centershift   8.50000000000000        8.50000000000000     
@@ -63,8 +119,8 @@ Wed Sep  9 16:03:25 PDT 2015
  fft_batchdim           1
  fft_circbatchdim           1
    -----  
- NBOX            2           2           2
- totpoints      110592
+ NBOX            4           4           4
+ totpoints       13824
  **********************************
  
  ************************   Parameters: config/spf    ************************  
@@ -109,7 +165,7 @@ Wed Sep  9 16:03:25 PDT 2015
  
      Will use sparse configuration routines.
            Lanczosorder is          200
-           Lanthresh is      1.000000000000000E-009
+           Lanthresh is      1.000000000000000E-010
            Aorder is                300
            Maxaorder is            2000
            Aerror is         1.000000000000000E-009
@@ -127,13 +183,16 @@ Wed Sep  9 16:03:25 PDT 2015
  
  Autosteps is            1  Autosize is         4001  Numpropsteps is 
         4000
- Fluxsteps is            1  Fluxtimestep is    10.0000000000000     
  
  *****************************************************************************
  
  
  
-  Get ORbsets.  Fewer procs than orbitals.
+ 
+ ************************************
+ ********  MAIN WALKS  **************
+ ************************************
+ 
  Go fast_newconfiglist
  UPPER/LOWER
            1           2
@@ -155,14 +214,70 @@ Wed Sep  9 16:03:25 PDT 2015
       ...Done fast_newconfiglist
  
  BOTWALKS /TOPWALKS        3041
-           1         377         377
-         378         759         382
-         760        1135         376
-        1136        1519         384
-        1520        1897         378
-        1898        2279         382
-        2280        2657         378
-        2658        3041         384
+           1          41          41
+          42          91          50
+          92         141          50
+         142         189          48
+         190         233          44
+         234         283          50
+         284         331          48
+         332         377          46
+         378         423          46
+         424         473          50
+         474         521          48
+         522         569          48
+         570         611          42
+         612         661          50
+         662         711          50
+         712         759          48
+         760         801          42
+         802         853          52
+         854         897          44
+         898         949          52
+         950         991          42
+         992        1039          48
+        1040        1077          38
+        1078        1135          58
+        1136        1185          50
+        1186        1229          44
+        1230        1281          52
+        1282        1325          44
+        1326        1373          48
+        1374        1423          50
+        1424        1471          48
+        1472        1519          48
+        1520        1567          48
+        1568        1611          44
+        1612        1659          48
+        1660        1707          48
+        1708        1753          46
+        1754        1803          50
+        1804        1849          46
+        1850        1897          48
+        1898        1945          48
+        1946        1977          32
+        1978        2041          64
+        2042        2085          44
+        2086        2129          44
+        2130        2181          52
+        2182        2231          50
+        2232        2279          48
+        2280        2327          48
+        2328        2373          46
+        2374        2419          46
+        2420        2469          50
+        2470        2505          36
+        2506        2551          46
+        2552        2595          44
+        2596        2657          62
+        2658        2703          46
+        2704        2747          44
+        2748        2799          52
+        2800        2849          50
+        2850        2897          48
+        2898        2943          46
+        2944        2991          48
+        2992        3041          50
  
  Counting walks. Singles
  Counting walks. Doubles
@@ -170,38 +285,260 @@ Wed Sep  9 16:03:25 PDT 2015
  Maximum number of
             single walks=           50
             double walks=         1225
-   TOTAL walks:     2211435 maxdoublewalks*numconfig     3725225
+   TOTAL walks:      599355 maxdoublewalks*numconfig     3725225
  
  Allocating singlewalks
  Allocating doublewalks
       ..done walkalloc.
- No savewalks.BIN found.  Calculating walks.  Singles...
+ Calculating walks.  Singles...
  Calculating walks.  Doubles...
- Go spinwalks. 
- Doing spin projector.
- Maximum number of spin walks=            9
- Avg number of spin walks=    3.02387267904509     
- Calculating spin walks.
- Numspinsets is          116   maxspinset size is           20
- Getting SPARSE spinset projector.  Numspinsets is          116 
-  maxspinsetsize is           20
- Getting spin set projectors...
- ...done.  Eliminated            0  sets with total rank            0
- Number of spin sets is now          116
- Total # of spinvects with S^2 =   0.000000000000000E+000  is          154 
-  out of          377
- TOTAL (all processors) rank        1071  out of         3041
-      Spin DF rank is           81    all processors          231
-    This proc:  spinstart :            1
+ Sorting walks...
+     .... done sorting walks.
+ Counting single hops...
+ Counting double hops...
+ Getting single hops...
+ Getting double hops...
+ GOT HOPS:  
+  Single hops this processor         1101  of         1470
+  Double hops this processor         7555  of        24297
+  Single hops total        23001  of        28050
+  Double hops total       220761  of       571305
+     Max single hops           41
+     Max double hops          561
  
  Number of included configurations          561
  Number of not included         2480
  
- numdfwalks:           948 
+ numdfwalks:             0 
   is total number DF single excitations on this processor
  
- numdfwalks:           948 
+ numdfwalks:             0 
   is really number DF single excitations on this processor
+ 
+ Go spinwalks. 
+ Doing spin projector.
+ Maximum number of spin walks=            9
+ Avg number of spin walks=    4.63663268661624     
+ Calculating spin walks.
+      ... done calculating spin walks.
+    ... go spinsets ...
+ Numspinsets this processor is           21   maxspinset size is           20
+ Getting Spinset Projectors.  Numspinsets this process is           21
+                                         maxspinsetsize is           20
+ ...done.  Eliminated            0  sets with total rank            0
+ 
+ This processor: 
+       spin sets                  21
+       spin rank                      22  of           41
+       botspin,topspin:                1          22
+       df spin rank                   22  of           41
+       botdfspin,topdfspin:            1          22
+ All processors:
+       spin rank, S^2 =   0.000000000000000E+000  is         1071  out of 
+        3041
+       df spin rank                  231  of          561
+ 
+ 
+ ************************************
+ ** done main walks. BIORTHO WALKS **
+ ************************************
+ 
+ Go fast_newconfiglist
+ UPPER/LOWER
+           1           2
+           1           3
+           2           3
+           2           4
+           3           4
+           3           5
+           4           5
+           4           8
+           5           9
+           5           9
+ 
+ 
+ FASTNEWCONFIG: NUMBER OF CONFIGURATIONS         3041
+ 
+ NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG         651          20
+ Go fast_newconfiglist, getting configurations
+      ...Done fast_newconfiglist
+ 
+ BOTWALKS /TOPWALKS        3041
+           1          41          41
+          42          91          50
+          92         141          50
+         142         189          48
+         190         233          44
+         234         283          50
+         284         331          48
+         332         377          46
+         378         423          46
+         424         473          50
+         474         521          48
+         522         569          48
+         570         611          42
+         612         661          50
+         662         711          50
+         712         759          48
+         760         801          42
+         802         853          52
+         854         897          44
+         898         949          52
+         950         991          42
+         992        1039          48
+        1040        1077          38
+        1078        1135          58
+        1136        1185          50
+        1186        1229          44
+        1230        1281          52
+        1282        1325          44
+        1326        1373          48
+        1374        1423          50
+        1424        1471          48
+        1472        1519          48
+        1520        1567          48
+        1568        1611          44
+        1612        1659          48
+        1660        1707          48
+        1708        1753          46
+        1754        1803          50
+        1804        1849          46
+        1850        1897          48
+        1898        1945          48
+        1946        1977          32
+        1978        2041          64
+        2042        2085          44
+        2086        2129          44
+        2130        2181          52
+        2182        2231          50
+        2232        2279          48
+        2280        2327          48
+        2328        2373          46
+        2374        2419          46
+        2420        2469          50
+        2470        2505          36
+        2506        2551          46
+        2552        2595          44
+        2596        2657          62
+        2658        2703          46
+        2704        2747          44
+        2748        2799          52
+        2800        2849          50
+        2850        2897          48
+        2898        2943          46
+        2944        2991          48
+        2992        3041          50
+ 
+ Counting walks. Singles
+ Counting walks. Doubles
+ 
+ Maximum number of
+            single walks=           50
+            double walks=            1
+   TOTAL walks:      107090 maxdoublewalks*numconfig        3041
+ 
+ Allocating singlewalks
+ Allocating doublewalks
+      ..done walkalloc.
+ Calculating walks.  Singles...
+ Calculating walks.  Doubles...
+ Sorting walks...
+     .... done sorting walks.
+ Counting single hops...
+ Counting double hops...
+ Getting single hops...
+ Getting double hops...
+ GOT HOPS:  
+  Single hops this processor         1681  of         2050
+  Double hops this processor            0  of            0
+  Single hops total        79721  of       107090
+  Double hops total            0  of            0
+     Max single hops           41
+     Max double hops            1
+ 
+ Go spinwalks. 
+ Doing spin projector.
+ Maximum number of spin walks=            9
+ Avg number of spin walks=    4.63663268661624     
+ Calculating spin walks.
+      ... done calculating spin walks.
+    ... go spinsets ...
+ Numspinsets this processor is           21   maxspinset size is           20
+ Getting Spinset Projectors.  Numspinsets this process is           21
+                                         maxspinsetsize is           20
+ ...done.  Eliminated            0  sets with total rank            0
+ 
+ This processor: 
+       spin sets                  21
+       spin rank                      22  of           41
+       botspin,topspin:                1          22
+       df spin rank                   22  of           41
+       botdfspin,topdfspin:            1          22
+ All processors:
+       spin rank, S^2 =   0.000000000000000E+000  is         1071  out of 
+        3041
+       df spin rank                 1071  of         3041
+ 
+ 
+ ************************************
+ *** done biortho walks. DF WALKS ***
+ ************************************
+ 
+ Counting walks. Singles
+ Counting walks. Doubles
+ 
+ Maximum number of
+            single walks=           50
+            double walks=         1225
+   TOTAL walks:      261915 maxdoublewalks*numconfig      687225
+ 
+ Allocating singlewalks
+ Allocating doublewalks
+      ..done walkalloc.
+ Calculating walks.  Singles...
+ Calculating walks.  Doubles...
+ Sorting walks...
+     .... done sorting walks.
+ Counting single hops...
+ Counting double hops...
+ Getting single hops...
+ Getting double hops...
+ GOT HOPS:  
+  Single hops this processor         1101  of         1470
+  Double hops this processor         7555  of        24297
+  Single hops total        10281  of        15330
+  Double hops total        77961  of       246585
+     Max single hops           41
+     Max double hops          561
+ 
+ Go spinwalks. 
+ Doing spin projector.
+ Maximum number of spin walks=            4
+ Avg number of spin walks=    2.88770053475936     
+ Calculating spin walks.
+      ... done calculating spin walks.
+    ... go spinsets ...
+ Numspinsets this processor is           21   maxspinset size is            6
+ Getting Spinset Projectors.  Numspinsets this process is           21
+                                         maxspinsetsize is            6
+ ...done.  Eliminated            0  sets with total rank            0
+ 
+ This processor: 
+       spin sets                  21
+       spin rank                      22  of           41
+       botspin,topspin:                1          22
+       df spin rank                   22  of           41
+       botdfspin,topdfspin:            1          22
+ All processors:
+       spin rank, S^2 =   0.000000000000000E+000  is          231  out of 
+         561
+       df spin rank                  231  of          561
+ 
+    .. DONE setting DF walk variable.
+ 
+ ************************************
+ ********** DONE WALKS. *************
+ ************************************
  
  Reading spfs.
  Read complex spfs
@@ -212,12 +549,12 @@ Wed Sep  9 16:03:25 PDT 2015
  Bin/spfs.bin.neon                                                              
                                                                                 
                                            
- Calling init_project               1769472
+ Calling init_project                221184
  
  Go CT_INIT
     CT_MAXPRIME IS            2
      CT_PRIMEFACTORS ARE
-              2
+              2           2
  Calling ct_construct...
     ....Called ct_construct.
  Getting scaling...
@@ -231,169 +568,717 @@ Wed Sep  9 16:03:25 PDT 2015
  Reading avector...
  Read            1  A-vectors
  REPLACING SPFS - DENMAT EIGS
-         0.1999927521E+01
-         0.1994194218E+01
-         0.1991090266E+01
-         0.1991090266E+01
-         0.1991090266E+01
-         0.8758492908E-02
-         0.8758492887E-02
-         0.8758492836E-02
-         0.6331984151E-02
+         0.1999927520E+01
+         0.1994194270E+01
+         0.1991090475E+01
+         0.1991090471E+01
+         0.1991090465E+01
+         0.8758293949E-02
+         0.8758287665E-02
+         0.8758284277E-02
+         0.6331931651E-02
  
- IN PROP: VECTOR NORM  (0.999999999999999,0.000000000000000E+000)
-          ENERGY  (-100.825878819315,1.266006012116249E-008)
+ IN PROP: VECTOR NORM  (1.00000000000001,0.000000000000000E+000)
+          ENERGY  (-100.825899161606,5.254265191970034E-006)
  setting jacsymflag=1 for orbital quad
-    Quad orbitals: Deviation is       2.717742107628513E-002
-                   Orthog error is    1.776356839400250E-015
-    Quad orbitals: Deviation is       1.287882924905331E-003
-                   Orthog error is    1.443289932012704E-015
+    Quad orbitals: Deviation is       6.516546150431068E-003
+                   Orthog error is    1.332267629550188E-015
+    Quad orbitals: Deviation is       2.861569625761077E-004
+                   Orthog error is    2.997602166487923E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927520E+01
+         0.1994194272E+01
+         0.1991090483E+01
+         0.1991090475E+01
+         0.1991090467E+01
+         0.8758292223E-02
+         0.8758284299E-02
+         0.8758277700E-02
+         0.6331928856E-02
+ 
+T=         10.00000  Energy:  -0.1008259002E+03  0.4441206611E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.30E-03  0.10E-07  AVECTOR   0.11E+03  0.10E+01
+    Quad orbitals: Deviation is       2.979913378323350E-004
+                   Orthog error is    1.554312234475219E-015
+    Quad orbitals: Deviation is       1.409072177505742E-005
+                   Orthog error is    1.554312234475219E-015
      --> Converged newton
  REPLACING SPFS - DENMAT EIGS
          0.1999927521E+01
-         0.1994194218E+01
-         0.1991090266E+01
-         0.1991090266E+01
-         0.1991090266E+01
-         0.8758492944E-02
-         0.8758492855E-02
-         0.8758492827E-02
-         0.6331984156E-02
+         0.1994194227E+01
+         0.1991090278E+01
+         0.1991090277E+01
+         0.1991090276E+01
+         0.8758483498E-02
+         0.8758482199E-02
+         0.8758481518E-02
+         0.6331973158E-02
  
-T=         10.00000  Energy:  -0.1008258999E+03  0.4317175531E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.13E-02  0.10E-07  AVECTOR   0.11E+03  0.10E+01
-    Quad orbitals: Deviation is       1.288004399880352E-003
-                   Orthog error is    1.554312234475219E-015
-    Quad orbitals: Deviation is       5.742738719420598E-005
-                   Orthog error is    1.988812733933854E-015
+T=         12.00000  Energy:  -0.1008259001E+03  0.4444730059E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.58E-04  0.10E-07  AVECTOR   0.21E-07  0.10E+01
+    Quad orbitals: Deviation is       5.802256994421900E-005
+                   Orthog error is    1.776356839400250E-015
+    Quad orbitals: Deviation is       2.667671566499557E-006
+                   Orthog error is    1.776356839400250E-015
      --> Converged newton
  REPLACING SPFS - DENMAT EIGS
          0.1999927522E+01
-         0.1994194210E+01
-         0.1991090240E+01
-         0.1991090240E+01
-         0.1991090240E+01
-         0.8758518542E-02
-         0.8758518522E-02
-         0.8758518502E-02
-         0.6331992296E-02
+         0.1994194192E+01
+         0.1991090145E+01
+         0.1991090145E+01
+         0.1991090145E+01
+         0.8758615469E-02
+         0.8758615021E-02
+         0.8758614856E-02
+         0.6332005942E-02
  
- Vectors converged on read  2.073720566632201E-010  1.000000000000000E-009
-T=         12.00000  Energy:  -0.1008259001E+03  0.4443828415E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.59E-04  0.10E-07  AVECTOR   0.14E-06  0.10E+01
-    Quad orbitals: Deviation is       5.850948648091037E-005
+ Vectors converged on read  2.728899551376822E-011  1.000000000000000E-010
+T=         14.00000  Energy:  -0.1008259001E+03  0.4444661211E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.42E-05  0.10E-07  AVECTOR   0.16E-07  0.10E+01
+    Quad orbitals: Deviation is       4.172458070478753E-006
+                   Orthog error is    1.276620853559345E-015
+    Quad orbitals: Deviation is       2.071392278358453E-007
+                   Orthog error is    1.120213774431059E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927522E+01
+         0.1994194192E+01
+         0.1991090145E+01
+         0.1991090145E+01
+         0.1991090145E+01
+         0.8758615494E-02
+         0.8758615020E-02
+         0.8758614845E-02
+         0.6332005936E-02
+ 
+ Vectors converged on read  2.050600651221803E-011  1.000000000000000E-010
+T=         16.00000  Energy:  -0.1008259001E+03  0.4444654751E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.39E-06  0.10E-07  AVECTOR   0.50E-09  0.10E+01
+    Quad orbitals: Deviation is       3.938898874672320E-007
                    Orthog error is    1.332267629550188E-015
-    Quad orbitals: Deviation is       2.911836835016596E-006
+    Quad orbitals: Deviation is       1.892768063929994E-008
+                   Orthog error is    3.330669073875470E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927522E+01
+         0.1994194193E+01
+         0.1991090146E+01
+         0.1991090145E+01
+         0.1991090144E+01
+         0.8758615595E-02
+         0.8758615250E-02
+         0.8758614379E-02
+         0.6332005355E-02
+ 
+ Vectors converged on read  2.912930111783405E-011  1.000000000000000E-010
+T=         18.00000  Energy:  -0.1008259001E+03  0.4444655147E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.48E-06  0.10E-07  AVECTOR   0.16E-10  0.10E+01
+    Quad orbitals: Deviation is       4.769520483339090E-007
+                   Orthog error is    1.776356839400250E-015
+    Quad orbitals: Deviation is       1.910801499888895E-008
+                   Orthog error is    4.329869796038111E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927522E+01
+         0.1994194193E+01
+         0.1991090147E+01
+         0.1991090145E+01
+         0.1991090144E+01
+         0.8758616497E-02
+         0.8758615099E-02
+         0.8758613696E-02
+         0.6332005185E-02
+ 
+ Vectors converged on read  7.039965959267722E-011  1.000000000000000E-010
+T=         20.00000  Energy:  -0.1008259001E+03  0.4444655213E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.34E-05  0.10E-07  AVECTOR   0.12E-11  0.10E+01
+    Quad orbitals: Deviation is       3.419476219252530E-006
+                   Orthog error is    1.110223024625157E-015
+    Quad orbitals: Deviation is       1.257070283557214E-007
+                   Orthog error is    3.108624468950438E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927523E+01
+         0.1994194194E+01
+         0.1991090153E+01
+         0.1991090146E+01
+         0.1991090138E+01
+         0.8758621704E-02
+         0.8758614644E-02
+         0.8758606679E-02
+         0.6332002084E-02
+ 
+T=         22.00000  Energy:  -0.1008259001E+03  0.4444655509E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.22E-04  0.10E-07  AVECTOR   0.51E-11  0.10E+01
+    Quad orbitals: Deviation is       2.175651908402152E-005
+                   Orthog error is    1.598821763016975E-015
+    Quad orbitals: Deviation is       9.094346846219270E-007
                    Orthog error is    1.554312234475219E-015
      --> Converged newton
  REPLACING SPFS - DENMAT EIGS
-         0.1999927522E+01
-         0.1994194210E+01
-         0.1991090240E+01
-         0.1991090240E+01
-         0.1991090240E+01
-         0.8758518542E-02
-         0.8758518522E-02
-         0.8758518502E-02
-         0.6331992296E-02
+         0.1999927523E+01
+         0.1994194174E+01
+         0.1991090086E+01
+         0.1991090085E+01
+         0.1991090084E+01
+         0.8758675695E-02
+         0.8758674905E-02
+         0.8758673825E-02
+         0.6332023733E-02
  
- Vectors converged on read  1.766080545591015E-010  1.000000000000000E-009
-T=         14.00000  Energy:  -0.1008259001E+03  0.4444659289E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.46E-05  0.10E-07  AVECTOR   0.44E-09  0.10E+01
-    Quad orbitals: Deviation is       4.570213421567140E-006
-                   Orthog error is    1.494847510593799E-015
-    Quad orbitals: Deviation is       2.161388314482595E-007
-                   Orthog error is    2.220446049250313E-015
-     --> Converged newton
- REPLACING SPFS - DENMAT EIGS
-         0.1999927522E+01
-         0.1994194210E+01
-         0.1991090240E+01
-         0.1991090240E+01
-         0.1991090240E+01
-         0.8758518542E-02
-         0.8758518522E-02
-         0.8758518502E-02
-         0.6331992296E-02
- 
- Vectors converged on read  1.582732851513909E-010  1.000000000000000E-009
-T=         16.00000  Energy:  -0.1008259001E+03  0.4444654668E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.70E-06  0.10E-07  AVECTOR   0.80E-10  0.10E+01
-    Quad orbitals: Deviation is       6.965077164274705E-007
-                   Orthog error is    1.554312234475219E-015
-    Quad orbitals: Deviation is       3.215598797134072E-008
-                   Orthog error is    2.146843424838667E-015
-     --> Converged newton
- REPLACING SPFS - DENMAT EIGS
-         0.1999927522E+01
-         0.1994194210E+01
-         0.1991090240E+01
-         0.1991090240E+01
-         0.1991090240E+01
-         0.8758518546E-02
-         0.8758518521E-02
-         0.8758518497E-02
-         0.6331992302E-02
- 
- Vectors converged on read  1.602330850539423E-010  1.000000000000000E-009
-T=         18.00000  Energy:  -0.1008259001E+03  0.4444654865E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.99E-07  0.10E-07  AVECTOR   0.21E-12  0.10E+01
-    Quad orbitals: Deviation is       9.870980068328180E-008
-                   Orthog error is    2.442490654175344E-015
-    Quad orbitals: Deviation is       4.621269298108127E-009
+ Vectors converged on read  1.281828171176897E-011  1.000000000000000E-010
+T=         24.00000  Energy:  -0.1008259001E+03  0.4444655317E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.16E-05  0.10E-07  AVECTOR   0.57E-08  0.10E+01
+    Quad orbitals: Deviation is       1.628859400615735E-006
                    Orthog error is    1.998401444325282E-015
+    Quad orbitals: Deviation is       7.496757077555990E-008
+                   Orthog error is    2.930481560297315E-015
      --> Converged newton
  REPLACING SPFS - DENMAT EIGS
-         0.1999927522E+01
-         0.1994194210E+01
-         0.1991090240E+01
-         0.1991090240E+01
-         0.1991090240E+01
-         0.8758518553E-02
-         0.8758518521E-02
-         0.8758518506E-02
-         0.6331992298E-02
+         0.1999927523E+01
+         0.1994194175E+01
+         0.1991090086E+01
+         0.1991090085E+01
+         0.1991090084E+01
+         0.8758676203E-02
+         0.8758674555E-02
+         0.8758673559E-02
+         0.6332023636E-02
  
- Vectors converged on read  1.765013863794772E-010  1.000000000000000E-009
-T=         20.00000  Energy:  -0.1008259001E+03  0.4444654886E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.18E-07  0.10E-07  AVECTOR   0.26E-11  0.10E+01
-    Quad orbitals: Deviation is       1.762229554588438E-008
+ Vectors converged on read  2.518653166733765E-011  1.000000000000000E-010
+T=         26.00000  Energy:  -0.1008259001E+03  0.4444655235E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.17E-06  0.10E-07  AVECTOR   0.18E-09  0.10E+01
+    Quad orbitals: Deviation is       1.727765274425119E-007
+                   Orthog error is    1.332267629550188E-015
+    Quad orbitals: Deviation is       8.436891265563488E-009
+                   Orthog error is    4.218847493575595E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927523E+01
+         0.1994194175E+01
+         0.1991090086E+01
+         0.1991090085E+01
+         0.1991090084E+01
+         0.8758676203E-02
+         0.8758674555E-02
+         0.8758673559E-02
+         0.6332023636E-02
+ 
+ Vectors converged on read  1.679298334740806E-011  1.000000000000000E-010
+T=         28.00000  Energy:  -0.1008259001E+03  0.4444655295E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.39E-07  0.10E-07  AVECTOR   0.55E-11  0.10E+01
+    Quad orbitals: Deviation is       3.932177498443550E-008
+                   Orthog error is    1.332267629550188E-015
+    Quad orbitals: Deviation is       1.766969672268622E-009
+                   Orthog error is    4.440892098500626E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927523E+01
+         0.1994194174E+01
+         0.1991090086E+01
+         0.1991090085E+01
+         0.1991090084E+01
+         0.8758676201E-02
+         0.8758674553E-02
+         0.8758673560E-02
+         0.6332023640E-02
+ 
+ Vectors converged on read  1.637115014947971E-011  1.000000000000000E-010
+T=         30.00000  Energy:  -0.1008259001E+03  0.4444655341E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.14E-05  0.10E-07  AVECTOR   0.61E-13  0.10E+01
+    Quad orbitals: Deviation is       1.436208016431705E-006
+                   Orthog error is    8.881784197001252E-016
+    Quad orbitals: Deviation is       5.340437466610881E-008
+                   Orthog error is    1.856361597919196E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927523E+01
+         0.1994194174E+01
+         0.1991090086E+01
+         0.1991090085E+01
+         0.1991090084E+01
+         0.8758675965E-02
+         0.8758674992E-02
+         0.8758673383E-02
+         0.6332023680E-02
+ 
+ Vectors converged on read  3.094537427554907E-011  1.000000000000000E-010
+T=         32.00000  Energy:  -0.1008259001E+03  0.4444655317E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.13E-06  0.10E-07  AVECTOR   0.18E-12  0.10E+01
+    Quad orbitals: Deviation is       1.347813064711121E-007
+                   Orthog error is    1.076067775102514E-015
+    Quad orbitals: Deviation is       4.797013704079647E-009
+                   Orthog error is    2.707892914614311E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927523E+01
+         0.1994194174E+01
+         0.1991090086E+01
+         0.1991090085E+01
+         0.1991090084E+01
+         0.8758675975E-02
+         0.8758675003E-02
+         0.8758673376E-02
+         0.6332023692E-02
+ 
+ Vectors converged on read  2.090737413924793E-012  1.000000000000000E-010
+T=         34.00000  Energy:  -0.1008259001E+03  0.4444655316E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.36E-07  0.10E-07  AVECTOR   0.20E-12  0.10E+01
+    Quad orbitals: Deviation is       3.607927243773959E-008
+                   Orthog error is    1.665334536937735E-015
+    Quad orbitals: Deviation is       1.637027166424041E-009
+                   Orthog error is    3.108624468950438E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927523E+01
+         0.1994194174E+01
+         0.1991090086E+01
+         0.1991090085E+01
+         0.1991090084E+01
+         0.8758675966E-02
+         0.8758675017E-02
+         0.8758673378E-02
+         0.6332023688E-02
+ 
+ Vectors converged on read  1.897354745930757E-011  1.000000000000000E-010
+T=         36.00000  Energy:  -0.1008259001E+03  0.4444655357E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.15E-05  0.10E-07  AVECTOR   0.74E-13  0.10E+01
+    Quad orbitals: Deviation is       1.538010706421417E-006
+                   Orthog error is    1.110223024625157E-015
+    Quad orbitals: Deviation is       5.986724673178871E-008
+                   Orthog error is    2.388103687048675E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927523E+01
+         0.1994194173E+01
+         0.1991090087E+01
+         0.1991090084E+01
+         0.1991090081E+01
+         0.8758679400E-02
+         0.8758675504E-02
+         0.8758672179E-02
+         0.6332025839E-02
+ 
+ Vectors converged on read  1.071258267829753E-011  1.000000000000000E-010
+T=         38.00000  Energy:  -0.1008259001E+03  0.4444655294E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.27E-06  0.10E-07  AVECTOR   0.35E-13  0.10E+01
+    Quad orbitals: Deviation is       2.683003973754826E-007
+                   Orthog error is    1.776356839400250E-015
+    Quad orbitals: Deviation is       1.224756363425333E-008
+                   Orthog error is    2.689561127344341E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927523E+01
+         0.1994194174E+01
+         0.1991090087E+01
+         0.1991090084E+01
+         0.1991090080E+01
+         0.8758679613E-02
+         0.8758675487E-02
+         0.8758672100E-02
+         0.6332025441E-02
+ 
+ Vectors converged on read  2.365735350116508E-011  1.000000000000000E-010
+T=         40.00000  Energy:  -0.1008259001E+03  0.4444655329E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.48E-07  0.10E-07  AVECTOR   0.13E-12  0.10E+01
+    Quad orbitals: Deviation is       4.818412202671105E-008
+                   Orthog error is    1.332267629550188E-015
+    Quad orbitals: Deviation is       2.246247842808868E-009
+                   Orthog error is    2.395159325279987E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927523E+01
+         0.1994194174E+01
+         0.1991090087E+01
+         0.1991090084E+01
+         0.1991090080E+01
+         0.8758679613E-02
+         0.8758675487E-02
+         0.8758672100E-02
+         0.6332025441E-02
+ 
+ Vectors converged on read  4.100351275306100E-012  1.000000000000000E-010
+T=         42.00000  Energy:  -0.1008259001E+03  0.4444655317E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.12E-07  0.10E-07  AVECTOR   0.11E-12  0.10E+01
+    Quad orbitals: Deviation is       1.203582131338476E-008
+                   Orthog error is    1.332267629550188E-015
+    Quad orbitals: Deviation is       4.950548755529514E-010
+                   Orthog error is    3.108624468950438E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927523E+01
+         0.1994194174E+01
+         0.1991090087E+01
+         0.1991090084E+01
+         0.1991090080E+01
+         0.8758679613E-02
+         0.8758675487E-02
+         0.8758672100E-02
+         0.6332025441E-02
+ 
+ Vectors converged on read  7.392858854161339E-012  1.000000000000000E-010
+T=         44.00000  Energy:  -0.1008259001E+03  0.4444655325E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.14E-05  0.10E-07  AVECTOR   0.43E-13  0.10E+01
+    Quad orbitals: Deviation is       1.398115575429935E-006
+                   Orthog error is    1.332267629550188E-015
+    Quad orbitals: Deviation is       4.805451773286149E-008
+                   Orthog error is    2.442490654175344E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927523E+01
+         0.1994194176E+01
+         0.1991090088E+01
+         0.1991090083E+01
+         0.1991090078E+01
+         0.8758681117E-02
+         0.8758675835E-02
+         0.8758671464E-02
+         0.6332023511E-02
+ 
+ Vectors converged on read  4.299115100372952E-012  1.000000000000000E-010
+T=         46.00000  Energy:  -0.1008259001E+03  0.4444655333E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.29E-06  0.10E-07  AVECTOR   0.11E-12  0.10E+01
+    Quad orbitals: Deviation is       2.934964388511714E-007
                    Orthog error is    1.221245327087672E-015
-    Quad orbitals: Deviation is       8.378662658809634E-010
+    Quad orbitals: Deviation is       1.088490077679212E-008
+                   Orthog error is    4.064661591549684E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927523E+01
+         0.1994194176E+01
+         0.1991090088E+01
+         0.1991090083E+01
+         0.1991090078E+01
+         0.8758680889E-02
+         0.8758676236E-02
+         0.8758671292E-02
+         0.6332023519E-02
+ 
+ Vectors converged on read  5.903217707595026E-012  1.000000000000000E-010
+T=         48.00000  Energy:  -0.1008259001E+03  0.4444655355E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.29E-06  0.10E-07  AVECTOR   0.72E-13  0.10E+01
+    Quad orbitals: Deviation is       2.861323863006933E-007
+                   Orthog error is    1.404657890749548E-015
+    Quad orbitals: Deviation is       1.353521738546204E-008
+                   Orthog error is    1.711091863493360E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927523E+01
+         0.1994194176E+01
+         0.1991090087E+01
+         0.1991090083E+01
+         0.1991090079E+01
+         0.8758680664E-02
+         0.8758675992E-02
+         0.8758672036E-02
+         0.6332022722E-02
+ 
+ Vectors converged on read  9.198723282026520E-012  1.000000000000000E-010
+T=         50.00000  Energy:  -0.1008259001E+03  0.4444655280E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.30E-07  0.10E-07  AVECTOR   0.15E-12  0.10E+01
+    Quad orbitals: Deviation is       3.020505742232100E-008
+                   Orthog error is    1.110223024625157E-015
+    Quad orbitals: Deviation is       1.426195273579965E-009
+                   Orthog error is    1.332267629550188E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927523E+01
+         0.1994194176E+01
+         0.1991090087E+01
+         0.1991090083E+01
+         0.1991090079E+01
+         0.8758680663E-02
+         0.8758676008E-02
+         0.8758672026E-02
+         0.6332022722E-02
+ 
+ Vectors converged on read  8.708954713178813E-012  1.000000000000000E-010
+T=         52.00000  Energy:  -0.1008259001E+03  0.4444655349E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.75E-07  0.10E-07  AVECTOR   0.20E-12  0.10E+01
+    Quad orbitals: Deviation is       7.509391416504329E-008
+                   Orthog error is    8.319981502052229E-016
+    Quad orbitals: Deviation is       3.024470635386441E-009
+                   Orthog error is    3.474325808675752E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927523E+01
+         0.1994194177E+01
+         0.1991090087E+01
+         0.1991090083E+01
+         0.1991090079E+01
+         0.8758680619E-02
+         0.8758675951E-02
+         0.8758672063E-02
+         0.6332022714E-02
+ 
+ Vectors converged on read  3.915111235950055E-012  1.000000000000000E-010
+T=         54.00000  Energy:  -0.1008259001E+03  0.4444655309E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.10E-07  0.10E-07  AVECTOR   0.12E-12  0.10E+01
+    Quad orbitals: Deviation is       1.011932353732863E-008
+                   Orthog error is    8.881784197001252E-016
+    Quad orbitals: Deviation is       4.677147728114874E-010
+                   Orthog error is    3.774758283725532E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927523E+01
+         0.1994194177E+01
+         0.1991090087E+01
+         0.1991090083E+01
+         0.1991090079E+01
+         0.8758680622E-02
+         0.8758675950E-02
+         0.8758672067E-02
+         0.6332022711E-02
+ 
+ Vectors converged on read  1.154445805769160E-011  1.000000000000000E-010
+T=         56.00000  Energy:  -0.1008259001E+03  0.4444655209E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.14E-05  0.10E-07  AVECTOR   0.99E-13  0.10E+01
+    Quad orbitals: Deviation is       1.364620892424148E-006
+                   Orthog error is    1.139973303852065E-015
+    Quad orbitals: Deviation is       5.106969333962866E-008
+                   Orthog error is    3.075013745769970E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927523E+01
+         0.1994194177E+01
+         0.1991090088E+01
+         0.1991090083E+01
+         0.1991090078E+01
+         0.8758681069E-02
+         0.8758676057E-02
+         0.8758672104E-02
+         0.6332022618E-02
+ 
+ Vectors converged on read  3.861755629762601E-012  1.000000000000000E-010
+T=         58.00000  Energy:  -0.1008259001E+03  0.4444655311E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.27E-05  0.10E-07  AVECTOR   0.14E-12  0.10E+01
+    Quad orbitals: Deviation is       2.745299293662323E-006
+                   Orthog error is    1.166593396681961E-015
+    Quad orbitals: Deviation is       1.348660359506462E-007
+                   Orthog error is    2.454913412315651E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927523E+01
+         0.1994194179E+01
+         0.1991090093E+01
+         0.1991090082E+01
+         0.1991090071E+01
+         0.8758687605E-02
+         0.8758677150E-02
+         0.8758666977E-02
+         0.6332019776E-02
+ 
+ Vectors converged on read  1.275346569334061E-011  1.000000000000000E-010
+T=         60.00000  Energy:  -0.1008259001E+03  0.4444655316E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.60E-06  0.10E-07  AVECTOR   0.92E-13  0.10E+01
+    Quad orbitals: Deviation is       6.037645546880022E-007
+                   Orthog error is    1.332267629550188E-015
+    Quad orbitals: Deviation is       2.845753049576281E-008
+                   Orthog error is    2.610069417590542E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927523E+01
+         0.1994194179E+01
+         0.1991090093E+01
+         0.1991090083E+01
+         0.1991090071E+01
+         0.8758687834E-02
+         0.8758676582E-02
+         0.8758667651E-02
+         0.6332019453E-02
+ 
+ Vectors converged on read  1.342923936441603E-011  1.000000000000000E-010
+T=         62.00000  Energy:  -0.1008259001E+03  0.4444655364E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.74E-07  0.10E-07  AVECTOR   0.75E-13  0.10E+01
+    Quad orbitals: Deviation is       7.370856878878188E-008
+                   Orthog error is    1.776356839400250E-015
+    Quad orbitals: Deviation is       3.366009337286042E-009
+                   Orthog error is    2.775557561562891E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927523E+01
+         0.1994194179E+01
+         0.1991090093E+01
+         0.1991090083E+01
+         0.1991090071E+01
+         0.8758687837E-02
+         0.8758676641E-02
+         0.8758667642E-02
+         0.6332019408E-02
+ 
+ Vectors converged on read  3.081742058841362E-011  1.000000000000000E-010
+T=         64.00000  Energy:  -0.1008259001E+03  0.4444655294E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.72E-05  0.10E-07  AVECTOR   0.89E-12  0.10E+01
+    Quad orbitals: Deviation is       7.163330966394574E-006
+                   Orthog error is    1.998401444325282E-015
+    Quad orbitals: Deviation is       2.948043947984306E-007
+                   Orthog error is    1.110223024625157E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927523E+01
+         0.1994194190E+01
+         0.1991090104E+01
+         0.1991090082E+01
+         0.1991090065E+01
+         0.8758690447E-02
+         0.8758674884E-02
+         0.8758659968E-02
+         0.6332010582E-02
+ 
+ Vectors converged on read  3.297126461204008E-012  1.000000000000000E-010
+T=         66.00000  Energy:  -0.1008259001E+03  0.4444655321E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.92E-06  0.10E-07  AVECTOR   0.93E-13  0.10E+01
+    Quad orbitals: Deviation is       9.198562351966134E-007
+                   Orthog error is    1.017145363214764E-015
+    Quad orbitals: Deviation is       3.858770099748804E-008
+                   Orthog error is    3.755122237040123E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927523E+01
+         0.1994194190E+01
+         0.1991090104E+01
+         0.1991090082E+01
+         0.1991090065E+01
+         0.8758690447E-02
+         0.8758674884E-02
+         0.8758659968E-02
+         0.6332010582E-02
+ 
+ Vectors converged on read  3.109276186744087E-011  1.000000000000000E-010
+T=         68.00000  Energy:  -0.1008259001E+03  0.4444655320E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.22E-06  0.10E-07  AVECTOR   0.21E-13  0.10E+01
+    Quad orbitals: Deviation is       2.232754867923329E-007
+                   Orthog error is    1.332267629550188E-015
+    Quad orbitals: Deviation is       1.099656274025562E-008
+                   Orthog error is    2.442490654175344E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927523E+01
+         0.1994194190E+01
+         0.1991090104E+01
+         0.1991090082E+01
+         0.1991090065E+01
+         0.8758690447E-02
+         0.8758674884E-02
+         0.8758659968E-02
+         0.6332010582E-02
+ 
+ Vectors converged on read  3.864036098388280E-011  1.000000000000000E-010
+T=         70.00000  Energy:  -0.1008259001E+03  0.4444655335E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.66E-07  0.10E-07  AVECTOR   0.93E-13  0.10E+01
+    Quad orbitals: Deviation is       6.615358055205814E-008
+                   Orthog error is    1.401116342507640E-015
+    Quad orbitals: Deviation is       2.888737917993478E-009
                    Orthog error is    2.220446049250313E-015
      --> Converged newton
  REPLACING SPFS - DENMAT EIGS
-         0.1999927522E+01
-         0.1994194210E+01
-         0.1991090240E+01
-         0.1991090240E+01
-         0.1991090240E+01
-         0.8758518553E-02
-         0.8758518521E-02
-         0.8758518506E-02
-         0.6331992298E-02
+         0.1999927523E+01
+         0.1994194190E+01
+         0.1991090104E+01
+         0.1991090082E+01
+         0.1991090065E+01
+         0.8758690447E-02
+         0.8758674884E-02
+         0.8758659968E-02
+         0.6332010582E-02
  
- Vectors converged on read  1.564340384365215E-010  1.000000000000000E-009
-T=         22.00000  Energy:  -0.1008259001E+03  0.4444654873E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.21E-08  0.10E-07  AVECTOR   0.50E-13  0.10E+01
+ Vectors converged on read  3.274320803310395E-011  1.000000000000000E-010
+T=         72.00000  Energy:  -0.1008259001E+03  0.4444655301E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.21E-07  0.10E-07  AVECTOR   0.94E-13  0.10E+01
+    Quad orbitals: Deviation is       2.123898759132608E-008
+                   Orthog error is    8.881784197001252E-016
+    Quad orbitals: Deviation is       9.818844308452500E-010
+                   Orthog error is    2.886579864025407E-015
+     --> Converged newton
+ REPLACING SPFS - DENMAT EIGS
+         0.1999927523E+01
+         0.1994194190E+01
+         0.1991090104E+01
+         0.1991090082E+01
+         0.1991090065E+01
+         0.8758690445E-02
+         0.8758674889E-02
+         0.8758659971E-02
+         0.6332010581E-02
+ 
+ Vectors converged on read  3.460278284919109E-011  1.000000000000000E-010
+T=         74.00000  Energy:  -0.1008259001E+03  0.4444655274E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.63E-08  0.10E-07  AVECTOR   0.19E-12  0.10E+01
  
     ***  CONVERGED *** 
  
-       -100.825900120840      0.000004444655      0.000000000000     -0.000000000000
+       -100.825900084098      0.000004444655     -0.000000000000     -0.000000000000
     ***   
  
     ...done prop...
-    ...saving vector...
+   ...saving vector...
+   ... go save vectors...
+   ... gathered orbs, now gather avector...
+   ... ok, now write
     ...saved vectors!
     ...end prop...
-    ...cleanup...
-Wed Sep  9 16:12:25 PDT 2015
-Wed Sep  9 16:12:25 PDT 2015
-Wed Sep  9 16:12:25 PDT 2015
-Wed Sep  9 16:12:25 PDT 2015
-Wed Sep  9 16:12:25 PDT 2015
-Wed Sep  9 16:12:25 PDT 2015
-Wed Sep  9 16:12:25 PDT 2015
+    ...getting state expectation values etcetera...
+    ...GO finalstats.
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
     ...END MCTDHF
-Wed Sep  9 16:12:25 PDT 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
+Wed Dec 23 12:29:45 PST 2015
  MCTDHF STOP!

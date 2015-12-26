@@ -1,11 +1,67 @@
-Wed Sep  9 13:02:52 PDT 2015
-Wed Sep  9 13:02:52 PDT 2015
-Wed Sep  9 13:02:52 PDT 2015
-Wed Sep  9 13:02:52 PDT 2015
-Wed Sep  9 13:02:52 PDT 2015
-Wed Sep  9 13:02:52 PDT 2015
-Wed Sep  9 13:02:52 PDT 2015
-Wed Sep  9 13:02:52 PDT 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
+Wed Dec 23 11:58:42 PST 2015
  
   ****************************************************************************
   **********************  BEGIN LBNL-AMO-MCTDHF ******************************
@@ -21,7 +77,7 @@ Wed Sep  9 13:02:52 PDT 2015
  
                 This is CHMCTDH: HERM-normed ECS version.
  
-                PROCESSOR            1  OF            8
+                PROCESSOR            1  OF           64
  
  Inpfile is Input.Inp.ShiftHelium  
  
@@ -47,7 +103,7 @@ Wed Sep  9 13:02:52 PDT 2015
  
  ********  SINC DVR PARAMS ******** 
  griddim,spacing           3  0.400000000000000     
- numpoints          48          48          48
+ numpoints          24          24          24
  numcenters           1
  nuccharge   2.00000000000000     
  centershift  -7.50000000000000       -7.50000000000000     
@@ -63,8 +119,8 @@ Wed Sep  9 13:02:52 PDT 2015
  fft_batchdim           1
  fft_circbatchdim           1
    -----  
- NBOX            2           2           2
- totpoints      110592
+ NBOX            4           4           4
+ totpoints       13824
  **********************************
  
  ************************   Parameters: config/spf    ************************  
@@ -119,11 +175,15 @@ Wed Sep  9 13:02:52 PDT 2015
  
  Autosteps is            1  Autosize is         4001  Numpropsteps is 
         4000
- Fluxsteps is            1  Fluxtimestep is    10.0000000000000     
  
  *****************************************************************************
  
  
+ 
+ 
+ ************************************
+ ********  MAIN WALKS  **************
+ ************************************
  
  Go fast_newconfiglist
  UPPER/LOWER
@@ -138,13 +198,69 @@ Wed Sep  9 13:02:52 PDT 2015
       ...Done fast_newconfiglist
  
  BOTWALKS /TOPWALKS          16
+           1           0           0
+           1           0           0
+           1           0           0
+           1           0           0
+           1           0           0
+           1           0           0
+           1           0           0
            1           1           1
+           2           1           0
+           2           1           0
+           2           1           0
+           2           1           0
+           2           1           0
+           2           1           0
+           2           1           0
            2           3           2
+           4           3           0
+           4           3           0
+           4           3           0
+           4           3           0
+           4           3           0
+           4           3           0
+           4           3           0
            4           5           2
+           6           5           0
+           6           5           0
+           6           5           0
+           6           5           0
+           6           5           0
+           6           5           0
+           6           5           0
            6           7           2
+           8           7           0
+           8           7           0
+           8           7           0
            8           8           1
+           9           8           0
+           9           8           0
+           9           8           0
+           9           8           0
+           9           8           0
+           9           8           0
+           9           8           0
            9          10           2
-          11          13           3
+          11          10           0
+          11          10           0
+          11          10           0
+          11          10           0
+          11          10           0
+          11          10           0
+          11          10           0
+          11          12           2
+          13          12           0
+          13          12           0
+          13          12           0
+          13          13           1
+          14          13           0
+          14          13           0
+          14          13           0
+          14          13           0
+          14          13           0
+          14          13           0
+          14          13           0
           14          16           3
  
  Counting walks. Singles
@@ -153,29 +269,187 @@ Wed Sep  9 13:02:52 PDT 2015
  Maximum number of
             single walks=            8
             double walks=           16
-   TOTAL walks:        3072 maxdoublewalks*numconfig         256
+   TOTAL walks:         384 maxdoublewalks*numconfig         256
  
  Allocating singlewalks
  Allocating doublewalks
       ..done walkalloc.
- No savewalks.BIN found.  Calculating walks.  Singles...
+ Calculating walks.  Singles...
  Calculating walks.  Doubles...
+ Sorting walks...
+     .... done sorting walks.
+ Counting single hops...
+ Counting double hops...
+ Getting single hops...
+ Getting double hops...
+ GOT HOPS:  
+  Single hops this processor          112  of          128
+  Double hops this processor          256  of          256
+  Single hops total          112  of          128
+  Double hops total          256  of          256
+     Max single hops            7
+     Max double hops           16
+ 
  Go spinwalks. 
  Doing spin projector.
  Maximum number of spin walks=            1
  Avg number of spin walks=   0.750000000000000     
  Calculating spin walks.
- Numspinsets is           10   maxspinset size is            2
- Getting SPARSE spinset projector.  Numspinsets is           10 
-  maxspinsetsize is            2
- Getting spin set projectors...
+      ... done calculating spin walks.
+    ... go spinsets ...
+ Numspinsets this processor is            0   maxspinset size is            2
+ Getting Spinset Projectors.  Numspinsets this process is            0
+                                         maxspinsetsize is            2
  ...done.  Eliminated            0  sets with total rank            0
- Number of spin sets is now           10
- Total # of spinvects with S^2 =   0.000000000000000E+000  is           10 
-  out of           16
- TOTAL (all processors) rank          10  out of           16
-      Spin DF rank is           10    all processors           10
-    This proc:  spinstart :            1
+ 
+ This processor: 
+       spin sets                   0
+       spin rank                       0  of            0
+       botspin,topspin:                1           0
+       df spin rank                    0  of            0
+       botdfspin,topdfspin:            1           0
+ All processors:
+       spin rank, S^2 =   0.000000000000000E+000  is           10  out of 
+          16
+       df spin rank                   10  of           16
+ 
+ 
+ ************************************
+ ** done main walks. BIORTHO WALKS **
+ ************************************
+ 
+ Go fast_newconfiglist
+ UPPER/LOWER
+           1           4
+           1           4
+ 
+ 
+ FASTNEWCONFIG: NUMBER OF CONFIGURATIONS           16
+ 
+ NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG          10           2
+ Go fast_newconfiglist, getting configurations
+      ...Done fast_newconfiglist
+ 
+ BOTWALKS /TOPWALKS          16
+           1           0           0
+           1           0           0
+           1           0           0
+           1           0           0
+           1           0           0
+           1           0           0
+           1           0           0
+           1           1           1
+           2           1           0
+           2           1           0
+           2           1           0
+           2           1           0
+           2           1           0
+           2           1           0
+           2           1           0
+           2           3           2
+           4           3           0
+           4           3           0
+           4           3           0
+           4           3           0
+           4           3           0
+           4           3           0
+           4           3           0
+           4           5           2
+           6           5           0
+           6           5           0
+           6           5           0
+           6           5           0
+           6           5           0
+           6           5           0
+           6           5           0
+           6           7           2
+           8           7           0
+           8           7           0
+           8           7           0
+           8           8           1
+           9           8           0
+           9           8           0
+           9           8           0
+           9           8           0
+           9           8           0
+           9           8           0
+           9           8           0
+           9          10           2
+          11          10           0
+          11          10           0
+          11          10           0
+          11          10           0
+          11          10           0
+          11          10           0
+          11          10           0
+          11          12           2
+          13          12           0
+          13          12           0
+          13          12           0
+          13          13           1
+          14          13           0
+          14          13           0
+          14          13           0
+          14          13           0
+          14          13           0
+          14          13           0
+          14          13           0
+          14          16           3
+ 
+ Counting walks. Singles
+ Counting walks. Doubles
+ 
+ Maximum number of
+            single walks=            8
+            double walks=            1
+   TOTAL walks:         128 maxdoublewalks*numconfig          16
+ 
+ Allocating singlewalks
+ Allocating doublewalks
+      ..done walkalloc.
+ Calculating walks.  Singles...
+ Calculating walks.  Doubles...
+ Sorting walks...
+     .... done sorting walks.
+ Counting single hops...
+ Counting double hops...
+ Getting single hops...
+ Getting double hops...
+ GOT HOPS:  
+  Single hops this processor          112  of          128
+  Double hops this processor            0  of            0
+  Single hops total          112  of          128
+  Double hops total            0  of            0
+     Max single hops            7
+     Max double hops            1
+ 
+ Go spinwalks. 
+ Doing spin projector.
+ Maximum number of spin walks=            1
+ Avg number of spin walks=   0.750000000000000     
+ Calculating spin walks.
+      ... done calculating spin walks.
+    ... go spinsets ...
+ Numspinsets this processor is            0   maxspinset size is            2
+ Getting Spinset Projectors.  Numspinsets this process is            0
+                                         maxspinsetsize is            2
+ ...done.  Eliminated            0  sets with total rank            0
+ 
+ This processor: 
+       spin sets                   0
+       spin rank                       0  of            0
+       botspin,topspin:                1           0
+       df spin rank                    0  of            0
+       botdfspin,topdfspin:            1           0
+ All processors:
+       spin rank, S^2 =   0.000000000000000E+000  is           10  out of 
+          16
+       df spin rank                   10  of           16
+ 
+ 
+ ************************************
+ ********** DONE WALKS. *************
+ ************************************
  
  Reading spfs.
  Read complex spfs
@@ -186,12 +460,12 @@ Wed Sep  9 13:02:52 PDT 2015
  Bin/spfs.bin.helium                                                            
                                                                                 
                                            
- Calling init_project               1769472
+ Calling init_project                221184
  
  Go CT_INIT
     CT_MAXPRIME IS            2
      CT_PRIMEFACTORS ARE
-              2
+              2           2
  Calling ct_construct...
     ....Called ct_construct.
  Getting scaling...
@@ -205,89 +479,68 @@ Wed Sep  9 13:02:52 PDT 2015
  Reading avector...
  Read            1  A-vectors
  IN PROP: VECTOR NORM  (1.00000000000000,0.000000000000000E+000)
-          ENERGY  (-0.772317311089709,-3.510195670164977E-006)
+          ENERGY  (-0.772584557009012,4.493416538326804E-007)
  setting jacsymflag=1 for orbital quad
-    Quad orbitals: Deviation is       7.778549338650649E-002
-                   Orthog error is    8.615971779573445E-016
-    Quad orbitals: Deviation is       3.642554102486821E-003
-                   Orthog error is    1.250581632923334E-015
-     --> Converged newton
-   NONSPARSEQUAD: DEV  6.721745383786907E-006
-   NONSPARSEQUAD: DEV  1.396619988647946E-014
-T=         10.00000  Energy:  -0.7725709301E+00 -0.8081086956E-06    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.36E-02  0.10E-07  AVECTOR   0.10E+03  0.10E+01
-    Quad orbitals: Deviation is       3.642564412679025E-003
+    Quad orbitals: Deviation is       8.996244457339313E-004
+                   Orthog error is    6.661338147750939E-016
+    Quad orbitals: Deviation is       4.423547704213017E-005
                    Orthog error is    1.776356839400250E-015
-    Quad orbitals: Deviation is       1.800378952812498E-004
-                   Orthog error is    2.220446049250313E-015
      --> Converged newton
-   NONSPARSEQUAD: DEV  4.662787940014178E-006
-   NONSPARSEQUAD: DEV  3.512548996851131E-015
-T=         20.00000  Energy:  -0.7725849270E+00 -0.1260917681E-06    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.18E-03  0.10E-07  AVECTOR   0.14E-05  0.10E+01
-    Quad orbitals: Deviation is       1.808303327517684E-004
-                   Orthog error is    2.664535259100376E-015
-    Quad orbitals: Deviation is       8.726712097115617E-006
+    NONSPARSEQUAD: DEV 0.28651E-06  TOL  0.10000E-08 ENERGY    -0.7725850    -0.0000000
+    NONSPARSEQUAD: DEV 0.25796E-15  TOL  0.10000E-08 ENERGY    -0.7725850    -0.0000000
+T=         10.00000  Energy:  -0.7725849950E+00 -0.4353625690E-07    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.46E-04  0.10E-07  AVECTOR   0.10E+03  0.10E+01
+    Quad orbitals: Deviation is       4.649788160156215E-005
+                   Orthog error is    1.776356839400250E-015
+    Quad orbitals: Deviation is       2.323686035901949E-006
+                   Orthog error is    1.332267629550188E-015
+     --> Converged newton
+    NONSPARSEQUAD: DEV 0.89913E-07  TOL  0.10000E-08 ENERGY    -0.7725850    -0.0000000
+    NONSPARSEQUAD: DEV 0.18425E-15  TOL  0.10000E-08 ENERGY    -0.7725850    -0.0000000
+T=         20.00000  Energy:  -0.7725849907E+00 -0.4600318383E-07    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.47E-05  0.10E-07  AVECTOR   0.50E-09  0.10E+01
+    Quad orbitals: Deviation is       4.690089580834391E-006
+                   Orthog error is    1.110223024625157E-015
+    Quad orbitals: Deviation is       2.310427221687930E-007
                    Orthog error is    1.110223024625157E-015
      --> Converged newton
-   NONSPARSEQUAD: DEV  4.184368182244264E-006
-   NONSPARSEQUAD: DEV  3.549975842501665E-015
-T=         30.00000  Energy:  -0.7725849904E+00 -0.4621815175E-07    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.16E-04  0.10E-07  AVECTOR   0.10E-07  0.10E+01
-    Quad orbitals: Deviation is       1.586412565770120E-005
-                   Orthog error is    1.321900265779096E-015
-    Quad orbitals: Deviation is       7.883231126327964E-007
-                   Orthog error is    2.075564244079259E-015
+    NONSPARSEQUAD: DEV 0.77307E-08  TOL  0.10000E-08 ENERGY    -0.7725850    -0.0000000
+    NONSPARSEQUAD: DEV 0.13184E-15  TOL  0.10000E-08 ENERGY    -0.7725850    -0.0000000
+T=         30.00000  Energy:  -0.7725849900E+00 -0.4674790124E-07    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.11E-05  0.10E-07  AVECTOR   0.10E-09  0.10E+01
+    Quad orbitals: Deviation is       1.135223299666708E-006
+                   Orthog error is    1.887379141862766E-015
+    Quad orbitals: Deviation is       5.508590409753595E-008
+                   Orthog error is    1.554312234475219E-015
      --> Converged newton
-   NONSPARSEQUAD: DEV  6.300734881517527E-007
-   NONSPARSEQUAD: DEV  1.576401196149298E-016
-T=         40.00000  Energy:  -0.7725849898E+00 -0.4684379296E-07    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.28E-05  0.10E-07  AVECTOR   0.85E-10  0.10E+01
-    Quad orbitals: Deviation is       2.785943214602790E-006
-                   Orthog error is    2.459096153763593E-015
-    Quad orbitals: Deviation is       1.381276439243804E-007
-                   Orthog error is    1.362613972117863E-015
-     --> Converged newton
-   NONSPARSEQUAD: DEV  7.950193713579880E-008
-   NONSPARSEQUAD: DEV  2.824564549647504E-016
-T=         50.00000  Energy:  -0.7725849900E+00 -0.4680156628E-07    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.67E-06  0.10E-07  AVECTOR   0.12E-10  0.10E+01
-    Quad orbitals: Deviation is       6.742116324024303E-007
-                   Orthog error is    9.825336557208113E-016
-    Quad orbitals: Deviation is       3.263080312556571E-008
-                   Orthog error is    2.254756219755629E-015
-     --> Converged newton
-   NONSPARSEQUAD: DEV  3.450786743114258E-008
-   NONSPARSEQUAD: DEV  1.347289494672606E-016
-T=         60.00000  Energy:  -0.7725849900E+00 -0.4676401135E-07    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.18E-06  0.10E-07  AVECTOR   0.38E-11  0.10E+01
-    Quad orbitals: Deviation is       1.843345503237999E-007
-                   Orthog error is    2.664535259100376E-015
-    Quad orbitals: Deviation is       8.987496426176015E-009
-                   Orthog error is    7.597554130920671E-016
-     --> Converged newton
-   NONSPARSEQUAD: DEV  1.135616014655767E-008
-   NONSPARSEQUAD: DEV  3.618884325562852E-016
-T=         70.00000  Energy:  -0.7725849900E+00 -0.4676780183E-07    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.53E-07  0.10E-07  AVECTOR   0.38E-12  0.10E+01
-    Quad orbitals: Deviation is       5.346954924058307E-008
+    NONSPARSEQUAD: DEV 0.31029E-08  TOL  0.10000E-08 ENERGY    -0.7725850    -0.0000000
+    NONSPARSEQUAD: DEV 0.18515E-15  TOL  0.10000E-08 ENERGY    -0.7725850    -0.0000000
+T=         40.00000  Energy:  -0.7725849900E+00 -0.4676020699E-07    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.30E-06  0.10E-07  AVECTOR   0.13E-11  0.10E+01
+    Quad orbitals: Deviation is       2.985919618359578E-007
                    Orthog error is    8.881784197001252E-016
-    Quad orbitals: Deviation is       2.621125465656413E-009
-                   Orthog error is    1.776356839400250E-015
+    Quad orbitals: Deviation is       1.450505463969737E-008
+                   Orthog error is    1.924667683548659E-015
      --> Converged newton
-   NONSPARSEQUAD: DEV  3.456733700342748E-009
-   NONSPARSEQUAD: DEV  1.551583848872634E-016
-T=         80.00000  Energy:  -0.7725849900E+00 -0.4676766894E-07    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.16E-07  0.10E-07  AVECTOR   0.16E-13  0.10E+01
-    Quad orbitals: Deviation is       1.566750717429871E-008
-                   Orthog error is    1.776356839400250E-015
-    Quad orbitals: Deviation is       7.659005631297714E-010
-                   Orthog error is    3.649363466919450E-015
+    NONSPARSEQUAD: DEV 0.78890E-09  TOL  0.10000E-08 ENERGY    -0.7725850    -0.0000000
+T=         50.00000  Energy:  -0.7725849900E+00 -0.4676703288E-07    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.78E-07  0.10E-07  AVECTOR   0.16E-11  0.10E+01
+    Quad orbitals: Deviation is       7.806397176971911E-008
+                   Orthog error is    8.881784197001252E-016
+    Quad orbitals: Deviation is       3.703334046577441E-009
+                   Orthog error is    1.436216946943372E-015
      --> Converged newton
-   NONSPARSEQUAD: DEV  1.026610191342530E-009
-   NONSPARSEQUAD: DEV  1.631746968956234E-016
-T=         90.00000  Energy:  -0.7725849900E+00 -0.4676769839E-07    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.46E-08  0.10E-07  AVECTOR   0.12E-13  0.10E+01
+    NONSPARSEQUAD: DEV 0.79346E-09  TOL  0.10000E-08 ENERGY    -0.7725850    -0.0000000
+T=         60.00000  Energy:  -0.7725849900E+00 -0.4676741198E-07    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.20E-07  0.10E-07  AVECTOR   0.42E-13  0.10E+01
+    Quad orbitals: Deviation is       2.038040032071112E-008
+                   Orthog error is    1.457733460273794E-015
+    Quad orbitals: Deviation is       9.972475635308727E-010
+                   Orthog error is    1.193183642770391E-015
+     --> Converged newton
+    NONSPARSEQUAD: DEV 0.89047E-09  TOL  0.10000E-08 ENERGY    -0.7725850    -0.0000000
+T=         70.00000  Energy:  -0.7725849900E+00 -0.4676764310E-07    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.53E-08  0.10E-07  AVECTOR   0.28E-13  0.10E+01
  
     ***  CONVERGED *** 
  
@@ -295,17 +548,75 @@ T=         90.00000  Energy:  -0.7725849900E+00 -0.4676769839E-07    Norm:   0.1
     ***   
  
     ...done prop...
-    ...saving vector...
+   ...saving vector...
+   ... go save vectors...
+   ... gathered orbs, now gather avector...
+   ... ok, now write
     ...saved vectors!
     ...end prop...
-    ...cleanup...
-Wed Sep  9 13:10:35 PDT 2015
-Wed Sep  9 13:10:35 PDT 2015
-Wed Sep  9 13:10:35 PDT 2015
-Wed Sep  9 13:10:35 PDT 2015
-Wed Sep  9 13:10:35 PDT 2015
+    ...getting state expectation values etcetera...
+    ...GO finalstats.
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
     ...END MCTDHF
-Wed Sep  9 13:10:35 PDT 2015
-Wed Sep  9 13:10:35 PDT 2015
-Wed Sep  9 13:10:35 PDT 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
+Wed Dec 23 12:01:03 PST 2015
  MCTDHF STOP!

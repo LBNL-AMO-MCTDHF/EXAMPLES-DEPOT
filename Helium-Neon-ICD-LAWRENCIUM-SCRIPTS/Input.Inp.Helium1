@@ -43,8 +43,8 @@ parorbsplit=3
 
 &sincparinp
 
-fft_batchdim=2
-fft_circbatchdim=2
+fft_batchdim=1
+fft_circbatchdim=1
 
 fft_mpi_inplaceflag=0
 
@@ -60,7 +60,7 @@ nuccharges=2
 
 centershift=1,1,1
 
-numpoints=64
+numpoints=96
 
 spacing=0.4d0
 

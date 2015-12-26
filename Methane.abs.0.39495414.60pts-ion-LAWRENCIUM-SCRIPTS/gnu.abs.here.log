@@ -13,7 +13,8 @@ set style data lines
 
 set key top left
 
-set yrange [0:60]
+set logscale y
+set yrange [*:*]
 set y2range [0:*]
 
 set xrange [6:26]
@@ -31,7 +32,7 @@ replot "Dat/ZDipoleft.Dat000300" using (27.2114*$1):(($4**2+$5**2)) with points 
 set term x11
 replot
 
-set out "Absorption.here.ps"
+set out "Absorption.here.log.ps"
 set term post enhanced solid color 28
 replot
 

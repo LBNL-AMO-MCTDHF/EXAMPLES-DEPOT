@@ -1,11 +1,67 @@
-Wed Sep  9 13:00:29 PDT 2015
-Wed Sep  9 13:00:29 PDT 2015
-Wed Sep  9 13:00:29 PDT 2015
-Wed Sep  9 13:00:29 PDT 2015
-Wed Sep  9 13:00:29 PDT 2015
-Wed Sep  9 13:00:29 PDT 2015
-Wed Sep  9 13:00:29 PDT 2015
-Wed Sep  9 13:00:29 PDT 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
+Wed Dec 23 11:52:48 PST 2015
  
   ****************************************************************************
   **********************  BEGIN LBNL-AMO-MCTDHF ******************************
@@ -21,7 +77,7 @@ Wed Sep  9 13:00:29 PDT 2015
  
                 This is CHMCTDH: HERM-normed ECS version.
  
-                PROCESSOR            1  OF            8
+                PROCESSOR            1  OF           64
  
  Inpfile is Input.Inp.Helium1  
  
@@ -47,7 +103,7 @@ Wed Sep  9 13:00:29 PDT 2015
  
  ********  SINC DVR PARAMS ******** 
  griddim,spacing           3  0.400000000000000     
- numpoints          32          32          32
+ numpoints          24          24          24
  numcenters           1
  nuccharge   2.00000000000000     
  centershift  0.500000000000000       0.500000000000000     
@@ -60,11 +116,11 @@ Wed Sep  9 13:00:29 PDT 2015
  zke_paropt           1
  fft_mpi_inplaceflag           0
     --> fft_ct_paropt           1
- fft_batchdim           2
- fft_circbatchdim           2
+ fft_batchdim           1
+ fft_circbatchdim           1
    -----  
- NBOX            2           2           2
- totpoints       32768
+ NBOX            4           4           4
+ totpoints       13824
  **********************************
  
  ************************   Parameters: config/spf    ************************  
@@ -123,13 +179,16 @@ Wed Sep  9 13:00:29 PDT 2015
  
  Autosteps is           10  Autosize is        40001  Numpropsteps is 
       400000
- Fluxsteps is            1  Fluxtimestep is   0.100000000000000     
  
  *****************************************************************************
  
  
  
-  Get ORbsets.  Fewer procs than orbitals.
+ 
+ ************************************
+ ********  MAIN WALKS  **************
+ ************************************
+ 
  Go fast_newconfiglist
  UPPER/LOWER
            1          14
@@ -143,14 +202,70 @@ Wed Sep  9 13:00:29 PDT 2015
       ...Done fast_newconfiglist
  
  BOTWALKS /TOPWALKS         196
-           1          23          23
-          24          48          25
-          49          71          23
-          72          97          26
-          98         120          23
-         121         145          25
-         146         169          24
-         170         196          27
+           1           1           1
+           2           5           4
+           6           7           2
+           8          11           4
+          12          13           2
+          14          17           4
+          18          19           2
+          20          23           4
+          24          25           2
+          26          28           3
+          29          32           4
+          33          34           2
+          35          38           4
+          39          40           2
+          41          44           4
+          45          48           4
+          49          50           2
+          51          53           3
+          54          57           4
+          58          59           2
+          60          63           4
+          64          65           2
+          66          69           4
+          70          71           2
+          72          75           4
+          76          78           3
+          79          80           2
+          81          84           4
+          85          86           2
+          87          90           4
+          91          92           2
+          93          97           5
+          98          99           2
+         100         103           4
+         104         105           2
+         106         109           4
+         110         111           2
+         112         115           4
+         116         118           3
+         119         120           2
+         121         124           4
+         125         126           2
+         127         130           4
+         131         133           3
+         134         135           2
+         136         139           4
+         140         141           2
+         142         145           4
+         146         148           3
+         149         152           4
+         153         154           2
+         155         158           4
+         159         161           3
+         162         163           2
+         164         167           4
+         168         169           2
+         170         172           3
+         173         176           4
+         177         178           2
+         179         181           3
+         182         185           4
+         186         188           3
+         189         190           2
+         191         196           6
  
  Counting walks. Singles
  Counting walks. Doubles
@@ -158,29 +273,187 @@ Wed Sep  9 13:00:29 PDT 2015
  Maximum number of
             single walks=           28
             double walks=          196
-   TOTAL walks:      351232 maxdoublewalks*numconfig       38416
+   TOTAL walks:       43904 maxdoublewalks*numconfig       38416
  
  Allocating singlewalks
  Allocating doublewalks
       ..done walkalloc.
- No savewalks.BIN found.  Calculating walks.  Singles...
+ Calculating walks.  Singles...
  Calculating walks.  Doubles...
+ Sorting walks...
+     .... done sorting walks.
+ Counting single hops...
+ Counting double hops...
+ Getting single hops...
+ Getting double hops...
+ GOT HOPS:  
+  Single hops this processor         5292  of         5488
+  Double hops this processor        38416  of        38416
+  Single hops total         5292  of         5488
+  Double hops total        38416  of        38416
+     Max single hops           27
+     Max double hops          196
+ 
  Go spinwalks. 
  Doing spin projector.
  Maximum number of spin walks=            1
  Avg number of spin walks=   0.928571428571429     
  Calculating spin walks.
- Numspinsets is          105   maxspinset size is            2
- Getting SPARSE spinset projector.  Numspinsets is          105 
-  maxspinsetsize is            2
- Getting spin set projectors...
+      ... done calculating spin walks.
+    ... go spinsets ...
+ Numspinsets this processor is            1   maxspinset size is            2
+ Getting Spinset Projectors.  Numspinsets this process is            1
+                                         maxspinsetsize is            2
  ...done.  Eliminated            0  sets with total rank            0
- Number of spin sets is now          105
- Total # of spinvects with S^2 =   0.000000000000000E+000  is          105 
-  out of          196
- TOTAL (all processors) rank         105  out of          196
-      Spin DF rank is          105    all processors          105
-    This proc:  spinstart :            1
+ 
+ This processor: 
+       spin sets                   1
+       spin rank                       1  of            1
+       botspin,topspin:                1           1
+       df spin rank                    1  of            1
+       botdfspin,topdfspin:            1           1
+ All processors:
+       spin rank, S^2 =   0.000000000000000E+000  is          105  out of 
+         196
+       df spin rank                  105  of          196
+ 
+ 
+ ************************************
+ ** done main walks. BIORTHO WALKS **
+ ************************************
+ 
+ Go fast_newconfiglist
+ UPPER/LOWER
+           1          14
+           1          14
+ 
+ 
+ FASTNEWCONFIG: NUMBER OF CONFIGURATIONS          196
+ 
+ NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG         105           2
+ Go fast_newconfiglist, getting configurations
+      ...Done fast_newconfiglist
+ 
+ BOTWALKS /TOPWALKS         196
+           1           1           1
+           2           5           4
+           6           7           2
+           8          11           4
+          12          13           2
+          14          17           4
+          18          19           2
+          20          23           4
+          24          25           2
+          26          28           3
+          29          32           4
+          33          34           2
+          35          38           4
+          39          40           2
+          41          44           4
+          45          48           4
+          49          50           2
+          51          53           3
+          54          57           4
+          58          59           2
+          60          63           4
+          64          65           2
+          66          69           4
+          70          71           2
+          72          75           4
+          76          78           3
+          79          80           2
+          81          84           4
+          85          86           2
+          87          90           4
+          91          92           2
+          93          97           5
+          98          99           2
+         100         103           4
+         104         105           2
+         106         109           4
+         110         111           2
+         112         115           4
+         116         118           3
+         119         120           2
+         121         124           4
+         125         126           2
+         127         130           4
+         131         133           3
+         134         135           2
+         136         139           4
+         140         141           2
+         142         145           4
+         146         148           3
+         149         152           4
+         153         154           2
+         155         158           4
+         159         161           3
+         162         163           2
+         164         167           4
+         168         169           2
+         170         172           3
+         173         176           4
+         177         178           2
+         179         181           3
+         182         185           4
+         186         188           3
+         189         190           2
+         191         196           6
+ 
+ Counting walks. Singles
+ Counting walks. Doubles
+ 
+ Maximum number of
+            single walks=           28
+            double walks=            1
+   TOTAL walks:        5488 maxdoublewalks*numconfig         196
+ 
+ Allocating singlewalks
+ Allocating doublewalks
+      ..done walkalloc.
+ Calculating walks.  Singles...
+ Calculating walks.  Doubles...
+ Sorting walks...
+     .... done sorting walks.
+ Counting single hops...
+ Counting double hops...
+ Getting single hops...
+ Getting double hops...
+ GOT HOPS:  
+  Single hops this processor         5292  of         5488
+  Double hops this processor            0  of            0
+  Single hops total         5292  of         5488
+  Double hops total            0  of            0
+     Max single hops           27
+     Max double hops            1
+ 
+ Go spinwalks. 
+ Doing spin projector.
+ Maximum number of spin walks=            1
+ Avg number of spin walks=   0.928571428571429     
+ Calculating spin walks.
+      ... done calculating spin walks.
+    ... go spinsets ...
+ Numspinsets this processor is            1   maxspinset size is            2
+ Getting Spinset Projectors.  Numspinsets this process is            1
+                                         maxspinsetsize is            2
+ ...done.  Eliminated            0  sets with total rank            0
+ 
+ This processor: 
+       spin sets                   1
+       spin rank                       1  of            1
+       botspin,topspin:                1           1
+       df spin rank                    1  of            1
+       botdfspin,topdfspin:            1           1
+ All processors:
+       spin rank, S^2 =   0.000000000000000E+000  is          105  out of 
+         196
+       df spin rank                  105  of          196
+ 
+ 
+ ************************************
+ ********** DONE WALKS. *************
+ ************************************
  
  Reading spfs.
  Read complex spfs
@@ -189,12 +462,12 @@ Wed Sep  9 13:00:29 PDT 2015
  Bin/spfs.bin.helium0                                                           
                                                                                 
                                            
- Calling init_project                524288
+ Calling init_project                221184
  
  Go CT_INIT
     CT_MAXPRIME IS            2
      CT_PRIMEFACTORS ARE
-              2
+              2           2
  Calling ct_construct...
     ....Called ct_construct.
  GO GET_3DPOISSON. calling getinverse.
@@ -206,76 +479,137 @@ Wed Sep  9 13:00:29 PDT 2015
  Reading avector...
  Read            1  A-vectors
  REPLACING SPFS - DENMAT EIGS
-         0.1422202619E+01
-         0.1902173626E+00
-         0.1897225476E+00
-         0.1896661737E+00
-         0.3651256347E-02
-         0.1184588879E-02
-         0.1183406377E-02
-         0.1161278003E-02
-         0.2481150680E-03
-         0.1540110293E-03
-         0.1532837468E-03
-         0.1522188273E-03
-         0.1517236375E-03
-         0.1514147909E-03
+         0.1422305818E+01
+         0.1899168516E+00
+         0.1899032674E+00
+         0.1897008621E+00
+         0.3652065365E-02
+         0.1177001917E-02
+         0.1165729516E-02
+         0.1163315673E-02
+         0.2496008208E-03
+         0.1538951020E-03
+         0.1535077350E-03
+         0.1528360663E-03
+         0.1526788000E-03
+         0.1525701624E-03
  
  IN PROP: VECTOR NORM  (1.00000000000000,0.000000000000000E+000)
-          ENERGY  (-0.772400422731380,5.295321761005221E-017)
+          ENERGY  (-0.772437626526755,1.958255470776000E-017)
  REPLACING SPFS - DENMAT EIGS
-         0.1422202619E+01
-         0.1902173626E+00
-         0.1897225476E+00
-         0.1896661737E+00
-         0.3651256347E-02
-         0.1184588879E-02
-         0.1183406377E-02
-         0.1161278003E-02
-         0.2481150680E-03
-         0.1540110293E-03
-         0.1532837468E-03
-         0.1522188273E-03
-         0.1517236375E-03
-         0.1514147909E-03
+         0.1422305818E+01
+         0.1899168516E+00
+         0.1899032674E+00
+         0.1897008621E+00
+         0.3652065365E-02
+         0.1177001917E-02
+         0.1165729516E-02
+         0.1163315673E-02
+         0.2496008208E-03
+         0.1538951020E-03
+         0.1535077350E-03
+         0.1528360663E-03
+         0.1526788000E-03
+         0.1525701624E-03
  
-T=          0.10000  Energy:  -0.7724004227E+00 -0.3153804517E-16    Norm:   0.1000000000E+01
+T=          0.10000  Energy:  -0.7724376265E+00  0.4738250765E-16    Norm:   0.1000000000E+01
     STOPTEST : ORBITALS   0.34E+01  0.10E-01  AVECTOR   0.10E+05  0.10E+01
              Orbitals Converged, Avector not necessarily converged 
  REPLACING SPFS - DENMAT EIGS
-         0.1422202619E+01
-         0.1902173626E+00
-         0.1897225476E+00
-         0.1896661737E+00
-         0.3651256347E-02
-         0.1184588879E-02
-         0.1183406377E-02
-         0.1161278003E-02
-         0.2481150680E-03
-         0.1540110293E-03
-         0.1532837468E-03
-         0.1522188273E-03
-         0.1517236375E-03
-         0.1514147909E-03
+         0.1422305818E+01
+         0.1899168516E+00
+         0.1899032674E+00
+         0.1897008621E+00
+         0.3652065365E-02
+         0.1177001917E-02
+         0.1165729516E-02
+         0.1163315673E-02
+         0.2496008208E-03
+         0.1538951020E-03
+         0.1535077350E-03
+         0.1528360663E-03
+         0.1526788000E-03
+         0.1525701624E-03
  
-T=          0.20100  Energy:  -0.7724004227E+00 -0.4078993798E-16    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.34E+01  0.10E-01  AVECTOR   0.66E-14  0.10E+01
+T=          0.20100  Energy:  -0.7724376265E+00  0.7414599439E-16    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.34E+01  0.10E-01  AVECTOR   0.55E-14  0.10E+01
  
     ***  CONVERGED *** 
  
-         -0.772400422731     -0.000000000000      0.000000000000     -0.000000000000
+         -0.772437626527      0.000000000000     -0.000000000000      0.000000000000
     ***   
  
     ...done prop...
-    ...saving vector...
+   ...saving vector...
+   ... go save vectors...
+   ... gathered orbs, now gather avector...
+   ... ok, now write
     ...saved vectors!
     ...end prop...
-    ...cleanup...
-Wed Sep  9 13:02:10 PDT 2015
-Wed Sep  9 13:02:10 PDT 2015
-Wed Sep  9 13:02:10 PDT 2015
+    ...getting state expectation values etcetera...
+    ...GO finalstats.
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
     ...END MCTDHF
-Wed Sep  9 13:02:10 PDT 2015
-Wed Sep  9 13:02:10 PDT 2015
-Wed Sep  9 13:02:10 PDT 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
+Wed Dec 23 11:55:18 PST 2015
  MCTDHF STOP!

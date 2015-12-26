@@ -2,6 +2,10 @@
 
 &parinp
 
+notiming=0
+timingdir="timing.neon"
+timingout=100
+
 mcscfnum=1
 
 maxexpodim=200
@@ -61,7 +65,7 @@ nuccharges=10
 
 centershift=1,1,1
 
-numpoints=64
+numpoints=96
 
 spacing=0.4d0
 

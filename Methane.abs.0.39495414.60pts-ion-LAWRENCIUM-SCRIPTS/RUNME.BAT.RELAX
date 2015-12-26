@@ -1,8 +1,4 @@
 
-threads=3
-procs=27
-NPN=6
-
 threads=1
 procs=64
 NPN=16

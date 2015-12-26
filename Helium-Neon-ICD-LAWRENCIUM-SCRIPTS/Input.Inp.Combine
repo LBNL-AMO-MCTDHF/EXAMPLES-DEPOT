@@ -2,8 +2,6 @@
 
 &parinp
 
-energyshift=(0d0, -0.00000439788717989d0)
-
 walkwriteflag=1
 
 spf_flag=0

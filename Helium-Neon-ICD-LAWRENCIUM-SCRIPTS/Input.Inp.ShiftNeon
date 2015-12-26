@@ -2,6 +2,8 @@
 
 &parinp
 
+lanthresh=1d-10
+
 maxaorder=2000
 
 mcscfnum=1

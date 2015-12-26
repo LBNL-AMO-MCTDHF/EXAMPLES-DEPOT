@@ -69,7 +69,7 @@ nuccharges=10
 
 centershift=1,1,1
 
-numpoints=64
+numpoints=96
 
 spacing=0.4d0
 
