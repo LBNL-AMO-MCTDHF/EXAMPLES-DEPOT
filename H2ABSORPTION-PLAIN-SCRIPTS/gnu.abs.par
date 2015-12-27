@@ -14,7 +14,7 @@ set key top right
 
 set yrange [0.1:100]
 
-set xrange [10:40]
+set xrange [0:40]
 
 set logscale y
 

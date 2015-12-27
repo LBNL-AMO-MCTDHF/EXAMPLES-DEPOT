@@ -3,20 +3,17 @@ $parinp
 avectoroutfile="Bin/avector.bin.relax"
 spfoutfile="Bin/spfs.bin.relax"
 
-messflag=0
-messamount=1d-4
+sparseconfigflag=0
 
 numelec=2
-
-sparseconfigflag=0
 
 nspf=7
 
 spfrestrictflag=1
 spfugrestrict=1
 
-spfmvals =  0, 0, 0, 1,-1,    0, 0, 0 
-spfugvals=  1,-1, 1,-1,-1,    1,-1, 1 
+spfmvals =  0, 0, 0, 1,-1,    0, 0
+spfugvals=  1,-1, 1,-1,-1,    1,-1
 
 restrictflag=1
 restrictms=0
@@ -40,13 +37,13 @@ $h2parinp
 NucCharge1=1d0
 NucCharge2=1d0
 
-LBIG=9,MBIG=1
+LBIG=6,MBIG=1
 
 xinumpoints=10
-xinumelements=12
-xicelement=10
+xinumelements=8
+xicelement=6
 xiecstheta=0.5d0
-xielementsizes=5d0,5d0,5d0, 5d0,5d0,5d0, 5d0,5d0,5d0,   5d0,7d0,12d0
+xielementsizes=5d0,5d0,5d0,5d0,5d0,  5d0,8d0,14d0
 
 rstart=1.4d0
 

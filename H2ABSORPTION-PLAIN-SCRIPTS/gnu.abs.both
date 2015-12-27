@@ -12,17 +12,23 @@ set style data lines
 
 set key top right
 
-set xrange [10:40]
-set yrange [0:20]
+set yrange [0.1:100]
+set xrange [0:40]
 
-set ytics 2
+set logscale y
 
-plot "Dat/ZDipoleft.Dat" using (27.2114*$1):($9) lt 7 lw 10 title "Par"
-
-replot "Dat/XDipoleft.Dat.perp" using (27.2114*$1):($9) lt 3 lw 7 title "Perp"
-
+plot "Dat/ZDipoleft.Dat" using (27.2114*$1):($9) lt 7 lw 10 title "Parallel"
+replot "Dat/XDipoleft.Dat.perp" using (27.2114*$1):($9) lt 3 lw 7 title "Perpendicular"
 
 set term x11
+replot
+
+unset logscale y
+
+set xrange [10:40]
+set yrange [0:20]
+set out
+set term x11 2
 replot
 
 set out "Absorption.h2.both.eps"

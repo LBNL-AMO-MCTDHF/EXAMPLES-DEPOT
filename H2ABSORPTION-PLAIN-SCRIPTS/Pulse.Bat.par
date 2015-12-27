@@ -1,5 +1,5 @@
 #!/bin/bash
 
 export OMP_NUM_THREADS=1
-mpirun -n 7 chmctdhf_diatom.mpi Inp=Input.Inp.Pulse |tee Outs/Out.pulse
+mpirun -n 4 chmctdhf_diatom.mpi Inp=Input.Inp.Pulse |tee Outs/Out.pulse
 
