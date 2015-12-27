@@ -3,14 +3,12 @@
 
    then
 
-./Pulse.Bat
 ./Fourier.Bat
 ./Flux.Bat 500
 ./gnu.xsec
 
    or
 
-./Pulse.Perp.Bat
 ./Fourier.Perp.Bat
 ./Flux.Perp.Bat 500
 ./gnu.xsec.perp
@@ -18,4 +16,7 @@
    Also you can run Flux.Bats during Fourier run; 
 specify a final time (not 500) not exceeding the last time already calculated.
 
+   This is now a two-step process; Pulse.Bat has been eliminated.  You can
+run Pulsecheck.Bat to verify that the flux is not absorbed much before the
+pulse is over.
 

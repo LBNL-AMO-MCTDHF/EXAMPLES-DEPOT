@@ -4,14 +4,14 @@ $pulse
 
  pulsetype=2
 
- omega2=0.8d0
+ omega2=1d0
  omega=0.2d0
 
  intensity=1d-5
 
  velflag=0
 
- minpulsetime=2000d0
+ minpulsetime=1000d0
 
 
 /
@@ -22,8 +22,9 @@ $parinp
 
 numactions=1
 actions=21
-dipmodtime=20
-diptime=200
+autotimestep=1d0
+dipmodtime=100
+diptime=100
 xdipfile="Dat/XDipoleexpect.Dat"
 xdftfile="Dat/XDipoleft.Dat"
 ydipfile="Dat/YDipoleexpect.Dat"
@@ -38,14 +39,14 @@ spffile="Bin/spfs.bin.relax"
 
 saveflag=0
 
-numelec=2
-
 sparseconfigflag=0
+
+numelec=2
 
 nspf=5
 
 spfrestrictflag=1
-spfmvals = 0,  0,  0, 1,-1
+spfmvals =  0, 0, 0, 1,-1
 
 restrictflag=1
 restrictms=0
@@ -55,27 +56,21 @@ mrestrictval=0
 
 tdflag=1
 
-par_timestep=0.1d0
+par_timestep=0.05d0
 
 /
 
-
-!! was 12 elements celement 9 with first element 2d0 lbig 6
 
 $heparinp
 
-NucCharge1=2.d0
+NucCharge1=2d0
+
 LBIG=5, MBIG=1
 
 henumpoints=10
-henumelements=7
-hecelement=5
-heecstheta= 0.5d0
-heelementsizes =  6d0, 6d0, 6d0, 6d0, 6d0, 6d0, 6d0, 6d0, 6d0, 6d0,  6d0, 6d0,  6d0, 6d0, 
-
+henumelements=8
+hecelement=6
+heecstheta=0.5d0
+heelementsizes=7d0,7d0,7d0,7d0,7d0,  7d0,11d0,18d0
 
 /
-
-
-
-

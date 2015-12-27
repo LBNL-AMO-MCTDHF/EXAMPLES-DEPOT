@@ -9,8 +9,6 @@ $pulse
 
  velflag=0
 
- pulsetheta=1.5707963268d0
-
 /
 
 
@@ -22,23 +20,23 @@ avectorfile="Bin/avector.bin.relax"
 loadspfflag=1
 spffile="Bin/spfs.bin.relax"
 
-avectoroutfile="Bin/avector.bin.afterpulse.perp"
-spfoutfile="Bin/spfs.bin.afterpulse.perp"
-
-numelec=2
+saveflag=0
 
 sparseconfigflag=0
 
+numelec=2
+
 nspf=5
 
-spfrestrictflag=0
+spfrestrictflag=1
 
-spfmvals =  0, 0,   0, 1,-1
+spfmvals =  0, 0, 0, 1,-1
 
 restrictflag=1
 restrictms=0
 
-mrestrictflag=0
+mrestrictflag=1
+mrestrictval=0
 
 tdflag=1
 
@@ -46,19 +44,17 @@ par_timestep=0.05d0
 
 /
 
+
 $heparinp
 
 NucCharge1=2d0
 
-LBIG=6,MBIG=2
+LBIG=5, MBIG=1
 
-henumpoints=12
-henumelements=7
+henumpoints=10
+henumelements=8
 hecelement=6
-heecstheta=0.4d0
-heelementsizes=7d0,7d0,7d0,7d0,7d0,  7d0,14d0
-
-
+heecstheta=0.5d0
+heelementsizes=7d0,7d0,7d0,7d0,7d0,  7d0,11d0,18d0
 
 /
-
