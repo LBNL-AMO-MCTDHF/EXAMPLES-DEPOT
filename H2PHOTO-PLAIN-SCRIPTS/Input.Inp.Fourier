@@ -9,33 +9,38 @@ $pulse
 
  velflag=0
 
+ minpulsetime=1000
+
 /
 
 
 
 $parinp
 
-finaltime=500
-
-loadavectorflag=1
-avectorfile="Bin/avector.bin.afterpulse"
-loadspfflag=1
-spffile="Bin/spfs.bin.afterpulse"
-
+numactions=1
+actions=15
+fluxskipmult=1
+fluxinterval=10
 fluxmofile="Flux/flux.mo.bin"
 fluxafile="Flux/flux.avec.bin"
 spifile="Dat/xsec.spi.dat"
 
+loadavectorflag=1
+avectorfile="Bin/avector.bin.relax"
+loadspfflag=1
+spffile="Bin/spfs.bin.relax"
 
-numelec=2
+saveflag=0
 
 sparseconfigflag=0
+
+numelec=2
 
 nspf=7
 
 spfrestrictflag=1
 
-spfmvals =  0, 0, 0, 1,-1,    0, 0, 0 
+spfmvals =  0, 0, 0, 1,-1,    0, 0
 
 restrictflag=1
 restrictms=0
@@ -43,15 +48,9 @@ restrictms=0
 mrestrictflag=1
 mrestrictval=0
 
-tdflag=0
+tdflag=1
 
 par_timestep=0.05d0
-
-numactions=1
-actions=15
-
-fluxskipmult=1
-fluxinterval=10
 
 /
 
@@ -62,13 +61,12 @@ NucCharge2=1d0
 
 LBIG=6,MBIG=1
 
-xinumpoints=12
-xinumelements=7
+xinumpoints=10
+xinumelements=8
 xicelement=6
-xiecstheta=0.4d0
-xielementsizes=7d0,7d0,7d0,7d0,7d0,  7d0,14d0
+xiecstheta=0.5d0
+xielementsizes=5d0,5d0,5d0,5d0,5d0,  5d0,8d0,14d0
 
 rstart=1.4d0
 
 /
-
