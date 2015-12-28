@@ -1,5 +1,7 @@
 $parinp
 
+lanthresh=1d-10
+
 avectoroutfile="Bin/avector.bin.Relax"
 spfoutfile="Bin/spfs.bin.Relax"
 

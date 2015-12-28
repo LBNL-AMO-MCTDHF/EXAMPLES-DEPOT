@@ -1,0 +1,2717 @@
+Thu Dec 24 17:50:32 PST 2015
+  ****************************************************************************
+  **********************  BEGIN LBNL-AMO-MCTDHF ******************************
+  ****************************************************************************
+
+    Atomic/Diatomic/Cartesian Polyatomic nonadiabatic MCTDHF code
+      for ultrafast electronic and nuclear dynamics in intense laser fields
+    AMO Theory Group, Lawrence Berkeley Laboratory
+      D J Haxton, C W McCurdy, T N Rescigno, K V Lawler, J Jones, 
+      B Abeln, X Li . . .
+                              VERSION 1.10 
+        Copyright 2015 the regents of the University of California
+
+                This is CHMCTDH: HERM-normed ECS version.
+
+                PROCESSOR            1  OF            1
+
+ Inpfile is Input.Inp.Fourier  
+
+  *************************  COMMAND LINE OPTIONS  ***************************
+
+ Reading Input.Inp.Fourier                                                                                                                                                                                       
+  ****************************************************************************
+
+ Enforcing CMF defaults for Verlet or EXPO.
+
+  ****************************************************************************
+ *****************************************************************************
+
+ Number of states in propagation=           1
+
+  Parameters: electronic
+
+                    Number of electrons    16
+ Nuclear KE flag (nonuc_checkflag):         1
+
+   *****  prolate spheroidal coordinate options ****
+                        bornopflag:         1
+             Xinumpoints, xinumelements:   12    7
+                              ECS is ON!
+                 xicelement,  xiecstheta    6    0.400000000000
+    Xi elementsizes:   5.00000   5.00000   5.00000   5.00000   5.00000   5.00000  10.00000
+      lbig,mbig          00010     00001
+
+ **************************   Parameters: nuclear    *************************   
+
+   Hmass, Dmass, Reduced:     1836.15270100     1836.15270100      918.07635050
+rnumelements, rnumpoints:    1    3
+  relementsize ,  rstart:   0.00000   2.28200
+                              ECS is ON!
+                   rcelement,  rthetaecs  100    0.000000000000
+                             CAP is Off!
+                  Jvalue:    0
+                            Reducedflag:    0
+
+ ************************   Parameters: config/spf    ************************   
+
+ Doing full CI: numshells=1.  Shells:
+ Shell            1
+   1a    1b    2a    2b    3a    3b    4a    4b    5a    5b    6a    6b 
+   7a    7b    8a    8b    9a    9b   10a   10b 
+  Final shell occupancy level vexcite=         999
+
+    Number of unfrozen spfs:     10
+    Number of frozen spfs:        0
+            Spfs start in m=     0   0   0   0   1  -1   0   1  -1   0
+
+ Spfs will be restricted to their original m-values.
+ Configurations will be restricted to total M=            0
+ Configurations will be restricted to spin projection           2 /2
+  Configurations will be restricted to spin            2
+
+ ***********************    Initial state      ***********************   
+
+ Spfs will be loaded from files 
+
+ Avector will be loaded from files.  Number of files=            1
+
+ ***********************    Parameters: propagation    ***********************   
+
+  PAR_TIMESTEP IS   0.50000000000000000       LITTLESTEPS IS            5
+
+                 # of steps, final time:      1200            600.00000000
+
+
+ *******  USING POLYNOMIAL MEAN FIELDS/MAGNUS A-VECTOR PREDICTOR/CORRECTOR   *******  
+
+     Will use sparse configuration routines.
+           Lanczosorder is          200
+           Lanthresh is       1.0000000000000001E-009
+           Aorder is                 30
+           Maxaorder is             100
+           Aerror is          1.0000000000000001E-009
+  Jacobian options:
+     Jacprojorth=           0
+     Jacsymflag=           0
+  Using EXPONENTIAL integration.
+     Expotol    =   1.0000000000000000E-008
+     Maxexpodim=         100
+
+ Density matrix regularized with denreg= 0.100E-09
+
+
+ ****************************************************************************
+
+ Autosteps is            1  Autosize is         1201  Numpropsteps is         1200
+
+ *****************************************************************************
+
+
+ ACTIONS:  Ion.  Flux Save
+
+ FOR IONIZATION FLUX:
+    Flux Interval            1  0.50000000000000000     
+  Get ORbsets.  Fewer procs than orbitals.
+
+ ************************************
+ ********  MAIN WALKS  **************
+ ************************************
+
+ Go fast_newconfiglist
+ UPPER/LOWER
+           1           2
+           1           3
+           2           4
+           2           4
+           3           5
+           3           5
+           4           6
+           4           6
+           5           7
+           5           7
+           6           8
+           6           8
+           7           9
+           7           9
+           8          10
+           9          10
+
+
+ FASTNEWCONFIG: NUMBER OF CONFIGURATIONS          392
+
+ NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG         164           4
+ Go fast_newconfiglist, getting configurations
+      ...Done fast_newconfiglist
+
+ BOTWALKS /TOPWALKS         392
+           1         392         392
+
+ Counting walks. Singles
+ Counting walks. Doubles
+
+ Maximum number of
+            single walks=           30
+            double walks=          592
+   TOTAL walks:      220400 maxdoublewalks*numconfig      232064
+
+ Allocating singlewalks
+ Allocating doublewalks
+      ..done walkalloc.
+ Calculating walks.  Singles...
+ Calculating walks.  Doubles...
+ Sorting walks...
+     .... done sorting walks.
+ Counting single hops...
+ Counting double hops...
+ Getting single hops...
+ Getting double hops...
+ GOT HOPS:  
+  Single hops this processor         5016  of        10896
+  Double hops this processor        37432  of       209504
+  Single hops total         5016  of        10896
+  Double hops total        37432  of       209504
+     Max single hops           15
+     Max double hops          110
+
+ Go spinwalks. 
+ Doing spin projector.
+ Maximum number of spin walks=            3
+ Avg number of spin walks=    2.3265306122448979     
+ Calculating spin walks.
+      ... done calculating spin walks.
+    ... go spinsets ...
+ Numspinsets this processor is          164   maxspinset size is            4
+ Getting Spinset Projectors.  Numspinsets this process is          164
+                                         maxspinsetsize is            4
+ ...done.  Eliminated            0  sets with total rank            0
+
+ This processor: 
+       spin sets                 164
+       spin rank                     316  of          392
+       botspin,topspin:                1         316
+       df spin rank                  316  of          392
+       botdfspin,topdfspin:            1         316
+ All processors:
+       spin rank, S^2 =    2.0000000000000000       is          316  out of          392
+       df spin rank                  316  of          392
+
+
+ ************************************
+ ** done main walks. BIORTHO WALKS **
+ ************************************
+
+ Go fast_newconfiglist
+ UPPER/LOWER
+           1           2
+           1           3
+           2           4
+           2           4
+           3           5
+           3           5
+           4           6
+           4           6
+           5           7
+           5           7
+           6           8
+           6           8
+           7           9
+           7           9
+           8          10
+           9          10
+
+
+ FASTNEWCONFIG: NUMBER OF CONFIGURATIONS          392
+
+ NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG         164           4
+ Go fast_newconfiglist, getting configurations
+      ...Done fast_newconfiglist
+
+ BOTWALKS /TOPWALKS         392
+           1         392         392
+
+ Counting walks. Singles
+ Counting walks. Doubles
+
+ Maximum number of
+            single walks=           30
+            double walks=            1
+   TOTAL walks:       10896 maxdoublewalks*numconfig         392
+
+ Allocating singlewalks
+ Allocating doublewalks
+      ..done walkalloc.
+ Calculating walks.  Singles...
+ Calculating walks.  Doubles...
+ Sorting walks...
+     .... done sorting walks.
+ Counting single hops...
+ Counting double hops...
+ Getting single hops...
+ Getting double hops...
+ GOT HOPS:  
+  Single hops this processor         5016  of        10896
+  Double hops this processor            0  of            0
+  Single hops total         5016  of        10896
+  Double hops total            0  of            0
+     Max single hops           15
+     Max double hops            1
+
+ Go spinwalks. 
+ Doing spin projector.
+ Maximum number of spin walks=            3
+ Avg number of spin walks=    2.3265306122448979     
+ Calculating spin walks.
+      ... done calculating spin walks.
+    ... go spinsets ...
+ Numspinsets this processor is          164   maxspinset size is            4
+ Getting Spinset Projectors.  Numspinsets this process is          164
+                                         maxspinsetsize is            4
+ ...done.  Eliminated            0  sets with total rank            0
+
+ This processor: 
+       spin sets                 164
+       spin rank                     316  of          392
+       botspin,topspin:                1         316
+       df spin rank                  316  of          392
+       botdfspin,topdfspin:            1         316
+ All processors:
+       spin rank, S^2 =    2.0000000000000000       is          316  out of          392
+       df spin rank                  316  of          392
+
+
+ ************************************
+ ********** DONE WALKS. *************
+ ************************************
+
+ Reading spfs.
+ Read complex spfs
+    ...rank 1 read from file
+ Loaded           10  spfs from file Bin/spfs.bin.Pulse                                                                                                                                                                                      
+ Calling init_project                40656
+ MAX prolate_derivs asym :     8.6953125000000000     
+
+ Found all spfs I need on file.
+
+ Done init_h2.
+
+ Ok init project.  Call get_twoe new
+    Calc two electron.
+    ...done.
+ Ok called get twoe_new
+    ....Called init_project.
+ Reading avector...
+ Read            1  A-vectors
+ Saving the wavefunction for reactive flux.
+ IN PROP: VECTOR NORM  ( 0.99999923818031400     ,  0.0000000000000000     )
+          ENERGY  ( -147.34949610849756     , -1.5454647654774669E-007)
+ Saving wavefunction at T=      0.0000
+T=          0.50000  Energy:  -0.1473494964E+03 -0.1930865251E-06    Norm:   0.9999991513E+00
+ Saving wavefunction at T=      0.5000
+T=          1.00000  Energy:  -0.1473494967E+03 -0.2402663711E-06    Norm:   0.9999990429E+00
+ Saving wavefunction at T=      1.0000
+T=          1.50000  Energy:  -0.1473494972E+03 -0.2973155860E-06    Norm:   0.9999989085E+00
+ Saving wavefunction at T=      1.5000
+T=          2.00000  Energy:  -0.1473494977E+03 -0.3654356759E-06    Norm:   0.9999987429E+00
+ Saving wavefunction at T=      2.0000
+T=          2.50000  Energy:  -0.1473494982E+03 -0.4457409060E-06    Norm:   0.9999985401E+00
+ Saving wavefunction at T=      2.5000
+T=          3.00000  Energy:  -0.1473494989E+03 -0.5391912817E-06    Norm:   0.9999982938E+00
+ Saving wavefunction at T=      3.0000
+T=          3.50000  Energy:  -0.1473494998E+03 -0.6465036455E-06    Norm:   0.9999979974E+00
+ Saving wavefunction at T=      3.5000
+T=          4.00000  Energy:  -0.1473495008E+03 -0.7680602198E-06    Norm:   0.9999976438E+00
+ Saving wavefunction at T=      4.0000
+T=          4.50000  Energy:  -0.1473495020E+03 -0.9038037353E-06    Norm:   0.9999972258E+00
+ Saving wavefunction at T=      4.5000
+T=          5.00000  Energy:  -0.1473495033E+03 -0.1053158274E-05    Norm:   0.9999967366E+00
+ Saving wavefunction at T=      5.0000
+T=          5.50000  Energy:  -0.1473495049E+03 -0.1215005474E-05    Norm:   0.9999961695E+00
+ Saving wavefunction at T=      5.5000
+T=          6.00000  Energy:  -0.1473495067E+03 -0.1387488832E-05    Norm:   0.9999955189E+00
+ Saving wavefunction at T=      6.0000
+T=          6.50000  Energy:  -0.1473495087E+03 -0.1568129892E-05    Norm:   0.9999947800E+00
+ Saving wavefunction at T=      6.5000
+T=          7.00000  Energy:  -0.1473495109E+03 -0.1753916456E-05    Norm:   0.9999939495E+00
+ Saving wavefunction at T=      7.0000
+T=          7.50000  Energy:  -0.1473495133E+03 -0.1940707461E-05    Norm:   0.9999930258E+00
+ Saving wavefunction at T=      7.5000
+T=          8.00000  Energy:  -0.1473495160E+03 -0.2124380500E-05    Norm:   0.9999920096E+00
+ Saving wavefunction at T=      8.0000
+T=          8.50000  Energy:  -0.1473495189E+03 -0.2300745888E-05    Norm:   0.9999909033E+00
+ Saving wavefunction at T=      8.5000
+T=          9.00000  Energy:  -0.1473495220E+03 -0.2464333352E-05    Norm:   0.9999897121E+00
+ Saving wavefunction at T=      9.0000
+T=          9.50000  Energy:  -0.1473495253E+03 -0.2609181683E-05    Norm:   0.9999884437E+00
+ Saving wavefunction at T=      9.5000
+T=         10.00000  Energy:  -0.1473495288E+03 -0.2730671081E-05    Norm:   0.9999871087E+00
+ Saving wavefunction at T=     10.0000
+T=         10.50000  Energy:  -0.1473495323E+03 -0.2825798306E-05    Norm:   0.9999857197E+00
+ Saving wavefunction at T=     10.5000
+T=         11.00000  Energy:  -0.1473495360E+03 -0.2891942607E-05    Norm:   0.9999842902E+00
+ Saving wavefunction at T=     11.0000
+T=         11.50000  Energy:  -0.1473495397E+03 -0.2925961684E-05    Norm:   0.9999828358E+00
+ Saving wavefunction at T=     11.5000
+T=         12.00000  Energy:  -0.1473495434E+03 -0.2924564994E-05    Norm:   0.9999813732E+00
+ Saving wavefunction at T=     12.0000
+T=         12.50000  Energy:  -0.1473495470E+03 -0.2885366901E-05    Norm:   0.9999799207E+00
+ Saving wavefunction at T=     12.5000
+T=         13.00000  Energy:  -0.1473495506E+03 -0.2808208285E-05    Norm:   0.9999784974E+00
+ Saving wavefunction at T=     13.0000
+T=         13.50000  Energy:  -0.1473495540E+03 -0.2695682645E-05    Norm:   0.9999771214E+00
+ Saving wavefunction at T=     13.5000
+T=         14.00000  Energy:  -0.1473495573E+03 -0.2552976604E-05    Norm:   0.9999758093E+00
+ Saving wavefunction at T=     14.0000
+T=         14.50000  Energy:  -0.1473495603E+03 -0.2387253675E-05    Norm:   0.9999745743E+00
+ Saving wavefunction at T=     14.5000
+T=         15.00000  Energy:  -0.1473495631E+03 -0.2206465961E-05    Norm:   0.9999734259E+00
+ Saving wavefunction at T=     15.0000
+T=         15.50000  Energy:  -0.1473495656E+03 -0.2018494723E-05    Norm:   0.9999723697E+00
+ Saving wavefunction at T=     15.5000
+T=         16.00000  Energy:  -0.1473495679E+03 -0.1830403215E-05    Norm:   0.9999714075E+00
+ Saving wavefunction at T=     16.0000
+T=         16.50000  Energy:  -0.1473495699E+03 -0.1647879022E-05    Norm:   0.9999705379E+00
+ Saving wavefunction at T=     16.5000
+T=         17.00000  Energy:  -0.1473495717E+03 -0.1475127596E-05    Norm:   0.9999697572E+00
+ Saving wavefunction at T=     17.0000
+T=         17.50000  Energy:  -0.1473495733E+03 -0.1314799968E-05    Norm:   0.9999690597E+00
+ Saving wavefunction at T=     17.5000
+T=         18.00000  Energy:  -0.1473495748E+03 -0.1168224132E-05    Norm:   0.9999684390E+00
+ Saving wavefunction at T=     18.0000
+T=         18.50000  Energy:  -0.1473495760E+03 -0.1035728921E-05    Norm:   0.9999678880E+00
+ Saving wavefunction at T=     18.5000
+T=         19.00000  Energy:  -0.1473495771E+03 -0.9168700867E-06    Norm:   0.9999673999E+00
+ Saving wavefunction at T=     19.0000
+T=         19.50000  Energy:  -0.1473495781E+03 -0.8107693508E-06    Norm:   0.9999669680E+00
+ Saving wavefunction at T=     19.5000
+T=         20.00000  Energy:  -0.1473495789E+03 -0.7163013573E-06    Norm:   0.9999665862E+00
+ Saving wavefunction at T=     20.0000
+T=         20.50000  Energy:  -0.1473495797E+03 -0.6322868834E-06    Norm:   0.9999662491E+00
+ Saving wavefunction at T=     20.5000
+T=         21.00000  Energy:  -0.1473495803E+03 -0.5576419360E-06    Norm:   0.9999659516E+00
+ Saving wavefunction at T=     21.0000
+T=         21.50000  Energy:  -0.1473495809E+03 -0.4914119368E-06    Norm:   0.9999656894E+00
+ Saving wavefunction at T=     21.5000
+T=         22.00000  Energy:  -0.1473495814E+03 -0.4328272353E-06    Norm:   0.9999654583E+00
+ Saving wavefunction at T=     22.0000
+T=         22.50000  Energy:  -0.1473495818E+03 -0.3812788182E-06    Norm:   0.9999652548E+00
+ Saving wavefunction at T=     22.5000
+T=         23.00000  Energy:  -0.1473495822E+03 -0.3362859356E-06    Norm:   0.9999650754E+00
+ Saving wavefunction at T=     23.0000
+T=         23.50000  Energy:  -0.1473495826E+03 -0.2974936443E-06    Norm:   0.9999649170E+00
+ Saving wavefunction at T=     23.5000
+T=         24.00000  Energy:  -0.1473495829E+03 -0.2645867864E-06    Norm:   0.9999647765E+00
+ Saving wavefunction at T=     24.0000
+T=         24.50000  Energy:  -0.1473495832E+03 -0.2372825022E-06    Norm:   0.9999646510E+00
+ Saving wavefunction at T=     24.5000
+T=         25.00000  Energy:  -0.1473495834E+03 -0.2152665901E-06    Norm:   0.9999645379E+00
+ Saving wavefunction at T=     25.0000
+T=         25.50000  Energy:  -0.1473495836E+03 -0.1981885931E-06    Norm:   0.9999644345E+00
+ Saving wavefunction at T=     25.5000
+T=         26.00000  Energy:  -0.1473495838E+03 -0.1856559023E-06    Norm:   0.9999643385E+00
+ Saving wavefunction at T=     26.0000
+T=         26.50000  Energy:  -0.1473495840E+03 -0.1772008720E-06    Norm:   0.9999642478E+00
+ Saving wavefunction at T=     26.5000
+T=         27.00000  Energy:  -0.1473495842E+03 -0.1723054606E-06    Norm:   0.9999641605E+00
+ Saving wavefunction at T=     27.0000
+T=         27.50000  Energy:  -0.1473495844E+03 -0.1703975328E-06    Norm:   0.9999640748E+00
+ Saving wavefunction at T=     27.5000
+T=         28.00000  Energy:  -0.1473495846E+03 -0.1708600023E-06    Norm:   0.9999639895E+00
+ Saving wavefunction at T=     28.0000
+T=         28.50000  Energy:  -0.1473495848E+03 -0.1730598053E-06    Norm:   0.9999639035E+00
+ Saving wavefunction at T=     28.5000
+T=         29.00000  Energy:  -0.1473495850E+03 -0.1763652329E-06    Norm:   0.9999638161E+00
+ Saving wavefunction at T=     29.0000
+T=         29.50000  Energy:  -0.1473495852E+03 -0.1801683282E-06    Norm:   0.9999637270E+00
+ Saving wavefunction at T=     29.5000
+T=         30.00000  Energy:  -0.1473495854E+03 -0.1839142569E-06    Norm:   0.9999636360E+00
+ Saving wavefunction at T=     30.0000
+T=         30.50000  Energy:  -0.1473495856E+03 -0.1871128603E-06    Norm:   0.9999635432E+00
+ Saving wavefunction at T=     30.5000
+T=         31.00000  Energy:  -0.1473495858E+03 -0.1893641814E-06    Norm:   0.9999634491E+00
+ Saving wavefunction at T=     31.0000
+T=         31.50000  Energy:  -0.1473495860E+03 -0.1903724338E-06    Norm:   0.9999633542E+00
+ Saving wavefunction at T=     31.5000
+T=         32.00000  Energy:  -0.1473495862E+03 -0.1899462253E-06    Norm:   0.9999632591E+00
+ Saving wavefunction at T=     32.0000
+T=         32.50000  Energy:  -0.1473495864E+03 -0.1879923165E-06    Norm:   0.9999631646E+00
+ Saving wavefunction at T=     32.5000
+T=         33.00000  Energy:  -0.1473495866E+03 -0.1845208846E-06    Norm:   0.9999630715E+00
+ Saving wavefunction at T=     33.0000
+T=         33.50000  Energy:  -0.1473495868E+03 -0.1796082742E-06    Norm:   0.9999629805E+00
+ Saving wavefunction at T=     33.5000
+T=         34.00000  Energy:  -0.1473495870E+03 -0.1734019167E-06    Norm:   0.9999628922E+00
+ Saving wavefunction at T=     34.0000
+T=         34.50000  Energy:  -0.1473495872E+03 -0.1660986791E-06    Norm:   0.9999628074E+00
+ Saving wavefunction at T=     34.5000
+T=         35.00000  Energy:  -0.1473495874E+03 -0.1579170523E-06    Norm:   0.9999627264E+00
+ Saving wavefunction at T=     35.0000
+T=         35.50000  Energy:  -0.1473495875E+03 -0.1490909884E-06    Norm:   0.9999626496E+00
+ Saving wavefunction at T=     35.5000
+T=         36.00000  Energy:  -0.1473495877E+03 -0.1398497540E-06    Norm:   0.9999625774E+00
+ Saving wavefunction at T=     36.0000
+T=         36.50000  Energy:  -0.1473495878E+03 -0.1304069452E-06    Norm:   0.9999625098E+00
+ Saving wavefunction at T=     36.5000
+T=         37.00000  Energy:  -0.1473495879E+03 -0.1209552402E-06    Norm:   0.9999624470E+00
+ Saving wavefunction at T=     37.0000
+T=         37.50000  Energy:  -0.1473495881E+03 -0.1116687067E-06    Norm:   0.9999623888E+00
+ Saving wavefunction at T=     37.5000
+T=         38.00000  Energy:  -0.1473495882E+03 -0.1026991030E-06    Norm:   0.9999623352E+00
+ Saving wavefunction at T=     38.0000
+T=         38.50000  Energy:  -0.1473495883E+03 -0.9417950246E-07    Norm:   0.9999622860E+00
+ Saving wavefunction at T=     38.5000
+T=         39.00000  Energy:  -0.1473495884E+03 -0.8623294666E-07    Norm:   0.9999622409E+00
+ Saving wavefunction at T=     39.0000
+T=         39.50000  Energy:  -0.1473495884E+03 -0.7895476483E-07    Norm:   0.9999621996E+00
+ Saving wavefunction at T=     39.5000
+T=         40.00000  Energy:  -0.1473495885E+03 -0.7242305528E-07    Norm:   0.9999621618E+00
+ Saving wavefunction at T=     40.0000
+T=         40.50000  Energy:  -0.1473495886E+03 -0.6668595381E-07    Norm:   0.9999621270E+00
+ Saving wavefunction at T=     40.5000
+T=         41.00000  Energy:  -0.1473495886E+03 -0.6176141909E-07    Norm:   0.9999620949E+00
+ Saving wavefunction at T=     41.0000
+T=         41.50000  Energy:  -0.1473495887E+03 -0.5763534769E-07    Norm:   0.9999620650E+00
+ Saving wavefunction at T=     41.5000
+T=         42.00000  Energy:  -0.1473495887E+03 -0.5426620694E-07    Norm:   0.9999620371E+00
+ Saving wavefunction at T=     42.0000
+T=         42.50000  Energy:  -0.1473495888E+03 -0.5158556415E-07    Norm:   0.9999620106E+00
+ Saving wavefunction at T=     42.5000
+T=         43.00000  Energy:  -0.1473495888E+03 -0.4950563294E-07    Norm:   0.9999619853E+00
+ Saving wavefunction at T=     43.0000
+T=         43.50000  Energy:  -0.1473495889E+03 -0.4792409534E-07    Norm:   0.9999619610E+00
+ Saving wavefunction at T=     43.5000
+T=         44.00000  Energy:  -0.1473495889E+03 -0.4673238844E-07    Norm:   0.9999619373E+00
+ Saving wavefunction at T=     44.0000
+T=         44.50000  Energy:  -0.1473495889E+03 -0.4582621811E-07    Norm:   0.9999619142E+00
+ Saving wavefunction at T=     44.5000
+T=         45.00000  Energy:  -0.1473495890E+03 -0.4511236583E-07    Norm:   0.9999618914E+00
+ Saving wavefunction at T=     45.0000
+T=         45.50000  Energy:  -0.1473495890E+03 -0.4452118553E-07    Norm:   0.9999618690E+00
+ Saving wavefunction at T=     45.5000
+T=         46.00000  Energy:  -0.1473495890E+03 -0.4400544462E-07    Norm:   0.9999618469E+00
+ Saving wavefunction at T=     46.0000
+T=         46.50000  Energy:  -0.1473495891E+03 -0.4354424872E-07    Norm:   0.9999618250E+00
+ Saving wavefunction at T=     46.5000
+T=         47.00000  Energy:  -0.1473495891E+03 -0.4313719000E-07    Norm:   0.9999618034E+00
+ Saving wavefunction at T=     47.0000
+T=         47.50000  Energy:  -0.1473495891E+03 -0.4279875387E-07    Norm:   0.9999617819E+00
+ Saving wavefunction at T=     47.5000
+T=         48.00000  Energy:  -0.1473495892E+03 -0.4254927777E-07    Norm:   0.9999617605E+00
+ Saving wavefunction at T=     48.0000
+T=         48.50000  Energy:  -0.1473495892E+03 -0.4241034644E-07    Norm:   0.9999617393E+00
+ Saving wavefunction at T=     48.5000
+T=         49.00000  Energy:  -0.1473495892E+03 -0.4239378616E-07    Norm:   0.9999617181E+00
+ Saving wavefunction at T=     49.0000
+T=         49.50000  Energy:  -0.1473495893E+03 -0.4249975437E-07    Norm:   0.9999616969E+00
+ Saving wavefunction at T=     49.5000
+T=         50.00000  Energy:  -0.1473495893E+03 -0.4270684486E-07    Norm:   0.9999616756E+00
+ Saving wavefunction at T=     50.0000
+T=         50.50000  Energy:  -0.1473495893E+03 -0.4298007669E-07    Norm:   0.9999616542E+00
+ Saving wavefunction at T=     50.5000
+T=         51.00000  Energy:  -0.1473495894E+03 -0.4326540363E-07    Norm:   0.9999616326E+00
+ Saving wavefunction at T=     51.0000
+T=         51.50000  Energy:  -0.1473495894E+03 -0.4349895448E-07    Norm:   0.9999616109E+00
+ Saving wavefunction at T=     51.5000
+T=         52.00000  Energy:  -0.1473495894E+03 -0.4361141968E-07    Norm:   0.9999615891E+00
+ Saving wavefunction at T=     52.0000
+T=         52.50000  Energy:  -0.1473495895E+03 -0.4354171475E-07    Norm:   0.9999615673E+00
+ Saving wavefunction at T=     52.5000
+T=         53.00000  Energy:  -0.1473495895E+03 -0.4324391534E-07    Norm:   0.9999615456E+00
+ Saving wavefunction at T=     53.0000
+T=         53.50000  Energy:  -0.1473495896E+03 -0.4269432269E-07    Norm:   0.9999615242E+00
+ Saving wavefunction at T=     53.5000
+T=         54.00000  Energy:  -0.1473495896E+03 -0.4189395321E-07    Norm:   0.9999615030E+00
+ Saving wavefunction at T=     54.0000
+T=         54.50000  Energy:  -0.1473495896E+03 -0.4087263784E-07    Norm:   0.9999614823E+00
+ Saving wavefunction at T=     54.5000
+T=         55.00000  Energy:  -0.1473495897E+03 -0.3968307483E-07    Norm:   0.9999614622E+00
+ Saving wavefunction at T=     55.0000
+T=         55.50000  Energy:  -0.1473495897E+03 -0.3839463968E-07    Norm:   0.9999614427E+00
+ Saving wavefunction at T=     55.5000
+T=         56.00000  Energy:  -0.1473495897E+03 -0.3708440646E-07    Norm:   0.9999614238E+00
+ Saving wavefunction at T=     56.0000
+T=         56.50000  Energy:  -0.1473495898E+03 -0.3582717840E-07    Norm:   0.9999614056E+00
+ Saving wavefunction at T=     56.5000
+T=         57.00000  Energy:  -0.1473495898E+03 -0.3468819070E-07    Norm:   0.9999613879E+00
+ Saving wavefunction at T=     57.0000
+T=         57.50000  Energy:  -0.1473495898E+03 -0.3371820323E-07    Norm:   0.9999613708E+00
+ Saving wavefunction at T=     57.5000
+T=         58.00000  Energy:  -0.1473495899E+03 -0.3294647637E-07    Norm:   0.9999613542E+00
+ Saving wavefunction at T=     58.0000
+T=         58.50000  Energy:  -0.1473495899E+03 -0.3237827715E-07    Norm:   0.9999613378E+00
+ Saving wavefunction at T=     58.5000
+T=         59.00000  Energy:  -0.1473495899E+03 -0.3199865355E-07    Norm:   0.9999613217E+00
+ Saving wavefunction at T=     59.0000
+T=         59.50000  Energy:  -0.1473495900E+03 -0.3177674700E-07    Norm:   0.9999613058E+00
+ Saving wavefunction at T=     59.5000
+T=         60.00000  Energy:  -0.1473495900E+03 -0.3167152417E-07    Norm:   0.9999612899E+00
+ Saving wavefunction at T=     60.0000
+T=         60.50000  Energy:  -0.1473495900E+03 -0.3163999483E-07    Norm:   0.9999612741E+00
+ Saving wavefunction at T=     60.5000
+T=         61.00000  Energy:  -0.1473495901E+03 -0.3164086072E-07    Norm:   0.9999612583E+00
+ Saving wavefunction at T=     61.0000
+T=         61.50000  Energy:  -0.1473495901E+03 -0.3164181416E-07    Norm:   0.9999612425E+00
+ Saving wavefunction at T=     61.5000
+T=         62.00000  Energy:  -0.1473495901E+03 -0.3162388279E-07    Norm:   0.9999612267E+00
+ Saving wavefunction at T=     62.0000
+T=         62.50000  Energy:  -0.1473495902E+03 -0.3158008801E-07    Norm:   0.9999612109E+00
+ Saving wavefunction at T=     62.5000
+T=         63.00000  Energy:  -0.1473495902E+03 -0.3151439544E-07    Norm:   0.9999611951E+00
+ Saving wavefunction at T=     63.0000
+T=         63.50000  Energy:  -0.1473495902E+03 -0.3144105307E-07    Norm:   0.9999611793E+00
+ Saving wavefunction at T=     63.5000
+T=         64.00000  Energy:  -0.1473495902E+03 -0.3138049413E-07    Norm:   0.9999611636E+00
+ Saving wavefunction at T=     64.0000
+T=         64.50000  Energy:  -0.1473495903E+03 -0.3135387574E-07    Norm:   0.9999611480E+00
+ Saving wavefunction at T=     64.5000
+T=         65.00000  Energy:  -0.1473495903E+03 -0.3137916474E-07    Norm:   0.9999611323E+00
+ Saving wavefunction at T=     65.0000
+T=         65.50000  Energy:  -0.1473495903E+03 -0.3146698627E-07    Norm:   0.9999611166E+00
+ Saving wavefunction at T=     65.5000
+T=         66.00000  Energy:  -0.1473495904E+03 -0.3161999085E-07    Norm:   0.9999611008E+00
+ Saving wavefunction at T=     66.0000
+T=         66.50000  Energy:  -0.1473495904E+03 -0.3183157720E-07    Norm:   0.9999610849E+00
+ Saving wavefunction at T=     66.5000
+T=         67.00000  Energy:  -0.1473495904E+03 -0.3208761654E-07    Norm:   0.9999610690E+00
+ Saving wavefunction at T=     67.0000
+T=         67.50000  Energy:  -0.1473495904E+03 -0.3236601932E-07    Norm:   0.9999610528E+00
+ Saving wavefunction at T=     67.5000
+T=         68.00000  Energy:  -0.1473495905E+03 -0.3264142504E-07    Norm:   0.9999610366E+00
+ Saving wavefunction at T=     68.0000
+T=         68.50000  Energy:  -0.1473495905E+03 -0.3288694282E-07    Norm:   0.9999610202E+00
+ Saving wavefunction at T=     68.5000
+T=         69.00000  Energy:  -0.1473495905E+03 -0.3307864597E-07    Norm:   0.9999610037E+00
+ Saving wavefunction at T=     69.0000
+T=         69.50000  Energy:  -0.1473495906E+03 -0.3319804607E-07    Norm:   0.9999609871E+00
+ Saving wavefunction at T=     69.5000
+T=         70.00000  Energy:  -0.1473495906E+03 -0.3323540378E-07    Norm:   0.9999609705E+00
+ Saving wavefunction at T=     70.0000
+T=         70.50000  Energy:  -0.1473495906E+03 -0.3319016645E-07    Norm:   0.9999609539E+00
+ Saving wavefunction at T=     70.5000
+T=         71.00000  Energy:  -0.1473495907E+03 -0.3307053089E-07    Norm:   0.9999609374E+00
+ Saving wavefunction at T=     71.0000
+T=         71.50000  Energy:  -0.1473495907E+03 -0.3289281641E-07    Norm:   0.9999609209E+00
+ Saving wavefunction at T=     71.5000
+T=         72.00000  Energy:  -0.1473495907E+03 -0.3267788845E-07    Norm:   0.9999609045E+00
+ Saving wavefunction at T=     72.0000
+T=         72.50000  Energy:  -0.1473495907E+03 -0.3245005096E-07    Norm:   0.9999608882E+00
+ Saving wavefunction at T=     72.5000
+T=         73.00000  Energy:  -0.1473495908E+03 -0.3223348506E-07    Norm:   0.9999608720E+00
+ Saving wavefunction at T=     73.0000
+T=         73.50000  Energy:  -0.1473495908E+03 -0.3205031665E-07    Norm:   0.9999608560E+00
+ Saving wavefunction at T=     73.5000
+T=         74.00000  Energy:  -0.1473495908E+03 -0.3192014327E-07    Norm:   0.9999608400E+00
+ Saving wavefunction at T=     74.0000
+T=         74.50000  Energy:  -0.1473495909E+03 -0.3185611504E-07    Norm:   0.9999608240E+00
+ Saving wavefunction at T=     74.5000
+T=         75.00000  Energy:  -0.1473495909E+03 -0.3186542518E-07    Norm:   0.9999608081E+00
+ Saving wavefunction at T=     75.0000
+T=         75.50000  Energy:  -0.1473495909E+03 -0.3194903691E-07    Norm:   0.9999607921E+00
+ Saving wavefunction at T=     75.5000
+T=         76.00000  Energy:  -0.1473495909E+03 -0.3210262832E-07    Norm:   0.9999607761E+00
+ Saving wavefunction at T=     76.0000
+T=         76.50000  Energy:  -0.1473495910E+03 -0.3231568090E-07    Norm:   0.9999607600E+00
+ Saving wavefunction at T=     76.5000
+T=         77.00000  Energy:  -0.1473495910E+03 -0.3257510126E-07    Norm:   0.9999607438E+00
+ Saving wavefunction at T=     77.0000
+T=         77.50000  Energy:  -0.1473495910E+03 -0.3286687679E-07    Norm:   0.9999607275E+00
+ Saving wavefunction at T=     77.5000
+T=         78.00000  Energy:  -0.1473495911E+03 -0.3317783678E-07    Norm:   0.9999607109E+00
+ Saving wavefunction at T=     78.0000
+T=         78.50000  Energy:  -0.1473495911E+03 -0.3349777616E-07    Norm:   0.9999606943E+00
+ Saving wavefunction at T=     78.5000
+T=         79.00000  Energy:  -0.1473495911E+03 -0.3381902049E-07    Norm:   0.9999606774E+00
+ Saving wavefunction at T=     79.0000
+T=         79.50000  Energy:  -0.1473495912E+03 -0.3413547712E-07    Norm:   0.9999606605E+00
+ Saving wavefunction at T=     79.5000
+T=         80.00000  Energy:  -0.1473495912E+03 -0.3444335974E-07    Norm:   0.9999606433E+00
+ Saving wavefunction at T=     80.0000
+T=         80.50000  Energy:  -0.1473495912E+03 -0.3474119108E-07    Norm:   0.9999606260E+00
+ Saving wavefunction at T=     80.5000
+T=         81.00000  Energy:  -0.1473495913E+03 -0.3502766433E-07    Norm:   0.9999606086E+00
+ Saving wavefunction at T=     81.0000
+T=         81.50000  Energy:  -0.1473495913E+03 -0.3530137299E-07    Norm:   0.9999605910E+00
+ Saving wavefunction at T=     81.5000
+T=         82.00000  Energy:  -0.1473495913E+03 -0.3556042690E-07    Norm:   0.9999605733E+00
+ Saving wavefunction at T=     82.0000
+T=         82.50000  Energy:  -0.1473495914E+03 -0.3580323553E-07    Norm:   0.9999605554E+00
+ Saving wavefunction at T=     82.5000
+T=         83.00000  Energy:  -0.1473495914E+03 -0.3602469336E-07    Norm:   0.9999605375E+00
+ Saving wavefunction at T=     83.0000
+T=         83.50000  Energy:  -0.1473495914E+03 -0.3622005653E-07    Norm:   0.9999605194E+00
+ Saving wavefunction at T=     83.5000
+T=         84.00000  Energy:  -0.1473495914E+03 -0.3638242874E-07    Norm:   0.9999605013E+00
+ Saving wavefunction at T=     84.0000
+T=         84.50000  Energy:  -0.1473495915E+03 -0.3650489692E-07    Norm:   0.9999604830E+00
+ Saving wavefunction at T=     84.5000
+T=         85.00000  Energy:  -0.1473495915E+03 -0.3658132956E-07    Norm:   0.9999604648E+00
+ Saving wavefunction at T=     85.0000
+T=         85.50000  Energy:  -0.1473495915E+03 -0.3660745485E-07    Norm:   0.9999604465E+00
+ Saving wavefunction at T=     85.5000
+T=         86.00000  Energy:  -0.1473495916E+03 -0.3657930668E-07    Norm:   0.9999604282E+00
+ Saving wavefunction at T=     86.0000
+T=         86.50000  Energy:  -0.1473495916E+03 -0.3649588070E-07    Norm:   0.9999604099E+00
+ Saving wavefunction at T=     86.5000
+T=         87.00000  Energy:  -0.1473495916E+03 -0.3635882471E-07    Norm:   0.9999603917E+00
+ Saving wavefunction at T=     87.0000
+T=         87.50000  Energy:  -0.1473495917E+03 -0.3617419494E-07    Norm:   0.9999603736E+00
+ Saving wavefunction at T=     87.5000
+T=         88.00000  Energy:  -0.1473495917E+03 -0.3595143841E-07    Norm:   0.9999603555E+00
+ Saving wavefunction at T=     88.0000
+T=         88.50000  Energy:  -0.1473495917E+03 -0.3570293165E-07    Norm:   0.9999603376E+00
+ Saving wavefunction at T=     88.5000
+T=         89.00000  Energy:  -0.1473495917E+03 -0.3544442784E-07    Norm:   0.9999603198E+00
+ Saving wavefunction at T=     89.0000
+T=         89.50000  Energy:  -0.1473495918E+03 -0.3519441810E-07    Norm:   0.9999603022E+00
+ Saving wavefunction at T=     89.5000
+T=         90.00000  Energy:  -0.1473495918E+03 -0.3497176411E-07    Norm:   0.9999602846E+00
+ Saving wavefunction at T=     90.0000
+T=         90.50000  Energy:  -0.1473495918E+03 -0.3479447258E-07    Norm:   0.9999602672E+00
+ Saving wavefunction at T=     90.5000
+T=         91.00000  Energy:  -0.1473495919E+03 -0.3467774280E-07    Norm:   0.9999602498E+00
+ Saving wavefunction at T=     91.0000
+T=         91.50000  Energy:  -0.1473495919E+03 -0.3463309915E-07    Norm:   0.9999602325E+00
+ Saving wavefunction at T=     91.5000
+T=         92.00000  Energy:  -0.1473495919E+03 -0.3466627488E-07    Norm:   0.9999602152E+00
+ Saving wavefunction at T=     92.0000
+T=         92.50000  Energy:  -0.1473495919E+03 -0.3477534824E-07    Norm:   0.9999601978E+00
+ Saving wavefunction at T=     92.5000
+T=         93.00000  Energy:  -0.1473495920E+03 -0.3495139789E-07    Norm:   0.9999601804E+00
+ Saving wavefunction at T=     93.0000
+T=         93.50000  Energy:  -0.1473495920E+03 -0.3517932271E-07    Norm:   0.9999601629E+00
+ Saving wavefunction at T=     93.5000
+T=         94.00000  Energy:  -0.1473495920E+03 -0.3543849052E-07    Norm:   0.9999601452E+00
+ Saving wavefunction at T=     94.0000
+T=         94.50000  Energy:  -0.1473495920E+03 -0.3570461641E-07    Norm:   0.9999601274E+00
+ Saving wavefunction at T=     94.5000
+T=         95.00000  Energy:  -0.1473495921E+03 -0.3595283504E-07    Norm:   0.9999601095E+00
+ Saving wavefunction at T=     95.0000
+T=         95.50000  Energy:  -0.1473495921E+03 -0.3616001137E-07    Norm:   0.9999600915E+00
+ Saving wavefunction at T=     95.5000
+T=         96.00000  Energy:  -0.1473495921E+03 -0.3630551285E-07    Norm:   0.9999600734E+00
+ Saving wavefunction at T=     96.0000
+T=         96.50000  Energy:  -0.1473495922E+03 -0.3637338738E-07    Norm:   0.9999600552E+00
+ Saving wavefunction at T=     96.5000
+T=         97.00000  Energy:  -0.1473495922E+03 -0.3635568879E-07    Norm:   0.9999600370E+00
+ Saving wavefunction at T=     97.0000
+T=         97.50000  Energy:  -0.1473495922E+03 -0.3624802215E-07    Norm:   0.9999600189E+00
+ Saving wavefunction at T=     97.5000
+T=         98.00000  Energy:  -0.1473495922E+03 -0.3605263976E-07    Norm:   0.9999600008E+00
+ Saving wavefunction at T=     98.0000
+T=         98.50000  Energy:  -0.1473495923E+03 -0.3577803194E-07    Norm:   0.9999599828E+00
+ Saving wavefunction at T=     98.5000
+T=         99.00000  Energy:  -0.1473495923E+03 -0.3543671736E-07    Norm:   0.9999599650E+00
+ Saving wavefunction at T=     99.0000
+T=         99.50000  Energy:  -0.1473495923E+03 -0.3504228347E-07    Norm:   0.9999599474E+00
+ Saving wavefunction at T=     99.5000
+T=        100.00000  Energy:  -0.1473495923E+03 -0.3460953712E-07    Norm:   0.9999599300E+00
+ Saving wavefunction at T=    100.0000
+T=        100.50000  Energy:  -0.1473495924E+03 -0.3415472526E-07    Norm:   0.9999599128E+00
+ Saving wavefunction at T=    100.5000
+T=        101.00000  Energy:  -0.1473495924E+03 -0.3369393899E-07    Norm:   0.9999598958E+00
+ Saving wavefunction at T=    101.0000
+T=        101.50000  Energy:  -0.1473495924E+03 -0.3324213771E-07    Norm:   0.9999598791E+00
+ Saving wavefunction at T=    101.5000
+T=        102.00000  Energy:  -0.1473495924E+03 -0.3281375568E-07    Norm:   0.9999598626E+00
+ Saving wavefunction at T=    102.0000
+T=        102.50000  Energy:  -0.1473495925E+03 -0.3242268691E-07    Norm:   0.9999598463E+00
+ Saving wavefunction at T=    102.5000
+T=        103.00000  Energy:  -0.1473495925E+03 -0.3207969164E-07    Norm:   0.9999598302E+00
+ Saving wavefunction at T=    103.0000
+T=        103.50000  Energy:  -0.1473495925E+03 -0.3179267713E-07    Norm:   0.9999598142E+00
+ Saving wavefunction at T=    103.5000
+T=        104.00000  Energy:  -0.1473495925E+03 -0.3156545185E-07    Norm:   0.9999597984E+00
+ Saving wavefunction at T=    104.0000
+T=        104.50000  Energy:  -0.1473495925E+03 -0.3139817480E-07    Norm:   0.9999597826E+00
+ Saving wavefunction at T=    104.5000
+T=        105.00000  Energy:  -0.1473495926E+03 -0.3128724065E-07    Norm:   0.9999597669E+00
+ Saving wavefunction at T=    105.0000
+T=        105.50000  Energy:  -0.1473495926E+03 -0.3122515240E-07    Norm:   0.9999597513E+00
+ Saving wavefunction at T=    105.5000
+T=        106.00000  Energy:  -0.1473495926E+03 -0.3120240415E-07    Norm:   0.9999597357E+00
+ Saving wavefunction at T=    106.0000
+T=        106.50000  Energy:  -0.1473495926E+03 -0.3120689697E-07    Norm:   0.9999597201E+00
+ Saving wavefunction at T=    106.5000
+T=        107.00000  Energy:  -0.1473495926E+03 -0.3122619385E-07    Norm:   0.9999597045E+00
+ Saving wavefunction at T=    107.0000
+T=        107.50000  Energy:  -0.1473495926E+03 -0.3124725645E-07    Norm:   0.9999596889E+00
+ Saving wavefunction at T=    107.5000
+T=        108.00000  Energy:  -0.1473495927E+03 -0.3125974045E-07    Norm:   0.9999596733E+00
+ Saving wavefunction at T=    108.0000
+T=        108.50000  Energy:  -0.1473495927E+03 -0.3125662944E-07    Norm:   0.9999596576E+00
+ Saving wavefunction at T=    108.5000
+T=        109.00000  Energy:  -0.1473495927E+03 -0.3123440432E-07    Norm:   0.9999596420E+00
+ Saving wavefunction at T=    109.0000
+T=        109.50000  Energy:  -0.1473495927E+03 -0.3119360441E-07    Norm:   0.9999596264E+00
+ Saving wavefunction at T=    109.5000
+T=        110.00000  Energy:  -0.1473495927E+03 -0.3113895166E-07    Norm:   0.9999596108E+00
+ Saving wavefunction at T=    110.0000
+T=        110.50000  Energy:  -0.1473495928E+03 -0.3107829182E-07    Norm:   0.9999595953E+00
+ Saving wavefunction at T=    110.5000
+T=        111.00000  Energy:  -0.1473495928E+03 -0.3102210752E-07    Norm:   0.9999595797E+00
+ Saving wavefunction at T=    111.0000
+T=        111.50000  Energy:  -0.1473495928E+03 -0.3098112356E-07    Norm:   0.9999595642E+00
+ Saving wavefunction at T=    111.5000
+T=        112.00000  Energy:  -0.1473495928E+03 -0.3096493493E-07    Norm:   0.9999595488E+00
+ Saving wavefunction at T=    112.0000
+T=        112.50000  Energy:  -0.1473495928E+03 -0.3098151416E-07    Norm:   0.9999595333E+00
+ Saving wavefunction at T=    112.5000
+T=        113.00000  Energy:  -0.1473495928E+03 -0.3103529321E-07    Norm:   0.9999595178E+00
+ Saving wavefunction at T=    113.0000
+T=        113.50000  Energy:  -0.1473495929E+03 -0.3112769831E-07    Norm:   0.9999595022E+00
+ Saving wavefunction at T=    113.5000
+T=        114.00000  Energy:  -0.1473495929E+03 -0.3125477021E-07    Norm:   0.9999594866E+00
+ Saving wavefunction at T=    114.0000
+T=        114.50000  Energy:  -0.1473495929E+03 -0.3140892766E-07    Norm:   0.9999594710E+00
+ Saving wavefunction at T=    114.5000
+T=        115.00000  Energy:  -0.1473495929E+03 -0.3157974465E-07    Norm:   0.9999594552E+00
+ Saving wavefunction at T=    115.0000
+T=        115.50000  Energy:  -0.1473495929E+03 -0.3175345889E-07    Norm:   0.9999594394E+00
+ Saving wavefunction at T=    115.5000
+T=        116.00000  Energy:  -0.1473495930E+03 -0.3191325980E-07    Norm:   0.9999594235E+00
+ Saving wavefunction at T=    116.0000
+T=        116.50000  Energy:  -0.1473495930E+03 -0.3204225528E-07    Norm:   0.9999594075E+00
+ Saving wavefunction at T=    116.5000
+T=        117.00000  Energy:  -0.1473495930E+03 -0.3212442807E-07    Norm:   0.9999593914E+00
+ Saving wavefunction at T=    117.0000
+T=        117.50000  Energy:  -0.1473495930E+03 -0.3214490481E-07    Norm:   0.9999593754E+00
+ Saving wavefunction at T=    117.5000
+T=        118.00000  Energy:  -0.1473495930E+03 -0.3209060194E-07    Norm:   0.9999593593E+00
+ Saving wavefunction at T=    118.0000
+T=        118.50000  Energy:  -0.1473495931E+03 -0.3195267135E-07    Norm:   0.9999593433E+00
+ Saving wavefunction at T=    118.5000
+T=        119.00000  Energy:  -0.1473495931E+03 -0.3172654635E-07    Norm:   0.9999593274E+00
+ Saving wavefunction at T=    119.0000
+T=        119.50000  Energy:  -0.1473495931E+03 -0.3141223291E-07    Norm:   0.9999593116E+00
+ Saving wavefunction at T=    119.5000
+T=        120.00000  Energy:  -0.1473495931E+03 -0.3101496052E-07    Norm:   0.9999592960E+00
+ Saving wavefunction at T=    120.0000
+T=        120.50000  Energy:  -0.1473495931E+03 -0.3054467425E-07    Norm:   0.9999592806E+00
+ Saving wavefunction at T=    120.5000
+T=        121.00000  Energy:  -0.1473495931E+03 -0.3001550684E-07    Norm:   0.9999592655E+00
+ Saving wavefunction at T=    121.0000
+T=        121.50000  Energy:  -0.1473495932E+03 -0.2944499841E-07    Norm:   0.9999592506E+00
+ Saving wavefunction at T=    121.5000
+T=        122.00000  Energy:  -0.1473495932E+03 -0.2885215681E-07    Norm:   0.9999592360E+00
+ Saving wavefunction at T=    122.0000
+T=        122.50000  Energy:  -0.1473495932E+03 -0.2825688909E-07    Norm:   0.9999592218E+00
+ Saving wavefunction at T=    122.5000
+T=        123.00000  Energy:  -0.1473495932E+03 -0.2767703798E-07    Norm:   0.9999592078E+00
+ Saving wavefunction at T=    123.0000
+T=        123.50000  Energy:  -0.1473495932E+03 -0.2712790541E-07    Norm:   0.9999591941E+00
+ Saving wavefunction at T=    123.5000
+T=        124.00000  Energy:  -0.1473495932E+03 -0.2662131190E-07    Norm:   0.9999591806E+00
+ Saving wavefunction at T=    124.0000
+T=        124.50000  Energy:  -0.1473495932E+03 -0.2616509673E-07    Norm:   0.9999591674E+00
+ Saving wavefunction at T=    124.5000
+T=        125.00000  Energy:  -0.1473495932E+03 -0.2576280749E-07    Norm:   0.9999591545E+00
+ Saving wavefunction at T=    125.0000
+T=        125.50000  Energy:  -0.1473495933E+03 -0.2541407445E-07    Norm:   0.9999591417E+00
+ Saving wavefunction at T=    125.5000
+T=        126.00000  Energy:  -0.1473495933E+03 -0.2511604374E-07    Norm:   0.9999591290E+00
+ Saving wavefunction at T=    126.0000
+T=        126.50000  Energy:  -0.1473495933E+03 -0.2486380113E-07    Norm:   0.9999591165E+00
+ Saving wavefunction at T=    126.5000
+T=        127.00000  Energy:  -0.1473495933E+03 -0.2465078552E-07    Norm:   0.9999591042E+00
+ Saving wavefunction at T=    127.0000
+T=        127.50000  Energy:  -0.1473495933E+03 -0.2446944602E-07    Norm:   0.9999590919E+00
+ Saving wavefunction at T=    127.5000
+T=        128.00000  Energy:  -0.1473495933E+03 -0.2431362883E-07    Norm:   0.9999590797E+00
+ Saving wavefunction at T=    128.0000
+T=        128.50000  Energy:  -0.1473495933E+03 -0.2417657655E-07    Norm:   0.9999590676E+00
+ Saving wavefunction at T=    128.5000
+T=        129.00000  Energy:  -0.1473495933E+03 -0.2405337862E-07    Norm:   0.9999590555E+00
+ Saving wavefunction at T=    129.0000
+T=        129.50000  Energy:  -0.1473495933E+03 -0.2394008378E-07    Norm:   0.9999590435E+00
+ Saving wavefunction at T=    129.5000
+T=        130.00000  Energy:  -0.1473495933E+03 -0.2383430082E-07    Norm:   0.9999590316E+00
+ Saving wavefunction at T=    130.0000
+T=        130.50000  Energy:  -0.1473495933E+03 -0.2373433587E-07    Norm:   0.9999590197E+00
+ Saving wavefunction at T=    130.5000
+T=        131.00000  Energy:  -0.1473495933E+03 -0.2363893031E-07    Norm:   0.9999590078E+00
+ Saving wavefunction at T=    131.0000
+T=        131.50000  Energy:  -0.1473495933E+03 -0.2354801712E-07    Norm:   0.9999589960E+00
+ Saving wavefunction at T=    131.5000
+T=        132.00000  Energy:  -0.1473495933E+03 -0.2346253349E-07    Norm:   0.9999589843E+00
+ Saving wavefunction at T=    132.0000
+T=        132.50000  Energy:  -0.1473495933E+03 -0.2338356141E-07    Norm:   0.9999589726E+00
+ Saving wavefunction at T=    132.5000
+T=        133.00000  Energy:  -0.1473495934E+03 -0.2331330698E-07    Norm:   0.9999589609E+00
+ Saving wavefunction at T=    133.0000
+T=        133.50000  Energy:  -0.1473495934E+03 -0.2325452115E-07    Norm:   0.9999589493E+00
+ Saving wavefunction at T=    133.5000
+T=        134.00000  Energy:  -0.1473495934E+03 -0.2321045644E-07    Norm:   0.9999589376E+00
+ Saving wavefunction at T=    134.0000
+T=        134.50000  Energy:  -0.1473495934E+03 -0.2318356210E-07    Norm:   0.9999589260E+00
+ Saving wavefunction at T=    134.5000
+T=        135.00000  Energy:  -0.1473495934E+03 -0.2317554505E-07    Norm:   0.9999589145E+00
+ Saving wavefunction at T=    135.0000
+T=        135.50000  Energy:  -0.1473495934E+03 -0.2318692455E-07    Norm:   0.9999589029E+00
+ Saving wavefunction at T=    135.5000
+T=        136.00000  Energy:  -0.1473495934E+03 -0.2321713941E-07    Norm:   0.9999588913E+00
+ Saving wavefunction at T=    136.0000
+T=        136.50000  Energy:  -0.1473495934E+03 -0.2326412647E-07    Norm:   0.9999588796E+00
+ Saving wavefunction at T=    136.5000
+T=        137.00000  Energy:  -0.1473495934E+03 -0.2332451819E-07    Norm:   0.9999588680E+00
+ Saving wavefunction at T=    137.0000
+T=        137.50000  Energy:  -0.1473495934E+03 -0.2339354120E-07    Norm:   0.9999588563E+00
+ Saving wavefunction at T=    137.5000
+T=        138.00000  Energy:  -0.1473495934E+03 -0.2346653556E-07    Norm:   0.9999588446E+00
+ Saving wavefunction at T=    138.0000
+T=        138.50000  Energy:  -0.1473495934E+03 -0.2353674871E-07    Norm:   0.9999588329E+00
+ Saving wavefunction at T=    138.5000
+T=        139.00000  Energy:  -0.1473495934E+03 -0.2359789512E-07    Norm:   0.9999588211E+00
+ Saving wavefunction at T=    139.0000
+T=        139.50000  Energy:  -0.1473495934E+03 -0.2364332877E-07    Norm:   0.9999588093E+00
+ Saving wavefunction at T=    139.5000
+T=        140.00000  Energy:  -0.1473495934E+03 -0.2366652748E-07    Norm:   0.9999587974E+00
+ Saving wavefunction at T=    140.0000
+T=        140.50000  Energy:  -0.1473495934E+03 -0.2366221583E-07    Norm:   0.9999587856E+00
+ Saving wavefunction at T=    140.5000
+T=        141.00000  Energy:  -0.1473495934E+03 -0.2362606918E-07    Norm:   0.9999587738E+00
+ Saving wavefunction at T=    141.0000
+T=        141.50000  Energy:  -0.1473495935E+03 -0.2355448368E-07    Norm:   0.9999587620E+00
+ Saving wavefunction at T=    141.5000
+T=        142.00000  Energy:  -0.1473495935E+03 -0.2344495722E-07    Norm:   0.9999587502E+00
+ Saving wavefunction at T=    142.0000
+T=        142.50000  Energy:  -0.1473495935E+03 -0.2329661065E-07    Norm:   0.9999587385E+00
+ Saving wavefunction at T=    142.5000
+T=        143.00000  Energy:  -0.1473495935E+03 -0.2311028069E-07    Norm:   0.9999587269E+00
+ Saving wavefunction at T=    143.0000
+T=        143.50000  Energy:  -0.1473495935E+03 -0.2288815620E-07    Norm:   0.9999587154E+00
+ Saving wavefunction at T=    143.5000
+T=        144.00000  Energy:  -0.1473495935E+03 -0.2263453055E-07    Norm:   0.9999587041E+00
+ Saving wavefunction at T=    144.0000
+T=        144.50000  Energy:  -0.1473495935E+03 -0.2235626535E-07    Norm:   0.9999586928E+00
+ Saving wavefunction at T=    144.5000
+T=        145.00000  Energy:  -0.1473495935E+03 -0.2206093546E-07    Norm:   0.9999586817E+00
+ Saving wavefunction at T=    145.0000
+T=        145.50000  Energy:  -0.1473495935E+03 -0.2175842695E-07    Norm:   0.9999586708E+00
+ Saving wavefunction at T=    145.5000
+T=        146.00000  Energy:  -0.1473495935E+03 -0.2145846170E-07    Norm:   0.9999586600E+00
+ Saving wavefunction at T=    146.0000
+T=        146.50000  Energy:  -0.1473495935E+03 -0.2117056019E-07    Norm:   0.9999586493E+00
+ Saving wavefunction at T=    146.5000
+T=        147.00000  Energy:  -0.1473495935E+03 -0.2090317537E-07    Norm:   0.9999586388E+00
+ Saving wavefunction at T=    147.0000
+T=        147.50000  Energy:  -0.1473495935E+03 -0.2066326287E-07    Norm:   0.9999586284E+00
+ Saving wavefunction at T=    147.5000
+T=        148.00000  Energy:  -0.1473495935E+03 -0.2045576750E-07    Norm:   0.9999586181E+00
+ Saving wavefunction at T=    148.0000
+T=        148.50000  Energy:  -0.1473495935E+03 -0.2028271318E-07    Norm:   0.9999586079E+00
+ Saving wavefunction at T=    148.5000
+T=        149.00000  Energy:  -0.1473495935E+03 -0.2014420894E-07    Norm:   0.9999585978E+00
+ Saving wavefunction at T=    149.0000
+T=        149.50000  Energy:  -0.1473495935E+03 -0.2003822289E-07    Norm:   0.9999585878E+00
+ Saving wavefunction at T=    149.5000
+T=        150.00000  Energy:  -0.1473495935E+03 -0.1996118110E-07    Norm:   0.9999585778E+00
+ Saving wavefunction at T=    150.0000
+T=        150.50000  Energy:  -0.1473495935E+03 -0.1990826234E-07    Norm:   0.9999585678E+00
+ Saving wavefunction at T=    150.5000
+T=        151.00000  Energy:  -0.1473495935E+03 -0.1987428743E-07    Norm:   0.9999585579E+00
+ Saving wavefunction at T=    151.0000
+T=        151.50000  Energy:  -0.1473495935E+03 -0.1985449107E-07    Norm:   0.9999585479E+00
+ Saving wavefunction at T=    151.5000
+T=        152.00000  Energy:  -0.1473495935E+03 -0.1984509157E-07    Norm:   0.9999585380E+00
+ Saving wavefunction at T=    152.0000
+T=        152.50000  Energy:  -0.1473495935E+03 -0.1984351822E-07    Norm:   0.9999585281E+00
+ Saving wavefunction at T=    152.5000
+T=        153.00000  Energy:  -0.1473495935E+03 -0.1984817570E-07    Norm:   0.9999585182E+00
+ Saving wavefunction at T=    153.0000
+T=        153.50000  Energy:  -0.1473495935E+03 -0.1985829234E-07    Norm:   0.9999585082E+00
+ Saving wavefunction at T=    153.5000
+T=        154.00000  Energy:  -0.1473495935E+03 -0.1987337175E-07    Norm:   0.9999584983E+00
+ Saving wavefunction at T=    154.0000
+T=        154.50000  Energy:  -0.1473495935E+03 -0.1989276700E-07    Norm:   0.9999584884E+00
+ Saving wavefunction at T=    154.5000
+T=        155.00000  Energy:  -0.1473495935E+03 -0.1991523099E-07    Norm:   0.9999584784E+00
+ Saving wavefunction at T=    155.0000
+T=        155.50000  Energy:  -0.1473495935E+03 -0.1993857746E-07    Norm:   0.9999584685E+00
+ Saving wavefunction at T=    155.5000
+T=        156.00000  Energy:  -0.1473495935E+03 -0.1996052707E-07    Norm:   0.9999584585E+00
+ Saving wavefunction at T=    156.0000
+T=        156.50000  Energy:  -0.1473495935E+03 -0.1997855550E-07    Norm:   0.9999584485E+00
+ Saving wavefunction at T=    156.5000
+T=        157.00000  Energy:  -0.1473495935E+03 -0.1999066515E-07    Norm:   0.9999584385E+00
+ Saving wavefunction at T=    157.0000
+T=        157.50000  Energy:  -0.1473495935E+03 -0.1999590429E-07    Norm:   0.9999584285E+00
+ Saving wavefunction at T=    157.5000
+T=        158.00000  Energy:  -0.1473495935E+03 -0.1999453442E-07    Norm:   0.9999584185E+00
+ Saving wavefunction at T=    158.0000
+T=        158.50000  Energy:  -0.1473495935E+03 -0.1998804447E-07    Norm:   0.9999584085E+00
+ Saving wavefunction at T=    158.5000
+T=        159.00000  Energy:  -0.1473495935E+03 -0.1997966104E-07    Norm:   0.9999583985E+00
+ Saving wavefunction at T=    159.0000
+T=        159.50000  Energy:  -0.1473495935E+03 -0.1997328557E-07    Norm:   0.9999583885E+00
+ Saving wavefunction at T=    159.5000
+T=        160.00000  Energy:  -0.1473495935E+03 -0.1997376957E-07    Norm:   0.9999583785E+00
+ Saving wavefunction at T=    160.0000
+T=        160.50000  Energy:  -0.1473495935E+03 -0.1998441934E-07    Norm:   0.9999583686E+00
+ Saving wavefunction at T=    160.5000
+T=        161.00000  Energy:  -0.1473495935E+03 -0.2000757741E-07    Norm:   0.9999583586E+00
+ Saving wavefunction at T=    161.0000
+T=        161.50000  Energy:  -0.1473495935E+03 -0.2004389914E-07    Norm:   0.9999583485E+00
+ Saving wavefunction at T=    161.5000
+T=        162.00000  Energy:  -0.1473495935E+03 -0.2009123840E-07    Norm:   0.9999583385E+00
+ Saving wavefunction at T=    162.0000
+T=        162.50000  Energy:  -0.1473495936E+03 -0.2014552068E-07    Norm:   0.9999583285E+00
+ Saving wavefunction at T=    162.5000
+T=        163.00000  Energy:  -0.1473495936E+03 -0.2020126725E-07    Norm:   0.9999583184E+00
+ Saving wavefunction at T=    163.0000
+T=        163.50000  Energy:  -0.1473495936E+03 -0.2025291209E-07    Norm:   0.9999583083E+00
+ Saving wavefunction at T=    163.5000
+T=        164.00000  Energy:  -0.1473495936E+03 -0.2029557821E-07    Norm:   0.9999582981E+00
+ Saving wavefunction at T=    164.0000
+T=        164.50000  Energy:  -0.1473495936E+03 -0.2032620088E-07    Norm:   0.9999582880E+00
+ Saving wavefunction at T=    164.5000
+T=        165.00000  Energy:  -0.1473495936E+03 -0.2034405205E-07    Norm:   0.9999582778E+00
+ Saving wavefunction at T=    165.0000
+T=        165.50000  Energy:  -0.1473495936E+03 -0.2035097121E-07    Norm:   0.9999582676E+00
+ Saving wavefunction at T=    165.5000
+T=        166.00000  Energy:  -0.1473495936E+03 -0.2035179117E-07    Norm:   0.9999582574E+00
+ Saving wavefunction at T=    166.0000
+T=        166.50000  Energy:  -0.1473495936E+03 -0.2035278810E-07    Norm:   0.9999582473E+00
+ Saving wavefunction at T=    166.5000
+T=        167.00000  Energy:  -0.1473495936E+03 -0.2036090924E-07    Norm:   0.9999582371E+00
+ Saving wavefunction at T=    167.0000
+T=        167.50000  Energy:  -0.1473495936E+03 -0.2038247196E-07    Norm:   0.9999582269E+00
+ Saving wavefunction at T=    167.5000
+T=        168.00000  Energy:  -0.1473495936E+03 -0.2042221260E-07    Norm:   0.9999582167E+00
+ Saving wavefunction at T=    168.0000
+T=        168.50000  Energy:  -0.1473495936E+03 -0.2048238482E-07    Norm:   0.9999582065E+00
+ Saving wavefunction at T=    168.5000
+T=        169.00000  Energy:  -0.1473495936E+03 -0.2056201770E-07    Norm:   0.9999581962E+00
+ Saving wavefunction at T=    169.0000
+T=        169.50000  Energy:  -0.1473495936E+03 -0.2065678768E-07    Norm:   0.9999581859E+00
+ Saving wavefunction at T=    169.5000
+T=        170.00000  Energy:  -0.1473495936E+03 -0.2075991849E-07    Norm:   0.9999581756E+00
+ Saving wavefunction at T=    170.0000
+T=        170.50000  Energy:  -0.1473495936E+03 -0.2086402695E-07    Norm:   0.9999581652E+00
+ Saving wavefunction at T=    170.5000
+T=        171.00000  Energy:  -0.1473495936E+03 -0.2096074355E-07    Norm:   0.9999581547E+00
+ Saving wavefunction at T=    171.0000
+T=        171.50000  Energy:  -0.1473495936E+03 -0.2104243284E-07    Norm:   0.9999581442E+00
+ Saving wavefunction at T=    171.5000
+T=        172.00000  Energy:  -0.1473495936E+03 -0.2110440952E-07    Norm:   0.9999581337E+00
+ Saving wavefunction at T=    172.0000
+T=        172.50000  Energy:  -0.1473495936E+03 -0.2114407011E-07    Norm:   0.9999581231E+00
+ Saving wavefunction at T=    172.5000
+T=        173.00000  Energy:  -0.1473495936E+03 -0.2116223523E-07    Norm:   0.9999581125E+00
+ Saving wavefunction at T=    173.0000
+T=        173.50000  Energy:  -0.1473495936E+03 -0.2116176984E-07    Norm:   0.9999581019E+00
+ Saving wavefunction at T=    173.5000
+T=        174.00000  Energy:  -0.1473495936E+03 -0.2114755108E-07    Norm:   0.9999580914E+00
+ Saving wavefunction at T=    174.0000
+T=        174.50000  Energy:  -0.1473495936E+03 -0.2112521111E-07    Norm:   0.9999580808E+00
+ Saving wavefunction at T=    174.5000
+T=        175.00000  Energy:  -0.1473495936E+03 -0.2110053267E-07    Norm:   0.9999580702E+00
+ Saving wavefunction at T=    175.0000
+T=        175.50000  Energy:  -0.1473495937E+03 -0.2107800897E-07    Norm:   0.9999580597E+00
+ Saving wavefunction at T=    175.5000
+T=        176.00000  Energy:  -0.1473495937E+03 -0.2105987416E-07    Norm:   0.9999580492E+00
+ Saving wavefunction at T=    176.0000
+T=        176.50000  Energy:  -0.1473495937E+03 -0.2104574185E-07    Norm:   0.9999580386E+00
+ Saving wavefunction at T=    176.5000
+T=        177.00000  Energy:  -0.1473495937E+03 -0.2103383419E-07    Norm:   0.9999580281E+00
+ Saving wavefunction at T=    177.0000
+T=        177.50000  Energy:  -0.1473495937E+03 -0.2102043629E-07    Norm:   0.9999580176E+00
+ Saving wavefunction at T=    177.5000
+T=        178.00000  Energy:  -0.1473495937E+03 -0.2100033372E-07    Norm:   0.9999580071E+00
+ Saving wavefunction at T=    178.0000
+T=        178.50000  Energy:  -0.1473495937E+03 -0.2096821913E-07    Norm:   0.9999579966E+00
+ Saving wavefunction at T=    178.5000
+T=        179.00000  Energy:  -0.1473495937E+03 -0.2092035437E-07    Norm:   0.9999579861E+00
+ Saving wavefunction at T=    179.0000
+T=        179.50000  Energy:  -0.1473495937E+03 -0.2085465796E-07    Norm:   0.9999579757E+00
+ Saving wavefunction at T=    179.5000
+T=        180.00000  Energy:  -0.1473495937E+03 -0.2077112749E-07    Norm:   0.9999579653E+00
+ Saving wavefunction at T=    180.0000
+T=        180.50000  Energy:  -0.1473495937E+03 -0.2067147988E-07    Norm:   0.9999579549E+00
+ Saving wavefunction at T=    180.5000
+T=        181.00000  Energy:  -0.1473495937E+03 -0.2056033494E-07    Norm:   0.9999579446E+00
+ Saving wavefunction at T=    181.0000
+T=        181.50000  Energy:  -0.1473495937E+03 -0.2044343326E-07    Norm:   0.9999579344E+00
+ Saving wavefunction at T=    181.5000
+T=        182.00000  Energy:  -0.1473495937E+03 -0.2032748185E-07    Norm:   0.9999579242E+00
+ Saving wavefunction at T=    182.0000
+T=        182.50000  Energy:  -0.1473495937E+03 -0.2021895589E-07    Norm:   0.9999579140E+00
+ Saving wavefunction at T=    182.5000
+T=        183.00000  Energy:  -0.1473495937E+03 -0.2012393196E-07    Norm:   0.9999579040E+00
+ Saving wavefunction at T=    183.0000
+T=        183.50000  Energy:  -0.1473495937E+03 -0.2004787094E-07    Norm:   0.9999578939E+00
+ Saving wavefunction at T=    183.5000
+T=        184.00000  Energy:  -0.1473495937E+03 -0.1999470758E-07    Norm:   0.9999578839E+00
+ Saving wavefunction at T=    184.0000
+T=        184.50000  Energy:  -0.1473495937E+03 -0.1996734068E-07    Norm:   0.9999578739E+00
+ Saving wavefunction at T=    184.5000
+T=        185.00000  Energy:  -0.1473495937E+03 -0.1996771177E-07    Norm:   0.9999578639E+00
+ Saving wavefunction at T=    185.0000
+T=        185.50000  Energy:  -0.1473495937E+03 -0.1999642178E-07    Norm:   0.9999578539E+00
+ Saving wavefunction at T=    185.5000
+T=        186.00000  Energy:  -0.1473495937E+03 -0.2005361496E-07    Norm:   0.9999578439E+00
+ Saving wavefunction at T=    186.0000
+T=        186.50000  Energy:  -0.1473495937E+03 -0.2013905588E-07    Norm:   0.9999578339E+00
+ Saving wavefunction at T=    186.5000
+T=        187.00000  Energy:  -0.1473495937E+03 -0.2025209870E-07    Norm:   0.9999578238E+00
+ Saving wavefunction at T=    187.0000
+T=        187.50000  Energy:  -0.1473495937E+03 -0.2039108113E-07    Norm:   0.9999578136E+00
+ Saving wavefunction at T=    187.5000
+T=        188.00000  Energy:  -0.1473495937E+03 -0.2055338357E-07    Norm:   0.9999578034E+00
+ Saving wavefunction at T=    188.0000
+T=        188.50000  Energy:  -0.1473495937E+03 -0.2073521923E-07    Norm:   0.9999577931E+00
+ Saving wavefunction at T=    188.5000
+T=        189.00000  Energy:  -0.1473495937E+03 -0.2093083201E-07    Norm:   0.9999577827E+00
+ Saving wavefunction at T=    189.0000
+T=        189.50000  Energy:  -0.1473495937E+03 -0.2113307095E-07    Norm:   0.9999577721E+00
+ Saving wavefunction at T=    189.5000
+T=        190.00000  Energy:  -0.1473495937E+03 -0.2133293359E-07    Norm:   0.9999577615E+00
+ Saving wavefunction at T=    190.0000
+T=        190.50000  Energy:  -0.1473495937E+03 -0.2152039164E-07    Norm:   0.9999577508E+00
+ Saving wavefunction at T=    190.5000
+T=        191.00000  Energy:  -0.1473495937E+03 -0.2168454239E-07    Norm:   0.9999577400E+00
+ Saving wavefunction at T=    191.0000
+T=        191.50000  Energy:  -0.1473495937E+03 -0.2181610031E-07    Norm:   0.9999577291E+00
+ Saving wavefunction at T=    191.5000
+T=        192.00000  Energy:  -0.1473495938E+03 -0.2190653394E-07    Norm:   0.9999577182E+00
+ Saving wavefunction at T=    192.0000
+T=        192.50000  Energy:  -0.1473495938E+03 -0.2195077244E-07    Norm:   0.9999577072E+00
+ Saving wavefunction at T=    192.5000
+T=        193.00000  Energy:  -0.1473495938E+03 -0.2194698058E-07    Norm:   0.9999576963E+00
+ Saving wavefunction at T=    193.0000
+T=        193.50000  Energy:  -0.1473495938E+03 -0.2189778877E-07    Norm:   0.9999576853E+00
+ Saving wavefunction at T=    193.5000
+T=        194.00000  Energy:  -0.1473495938E+03 -0.2181011013E-07    Norm:   0.9999576744E+00
+ Saving wavefunction at T=    194.0000
+T=        194.50000  Energy:  -0.1473495938E+03 -0.2169455286E-07    Norm:   0.9999576635E+00
+ Saving wavefunction at T=    194.5000
+T=        195.00000  Energy:  -0.1473495938E+03 -0.2156389963E-07    Norm:   0.9999576527E+00
+ Saving wavefunction at T=    195.0000
+T=        195.50000  Energy:  -0.1473495938E+03 -0.2143269896E-07    Norm:   0.9999576419E+00
+ Saving wavefunction at T=    195.5000
+T=        196.00000  Energy:  -0.1473495938E+03 -0.2131523769E-07    Norm:   0.9999576313E+00
+ Saving wavefunction at T=    196.0000
+T=        196.50000  Energy:  -0.1473495938E+03 -0.2122352127E-07    Norm:   0.9999576206E+00
+ Saving wavefunction at T=    196.5000
+T=        197.00000  Energy:  -0.1473495938E+03 -0.2116614409E-07    Norm:   0.9999576100E+00
+ Saving wavefunction at T=    197.0000
+T=        197.50000  Energy:  -0.1473495938E+03 -0.2114788301E-07    Norm:   0.9999575994E+00
+ Saving wavefunction at T=    197.5000
+T=        198.00000  Energy:  -0.1473495938E+03 -0.2116917658E-07    Norm:   0.9999575889E+00
+ Saving wavefunction at T=    198.0000
+T=        198.50000  Energy:  -0.1473495938E+03 -0.2122583540E-07    Norm:   0.9999575783E+00
+ Saving wavefunction at T=    198.5000
+T=        199.00000  Energy:  -0.1473495938E+03 -0.2130997285E-07    Norm:   0.9999575676E+00
+ Saving wavefunction at T=    199.0000
+T=        199.50000  Energy:  -0.1473495938E+03 -0.2141121762E-07    Norm:   0.9999575570E+00
+ Saving wavefunction at T=    199.5000
+T=        200.00000  Energy:  -0.1473495938E+03 -0.2151826792E-07    Norm:   0.9999575462E+00
+ Saving wavefunction at T=    200.0000
+T=        200.50000  Energy:  -0.1473495938E+03 -0.2161902805E-07    Norm:   0.9999575354E+00
+ Saving wavefunction at T=    200.5000
+T=        201.00000  Energy:  -0.1473495938E+03 -0.2170283350E-07    Norm:   0.9999575246E+00
+ Saving wavefunction at T=    201.0000
+T=        201.50000  Energy:  -0.1473495938E+03 -0.2176068527E-07    Norm:   0.9999575137E+00
+ Saving wavefunction at T=    201.5000
+T=        202.00000  Energy:  -0.1473495938E+03 -0.2178625665E-07    Norm:   0.9999575029E+00
+ Saving wavefunction at T=    202.0000
+T=        202.50000  Energy:  -0.1473495938E+03 -0.2177632604E-07    Norm:   0.9999574920E+00
+ Saving wavefunction at T=    202.5000
+T=        203.00000  Energy:  -0.1473495938E+03 -0.2173023760E-07    Norm:   0.9999574811E+00
+ Saving wavefunction at T=    203.0000
+T=        203.50000  Energy:  -0.1473495938E+03 -0.2165001984E-07    Norm:   0.9999574702E+00
+ Saving wavefunction at T=    203.5000
+T=        204.00000  Energy:  -0.1473495938E+03 -0.2153973904E-07    Norm:   0.9999574594E+00
+ Saving wavefunction at T=    204.0000
+T=        204.50000  Energy:  -0.1473495938E+03 -0.2140583271E-07    Norm:   0.9999574487E+00
+ Saving wavefunction at T=    204.5000
+T=        205.00000  Energy:  -0.1473495939E+03 -0.2125574241E-07    Norm:   0.9999574380E+00
+ Saving wavefunction at T=    205.0000
+T=        205.50000  Energy:  -0.1473495939E+03 -0.2109699478E-07    Norm:   0.9999574275E+00
+ Saving wavefunction at T=    205.5000
+T=        206.00000  Energy:  -0.1473495939E+03 -0.2093791370E-07    Norm:   0.9999574169E+00
+ Saving wavefunction at T=    206.0000
+T=        206.50000  Energy:  -0.1473495939E+03 -0.2078651358E-07    Norm:   0.9999574065E+00
+ Saving wavefunction at T=    206.5000
+T=        207.00000  Energy:  -0.1473495939E+03 -0.2065049770E-07    Norm:   0.9999573962E+00
+ Saving wavefunction at T=    207.0000
+T=        207.50000  Energy:  -0.1473495939E+03 -0.2053606980E-07    Norm:   0.9999573859E+00
+ Saving wavefunction at T=    207.5000
+T=        208.00000  Energy:  -0.1473495939E+03 -0.2044822091E-07    Norm:   0.9999573756E+00
+ Saving wavefunction at T=    208.0000
+T=        208.50000  Energy:  -0.1473495939E+03 -0.2039009805E-07    Norm:   0.9999573654E+00
+ Saving wavefunction at T=    208.5000
+T=        209.00000  Energy:  -0.1473495939E+03 -0.2036281163E-07    Norm:   0.9999573552E+00
+ Saving wavefunction at T=    209.0000
+T=        209.50000  Energy:  -0.1473495939E+03 -0.2036466017E-07    Norm:   0.9999573450E+00
+ Saving wavefunction at T=    209.5000
+T=        210.00000  Energy:  -0.1473495939E+03 -0.2039142018E-07    Norm:   0.9999573349E+00
+ Saving wavefunction at T=    210.0000
+T=        210.50000  Energy:  -0.1473495939E+03 -0.2043685531E-07    Norm:   0.9999573246E+00
+ Saving wavefunction at T=    210.5000
+T=        211.00000  Energy:  -0.1473495939E+03 -0.2049378065E-07    Norm:   0.9999573144E+00
+ Saving wavefunction at T=    211.0000
+T=        211.50000  Energy:  -0.1473495939E+03 -0.2055381401E-07    Norm:   0.9999573041E+00
+ Saving wavefunction at T=    211.5000
+T=        212.00000  Energy:  -0.1473495939E+03 -0.2060837616E-07    Norm:   0.9999572939E+00
+ Saving wavefunction at T=    212.0000
+T=        212.50000  Energy:  -0.1473495939E+03 -0.2064988541E-07    Norm:   0.9999572835E+00
+ Saving wavefunction at T=    212.5000
+T=        213.00000  Energy:  -0.1473495939E+03 -0.2067309394E-07    Norm:   0.9999572732E+00
+ Saving wavefunction at T=    213.0000
+T=        213.50000  Energy:  -0.1473495939E+03 -0.2067441922E-07    Norm:   0.9999572629E+00
+ Saving wavefunction at T=    213.5000
+T=        214.00000  Energy:  -0.1473495939E+03 -0.2065300346E-07    Norm:   0.9999572525E+00
+ Saving wavefunction at T=    214.0000
+T=        214.50000  Energy:  -0.1473495939E+03 -0.2061082924E-07    Norm:   0.9999572422E+00
+ Saving wavefunction at T=    214.5000
+T=        215.00000  Energy:  -0.1473495939E+03 -0.2055238303E-07    Norm:   0.9999572319E+00
+ Saving wavefunction at T=    215.0000
+T=        215.50000  Energy:  -0.1473495939E+03 -0.2048401676E-07    Norm:   0.9999572217E+00
+ Saving wavefunction at T=    215.5000
+T=        216.00000  Energy:  -0.1473495939E+03 -0.2041255260E-07    Norm:   0.9999572115E+00
+ Saving wavefunction at T=    216.0000
+T=        216.50000  Energy:  -0.1473495939E+03 -0.2034495685E-07    Norm:   0.9999572013E+00
+ Saving wavefunction at T=    216.5000
+T=        217.00000  Energy:  -0.1473495939E+03 -0.2028778064E-07    Norm:   0.9999571911E+00
+ Saving wavefunction at T=    217.0000
+T=        217.50000  Energy:  -0.1473495939E+03 -0.2024589920E-07    Norm:   0.9999571810E+00
+ Saving wavefunction at T=    217.5000
+T=        218.00000  Energy:  -0.1473495939E+03 -0.2022241893E-07    Norm:   0.9999571709E+00
+ Saving wavefunction at T=    218.0000
+T=        218.50000  Energy:  -0.1473495939E+03 -0.2021841499E-07    Norm:   0.9999571608E+00
+ Saving wavefunction at T=    218.5000
+T=        219.00000  Energy:  -0.1473495939E+03 -0.2023364658E-07    Norm:   0.9999571506E+00
+ Saving wavefunction at T=    219.0000
+T=        219.50000  Energy:  -0.1473495939E+03 -0.2026628853E-07    Norm:   0.9999571405E+00
+ Saving wavefunction at T=    219.5000
+T=        220.00000  Energy:  -0.1473495939E+03 -0.2031329422E-07    Norm:   0.9999571304E+00
+ Saving wavefunction at T=    220.0000
+T=        220.50000  Energy:  -0.1473495939E+03 -0.2037107924E-07    Norm:   0.9999571202E+00
+ Saving wavefunction at T=    220.5000
+T=        221.00000  Energy:  -0.1473495939E+03 -0.2043540409E-07    Norm:   0.9999571100E+00
+ Saving wavefunction at T=    221.0000
+T=        221.50000  Energy:  -0.1473495939E+03 -0.2050210352E-07    Norm:   0.9999570998E+00
+ Saving wavefunction at T=    221.5000
+T=        222.00000  Energy:  -0.1473495939E+03 -0.2056705351E-07    Norm:   0.9999570895E+00
+ Saving wavefunction at T=    222.0000
+T=        222.50000  Energy:  -0.1473495939E+03 -0.2062608030E-07    Norm:   0.9999570792E+00
+ Saving wavefunction at T=    222.5000
+T=        223.00000  Energy:  -0.1473495939E+03 -0.2067592603E-07    Norm:   0.9999570689E+00
+ Saving wavefunction at T=    223.0000
+T=        223.50000  Energy:  -0.1473495939E+03 -0.2071338175E-07    Norm:   0.9999570585E+00
+ Saving wavefunction at T=    223.5000
+T=        224.00000  Energy:  -0.1473495939E+03 -0.2073561403E-07    Norm:   0.9999570482E+00
+ Saving wavefunction at T=    224.0000
+T=        224.50000  Energy:  -0.1473495939E+03 -0.2074066182E-07    Norm:   0.9999570378E+00
+ Saving wavefunction at T=    224.5000
+T=        225.00000  Energy:  -0.1473495939E+03 -0.2072747014E-07    Norm:   0.9999570274E+00
+ Saving wavefunction at T=    225.0000
+T=        225.50000  Energy:  -0.1473495939E+03 -0.2069614699E-07    Norm:   0.9999570171E+00
+ Saving wavefunction at T=    225.5000
+T=        226.00000  Energy:  -0.1473495939E+03 -0.2064806368E-07    Norm:   0.9999570067E+00
+ Saving wavefunction at T=    226.0000
+T=        226.50000  Energy:  -0.1473495939E+03 -0.2058666284E-07    Norm:   0.9999569964E+00
+ Saving wavefunction at T=    226.5000
+T=        227.00000  Energy:  -0.1473495939E+03 -0.2051558183E-07    Norm:   0.9999569862E+00
+ Saving wavefunction at T=    227.0000
+T=        227.50000  Energy:  -0.1473495939E+03 -0.2044036033E-07    Norm:   0.9999569759E+00
+ Saving wavefunction at T=    227.5000
+T=        228.00000  Energy:  -0.1473495939E+03 -0.2036630305E-07    Norm:   0.9999569657E+00
+ Saving wavefunction at T=    228.0000
+T=        228.50000  Energy:  -0.1473495940E+03 -0.2029864745E-07    Norm:   0.9999569556E+00
+ Saving wavefunction at T=    228.5000
+T=        229.00000  Energy:  -0.1473495940E+03 -0.2024169008E-07    Norm:   0.9999569454E+00
+ Saving wavefunction at T=    229.0000
+T=        229.50000  Energy:  -0.1473495940E+03 -0.2019840087E-07    Norm:   0.9999569353E+00
+ Saving wavefunction at T=    229.5000
+T=        230.00000  Energy:  -0.1473495940E+03 -0.2017000680E-07    Norm:   0.9999569252E+00
+ Saving wavefunction at T=    230.0000
+T=        230.50000  Energy:  -0.1473495940E+03 -0.2015588424E-07    Norm:   0.9999569151E+00
+ Saving wavefunction at T=    230.5000
+T=        231.00000  Energy:  -0.1473495940E+03 -0.2015338078E-07    Norm:   0.9999569051E+00
+ Saving wavefunction at T=    231.0000
+T=        231.50000  Energy:  -0.1473495940E+03 -0.2015862046E-07    Norm:   0.9999568950E+00
+ Saving wavefunction at T=    231.5000
+T=        232.00000  Energy:  -0.1473495940E+03 -0.2016613362E-07    Norm:   0.9999568849E+00
+ Saving wavefunction at T=    232.0000
+T=        232.50000  Energy:  -0.1473495940E+03 -0.2017060696E-07    Norm:   0.9999568748E+00
+ Saving wavefunction at T=    232.5000
+T=        233.00000  Energy:  -0.1473495940E+03 -0.2016732582E-07    Norm:   0.9999568647E+00
+ Saving wavefunction at T=    233.0000
+T=        233.50000  Energy:  -0.1473495940E+03 -0.2015243688E-07    Norm:   0.9999568547E+00
+ Saving wavefunction at T=    233.5000
+T=        234.00000  Energy:  -0.1473495940E+03 -0.2012378429E-07    Norm:   0.9999568446E+00
+ Saving wavefunction at T=    234.0000
+T=        234.50000  Energy:  -0.1473495940E+03 -0.2008141938E-07    Norm:   0.9999568345E+00
+ Saving wavefunction at T=    234.5000
+T=        235.00000  Energy:  -0.1473495940E+03 -0.2002708641E-07    Norm:   0.9999568245E+00
+ Saving wavefunction at T=    235.0000
+T=        235.50000  Energy:  -0.1473495940E+03 -0.1996423724E-07    Norm:   0.9999568145E+00
+ Saving wavefunction at T=    235.5000
+T=        236.00000  Energy:  -0.1473495940E+03 -0.1989721052E-07    Norm:   0.9999568045E+00
+ Saving wavefunction at T=    236.0000
+T=        236.50000  Energy:  -0.1473495940E+03 -0.1983088376E-07    Norm:   0.9999567946E+00
+ Saving wavefunction at T=    236.5000
+T=        237.00000  Energy:  -0.1473495940E+03 -0.1976981017E-07    Norm:   0.9999567847E+00
+ Saving wavefunction at T=    237.0000
+T=        237.50000  Energy:  -0.1473495940E+03 -0.1971794618E-07    Norm:   0.9999567748E+00
+ Saving wavefunction at T=    237.5000
+T=        238.00000  Energy:  -0.1473495940E+03 -0.1967829085E-07    Norm:   0.9999567650E+00
+ Saving wavefunction at T=    238.0000
+T=        238.50000  Energy:  -0.1473495940E+03 -0.1965253961E-07    Norm:   0.9999567552E+00
+ Saving wavefunction at T=    238.5000
+T=        239.00000  Energy:  -0.1473495940E+03 -0.1964118258E-07    Norm:   0.9999567453E+00
+ Saving wavefunction at T=    239.0000
+T=        239.50000  Energy:  -0.1473495940E+03 -0.1964392260E-07    Norm:   0.9999567355E+00
+ Saving wavefunction at T=    239.5000
+T=        240.00000  Energy:  -0.1473495940E+03 -0.1965943942E-07    Norm:   0.9999567257E+00
+ Saving wavefunction at T=    240.0000
+T=        240.50000  Energy:  -0.1473495940E+03 -0.1968607029E-07    Norm:   0.9999567159E+00
+ Saving wavefunction at T=    240.5000
+T=        241.00000  Energy:  -0.1473495940E+03 -0.1972230360E-07    Norm:   0.9999567060E+00
+ Saving wavefunction at T=    241.0000
+T=        241.50000  Energy:  -0.1473495940E+03 -0.1976671950E-07    Norm:   0.9999566961E+00
+ Saving wavefunction at T=    241.5000
+T=        242.00000  Energy:  -0.1473495940E+03 -0.1981777442E-07    Norm:   0.9999566862E+00
+ Saving wavefunction at T=    242.0000
+T=        242.50000  Energy:  -0.1473495940E+03 -0.1987425691E-07    Norm:   0.9999566763E+00
+ Saving wavefunction at T=    242.5000
+T=        243.00000  Energy:  -0.1473495940E+03 -0.1993476871E-07    Norm:   0.9999566664E+00
+ Saving wavefunction at T=    243.0000
+T=        243.50000  Energy:  -0.1473495940E+03 -0.1999727146E-07    Norm:   0.9999566564E+00
+ Saving wavefunction at T=    243.5000
+T=        244.00000  Energy:  -0.1473495940E+03 -0.2005954622E-07    Norm:   0.9999566464E+00
+ Saving wavefunction at T=    244.0000
+T=        244.50000  Energy:  -0.1473495940E+03 -0.2011863812E-07    Norm:   0.9999566363E+00
+ Saving wavefunction at T=    244.5000
+T=        245.00000  Energy:  -0.1473495940E+03 -0.2017136466E-07    Norm:   0.9999566262E+00
+ Saving wavefunction at T=    245.0000
+T=        245.50000  Energy:  -0.1473495940E+03 -0.2021428536E-07    Norm:   0.9999566162E+00
+ Saving wavefunction at T=    245.5000
+T=        246.00000  Energy:  -0.1473495940E+03 -0.2024422886E-07    Norm:   0.9999566060E+00
+ Saving wavefunction at T=    246.0000
+T=        246.50000  Energy:  -0.1473495940E+03 -0.2025898499E-07    Norm:   0.9999565959E+00
+ Saving wavefunction at T=    246.5000
+T=        247.00000  Energy:  -0.1473495940E+03 -0.2025676606E-07    Norm:   0.9999565858E+00
+ Saving wavefunction at T=    247.0000
+T=        247.50000  Energy:  -0.1473495940E+03 -0.2023806238E-07    Norm:   0.9999565757E+00
+ Saving wavefunction at T=    247.5000
+T=        248.00000  Energy:  -0.1473495940E+03 -0.2020444841E-07    Norm:   0.9999565656E+00
+ Saving wavefunction at T=    248.0000
+T=        248.50000  Energy:  -0.1473495940E+03 -0.2015912408E-07    Norm:   0.9999565555E+00
+ Saving wavefunction at T=    248.5000
+T=        249.00000  Energy:  -0.1473495940E+03 -0.2010683745E-07    Norm:   0.9999565454E+00
+ Saving wavefunction at T=    249.0000
+T=        249.50000  Energy:  -0.1473495940E+03 -0.2005300722E-07    Norm:   0.9999565354E+00
+ Saving wavefunction at T=    249.5000
+T=        250.00000  Energy:  -0.1473495940E+03 -0.2000335630E-07    Norm:   0.9999565253E+00
+ Saving wavefunction at T=    250.0000
+T=        250.50000  Energy:  -0.1473495940E+03 -0.1996269049E-07    Norm:   0.9999565154E+00
+ Saving wavefunction at T=    250.5000
+T=        251.00000  Energy:  -0.1473495940E+03 -0.1993464469E-07    Norm:   0.9999565054E+00
+ Saving wavefunction at T=    251.0000
+T=        251.50000  Energy:  -0.1473495940E+03 -0.1992092486E-07    Norm:   0.9999564954E+00
+ Saving wavefunction at T=    251.5000
+T=        252.00000  Energy:  -0.1473495940E+03 -0.1992119414E-07    Norm:   0.9999564855E+00
+ Saving wavefunction at T=    252.0000
+T=        252.50000  Energy:  -0.1473495940E+03 -0.1993333718E-07    Norm:   0.9999564755E+00
+ Saving wavefunction at T=    252.5000
+T=        253.00000  Energy:  -0.1473495940E+03 -0.1995271598E-07    Norm:   0.9999564655E+00
+ Saving wavefunction at T=    253.0000
+T=        253.50000  Energy:  -0.1473495940E+03 -0.1997437755E-07    Norm:   0.9999564555E+00
+ Saving wavefunction at T=    253.5000
+T=        254.00000  Energy:  -0.1473495940E+03 -0.1999329126E-07    Norm:   0.9999564455E+00
+ Saving wavefunction at T=    254.0000
+T=        254.50000  Energy:  -0.1473495940E+03 -0.2000443760E-07    Norm:   0.9999564355E+00
+ Saving wavefunction at T=    254.5000
+T=        255.00000  Energy:  -0.1473495940E+03 -0.2000387483E-07    Norm:   0.9999564255E+00
+ Saving wavefunction at T=    255.0000
+T=        255.50000  Energy:  -0.1473495940E+03 -0.1998972921E-07    Norm:   0.9999564155E+00
+ Saving wavefunction at T=    255.5000
+T=        256.00000  Energy:  -0.1473495940E+03 -0.1996214078E-07    Norm:   0.9999564056E+00
+ Saving wavefunction at T=    256.0000
+T=        256.50000  Energy:  -0.1473495940E+03 -0.1992312847E-07    Norm:   0.9999563956E+00
+ Saving wavefunction at T=    256.5000
+T=        257.00000  Energy:  -0.1473495940E+03 -0.1987563559E-07    Norm:   0.9999563856E+00
+ Saving wavefunction at T=    257.0000
+T=        257.50000  Energy:  -0.1473495940E+03 -0.1982422437E-07    Norm:   0.9999563757E+00
+ Saving wavefunction at T=    257.5000
+T=        258.00000  Energy:  -0.1473495941E+03 -0.1977383550E-07    Norm:   0.9999563658E+00
+ Saving wavefunction at T=    258.0000
+T=        258.50000  Energy:  -0.1473495941E+03 -0.1972903326E-07    Norm:   0.9999563559E+00
+ Saving wavefunction at T=    258.5000
+T=        259.00000  Energy:  -0.1473495941E+03 -0.1969278659E-07    Norm:   0.9999563461E+00
+ Saving wavefunction at T=    259.0000
+T=        259.50000  Energy:  -0.1473495941E+03 -0.1966721922E-07    Norm:   0.9999563362E+00
+ Saving wavefunction at T=    259.5000
+T=        260.00000  Energy:  -0.1473495941E+03 -0.1965300896E-07    Norm:   0.9999563264E+00
+ Saving wavefunction at T=    260.0000
+T=        260.50000  Energy:  -0.1473495941E+03 -0.1964961048E-07    Norm:   0.9999563166E+00
+ Saving wavefunction at T=    260.5000
+T=        261.00000  Energy:  -0.1473495941E+03 -0.1965480613E-07    Norm:   0.9999563068E+00
+ Saving wavefunction at T=    261.0000
+T=        261.50000  Energy:  -0.1473495941E+03 -0.1966622643E-07    Norm:   0.9999562969E+00
+ Saving wavefunction at T=    261.5000
+T=        262.00000  Energy:  -0.1473495941E+03 -0.1968086854E-07    Norm:   0.9999562871E+00
+ Saving wavefunction at T=    262.0000
+T=        262.50000  Energy:  -0.1473495941E+03 -0.1969678573E-07    Norm:   0.9999562773E+00
+ Saving wavefunction at T=    262.5000
+T=        263.00000  Energy:  -0.1473495941E+03 -0.1971181783E-07    Norm:   0.9999562674E+00
+ Saving wavefunction at T=    263.0000
+T=        263.50000  Energy:  -0.1473495941E+03 -0.1972451448E-07    Norm:   0.9999562575E+00
+ Saving wavefunction at T=    263.5000
+T=        264.00000  Energy:  -0.1473495941E+03 -0.1973418261E-07    Norm:   0.9999562477E+00
+ Saving wavefunction at T=    264.0000
+T=        264.50000  Energy:  -0.1473495941E+03 -0.1974093620E-07    Norm:   0.9999562378E+00
+ Saving wavefunction at T=    264.5000
+T=        265.00000  Energy:  -0.1473495941E+03 -0.1974513545E-07    Norm:   0.9999562279E+00
+ Saving wavefunction at T=    265.0000
+T=        265.50000  Energy:  -0.1473495941E+03 -0.1974687871E-07    Norm:   0.9999562181E+00
+ Saving wavefunction at T=    265.5000
+T=        266.00000  Energy:  -0.1473495941E+03 -0.1974664582E-07    Norm:   0.9999562082E+00
+ Saving wavefunction at T=    266.0000
+T=        266.50000  Energy:  -0.1473495941E+03 -0.1974437666E-07    Norm:   0.9999561983E+00
+ Saving wavefunction at T=    266.5000
+T=        267.00000  Energy:  -0.1473495941E+03 -0.1973999207E-07    Norm:   0.9999561885E+00
+ Saving wavefunction at T=    267.0000
+T=        267.50000  Energy:  -0.1473495941E+03 -0.1973327716E-07    Norm:   0.9999561786E+00
+ Saving wavefunction at T=    267.5000
+T=        268.00000  Energy:  -0.1473495941E+03 -0.1972462552E-07    Norm:   0.9999561687E+00
+ Saving wavefunction at T=    268.0000
+T=        268.50000  Energy:  -0.1473495941E+03 -0.1971369907E-07    Norm:   0.9999561589E+00
+ Saving wavefunction at T=    268.5000
+T=        269.00000  Energy:  -0.1473495941E+03 -0.1970142468E-07    Norm:   0.9999561490E+00
+ Saving wavefunction at T=    269.0000
+T=        269.50000  Energy:  -0.1473495941E+03 -0.1968927881E-07    Norm:   0.9999561392E+00
+ Saving wavefunction at T=    269.5000
+T=        270.00000  Energy:  -0.1473495941E+03 -0.1967907495E-07    Norm:   0.9999561293E+00
+ Saving wavefunction at T=    270.0000
+T=        270.50000  Energy:  -0.1473495941E+03 -0.1967284870E-07    Norm:   0.9999561195E+00
+ Saving wavefunction at T=    270.5000
+T=        271.00000  Energy:  -0.1473495941E+03 -0.1967248527E-07    Norm:   0.9999561096E+00
+ Saving wavefunction at T=    271.0000
+T=        271.50000  Energy:  -0.1473495941E+03 -0.1967943957E-07    Norm:   0.9999560998E+00
+ Saving wavefunction at T=    271.5000
+T=        272.00000  Energy:  -0.1473495941E+03 -0.1969414439E-07    Norm:   0.9999560900E+00
+ Saving wavefunction at T=    272.0000
+T=        272.50000  Energy:  -0.1473495941E+03 -0.1971630127E-07    Norm:   0.9999560801E+00
+ Saving wavefunction at T=    272.5000
+T=        273.00000  Energy:  -0.1473495941E+03 -0.1974428416E-07    Norm:   0.9999560703E+00
+ Saving wavefunction at T=    273.0000
+T=        273.50000  Energy:  -0.1473495941E+03 -0.1977529957E-07    Norm:   0.9999560604E+00
+ Saving wavefunction at T=    273.5000
+T=        274.00000  Energy:  -0.1473495941E+03 -0.1980565883E-07    Norm:   0.9999560505E+00
+ Saving wavefunction at T=    274.0000
+T=        274.50000  Energy:  -0.1473495941E+03 -0.1983167626E-07    Norm:   0.9999560406E+00
+ Saving wavefunction at T=    274.5000
+T=        275.00000  Energy:  -0.1473495941E+03 -0.1984976607E-07    Norm:   0.9999560306E+00
+ Saving wavefunction at T=    275.0000
+T=        275.50000  Energy:  -0.1473495941E+03 -0.1985665122E-07    Norm:   0.9999560207E+00
+ Saving wavefunction at T=    275.5000
+T=        276.00000  Energy:  -0.1473495941E+03 -0.1985031217E-07    Norm:   0.9999560108E+00
+ Saving wavefunction at T=    276.0000
+T=        276.50000  Energy:  -0.1473495941E+03 -0.1983005599E-07    Norm:   0.9999560009E+00
+ Saving wavefunction at T=    276.5000
+T=        277.00000  Energy:  -0.1473495941E+03 -0.1979685952E-07    Norm:   0.9999559910E+00
+ Saving wavefunction at T=    277.0000
+T=        277.50000  Energy:  -0.1473495941E+03 -0.1975315140E-07    Norm:   0.9999559811E+00
+ Saving wavefunction at T=    277.5000
+T=        278.00000  Energy:  -0.1473495941E+03 -0.1970226238E-07    Norm:   0.9999559712E+00
+ Saving wavefunction at T=    278.0000
+T=        278.50000  Energy:  -0.1473495941E+03 -0.1964820956E-07    Norm:   0.9999559614E+00
+ Saving wavefunction at T=    278.5000
+T=        279.00000  Energy:  -0.1473495941E+03 -0.1959539695E-07    Norm:   0.9999559516E+00
+ Saving wavefunction at T=    279.0000
+T=        279.50000  Energy:  -0.1473495941E+03 -0.1954790544E-07    Norm:   0.9999559418E+00
+ Saving wavefunction at T=    279.5000
+T=        280.00000  Energy:  -0.1473495941E+03 -0.1950884923E-07    Norm:   0.9999559320E+00
+ Saving wavefunction at T=    280.0000
+T=        280.50000  Energy:  -0.1473495941E+03 -0.1948025451E-07    Norm:   0.9999559223E+00
+ Saving wavefunction at T=    280.5000
+T=        281.00000  Energy:  -0.1473495941E+03 -0.1946348073E-07    Norm:   0.9999559125E+00
+ Saving wavefunction at T=    281.0000
+T=        281.50000  Energy:  -0.1473495941E+03 -0.1945827376E-07    Norm:   0.9999559028E+00
+ Saving wavefunction at T=    281.5000
+T=        282.00000  Energy:  -0.1473495941E+03 -0.1946356673E-07    Norm:   0.9999558931E+00
+ Saving wavefunction at T=    282.0000
+T=        282.50000  Energy:  -0.1473495941E+03 -0.1947732498E-07    Norm:   0.9999558833E+00
+ Saving wavefunction at T=    282.5000
+T=        283.00000  Energy:  -0.1473495941E+03 -0.1949761231E-07    Norm:   0.9999558736E+00
+ Saving wavefunction at T=    283.0000
+T=        283.50000  Energy:  -0.1473495941E+03 -0.1952190213E-07    Norm:   0.9999558638E+00
+ Saving wavefunction at T=    283.5000
+T=        284.00000  Energy:  -0.1473495941E+03 -0.1954800472E-07    Norm:   0.9999558541E+00
+ Saving wavefunction at T=    284.0000
+T=        284.50000  Energy:  -0.1473495941E+03 -0.1957390147E-07    Norm:   0.9999558443E+00
+ Saving wavefunction at T=    284.5000
+T=        285.00000  Energy:  -0.1473495941E+03 -0.1959838561E-07    Norm:   0.9999558345E+00
+ Saving wavefunction at T=    285.0000
+T=        285.50000  Energy:  -0.1473495941E+03 -0.1962101962E-07    Norm:   0.9999558247E+00
+ Saving wavefunction at T=    285.5000
+T=        286.00000  Energy:  -0.1473495941E+03 -0.1964157622E-07    Norm:   0.9999558149E+00
+ Saving wavefunction at T=    286.0000
+T=        286.50000  Energy:  -0.1473495941E+03 -0.1966032047E-07    Norm:   0.9999558051E+00
+ Saving wavefunction at T=    286.5000
+T=        287.00000  Energy:  -0.1473495941E+03 -0.1967774979E-07    Norm:   0.9999557952E+00
+ Saving wavefunction at T=    287.0000
+T=        287.50000  Energy:  -0.1473495941E+03 -0.1969545085E-07    Norm:   0.9999557854E+00
+ Saving wavefunction at T=    287.5000
+T=        288.00000  Energy:  -0.1473495941E+03 -0.1971458636E-07    Norm:   0.9999557755E+00
+ Saving wavefunction at T=    288.0000
+T=        288.50000  Energy:  -0.1473495941E+03 -0.1973640079E-07    Norm:   0.9999557657E+00
+ Saving wavefunction at T=    288.5000
+T=        289.00000  Energy:  -0.1473495941E+03 -0.1976238247E-07    Norm:   0.9999557558E+00
+ Saving wavefunction at T=    289.0000
+T=        289.50000  Energy:  -0.1473495941E+03 -0.1979440108E-07    Norm:   0.9999557459E+00
+ Saving wavefunction at T=    289.5000
+T=        290.00000  Energy:  -0.1473495941E+03 -0.1983338929E-07    Norm:   0.9999557360E+00
+ Saving wavefunction at T=    290.0000
+T=        290.50000  Energy:  -0.1473495941E+03 -0.1988023352E-07    Norm:   0.9999557261E+00
+ Saving wavefunction at T=    290.5000
+T=        291.00000  Energy:  -0.1473495941E+03 -0.1993468023E-07    Norm:   0.9999557161E+00
+ Saving wavefunction at T=    291.0000
+T=        291.50000  Energy:  -0.1473495941E+03 -0.1999576970E-07    Norm:   0.9999557061E+00
+ Saving wavefunction at T=    291.5000
+T=        292.00000  Energy:  -0.1473495941E+03 -0.2006155466E-07    Norm:   0.9999556961E+00
+ Saving wavefunction at T=    292.0000
+T=        292.50000  Energy:  -0.1473495941E+03 -0.2012885049E-07    Norm:   0.9999556861E+00
+ Saving wavefunction at T=    292.5000
+T=        293.00000  Energy:  -0.1473495941E+03 -0.2019367609E-07    Norm:   0.9999556760E+00
+ Saving wavefunction at T=    293.0000
+T=        293.50000  Energy:  -0.1473495941E+03 -0.2025160299E-07    Norm:   0.9999556659E+00
+ Saving wavefunction at T=    293.5000
+T=        294.00000  Energy:  -0.1473495941E+03 -0.2029738452E-07    Norm:   0.9999556557E+00
+ Saving wavefunction at T=    294.0000
+T=        294.50000  Energy:  -0.1473495941E+03 -0.2032700623E-07    Norm:   0.9999556456E+00
+ Saving wavefunction at T=    294.5000
+T=        295.00000  Energy:  -0.1473495941E+03 -0.2033626165E-07    Norm:   0.9999556354E+00
+ Saving wavefunction at T=    295.0000
+T=        295.50000  Energy:  -0.1473495941E+03 -0.2032298824E-07    Norm:   0.9999556253E+00
+ Saving wavefunction at T=    295.5000
+T=        296.00000  Energy:  -0.1473495941E+03 -0.2028637522E-07    Norm:   0.9999556151E+00
+ Saving wavefunction at T=    296.0000
+T=        296.50000  Energy:  -0.1473495941E+03 -0.2022770576E-07    Norm:   0.9999556050E+00
+ Saving wavefunction at T=    296.5000
+T=        297.00000  Energy:  -0.1473495941E+03 -0.2015018666E-07    Norm:   0.9999555949E+00
+ Saving wavefunction at T=    297.0000
+T=        297.50000  Energy:  -0.1473495941E+03 -0.2005865235E-07    Norm:   0.9999555848E+00
+ Saving wavefunction at T=    297.5000
+T=        298.00000  Energy:  -0.1473495941E+03 -0.1995938705E-07    Norm:   0.9999555748E+00
+ Saving wavefunction at T=    298.0000
+T=        298.50000  Energy:  -0.1473495941E+03 -0.1985887594E-07    Norm:   0.9999555649E+00
+ Saving wavefunction at T=    298.5000
+T=        299.00000  Energy:  -0.1473495941E+03 -0.1976428119E-07    Norm:   0.9999555550E+00
+ Saving wavefunction at T=    299.0000
+T=        299.50000  Energy:  -0.1473495941E+03 -0.1968152901E-07    Norm:   0.9999555451E+00
+ Saving wavefunction at T=    299.5000
+T=        300.00000  Energy:  -0.1473495941E+03 -0.1961572374E-07    Norm:   0.9999555353E+00
+ Saving wavefunction at T=    300.0000
+T=        300.50000  Energy:  -0.1473495941E+03 -0.1957019095E-07    Norm:   0.9999555255E+00
+ Saving wavefunction at T=    300.5000
+T=        301.00000  Energy:  -0.1473495941E+03 -0.1954651363E-07    Norm:   0.9999555157E+00
+ Saving wavefunction at T=    301.0000
+T=        301.50000  Energy:  -0.1473495941E+03 -0.1954437943E-07    Norm:   0.9999555059E+00
+ Saving wavefunction at T=    301.5000
+T=        302.00000  Energy:  -0.1473495942E+03 -0.1956163738E-07    Norm:   0.9999554962E+00
+ Saving wavefunction at T=    302.0000
+T=        302.50000  Energy:  -0.1473495942E+03 -0.1959480199E-07    Norm:   0.9999554864E+00
+ Saving wavefunction at T=    302.5000
+T=        303.00000  Energy:  -0.1473495942E+03 -0.1963906973E-07    Norm:   0.9999554766E+00
+ Saving wavefunction at T=    303.0000
+T=        303.50000  Energy:  -0.1473495942E+03 -0.1968991185E-07    Norm:   0.9999554667E+00
+ Saving wavefunction at T=    303.5000
+T=        304.00000  Energy:  -0.1473495942E+03 -0.1974202034E-07    Norm:   0.9999554569E+00
+ Saving wavefunction at T=    304.0000
+T=        304.50000  Energy:  -0.1473495942E+03 -0.1979049015E-07    Norm:   0.9999554470E+00
+ Saving wavefunction at T=    304.5000
+T=        305.00000  Energy:  -0.1473495942E+03 -0.1983151722E-07    Norm:   0.9999554371E+00
+ Saving wavefunction at T=    305.0000
+T=        305.50000  Energy:  -0.1473495942E+03 -0.1986194244E-07    Norm:   0.9999554272E+00
+ Saving wavefunction at T=    305.5000
+T=        306.00000  Energy:  -0.1473495942E+03 -0.1987969989E-07    Norm:   0.9999554172E+00
+ Saving wavefunction at T=    306.0000
+T=        306.50000  Energy:  -0.1473495942E+03 -0.1988372573E-07    Norm:   0.9999554073E+00
+ Saving wavefunction at T=    306.5000
+T=        307.00000  Energy:  -0.1473495942E+03 -0.1987420575E-07    Norm:   0.9999553974E+00
+ Saving wavefunction at T=    307.0000
+T=        307.50000  Energy:  -0.1473495942E+03 -0.1985200225E-07    Norm:   0.9999553874E+00
+ Saving wavefunction at T=    307.5000
+T=        308.00000  Energy:  -0.1473495942E+03 -0.1981945925E-07    Norm:   0.9999553775E+00
+ Saving wavefunction at T=    308.0000
+T=        308.50000  Energy:  -0.1473495942E+03 -0.1977979333E-07    Norm:   0.9999553676E+00
+ Saving wavefunction at T=    308.5000
+T=        309.00000  Energy:  -0.1473495942E+03 -0.1973625087E-07    Norm:   0.9999553577E+00
+ Saving wavefunction at T=    309.0000
+T=        309.50000  Energy:  -0.1473495942E+03 -0.1969344507E-07    Norm:   0.9999553479E+00
+ Saving wavefunction at T=    309.5000
+T=        310.00000  Energy:  -0.1473495942E+03 -0.1965512382E-07    Norm:   0.9999553380E+00
+ Saving wavefunction at T=    310.0000
+T=        310.50000  Energy:  -0.1473495942E+03 -0.1962550024E-07    Norm:   0.9999553282E+00
+ Saving wavefunction at T=    310.5000
+T=        311.00000  Energy:  -0.1473495942E+03 -0.1960798746E-07    Norm:   0.9999553184E+00
+ Saving wavefunction at T=    311.0000
+T=        311.50000  Energy:  -0.1473495942E+03 -0.1960491029E-07    Norm:   0.9999553086E+00
+ Saving wavefunction at T=    311.5000
+T=        312.00000  Energy:  -0.1473495942E+03 -0.1961748534E-07    Norm:   0.9999552988E+00
+ Saving wavefunction at T=    312.0000
+T=        312.50000  Energy:  -0.1473495942E+03 -0.1964521963E-07    Norm:   0.9999552890E+00
+ Saving wavefunction at T=    312.5000
+T=        313.00000  Energy:  -0.1473495942E+03 -0.1968606415E-07    Norm:   0.9999552792E+00
+ Saving wavefunction at T=    313.0000
+T=        313.50000  Energy:  -0.1473495942E+03 -0.1973661585E-07    Norm:   0.9999552693E+00
+ Saving wavefunction at T=    313.5000
+T=        314.00000  Energy:  -0.1473495942E+03 -0.1979224315E-07    Norm:   0.9999552594E+00
+ Saving wavefunction at T=    314.0000
+T=        314.50000  Energy:  -0.1473495942E+03 -0.1984730487E-07    Norm:   0.9999552495E+00
+ Saving wavefunction at T=    314.5000
+T=        315.00000  Energy:  -0.1473495942E+03 -0.1989640612E-07    Norm:   0.9999552396E+00
+ Saving wavefunction at T=    315.0000
+T=        315.50000  Energy:  -0.1473495942E+03 -0.1993444546E-07    Norm:   0.9999552296E+00
+ Saving wavefunction at T=    315.5000
+T=        316.00000  Energy:  -0.1473495942E+03 -0.1995742943E-07    Norm:   0.9999552196E+00
+ Saving wavefunction at T=    316.0000
+T=        316.50000  Energy:  -0.1473495942E+03 -0.1996293273E-07    Norm:   0.9999552097E+00
+ Saving wavefunction at T=    316.5000
+T=        317.00000  Energy:  -0.1473495942E+03 -0.1995025264E-07    Norm:   0.9999551997E+00
+ Saving wavefunction at T=    317.0000
+T=        317.50000  Energy:  -0.1473495942E+03 -0.1992073276E-07    Norm:   0.9999551897E+00
+ Saving wavefunction at T=    317.5000
+T=        318.00000  Energy:  -0.1473495942E+03 -0.1987699649E-07    Norm:   0.9999551798E+00
+ Saving wavefunction at T=    318.0000
+T=        318.50000  Energy:  -0.1473495942E+03 -0.1982365786E-07    Norm:   0.9999551698E+00
+ Saving wavefunction at T=    318.5000
+T=        319.00000  Energy:  -0.1473495942E+03 -0.1976551488E-07    Norm:   0.9999551599E+00
+ Saving wavefunction at T=    319.0000
+T=        319.50000  Energy:  -0.1473495942E+03 -0.1970772256E-07    Norm:   0.9999551501E+00
+ Saving wavefunction at T=    319.5000
+T=        320.00000  Energy:  -0.1473495942E+03 -0.1965526222E-07    Norm:   0.9999551402E+00
+ Saving wavefunction at T=    320.0000
+T=        320.50000  Energy:  -0.1473495942E+03 -0.1961184782E-07    Norm:   0.9999551304E+00
+ Saving wavefunction at T=    320.5000
+T=        321.00000  Energy:  -0.1473495942E+03 -0.1957999967E-07    Norm:   0.9999551206E+00
+ Saving wavefunction at T=    321.0000
+T=        321.50000  Energy:  -0.1473495942E+03 -0.1956093917E-07    Norm:   0.9999551108E+00
+ Saving wavefunction at T=    321.5000
+T=        322.00000  Energy:  -0.1473495942E+03 -0.1955445820E-07    Norm:   0.9999551011E+00
+ Saving wavefunction at T=    322.0000
+T=        322.50000  Energy:  -0.1473495942E+03 -0.1955898741E-07    Norm:   0.9999550913E+00
+ Saving wavefunction at T=    322.5000
+T=        323.00000  Energy:  -0.1473495942E+03 -0.1957199965E-07    Norm:   0.9999550815E+00
+ Saving wavefunction at T=    323.0000
+T=        323.50000  Energy:  -0.1473495942E+03 -0.1959103764E-07    Norm:   0.9999550717E+00
+ Saving wavefunction at T=    323.5000
+T=        324.00000  Energy:  -0.1473495942E+03 -0.1961320191E-07    Norm:   0.9999550619E+00
+ Saving wavefunction at T=    324.0000
+T=        324.50000  Energy:  -0.1473495942E+03 -0.1963596752E-07    Norm:   0.9999550521E+00
+ Saving wavefunction at T=    324.5000
+T=        325.00000  Energy:  -0.1473495942E+03 -0.1965727767E-07    Norm:   0.9999550423E+00
+ Saving wavefunction at T=    325.0000
+T=        325.50000  Energy:  -0.1473495942E+03 -0.1967555616E-07    Norm:   0.9999550324E+00
+ Saving wavefunction at T=    325.5000
+T=        326.00000  Energy:  -0.1473495942E+03 -0.1969008402E-07    Norm:   0.9999550226E+00
+ Saving wavefunction at T=    326.0000
+T=        326.50000  Energy:  -0.1473495942E+03 -0.1970049352E-07    Norm:   0.9999550128E+00
+ Saving wavefunction at T=    326.5000
+T=        327.00000  Energy:  -0.1473495942E+03 -0.1970683743E-07    Norm:   0.9999550029E+00
+ Saving wavefunction at T=    327.0000
+T=        327.50000  Energy:  -0.1473495942E+03 -0.1970913336E-07    Norm:   0.9999549930E+00
+ Saving wavefunction at T=    327.5000
+T=        328.00000  Energy:  -0.1473495942E+03 -0.1970789897E-07    Norm:   0.9999549832E+00
+ Saving wavefunction at T=    328.0000
+T=        328.50000  Energy:  -0.1473495942E+03 -0.1970341139E-07    Norm:   0.9999549733E+00
+ Saving wavefunction at T=    328.5000
+T=        329.00000  Energy:  -0.1473495942E+03 -0.1969612568E-07    Norm:   0.9999549635E+00
+ Saving wavefunction at T=    329.0000
+T=        329.50000  Energy:  -0.1473495942E+03 -0.1968613968E-07    Norm:   0.9999549536E+00
+ Saving wavefunction at T=    329.5000
+T=        330.00000  Energy:  -0.1473495942E+03 -0.1967402931E-07    Norm:   0.9999549438E+00
+ Saving wavefunction at T=    330.0000
+T=        330.50000  Energy:  -0.1473495942E+03 -0.1966052824E-07    Norm:   0.9999549340E+00
+ Saving wavefunction at T=    330.5000
+T=        331.00000  Energy:  -0.1473495942E+03 -0.1964644317E-07    Norm:   0.9999549241E+00
+ Saving wavefunction at T=    331.0000
+T=        331.50000  Energy:  -0.1473495942E+03 -0.1963223395E-07    Norm:   0.9999549143E+00
+ Saving wavefunction at T=    331.5000
+T=        332.00000  Energy:  -0.1473495942E+03 -0.1961905110E-07    Norm:   0.9999549045E+00
+ Saving wavefunction at T=    332.0000
+T=        332.50000  Energy:  -0.1473495942E+03 -0.1960785838E-07    Norm:   0.9999548947E+00
+ Saving wavefunction at T=    332.5000
+T=        333.00000  Energy:  -0.1473495942E+03 -0.1959939398E-07    Norm:   0.9999548849E+00
+ Saving wavefunction at T=    333.0000
+T=        333.50000  Energy:  -0.1473495942E+03 -0.1959407306E-07    Norm:   0.9999548751E+00
+ Saving wavefunction at T=    333.5000
+T=        334.00000  Energy:  -0.1473495942E+03 -0.1959207162E-07    Norm:   0.9999548653E+00
+ Saving wavefunction at T=    334.0000
+T=        334.50000  Energy:  -0.1473495942E+03 -0.1959287465E-07    Norm:   0.9999548555E+00
+ Saving wavefunction at T=    334.5000
+T=        335.00000  Energy:  -0.1473495942E+03 -0.1959563459E-07    Norm:   0.9999548457E+00
+ Saving wavefunction at T=    335.0000
+T=        335.50000  Energy:  -0.1473495942E+03 -0.1959904224E-07    Norm:   0.9999548359E+00
+ Saving wavefunction at T=    335.5000
+T=        336.00000  Energy:  -0.1473495942E+03 -0.1960144964E-07    Norm:   0.9999548261E+00
+ Saving wavefunction at T=    336.0000
+T=        336.50000  Energy:  -0.1473495942E+03 -0.1960143201E-07    Norm:   0.9999548163E+00
+ Saving wavefunction at T=    336.5000
+T=        337.00000  Energy:  -0.1473495942E+03 -0.1959755551E-07    Norm:   0.9999548065E+00
+ Saving wavefunction at T=    337.0000
+T=        337.50000  Energy:  -0.1473495942E+03 -0.1958879107E-07    Norm:   0.9999547967E+00
+ Saving wavefunction at T=    337.5000
+T=        338.00000  Energy:  -0.1473495942E+03 -0.1957467809E-07    Norm:   0.9999547869E+00
+ Saving wavefunction at T=    338.0000
+T=        338.50000  Energy:  -0.1473495942E+03 -0.1955521426E-07    Norm:   0.9999547772E+00
+ Saving wavefunction at T=    338.5000
+T=        339.00000  Energy:  -0.1473495942E+03 -0.1953152474E-07    Norm:   0.9999547674E+00
+ Saving wavefunction at T=    339.0000
+T=        339.50000  Energy:  -0.1473495942E+03 -0.1950458275E-07    Norm:   0.9999547576E+00
+ Saving wavefunction at T=    339.5000
+T=        340.00000  Energy:  -0.1473495942E+03 -0.1947630223E-07    Norm:   0.9999547479E+00
+ Saving wavefunction at T=    340.0000
+T=        340.50000  Energy:  -0.1473495942E+03 -0.1944819392E-07    Norm:   0.9999547382E+00
+ Saving wavefunction at T=    340.5000
+T=        341.00000  Energy:  -0.1473495942E+03 -0.1942235125E-07    Norm:   0.9999547284E+00
+ Saving wavefunction at T=    341.0000
+T=        341.50000  Energy:  -0.1473495942E+03 -0.1939989996E-07    Norm:   0.9999547187E+00
+ Saving wavefunction at T=    341.5000
+T=        342.00000  Energy:  -0.1473495942E+03 -0.1938170479E-07    Norm:   0.9999547090E+00
+ Saving wavefunction at T=    342.0000
+T=        342.50000  Energy:  -0.1473495942E+03 -0.1936808717E-07    Norm:   0.9999546993E+00
+ Saving wavefunction at T=    342.5000
+T=        343.00000  Energy:  -0.1473495942E+03 -0.1935900497E-07    Norm:   0.9999546897E+00
+ Saving wavefunction at T=    343.0000
+T=        343.50000  Energy:  -0.1473495942E+03 -0.1935385077E-07    Norm:   0.9999546800E+00
+ Saving wavefunction at T=    343.5000
+T=        344.00000  Energy:  -0.1473495942E+03 -0.1935187410E-07    Norm:   0.9999546703E+00
+ Saving wavefunction at T=    344.0000
+T=        344.50000  Energy:  -0.1473495942E+03 -0.1935198881E-07    Norm:   0.9999546606E+00
+ Saving wavefunction at T=    344.5000
+T=        345.00000  Energy:  -0.1473495942E+03 -0.1935436634E-07    Norm:   0.9999546510E+00
+ Saving wavefunction at T=    345.0000
+T=        345.50000  Energy:  -0.1473495942E+03 -0.1935797495E-07    Norm:   0.9999546413E+00
+ Saving wavefunction at T=    345.5000
+T=        346.00000  Energy:  -0.1473495942E+03 -0.1936298780E-07    Norm:   0.9999546316E+00
+ Saving wavefunction at T=    346.0000
+T=        346.50000  Energy:  -0.1473495942E+03 -0.1936974352E-07    Norm:   0.9999546219E+00
+ Saving wavefunction at T=    346.5000
+T=        347.00000  Energy:  -0.1473495942E+03 -0.1937866210E-07    Norm:   0.9999546122E+00
+ Saving wavefunction at T=    347.0000
+T=        347.50000  Energy:  -0.1473495942E+03 -0.1939034564E-07    Norm:   0.9999546025E+00
+ Saving wavefunction at T=    347.5000
+T=        348.00000  Energy:  -0.1473495942E+03 -0.1940517264E-07    Norm:   0.9999545928E+00
+ Saving wavefunction at T=    348.0000
+T=        348.50000  Energy:  -0.1473495942E+03 -0.1942314901E-07    Norm:   0.9999545831E+00
+ Saving wavefunction at T=    348.5000
+T=        349.00000  Energy:  -0.1473495942E+03 -0.1944407425E-07    Norm:   0.9999545734E+00
+ Saving wavefunction at T=    349.0000
+T=        349.50000  Energy:  -0.1473495942E+03 -0.1946677315E-07    Norm:   0.9999545637E+00
+ Saving wavefunction at T=    349.5000
+T=        350.00000  Energy:  -0.1473495942E+03 -0.1949009499E-07    Norm:   0.9999545540E+00
+ Saving wavefunction at T=    350.0000
+T=        350.50000  Energy:  -0.1473495942E+03 -0.1951229618E-07    Norm:   0.9999545442E+00
+ Saving wavefunction at T=    350.5000
+T=        351.00000  Energy:  -0.1473495942E+03 -0.1953201789E-07    Norm:   0.9999545344E+00
+ Saving wavefunction at T=    351.0000
+T=        351.50000  Energy:  -0.1473495942E+03 -0.1954755240E-07    Norm:   0.9999545247E+00
+ Saving wavefunction at T=    351.5000
+T=        352.00000  Energy:  -0.1473495942E+03 -0.1955780401E-07    Norm:   0.9999545149E+00
+ Saving wavefunction at T=    352.0000
+T=        352.50000  Energy:  -0.1473495942E+03 -0.1956241298E-07    Norm:   0.9999545051E+00
+ Saving wavefunction at T=    352.5000
+T=        353.00000  Energy:  -0.1473495942E+03 -0.1956154833E-07    Norm:   0.9999544953E+00
+ Saving wavefunction at T=    353.0000
+T=        353.50000  Energy:  -0.1473495942E+03 -0.1955630530E-07    Norm:   0.9999544856E+00
+ Saving wavefunction at T=    353.5000
+T=        354.00000  Energy:  -0.1473495942E+03 -0.1954804430E-07    Norm:   0.9999544758E+00
+ Saving wavefunction at T=    354.0000
+T=        354.50000  Energy:  -0.1473495942E+03 -0.1953883282E-07    Norm:   0.9999544660E+00
+ Saving wavefunction at T=    354.5000
+T=        355.00000  Energy:  -0.1473495942E+03 -0.1953036035E-07    Norm:   0.9999544562E+00
+ Saving wavefunction at T=    355.0000
+T=        355.50000  Energy:  -0.1473495942E+03 -0.1952461534E-07    Norm:   0.9999544465E+00
+ Saving wavefunction at T=    355.5000
+T=        356.00000  Energy:  -0.1473495942E+03 -0.1952252074E-07    Norm:   0.9999544367E+00
+ Saving wavefunction at T=    356.0000
+T=        356.50000  Energy:  -0.1473495942E+03 -0.1952468836E-07    Norm:   0.9999544270E+00
+ Saving wavefunction at T=    356.5000
+T=        357.00000  Energy:  -0.1473495942E+03 -0.1953030770E-07    Norm:   0.9999544172E+00
+ Saving wavefunction at T=    357.0000
+T=        357.50000  Energy:  -0.1473495942E+03 -0.1953844624E-07    Norm:   0.9999544074E+00
+ Saving wavefunction at T=    357.5000
+T=        358.00000  Energy:  -0.1473495942E+03 -0.1954737159E-07    Norm:   0.9999543977E+00
+ Saving wavefunction at T=    358.0000
+T=        358.50000  Energy:  -0.1473495942E+03 -0.1955512645E-07    Norm:   0.9999543879E+00
+ Saving wavefunction at T=    358.5000
+T=        359.00000  Energy:  -0.1473495942E+03 -0.1955947445E-07    Norm:   0.9999543781E+00
+ Saving wavefunction at T=    359.0000
+T=        359.50000  Energy:  -0.1473495942E+03 -0.1955909704E-07    Norm:   0.9999543683E+00
+ Saving wavefunction at T=    359.5000
+T=        360.00000  Energy:  -0.1473495942E+03 -0.1955285032E-07    Norm:   0.9999543585E+00
+ Saving wavefunction at T=    360.0000
+T=        360.50000  Energy:  -0.1473495942E+03 -0.1954052249E-07    Norm:   0.9999543488E+00
+ Saving wavefunction at T=    360.5000
+T=        361.00000  Energy:  -0.1473495942E+03 -0.1952269778E-07    Norm:   0.9999543390E+00
+ Saving wavefunction at T=    361.0000
+T=        361.50000  Energy:  -0.1473495942E+03 -0.1950035099E-07    Norm:   0.9999543293E+00
+ Saving wavefunction at T=    361.5000
+T=        362.00000  Energy:  -0.1473495942E+03 -0.1947478795E-07    Norm:   0.9999543195E+00
+ Saving wavefunction at T=    362.0000
+T=        362.50000  Energy:  -0.1473495942E+03 -0.1944820102E-07    Norm:   0.9999543098E+00
+ Saving wavefunction at T=    362.5000
+T=        363.00000  Energy:  -0.1473495942E+03 -0.1942180305E-07    Norm:   0.9999543001E+00
+ Saving wavefunction at T=    363.0000
+T=        363.50000  Energy:  -0.1473495942E+03 -0.1939699504E-07    Norm:   0.9999542904E+00
+ Saving wavefunction at T=    363.5000
+T=        364.00000  Energy:  -0.1473495942E+03 -0.1937482165E-07    Norm:   0.9999542807E+00
+ Saving wavefunction at T=    364.0000
+T=        364.50000  Energy:  -0.1473495942E+03 -0.1935583991E-07    Norm:   0.9999542710E+00
+ Saving wavefunction at T=    364.5000
+T=        365.00000  Energy:  -0.1473495942E+03 -0.1934021889E-07    Norm:   0.9999542613E+00
+ Saving wavefunction at T=    365.0000
+T=        365.50000  Energy:  -0.1473495942E+03 -0.1932809584E-07    Norm:   0.9999542516E+00
+ Saving wavefunction at T=    365.5000
+T=        366.00000  Energy:  -0.1473495942E+03 -0.1931919628E-07    Norm:   0.9999542420E+00
+ Saving wavefunction at T=    366.0000
+T=        366.50000  Energy:  -0.1473495942E+03 -0.1931390281E-07    Norm:   0.9999542323E+00
+ Saving wavefunction at T=    366.5000
+T=        367.00000  Energy:  -0.1473495942E+03 -0.1931197819E-07    Norm:   0.9999542227E+00
+ Saving wavefunction at T=    367.0000
+T=        367.50000  Energy:  -0.1473495942E+03 -0.1931341848E-07    Norm:   0.9999542130E+00
+ Saving wavefunction at T=    367.5000
+T=        368.00000  Energy:  -0.1473495942E+03 -0.1931827235E-07    Norm:   0.9999542034E+00
+ Saving wavefunction at T=    368.0000
+T=        368.50000  Energy:  -0.1473495942E+03 -0.1932653036E-07    Norm:   0.9999541937E+00
+ Saving wavefunction at T=    368.5000
+T=        369.00000  Energy:  -0.1473495942E+03 -0.1933792277E-07    Norm:   0.9999541840E+00
+ Saving wavefunction at T=    369.0000
+T=        369.50000  Energy:  -0.1473495942E+03 -0.1935181725E-07    Norm:   0.9999541744E+00
+ Saving wavefunction at T=    369.5000
+T=        370.00000  Energy:  -0.1473495942E+03 -0.1936724652E-07    Norm:   0.9999541647E+00
+ Saving wavefunction at T=    370.0000
+T=        370.50000  Energy:  -0.1473495942E+03 -0.1938276628E-07    Norm:   0.9999541550E+00
+ Saving wavefunction at T=    370.5000
+T=        371.00000  Energy:  -0.1473495942E+03 -0.1939765414E-07    Norm:   0.9999541453E+00
+ Saving wavefunction at T=    371.0000
+T=        371.50000  Energy:  -0.1473495942E+03 -0.1941025177E-07    Norm:   0.9999541356E+00
+ Saving wavefunction at T=    371.5000
+T=        372.00000  Energy:  -0.1473495942E+03 -0.1941955510E-07    Norm:   0.9999541259E+00
+ Saving wavefunction at T=    372.0000
+T=        372.50000  Energy:  -0.1473495942E+03 -0.1942531147E-07    Norm:   0.9999541162E+00
+ Saving wavefunction at T=    372.5000
+T=        373.00000  Energy:  -0.1473495942E+03 -0.1942762136E-07    Norm:   0.9999541065E+00
+ Saving wavefunction at T=    373.0000
+T=        373.50000  Energy:  -0.1473495942E+03 -0.1942741658E-07    Norm:   0.9999540968E+00
+ Saving wavefunction at T=    373.5000
+T=        374.00000  Energy:  -0.1473495942E+03 -0.1942614414E-07    Norm:   0.9999540870E+00
+ Saving wavefunction at T=    374.0000
+T=        374.50000  Energy:  -0.1473495942E+03 -0.1942544552E-07    Norm:   0.9999540773E+00
+ Saving wavefunction at T=    374.5000
+T=        375.00000  Energy:  -0.1473495942E+03 -0.1942739816E-07    Norm:   0.9999540676E+00
+ Saving wavefunction at T=    375.0000
+T=        375.50000  Energy:  -0.1473495942E+03 -0.1943376624E-07    Norm:   0.9999540579E+00
+ Saving wavefunction at T=    375.5000
+T=        376.00000  Energy:  -0.1473495942E+03 -0.1944509779E-07    Norm:   0.9999540482E+00
+ Saving wavefunction at T=    376.0000
+T=        376.50000  Energy:  -0.1473495942E+03 -0.1946197620E-07    Norm:   0.9999540385E+00
+ Saving wavefunction at T=    376.5000
+T=        377.00000  Energy:  -0.1473495942E+03 -0.1948311677E-07    Norm:   0.9999540287E+00
+ Saving wavefunction at T=    377.0000
+T=        377.50000  Energy:  -0.1473495942E+03 -0.1950695008E-07    Norm:   0.9999540190E+00
+ Saving wavefunction at T=    377.5000
+T=        378.00000  Energy:  -0.1473495942E+03 -0.1953080269E-07    Norm:   0.9999540092E+00
+ Saving wavefunction at T=    378.0000
+T=        378.50000  Energy:  -0.1473495942E+03 -0.1955186553E-07    Norm:   0.9999539994E+00
+ Saving wavefunction at T=    378.5000
+T=        379.00000  Energy:  -0.1473495942E+03 -0.1956717108E-07    Norm:   0.9999539897E+00
+ Saving wavefunction at T=    379.0000
+T=        379.50000  Energy:  -0.1473495943E+03 -0.1957428376E-07    Norm:   0.9999539799E+00
+ Saving wavefunction at T=    379.5000
+T=        380.00000  Energy:  -0.1473495943E+03 -0.1957195723E-07    Norm:   0.9999539701E+00
+ Saving wavefunction at T=    380.0000
+T=        380.50000  Energy:  -0.1473495943E+03 -0.1955902854E-07    Norm:   0.9999539603E+00
+ Saving wavefunction at T=    380.5000
+T=        381.00000  Energy:  -0.1473495943E+03 -0.1953657955E-07    Norm:   0.9999539505E+00
+ Saving wavefunction at T=    381.0000
+T=        381.50000  Energy:  -0.1473495943E+03 -0.1950606709E-07    Norm:   0.9999539408E+00
+ Saving wavefunction at T=    381.5000
+T=        382.00000  Energy:  -0.1473495943E+03 -0.1946983629E-07    Norm:   0.9999539310E+00
+ Saving wavefunction at T=    382.0000
+T=        382.50000  Energy:  -0.1473495943E+03 -0.1943076336E-07    Norm:   0.9999539213E+00
+ Saving wavefunction at T=    382.5000
+T=        383.00000  Energy:  -0.1473495943E+03 -0.1939144046E-07    Norm:   0.9999539116E+00
+ Saving wavefunction at T=    383.0000
+T=        383.50000  Energy:  -0.1473495943E+03 -0.1935440211E-07    Norm:   0.9999539019E+00
+ Saving wavefunction at T=    383.5000
+T=        384.00000  Energy:  -0.1473495943E+03 -0.1932155807E-07    Norm:   0.9999538922E+00
+ Saving wavefunction at T=    384.0000
+T=        384.50000  Energy:  -0.1473495943E+03 -0.1929410686E-07    Norm:   0.9999538826E+00
+ Saving wavefunction at T=    384.5000
+T=        385.00000  Energy:  -0.1473495943E+03 -0.1927243700E-07    Norm:   0.9999538730E+00
+ Saving wavefunction at T=    385.0000
+T=        385.50000  Energy:  -0.1473495943E+03 -0.1925623699E-07    Norm:   0.9999538633E+00
+ Saving wavefunction at T=    385.5000
+T=        386.00000  Energy:  -0.1473495943E+03 -0.1924524634E-07    Norm:   0.9999538537E+00
+ Saving wavefunction at T=    386.0000
+T=        386.50000  Energy:  -0.1473495943E+03 -0.1923843240E-07    Norm:   0.9999538441E+00
+ Saving wavefunction at T=    386.5000
+T=        387.00000  Energy:  -0.1473495943E+03 -0.1923494386E-07    Norm:   0.9999538345E+00
+ Saving wavefunction at T=    387.0000
+T=        387.50000  Energy:  -0.1473495943E+03 -0.1923420029E-07    Norm:   0.9999538248E+00
+ Saving wavefunction at T=    387.5000
+T=        388.00000  Energy:  -0.1473495943E+03 -0.1923559717E-07    Norm:   0.9999538152E+00
+ Saving wavefunction at T=    388.0000
+T=        388.50000  Energy:  -0.1473495943E+03 -0.1923894910E-07    Norm:   0.9999538056E+00
+ Saving wavefunction at T=    388.5000
+T=        389.00000  Energy:  -0.1473495943E+03 -0.1924405688E-07    Norm:   0.9999537960E+00
+ Saving wavefunction at T=    389.0000
+T=        389.50000  Energy:  -0.1473495943E+03 -0.1925085455E-07    Norm:   0.9999537864E+00
+ Saving wavefunction at T=    389.5000
+T=        390.00000  Energy:  -0.1473495943E+03 -0.1925912631E-07    Norm:   0.9999537767E+00
+ Saving wavefunction at T=    390.0000
+T=        390.50000  Energy:  -0.1473495943E+03 -0.1926886425E-07    Norm:   0.9999537671E+00
+ Saving wavefunction at T=    390.5000
+T=        391.00000  Energy:  -0.1473495943E+03 -0.1927961321E-07    Norm:   0.9999537575E+00
+ Saving wavefunction at T=    391.0000
+T=        391.50000  Energy:  -0.1473495943E+03 -0.1929108563E-07    Norm:   0.9999537478E+00
+ Saving wavefunction at T=    391.5000
+T=        392.00000  Energy:  -0.1473495943E+03 -0.1930326648E-07    Norm:   0.9999537382E+00
+ Saving wavefunction at T=    392.0000
+T=        392.50000  Energy:  -0.1473495943E+03 -0.1931627913E-07    Norm:   0.9999537285E+00
+ Saving wavefunction at T=    392.5000
+T=        393.00000  Energy:  -0.1473495943E+03 -0.1933083745E-07    Norm:   0.9999537189E+00
+ Saving wavefunction at T=    393.0000
+T=        393.50000  Energy:  -0.1473495943E+03 -0.1934790129E-07    Norm:   0.9999537092E+00
+ Saving wavefunction at T=    393.5000
+T=        394.00000  Energy:  -0.1473495943E+03 -0.1936896283E-07    Norm:   0.9999536995E+00
+ Saving wavefunction at T=    394.0000
+T=        394.50000  Energy:  -0.1473495943E+03 -0.1939559293E-07    Norm:   0.9999536898E+00
+ Saving wavefunction at T=    394.5000
+T=        395.00000  Energy:  -0.1473495943E+03 -0.1942928855E-07    Norm:   0.9999536801E+00
+ Saving wavefunction at T=    395.0000
+T=        395.50000  Energy:  -0.1473495943E+03 -0.1947091033E-07    Norm:   0.9999536704E+00
+ Saving wavefunction at T=    395.5000
+T=        396.00000  Energy:  -0.1473495943E+03 -0.1952049809E-07    Norm:   0.9999536606E+00
+ Saving wavefunction at T=    396.0000
+T=        396.50000  Energy:  -0.1473495943E+03 -0.1957684714E-07    Norm:   0.9999536509E+00
+ Saving wavefunction at T=    396.5000
+T=        397.00000  Energy:  -0.1473495943E+03 -0.1963789534E-07    Norm:   0.9999536411E+00
+ Saving wavefunction at T=    397.0000
+T=        397.50000  Energy:  -0.1473495943E+03 -0.1969963079E-07    Norm:   0.9999536312E+00
+ Saving wavefunction at T=    397.5000
+T=        398.00000  Energy:  -0.1473495943E+03 -0.1975752122E-07    Norm:   0.9999536214E+00
+ Saving wavefunction at T=    398.0000
+T=        398.50000  Energy:  -0.1473495943E+03 -0.1980676809E-07    Norm:   0.9999536115E+00
+ Saving wavefunction at T=    398.5000
+T=        399.00000  Energy:  -0.1473495943E+03 -0.1984271320E-07    Norm:   0.9999536016E+00
+ Saving wavefunction at T=    399.0000
+T=        399.50000  Energy:  -0.1473495943E+03 -0.1986158415E-07    Norm:   0.9999535916E+00
+ Saving wavefunction at T=    399.5000
+T=        400.00000  Energy:  -0.1473495943E+03 -0.1986118881E-07    Norm:   0.9999535817E+00
+ Saving wavefunction at T=    400.0000
+T=        400.50000  Energy:  -0.1473495943E+03 -0.1984127047E-07    Norm:   0.9999535718E+00
+ Saving wavefunction at T=    400.5000
+T=        401.00000  Energy:  -0.1473495943E+03 -0.1980393277E-07    Norm:   0.9999535619E+00
+ Saving wavefunction at T=    401.0000
+T=        401.50000  Energy:  -0.1473495943E+03 -0.1975332958E-07    Norm:   0.9999535520E+00
+ Saving wavefunction at T=    401.5000
+T=        402.00000  Energy:  -0.1473495943E+03 -0.1969480722E-07    Norm:   0.9999535421E+00
+ Saving wavefunction at T=    402.0000
+T=        402.50000  Energy:  -0.1473495943E+03 -0.1963484309E-07    Norm:   0.9999535323E+00
+ Saving wavefunction at T=    402.5000
+T=        403.00000  Energy:  -0.1473495943E+03 -0.1958022240E-07    Norm:   0.9999535225E+00
+ Saving wavefunction at T=    403.0000
+T=        403.50000  Energy:  -0.1473495943E+03 -0.1953669809E-07    Norm:   0.9999535127E+00
+ Saving wavefunction at T=    403.5000
+T=        404.00000  Energy:  -0.1473495943E+03 -0.1950854715E-07    Norm:   0.9999535030E+00
+ Saving wavefunction at T=    404.0000
+T=        404.50000  Energy:  -0.1473495943E+03 -0.1949812472E-07    Norm:   0.9999534932E+00
+ Saving wavefunction at T=    404.5000
+T=        405.00000  Energy:  -0.1473495943E+03 -0.1950562714E-07    Norm:   0.9999534834E+00
+ Saving wavefunction at T=    405.0000
+T=        405.50000  Energy:  -0.1473495943E+03 -0.1952914834E-07    Norm:   0.9999534737E+00
+ Saving wavefunction at T=    405.5000
+T=        406.00000  Energy:  -0.1473495943E+03 -0.1956468953E-07    Norm:   0.9999534639E+00
+ Saving wavefunction at T=    406.0000
+T=        406.50000  Energy:  -0.1473495943E+03 -0.1960720951E-07    Norm:   0.9999534541E+00
+ Saving wavefunction at T=    406.5000
+T=        407.00000  Energy:  -0.1473495943E+03 -0.1965119037E-07    Norm:   0.9999534443E+00
+ Saving wavefunction at T=    407.0000
+T=        407.50000  Energy:  -0.1473495943E+03 -0.1969116482E-07    Norm:   0.9999534345E+00
+ Saving wavefunction at T=    407.5000
+T=        408.00000  Energy:  -0.1473495943E+03 -0.1972299995E-07    Norm:   0.9999534246E+00
+ Saving wavefunction at T=    408.0000
+T=        408.50000  Energy:  -0.1473495943E+03 -0.1974291445E-07    Norm:   0.9999534148E+00
+ Saving wavefunction at T=    408.5000
+T=        409.00000  Energy:  -0.1473495943E+03 -0.1974923843E-07    Norm:   0.9999534049E+00
+ Saving wavefunction at T=    409.0000
+T=        409.50000  Energy:  -0.1473495943E+03 -0.1974192888E-07    Norm:   0.9999533950E+00
+ Saving wavefunction at T=    409.5000
+T=        410.00000  Energy:  -0.1473495943E+03 -0.1972193281E-07    Norm:   0.9999533851E+00
+ Saving wavefunction at T=    410.0000
+T=        410.50000  Energy:  -0.1473495943E+03 -0.1969094963E-07    Norm:   0.9999533753E+00
+ Saving wavefunction at T=    410.5000
+T=        411.00000  Energy:  -0.1473495943E+03 -0.1965149600E-07    Norm:   0.9999533655E+00
+ Saving wavefunction at T=    411.0000
+T=        411.50000  Energy:  -0.1473495943E+03 -0.1960608976E-07    Norm:   0.9999533556E+00
+ Saving wavefunction at T=    411.5000
+T=        412.00000  Energy:  -0.1473495943E+03 -0.1955784633E-07    Norm:   0.9999533459E+00
+ Saving wavefunction at T=    412.0000
+T=        412.50000  Energy:  -0.1473495943E+03 -0.1950860622E-07    Norm:   0.9999533361E+00
+ Saving wavefunction at T=    412.5000
+T=        413.00000  Energy:  -0.1473495943E+03 -0.1946076405E-07    Norm:   0.9999533263E+00
+ Saving wavefunction at T=    413.0000
+T=        413.50000  Energy:  -0.1473495943E+03 -0.1941623340E-07    Norm:   0.9999533166E+00
+ Saving wavefunction at T=    413.5000
+T=        414.00000  Energy:  -0.1473495943E+03 -0.1937683900E-07    Norm:   0.9999533069E+00
+ Saving wavefunction at T=    414.0000
+T=        414.50000  Energy:  -0.1473495943E+03 -0.1934452662E-07    Norm:   0.9999532972E+00
+ Saving wavefunction at T=    414.5000
+T=        415.00000  Energy:  -0.1473495943E+03 -0.1932087202E-07    Norm:   0.9999532876E+00
+ Saving wavefunction at T=    415.0000
+T=        415.50000  Energy:  -0.1473495943E+03 -0.1930745886E-07    Norm:   0.9999532779E+00
+ Saving wavefunction at T=    415.5000
+T=        416.00000  Energy:  -0.1473495943E+03 -0.1930547954E-07    Norm:   0.9999532683E+00
+ Saving wavefunction at T=    416.0000
+T=        416.50000  Energy:  -0.1473495943E+03 -0.1931566950E-07    Norm:   0.9999532586E+00
+ Saving wavefunction at T=    416.5000
+T=        417.00000  Energy:  -0.1473495943E+03 -0.1933728168E-07    Norm:   0.9999532490E+00
+ Saving wavefunction at T=    417.0000
+T=        417.50000  Energy:  -0.1473495943E+03 -0.1936898684E-07    Norm:   0.9999532393E+00
+ Saving wavefunction at T=    417.5000
+T=        418.00000  Energy:  -0.1473495943E+03 -0.1940803821E-07    Norm:   0.9999532296E+00
+ Saving wavefunction at T=    418.0000
+T=        418.50000  Energy:  -0.1473495943E+03 -0.1945104584E-07    Norm:   0.9999532199E+00
+ Saving wavefunction at T=    418.5000
+T=        419.00000  Energy:  -0.1473495943E+03 -0.1949353522E-07    Norm:   0.9999532101E+00
+ Saving wavefunction at T=    419.0000
+T=        419.50000  Energy:  -0.1473495943E+03 -0.1953078500E-07    Norm:   0.9999532004E+00
+ Saving wavefunction at T=    419.5000
+T=        420.00000  Energy:  -0.1473495943E+03 -0.1955876615E-07    Norm:   0.9999531906E+00
+ Saving wavefunction at T=    420.0000
+T=        420.50000  Energy:  -0.1473495943E+03 -0.1957399054E-07    Norm:   0.9999531808E+00
+ Saving wavefunction at T=    420.5000
+T=        421.00000  Energy:  -0.1473495943E+03 -0.1957448672E-07    Norm:   0.9999531710E+00
+ Saving wavefunction at T=    421.0000
+T=        421.50000  Energy:  -0.1473495943E+03 -0.1955984361E-07    Norm:   0.9999531613E+00
+ Saving wavefunction at T=    421.5000
+T=        422.00000  Energy:  -0.1473495943E+03 -0.1953162242E-07    Norm:   0.9999531515E+00
+ Saving wavefunction at T=    422.0000
+T=        422.50000  Energy:  -0.1473495943E+03 -0.1949296990E-07    Norm:   0.9999531417E+00
+ Saving wavefunction at T=    422.5000
+T=        423.00000  Energy:  -0.1473495943E+03 -0.1944861947E-07    Norm:   0.9999531320E+00
+ Saving wavefunction at T=    423.0000
+T=        423.50000  Energy:  -0.1473495943E+03 -0.1940327431E-07    Norm:   0.9999531223E+00
+ Saving wavefunction at T=    423.5000
+T=        424.00000  Energy:  -0.1473495943E+03 -0.1936251795E-07    Norm:   0.9999531126E+00
+ Saving wavefunction at T=    424.0000
+T=        424.50000  Energy:  -0.1473495943E+03 -0.1933097616E-07    Norm:   0.9999531029E+00
+ Saving wavefunction at T=    424.5000
+T=        425.00000  Energy:  -0.1473495943E+03 -0.1931219906E-07    Norm:   0.9999530933E+00
+ Saving wavefunction at T=    425.0000
+T=        425.50000  Energy:  -0.1473495943E+03 -0.1930813872E-07    Norm:   0.9999530836E+00
+ Saving wavefunction at T=    425.5000
+T=        426.00000  Energy:  -0.1473495943E+03 -0.1931917335E-07    Norm:   0.9999530739E+00
+ Saving wavefunction at T=    426.0000
+T=        426.50000  Energy:  -0.1473495943E+03 -0.1934392422E-07    Norm:   0.9999530643E+00
+ Saving wavefunction at T=    426.5000
+T=        427.00000  Energy:  -0.1473495943E+03 -0.1937931797E-07    Norm:   0.9999530546E+00
+ Saving wavefunction at T=    427.0000
+T=        427.50000  Energy:  -0.1473495943E+03 -0.1942166247E-07    Norm:   0.9999530449E+00
+ Saving wavefunction at T=    427.5000
+T=        428.00000  Energy:  -0.1473495943E+03 -0.1946694905E-07    Norm:   0.9999530352E+00
+ Saving wavefunction at T=    428.0000
+T=        428.50000  Energy:  -0.1473495943E+03 -0.1951077757E-07    Norm:   0.9999530254E+00
+ Saving wavefunction at T=    428.5000
+T=        429.00000  Energy:  -0.1473495943E+03 -0.1954939428E-07    Norm:   0.9999530157E+00
+ Saving wavefunction at T=    429.0000
+T=        429.50000  Energy:  -0.1473495943E+03 -0.1958000826E-07    Norm:   0.9999530059E+00
+ Saving wavefunction at T=    429.5000
+T=        430.00000  Energy:  -0.1473495943E+03 -0.1960087765E-07    Norm:   0.9999529961E+00
+ Saving wavefunction at T=    430.0000
+T=        430.50000  Energy:  -0.1473495943E+03 -0.1961143279E-07    Norm:   0.9999529863E+00
+ Saving wavefunction at T=    430.5000
+T=        431.00000  Energy:  -0.1473495943E+03 -0.1961180999E-07    Norm:   0.9999529765E+00
+ Saving wavefunction at T=    431.0000
+T=        431.50000  Energy:  -0.1473495943E+03 -0.1960278457E-07    Norm:   0.9999529667E+00
+ Saving wavefunction at T=    431.5000
+T=        432.00000  Energy:  -0.1473495943E+03 -0.1958630815E-07    Norm:   0.9999529569E+00
+ Saving wavefunction at T=    432.0000
+T=        432.50000  Energy:  -0.1473495943E+03 -0.1956425494E-07    Norm:   0.9999529471E+00
+ Saving wavefunction at T=    432.5000
+T=        433.00000  Energy:  -0.1473495943E+03 -0.1953822366E-07    Norm:   0.9999529373E+00
+ Saving wavefunction at T=    433.0000
+T=        433.50000  Energy:  -0.1473495943E+03 -0.1951031844E-07    Norm:   0.9999529276E+00
+ Saving wavefunction at T=    433.5000
+T=        434.00000  Energy:  -0.1473495943E+03 -0.1948207265E-07    Norm:   0.9999529178E+00
+ Saving wavefunction at T=    434.0000
+T=        434.50000  Energy:  -0.1473495943E+03 -0.1945523990E-07    Norm:   0.9999529081E+00
+ Saving wavefunction at T=    434.5000
+T=        435.00000  Energy:  -0.1473495943E+03 -0.1943104363E-07    Norm:   0.9999528984E+00
+ Saving wavefunction at T=    435.0000
+T=        435.50000  Energy:  -0.1473495943E+03 -0.1941061790E-07    Norm:   0.9999528886E+00
+ Saving wavefunction at T=    435.5000
+T=        436.00000  Energy:  -0.1473495943E+03 -0.1939492414E-07    Norm:   0.9999528789E+00
+ Saving wavefunction at T=    436.0000
+T=        436.50000  Energy:  -0.1473495943E+03 -0.1938455381E-07    Norm:   0.9999528693E+00
+ Saving wavefunction at T=    436.5000
+T=        437.00000  Energy:  -0.1473495943E+03 -0.1937988239E-07    Norm:   0.9999528596E+00
+ Saving wavefunction at T=    437.0000
+T=        437.50000  Energy:  -0.1473495943E+03 -0.1938107362E-07    Norm:   0.9999528499E+00
+ Saving wavefunction at T=    437.5000
+T=        438.00000  Energy:  -0.1473495943E+03 -0.1938748828E-07    Norm:   0.9999528402E+00
+ Saving wavefunction at T=    438.0000
+T=        438.50000  Energy:  -0.1473495943E+03 -0.1939801746E-07    Norm:   0.9999528305E+00
+ Saving wavefunction at T=    438.5000
+T=        439.00000  Energy:  -0.1473495943E+03 -0.1941150008E-07    Norm:   0.9999528208E+00
+ Saving wavefunction at T=    439.0000
+T=        439.50000  Energy:  -0.1473495943E+03 -0.1942626472E-07    Norm:   0.9999528111E+00
+ Saving wavefunction at T=    439.5000
+T=        440.00000  Energy:  -0.1473495943E+03 -0.1944023053E-07    Norm:   0.9999528014E+00
+ Saving wavefunction at T=    440.0000
+T=        440.50000  Energy:  -0.1473495943E+03 -0.1945162305E-07    Norm:   0.9999527916E+00
+ Saving wavefunction at T=    440.5000
+T=        441.00000  Energy:  -0.1473495943E+03 -0.1945892412E-07    Norm:   0.9999527819E+00
+ Saving wavefunction at T=    441.0000
+T=        441.50000  Energy:  -0.1473495943E+03 -0.1946092342E-07    Norm:   0.9999527722E+00
+ Saving wavefunction at T=    441.5000
+T=        442.00000  Energy:  -0.1473495943E+03 -0.1945709934E-07    Norm:   0.9999527625E+00
+ Saving wavefunction at T=    442.0000
+T=        442.50000  Energy:  -0.1473495943E+03 -0.1944784691E-07    Norm:   0.9999527527E+00
+ Saving wavefunction at T=    442.5000
+T=        443.00000  Energy:  -0.1473495943E+03 -0.1943375212E-07    Norm:   0.9999527430E+00
+ Saving wavefunction at T=    443.0000
+T=        443.50000  Energy:  -0.1473495943E+03 -0.1941669828E-07    Norm:   0.9999527333E+00
+ Saving wavefunction at T=    443.5000
+T=        444.00000  Energy:  -0.1473495943E+03 -0.1939853354E-07    Norm:   0.9999527236E+00
+ Saving wavefunction at T=    444.0000
+T=        444.50000  Energy:  -0.1473495943E+03 -0.1938142943E-07    Norm:   0.9999527139E+00
+ Saving wavefunction at T=    444.5000
+T=        445.00000  Energy:  -0.1473495943E+03 -0.1936752516E-07    Norm:   0.9999527042E+00
+ Saving wavefunction at T=    445.0000
+T=        445.50000  Energy:  -0.1473495943E+03 -0.1935860717E-07    Norm:   0.9999526945E+00
+ Saving wavefunction at T=    445.5000
+T=        446.00000  Energy:  -0.1473495943E+03 -0.1935610007E-07    Norm:   0.9999526848E+00
+ Saving wavefunction at T=    446.0000
+T=        446.50000  Energy:  -0.1473495943E+03 -0.1936016342E-07    Norm:   0.9999526752E+00
+ Saving wavefunction at T=    446.5000
+T=        447.00000  Energy:  -0.1473495943E+03 -0.1937080050E-07    Norm:   0.9999526655E+00
+ Saving wavefunction at T=    447.0000
+T=        447.50000  Energy:  -0.1473495943E+03 -0.1938749728E-07    Norm:   0.9999526558E+00
+ Saving wavefunction at T=    447.5000
+T=        448.00000  Energy:  -0.1473495943E+03 -0.1940872391E-07    Norm:   0.9999526461E+00
+ Saving wavefunction at T=    448.0000
+T=        448.50000  Energy:  -0.1473495943E+03 -0.1943296855E-07    Norm:   0.9999526364E+00
+ Saving wavefunction at T=    448.5000
+T=        449.00000  Energy:  -0.1473495943E+03 -0.1945871792E-07    Norm:   0.9999526267E+00
+ Saving wavefunction at T=    449.0000
+T=        449.50000  Energy:  -0.1473495943E+03 -0.1948459561E-07    Norm:   0.9999526169E+00
+ Saving wavefunction at T=    449.5000
+T=        450.00000  Energy:  -0.1473495943E+03 -0.1950927554E-07    Norm:   0.9999526072E+00
+ Saving wavefunction at T=    450.0000
+T=        450.50000  Energy:  -0.1473495943E+03 -0.1953200134E-07    Norm:   0.9999525974E+00
+ Saving wavefunction at T=    450.5000
+T=        451.00000  Energy:  -0.1473495944E+03 -0.1955236640E-07    Norm:   0.9999525877E+00
+ Saving wavefunction at T=    451.0000
+T=        451.50000  Energy:  -0.1473495944E+03 -0.1957005110E-07    Norm:   0.9999525779E+00
+ Saving wavefunction at T=    451.5000
+T=        452.00000  Energy:  -0.1473495944E+03 -0.1958528255E-07    Norm:   0.9999525681E+00
+ Saving wavefunction at T=    452.0000
+T=        452.50000  Energy:  -0.1473495944E+03 -0.1959805616E-07    Norm:   0.9999525583E+00
+ Saving wavefunction at T=    452.5000
+T=        453.00000  Energy:  -0.1473495944E+03 -0.1960795921E-07    Norm:   0.9999525485E+00
+ Saving wavefunction at T=    453.0000
+T=        453.50000  Energy:  -0.1473495944E+03 -0.1961495378E-07    Norm:   0.9999525387E+00
+ Saving wavefunction at T=    453.5000
+T=        454.00000  Energy:  -0.1473495944E+03 -0.1961910158E-07    Norm:   0.9999525289E+00
+ Saving wavefunction at T=    454.0000
+T=        454.50000  Energy:  -0.1473495944E+03 -0.1961951033E-07    Norm:   0.9999525191E+00
+ Saving wavefunction at T=    454.5000
+T=        455.00000  Energy:  -0.1473495944E+03 -0.1961572153E-07    Norm:   0.9999525093E+00
+ Saving wavefunction at T=    455.0000
+T=        455.50000  Energy:  -0.1473495944E+03 -0.1960738906E-07    Norm:   0.9999524995E+00
+ Saving wavefunction at T=    455.5000
+T=        456.00000  Energy:  -0.1473495944E+03 -0.1959421158E-07    Norm:   0.9999524897E+00
+ Saving wavefunction at T=    456.0000
+T=        456.50000  Energy:  -0.1473495944E+03 -0.1957626995E-07    Norm:   0.9999524799E+00
+ Saving wavefunction at T=    456.5000
+T=        457.00000  Energy:  -0.1473495944E+03 -0.1955406836E-07    Norm:   0.9999524701E+00
+ Saving wavefunction at T=    457.0000
+T=        457.50000  Energy:  -0.1473495944E+03 -0.1952819863E-07    Norm:   0.9999524603E+00
+ Saving wavefunction at T=    457.5000
+T=        458.00000  Energy:  -0.1473495944E+03 -0.1949947463E-07    Norm:   0.9999524506E+00
+ Saving wavefunction at T=    458.0000
+T=        458.50000  Energy:  -0.1473495944E+03 -0.1946934794E-07    Norm:   0.9999524408E+00
+ Saving wavefunction at T=    458.5000
+T=        459.00000  Energy:  -0.1473495944E+03 -0.1943907625E-07    Norm:   0.9999524311E+00
+ Saving wavefunction at T=    459.0000
+T=        459.50000  Energy:  -0.1473495944E+03 -0.1940985101E-07    Norm:   0.9999524214E+00
+ Saving wavefunction at T=    459.5000
+T=        460.00000  Energy:  -0.1473495944E+03 -0.1938284556E-07    Norm:   0.9999524117E+00
+ Saving wavefunction at T=    460.0000
+T=        460.50000  Energy:  -0.1473495944E+03 -0.1935864136E-07    Norm:   0.9999524020E+00
+ Saving wavefunction at T=    460.5000
+T=        461.00000  Energy:  -0.1473495944E+03 -0.1933781327E-07    Norm:   0.9999523923E+00
+ Saving wavefunction at T=    461.0000
+T=        461.50000  Energy:  -0.1473495944E+03 -0.1932049221E-07    Norm:   0.9999523827E+00
+ Saving wavefunction at T=    461.5000
+T=        462.00000  Energy:  -0.1473495944E+03 -0.1930679878E-07    Norm:   0.9999523730E+00
+ Saving wavefunction at T=    462.0000
+T=        462.50000  Energy:  -0.1473495944E+03 -0.1929593286E-07    Norm:   0.9999523633E+00
+ Saving wavefunction at T=    462.5000
+T=        463.00000  Energy:  -0.1473495944E+03 -0.1928754267E-07    Norm:   0.9999523537E+00
+ Saving wavefunction at T=    463.0000
+T=        463.50000  Energy:  -0.1473495944E+03 -0.1928138391E-07    Norm:   0.9999523441E+00
+ Saving wavefunction at T=    463.5000
+T=        464.00000  Energy:  -0.1473495944E+03 -0.1927670068E-07    Norm:   0.9999523344E+00
+ Saving wavefunction at T=    464.0000
+T=        464.50000  Energy:  -0.1473495944E+03 -0.1927326633E-07    Norm:   0.9999523248E+00
+ Saving wavefunction at T=    464.5000
+T=        465.00000  Energy:  -0.1473495944E+03 -0.1927047376E-07    Norm:   0.9999523151E+00
+ Saving wavefunction at T=    465.0000
+T=        465.50000  Energy:  -0.1473495944E+03 -0.1926819129E-07    Norm:   0.9999523055E+00
+ Saving wavefunction at T=    465.5000
+T=        466.00000  Energy:  -0.1473495944E+03 -0.1926596224E-07    Norm:   0.9999522959E+00
+ Saving wavefunction at T=    466.0000
+T=        466.50000  Energy:  -0.1473495944E+03 -0.1926354550E-07    Norm:   0.9999522862E+00
+ Saving wavefunction at T=    466.5000
+T=        467.00000  Energy:  -0.1473495944E+03 -0.1926040265E-07    Norm:   0.9999522766E+00
+ Saving wavefunction at T=    467.0000
+T=        467.50000  Energy:  -0.1473495944E+03 -0.1925676874E-07    Norm:   0.9999522670E+00
+ Saving wavefunction at T=    467.5000
+T=        468.00000  Energy:  -0.1473495944E+03 -0.1925175485E-07    Norm:   0.9999522574E+00
+ Saving wavefunction at T=    468.0000
+T=        468.50000  Energy:  -0.1473495944E+03 -0.1924527620E-07    Norm:   0.9999522477E+00
+ Saving wavefunction at T=    468.5000
+T=        469.00000  Energy:  -0.1473495944E+03 -0.1923768179E-07    Norm:   0.9999522381E+00
+ Saving wavefunction at T=    469.0000
+T=        469.50000  Energy:  -0.1473495944E+03 -0.1922919411E-07    Norm:   0.9999522285E+00
+ Saving wavefunction at T=    469.5000
+T=        470.00000  Energy:  -0.1473495944E+03 -0.1922033947E-07    Norm:   0.9999522189E+00
+ Saving wavefunction at T=    470.0000
+T=        470.50000  Energy:  -0.1473495944E+03 -0.1921213656E-07    Norm:   0.9999522093E+00
+ Saving wavefunction at T=    470.5000
+T=        471.00000  Energy:  -0.1473495944E+03 -0.1920580587E-07    Norm:   0.9999521997E+00
+ Saving wavefunction at T=    471.0000
+T=        471.50000  Energy:  -0.1473495944E+03 -0.1920244850E-07    Norm:   0.9999521901E+00
+ Saving wavefunction at T=    471.5000
+T=        472.00000  Energy:  -0.1473495944E+03 -0.1920333320E-07    Norm:   0.9999521805E+00
+ Saving wavefunction at T=    472.0000
+T=        472.50000  Energy:  -0.1473495944E+03 -0.1920916943E-07    Norm:   0.9999521709E+00
+ Saving wavefunction at T=    472.5000
+T=        473.00000  Energy:  -0.1473495944E+03 -0.1922058974E-07    Norm:   0.9999521613E+00
+ Saving wavefunction at T=    473.0000
+T=        473.50000  Energy:  -0.1473495944E+03 -0.1923752505E-07    Norm:   0.9999521517E+00
+ Saving wavefunction at T=    473.5000
+T=        474.00000  Energy:  -0.1473495944E+03 -0.1925939944E-07    Norm:   0.9999521420E+00
+ Saving wavefunction at T=    474.0000
+T=        474.50000  Energy:  -0.1473495944E+03 -0.1928536395E-07    Norm:   0.9999521324E+00
+ Saving wavefunction at T=    474.5000
+T=        475.00000  Energy:  -0.1473495944E+03 -0.1931401524E-07    Norm:   0.9999521227E+00
+ Saving wavefunction at T=    475.0000
+T=        475.50000  Energy:  -0.1473495944E+03 -0.1934385078E-07    Norm:   0.9999521131E+00
+ Saving wavefunction at T=    475.5000
+T=        476.00000  Energy:  -0.1473495944E+03 -0.1937326931E-07    Norm:   0.9999521034E+00
+ Saving wavefunction at T=    476.0000
+T=        476.50000  Energy:  -0.1473495944E+03 -0.1940081195E-07    Norm:   0.9999520937E+00
+ Saving wavefunction at T=    476.5000
+T=        477.00000  Energy:  -0.1473495944E+03 -0.1942551982E-07    Norm:   0.9999520840E+00
+ Saving wavefunction at T=    477.0000
+T=        477.50000  Energy:  -0.1473495944E+03 -0.1944678236E-07    Norm:   0.9999520743E+00
+ Saving wavefunction at T=    477.5000
+T=        478.00000  Energy:  -0.1473495944E+03 -0.1946443808E-07    Norm:   0.9999520646E+00
+ Saving wavefunction at T=    478.0000
+T=        478.50000  Energy:  -0.1473495944E+03 -0.1947879789E-07    Norm:   0.9999520548E+00
+ Saving wavefunction at T=    478.5000
+T=        479.00000  Energy:  -0.1473495944E+03 -0.1949079658E-07    Norm:   0.9999520451E+00
+ Saving wavefunction at T=    479.0000
+T=        479.50000  Energy:  -0.1473495944E+03 -0.1950105569E-07    Norm:   0.9999520353E+00
+ Saving wavefunction at T=    479.5000
+T=        480.00000  Energy:  -0.1473495944E+03 -0.1951060336E-07    Norm:   0.9999520256E+00
+ Saving wavefunction at T=    480.0000
+T=        480.50000  Energy:  -0.1473495944E+03 -0.1952011283E-07    Norm:   0.9999520158E+00
+ Saving wavefunction at T=    480.5000
+T=        481.00000  Energy:  -0.1473495944E+03 -0.1952989586E-07    Norm:   0.9999520061E+00
+ Saving wavefunction at T=    481.0000
+T=        481.50000  Energy:  -0.1473495944E+03 -0.1953993117E-07    Norm:   0.9999519963E+00
+ Saving wavefunction at T=    481.5000
+T=        482.00000  Energy:  -0.1473495944E+03 -0.1954967469E-07    Norm:   0.9999519865E+00
+ Saving wavefunction at T=    482.0000
+T=        482.50000  Energy:  -0.1473495944E+03 -0.1955829041E-07    Norm:   0.9999519767E+00
+ Saving wavefunction at T=    482.5000
+T=        483.00000  Energy:  -0.1473495944E+03 -0.1956436039E-07    Norm:   0.9999519670E+00
+ Saving wavefunction at T=    483.0000
+T=        483.50000  Energy:  -0.1473495944E+03 -0.1956698580E-07    Norm:   0.9999519572E+00
+ Saving wavefunction at T=    483.5000
+T=        484.00000  Energy:  -0.1473495944E+03 -0.1956481453E-07    Norm:   0.9999519474E+00
+ Saving wavefunction at T=    484.0000
+T=        484.50000  Energy:  -0.1473495944E+03 -0.1955744983E-07    Norm:   0.9999519376E+00
+ Saving wavefunction at T=    484.5000
+T=        485.00000  Energy:  -0.1473495944E+03 -0.1954436784E-07    Norm:   0.9999519278E+00
+ Saving wavefunction at T=    485.0000
+T=        485.50000  Energy:  -0.1473495944E+03 -0.1952591499E-07    Norm:   0.9999519181E+00
+ Saving wavefunction at T=    485.5000
+T=        486.00000  Energy:  -0.1473495944E+03 -0.1950286032E-07    Norm:   0.9999519083E+00
+ Saving wavefunction at T=    486.0000
+T=        486.50000  Energy:  -0.1473495944E+03 -0.1947666687E-07    Norm:   0.9999518986E+00
+ Saving wavefunction at T=    486.5000
+T=        487.00000  Energy:  -0.1473495944E+03 -0.1944888708E-07    Norm:   0.9999518888E+00
+ Saving wavefunction at T=    487.0000
+T=        487.50000  Energy:  -0.1473495944E+03 -0.1942130831E-07    Norm:   0.9999518791E+00
+ Saving wavefunction at T=    487.5000
+T=        488.00000  Energy:  -0.1473495944E+03 -0.1939554109E-07    Norm:   0.9999518694E+00
+ Saving wavefunction at T=    488.0000
+T=        488.50000  Energy:  -0.1473495944E+03 -0.1937323567E-07    Norm:   0.9999518597E+00
+ Saving wavefunction at T=    488.5000
+T=        489.00000  Energy:  -0.1473495944E+03 -0.1935540552E-07    Norm:   0.9999518500E+00
+ Saving wavefunction at T=    489.0000
+T=        489.50000  Energy:  -0.1473495944E+03 -0.1934262457E-07    Norm:   0.9999518404E+00
+ Saving wavefunction at T=    489.5000
+T=        490.00000  Energy:  -0.1473495944E+03 -0.1933529906E-07    Norm:   0.9999518307E+00
+ Saving wavefunction at T=    490.0000
+T=        490.50000  Energy:  -0.1473495944E+03 -0.1933321839E-07    Norm:   0.9999518210E+00
+ Saving wavefunction at T=    490.5000
+T=        491.00000  Energy:  -0.1473495944E+03 -0.1933619776E-07    Norm:   0.9999518114E+00
+ Saving wavefunction at T=    491.0000
+T=        491.50000  Energy:  -0.1473495944E+03 -0.1934320055E-07    Norm:   0.9999518017E+00
+ Saving wavefunction at T=    491.5000
+T=        492.00000  Energy:  -0.1473495944E+03 -0.1935339553E-07    Norm:   0.9999517920E+00
+ Saving wavefunction at T=    492.0000
+T=        492.50000  Energy:  -0.1473495944E+03 -0.1936603100E-07    Norm:   0.9999517824E+00
+ Saving wavefunction at T=    492.5000
+T=        493.00000  Energy:  -0.1473495944E+03 -0.1938031960E-07    Norm:   0.9999517727E+00
+ Saving wavefunction at T=    493.0000
+T=        493.50000  Energy:  -0.1473495944E+03 -0.1939542256E-07    Norm:   0.9999517630E+00
+ Saving wavefunction at T=    493.5000
+T=        494.00000  Energy:  -0.1473495944E+03 -0.1941089764E-07    Norm:   0.9999517533E+00
+ Saving wavefunction at T=    494.0000
+T=        494.50000  Energy:  -0.1473495944E+03 -0.1942622349E-07    Norm:   0.9999517436E+00
+ Saving wavefunction at T=    494.5000
+T=        495.00000  Energy:  -0.1473495944E+03 -0.1944118629E-07    Norm:   0.9999517338E+00
+ Saving wavefunction at T=    495.0000
+T=        495.50000  Energy:  -0.1473495944E+03 -0.1945579526E-07    Norm:   0.9999517241E+00
+ Saving wavefunction at T=    495.5000
+T=        496.00000  Energy:  -0.1473495944E+03 -0.1946949884E-07    Norm:   0.9999517144E+00
+ Saving wavefunction at T=    496.0000
+T=        496.50000  Energy:  -0.1473495944E+03 -0.1948255391E-07    Norm:   0.9999517047E+00
+ Saving wavefunction at T=    496.5000
+T=        497.00000  Energy:  -0.1473495944E+03 -0.1949523309E-07    Norm:   0.9999516949E+00
+ Saving wavefunction at T=    497.0000
+T=        497.50000  Energy:  -0.1473495944E+03 -0.1950781684E-07    Norm:   0.9999516852E+00
+ Saving wavefunction at T=    497.5000
+T=        498.00000  Energy:  -0.1473495944E+03 -0.1952070191E-07    Norm:   0.9999516754E+00
+ Saving wavefunction at T=    498.0000
+T=        498.50000  Energy:  -0.1473495944E+03 -0.1953466573E-07    Norm:   0.9999516656E+00
+ Saving wavefunction at T=    498.5000
+T=        499.00000  Energy:  -0.1473495944E+03 -0.1955068429E-07    Norm:   0.9999516559E+00
+ Saving wavefunction at T=    499.0000
+T=        499.50000  Energy:  -0.1473495944E+03 -0.1956958074E-07    Norm:   0.9999516461E+00
+ Saving wavefunction at T=    499.5000
+T=        500.00000  Energy:  -0.1473495944E+03 -0.1959188883E-07    Norm:   0.9999516363E+00
+ Saving wavefunction at T=    500.0000
+T=        500.50000  Energy:  -0.1473495944E+03 -0.1961842004E-07    Norm:   0.9999516265E+00
+ Saving wavefunction at T=    500.5000
+T=        501.00000  Energy:  -0.1473495944E+03 -0.1964904691E-07    Norm:   0.9999516167E+00
+ Saving wavefunction at T=    501.0000
+T=        501.50000  Energy:  -0.1473495944E+03 -0.1968316912E-07    Norm:   0.9999516068E+00
+ Saving wavefunction at T=    501.5000
+T=        502.00000  Energy:  -0.1473495944E+03 -0.1971956749E-07    Norm:   0.9999515970E+00
+ Saving wavefunction at T=    502.0000
+T=        502.50000  Energy:  -0.1473495944E+03 -0.1975631483E-07    Norm:   0.9999515871E+00
+ Saving wavefunction at T=    502.5000
+T=        503.00000  Energy:  -0.1473495944E+03 -0.1979096574E-07    Norm:   0.9999515772E+00
+ Saving wavefunction at T=    503.0000
+T=        503.50000  Energy:  -0.1473495944E+03 -0.1982071301E-07    Norm:   0.9999515673E+00
+ Saving wavefunction at T=    503.5000
+T=        504.00000  Energy:  -0.1473495944E+03 -0.1984246010E-07    Norm:   0.9999515574E+00
+ Saving wavefunction at T=    504.0000
+T=        504.50000  Energy:  -0.1473495944E+03 -0.1985355497E-07    Norm:   0.9999515475E+00
+ Saving wavefunction at T=    504.5000
+T=        505.00000  Energy:  -0.1473495944E+03 -0.1985234740E-07    Norm:   0.9999515376E+00
+ Saving wavefunction at T=    505.0000
+T=        505.50000  Energy:  -0.1473495944E+03 -0.1983759213E-07    Norm:   0.9999515277E+00
+ Saving wavefunction at T=    505.5000
+T=        506.00000  Energy:  -0.1473495944E+03 -0.1980977568E-07    Norm:   0.9999515177E+00
+ Saving wavefunction at T=    506.0000
+T=        506.50000  Energy:  -0.1473495944E+03 -0.1977012752E-07    Norm:   0.9999515078E+00
+ Saving wavefunction at T=    506.5000
+T=        507.00000  Energy:  -0.1473495944E+03 -0.1972120689E-07    Norm:   0.9999514980E+00
+ Saving wavefunction at T=    507.0000
+T=        507.50000  Energy:  -0.1473495944E+03 -0.1966652889E-07    Norm:   0.9999514881E+00
+ Saving wavefunction at T=    507.5000
+T=        508.00000  Energy:  -0.1473495944E+03 -0.1960995516E-07    Norm:   0.9999514783E+00
+ Saving wavefunction at T=    508.0000
+T=        508.50000  Energy:  -0.1473495944E+03 -0.1955579302E-07    Norm:   0.9999514685E+00
+ Saving wavefunction at T=    508.5000
+T=        509.00000  Energy:  -0.1473495944E+03 -0.1950764266E-07    Norm:   0.9999514588E+00
+ Saving wavefunction at T=    509.0000
+T=        509.50000  Energy:  -0.1473495944E+03 -0.1946890010E-07    Norm:   0.9999514490E+00
+ Saving wavefunction at T=    509.5000
+T=        510.00000  Energy:  -0.1473495944E+03 -0.1944159504E-07    Norm:   0.9999514393E+00
+ Saving wavefunction at T=    510.0000
+T=        510.50000  Energy:  -0.1473495944E+03 -0.1942663499E-07    Norm:   0.9999514296E+00
+ Saving wavefunction at T=    510.5000
+T=        511.00000  Energy:  -0.1473495944E+03 -0.1942340429E-07    Norm:   0.9999514199E+00
+ Saving wavefunction at T=    511.0000
+T=        511.50000  Energy:  -0.1473495944E+03 -0.1943101962E-07    Norm:   0.9999514101E+00
+ Saving wavefunction at T=    511.5000
+T=        512.00000  Energy:  -0.1473495944E+03 -0.1944695114E-07    Norm:   0.9999514004E+00
+ Saving wavefunction at T=    512.0000
+T=        512.50000  Energy:  -0.1473495944E+03 -0.1946837965E-07    Norm:   0.9999513907E+00
+ Saving wavefunction at T=    512.5000
+T=        513.00000  Energy:  -0.1473495944E+03 -0.1949236352E-07    Norm:   0.9999513810E+00
+ Saving wavefunction at T=    513.0000
+T=        513.50000  Energy:  -0.1473495944E+03 -0.1951614038E-07    Norm:   0.9999513712E+00
+ Saving wavefunction at T=    513.5000
+T=        514.00000  Energy:  -0.1473495944E+03 -0.1953706240E-07    Norm:   0.9999513614E+00
+ Saving wavefunction at T=    514.0000
+T=        514.50000  Energy:  -0.1473495944E+03 -0.1955330016E-07    Norm:   0.9999513517E+00
+ Saving wavefunction at T=    514.5000
+T=        515.00000  Energy:  -0.1473495944E+03 -0.1956365444E-07    Norm:   0.9999513419E+00
+ Saving wavefunction at T=    515.0000
+T=        515.50000  Energy:  -0.1473495944E+03 -0.1956768352E-07    Norm:   0.9999513321E+00
+ Saving wavefunction at T=    515.5000
+T=        516.00000  Energy:  -0.1473495944E+03 -0.1956519189E-07    Norm:   0.9999513223E+00
+ Saving wavefunction at T=    516.0000
+T=        516.50000  Energy:  -0.1473495944E+03 -0.1955698548E-07    Norm:   0.9999513125E+00
+ Saving wavefunction at T=    516.5000
+T=        517.00000  Energy:  -0.1473495944E+03 -0.1954377349E-07    Norm:   0.9999513028E+00
+ Saving wavefunction at T=    517.0000
+T=        517.50000  Energy:  -0.1473495944E+03 -0.1952673823E-07    Norm:   0.9999512930E+00
+ Saving wavefunction at T=    517.5000
+T=        518.00000  Energy:  -0.1473495944E+03 -0.1950711116E-07    Norm:   0.9999512832E+00
+ Saving wavefunction at T=    518.0000
+T=        518.50000  Energy:  -0.1473495944E+03 -0.1948643831E-07    Norm:   0.9999512735E+00
+ Saving wavefunction at T=    518.5000
+T=        519.00000  Energy:  -0.1473495944E+03 -0.1946592659E-07    Norm:   0.9999512638E+00
+ Saving wavefunction at T=    519.0000
+T=        519.50000  Energy:  -0.1473495944E+03 -0.1944722244E-07    Norm:   0.9999512540E+00
+ Saving wavefunction at T=    519.5000
+T=        520.00000  Energy:  -0.1473495944E+03 -0.1943172458E-07    Norm:   0.9999512443E+00
+ Saving wavefunction at T=    520.0000
+T=        520.50000  Energy:  -0.1473495944E+03 -0.1942079475E-07    Norm:   0.9999512346E+00
+ Saving wavefunction at T=    520.5000
+T=        521.00000  Energy:  -0.1473495944E+03 -0.1941571345E-07    Norm:   0.9999512249E+00
+ Saving wavefunction at T=    521.0000
+T=        521.50000  Energy:  -0.1473495944E+03 -0.1941706754E-07    Norm:   0.9999512152E+00
+ Saving wavefunction at T=    521.5000
+T=        522.00000  Energy:  -0.1473495944E+03 -0.1942556729E-07    Norm:   0.9999512055E+00
+ Saving wavefunction at T=    522.0000
+T=        522.50000  Energy:  -0.1473495944E+03 -0.1944081934E-07    Norm:   0.9999511958E+00
+ Saving wavefunction at T=    522.5000
+T=        523.00000  Energy:  -0.1473495944E+03 -0.1946197601E-07    Norm:   0.9999511860E+00
+ Saving wavefunction at T=    523.0000
+T=        523.50000  Energy:  -0.1473495944E+03 -0.1948750175E-07    Norm:   0.9999511763E+00
+ Saving wavefunction at T=    523.5000
+T=        524.00000  Energy:  -0.1473495944E+03 -0.1951547137E-07    Norm:   0.9999511665E+00
+ Saving wavefunction at T=    524.0000
+T=        524.50000  Energy:  -0.1473495944E+03 -0.1954352518E-07    Norm:   0.9999511568E+00
+ Saving wavefunction at T=    524.5000
+T=        525.00000  Energy:  -0.1473495944E+03 -0.1956923449E-07    Norm:   0.9999511470E+00
+ Saving wavefunction at T=    525.0000
+T=        525.50000  Energy:  -0.1473495944E+03 -0.1958990249E-07    Norm:   0.9999511372E+00
+ Saving wavefunction at T=    525.5000
+T=        526.00000  Energy:  -0.1473495944E+03 -0.1960432012E-07    Norm:   0.9999511274E+00
+ Saving wavefunction at T=    526.0000
+T=        526.50000  Energy:  -0.1473495944E+03 -0.1961095830E-07    Norm:   0.9999511176E+00
+ Saving wavefunction at T=    526.5000
+T=        527.00000  Energy:  -0.1473495944E+03 -0.1960955681E-07    Norm:   0.9999511078E+00
+ Saving wavefunction at T=    527.0000
+T=        527.50000  Energy:  -0.1473495944E+03 -0.1960034843E-07    Norm:   0.9999510980E+00
+ Saving wavefunction at T=    527.5000
+T=        528.00000  Energy:  -0.1473495944E+03 -0.1958450111E-07    Norm:   0.9999510882E+00
+ Saving wavefunction at T=    528.0000
+T=        528.50000  Energy:  -0.1473495944E+03 -0.1956370289E-07    Norm:   0.9999510784E+00
+ Saving wavefunction at T=    528.5000
+T=        529.00000  Energy:  -0.1473495944E+03 -0.1953963580E-07    Norm:   0.9999510686E+00
+ Saving wavefunction at T=    529.0000
+T=        529.50000  Energy:  -0.1473495944E+03 -0.1951442607E-07    Norm:   0.9999510589E+00
+ Saving wavefunction at T=    529.5000
+T=        530.00000  Energy:  -0.1473495944E+03 -0.1948982224E-07    Norm:   0.9999510491E+00
+ Saving wavefunction at T=    530.0000
+T=        530.50000  Energy:  -0.1473495944E+03 -0.1946703950E-07    Norm:   0.9999510394E+00
+ Saving wavefunction at T=    530.5000
+T=        531.00000  Energy:  -0.1473495944E+03 -0.1944710387E-07    Norm:   0.9999510297E+00
+ Saving wavefunction at T=    531.0000
+T=        531.50000  Energy:  -0.1473495944E+03 -0.1943037031E-07    Norm:   0.9999510199E+00
+ Saving wavefunction at T=    531.5000
+T=        532.00000  Energy:  -0.1473495944E+03 -0.1941686768E-07    Norm:   0.9999510102E+00
+ Saving wavefunction at T=    532.0000
+T=        532.50000  Energy:  -0.1473495944E+03 -0.1940596686E-07    Norm:   0.9999510005E+00
+ Saving wavefunction at T=    532.5000
+T=        533.00000  Energy:  -0.1473495944E+03 -0.1939691097E-07    Norm:   0.9999509908E+00
+ Saving wavefunction at T=    533.0000
+T=        533.50000  Energy:  -0.1473495944E+03 -0.1938907637E-07    Norm:   0.9999509811E+00
+ Saving wavefunction at T=    533.5000
+T=        534.00000  Energy:  -0.1473495944E+03 -0.1938149970E-07    Norm:   0.9999509714E+00
+ Saving wavefunction at T=    534.0000
+T=        534.50000  Energy:  -0.1473495944E+03 -0.1937385055E-07    Norm:   0.9999509618E+00
+ Saving wavefunction at T=    534.5000
+T=        535.00000  Energy:  -0.1473495944E+03 -0.1936555080E-07    Norm:   0.9999509521E+00
+ Saving wavefunction at T=    535.0000
+T=        535.50000  Energy:  -0.1473495944E+03 -0.1935639303E-07    Norm:   0.9999509424E+00
+ Saving wavefunction at T=    535.5000
+T=        536.00000  Energy:  -0.1473495944E+03 -0.1934621129E-07    Norm:   0.9999509327E+00
+ Saving wavefunction at T=    536.0000
+T=        536.50000  Energy:  -0.1473495944E+03 -0.1933530272E-07    Norm:   0.9999509230E+00
+ Saving wavefunction at T=    536.5000
+T=        537.00000  Energy:  -0.1473495944E+03 -0.1932382866E-07    Norm:   0.9999509134E+00
+ Saving wavefunction at T=    537.0000
+T=        537.50000  Energy:  -0.1473495944E+03 -0.1931204452E-07    Norm:   0.9999509037E+00
+ Saving wavefunction at T=    537.5000
+T=        538.00000  Energy:  -0.1473495944E+03 -0.1930041685E-07    Norm:   0.9999508941E+00
+ Saving wavefunction at T=    538.0000
+T=        538.50000  Energy:  -0.1473495944E+03 -0.1928941069E-07    Norm:   0.9999508844E+00
+ Saving wavefunction at T=    538.5000
+T=        539.00000  Energy:  -0.1473495944E+03 -0.1927963337E-07    Norm:   0.9999508748E+00
+ Saving wavefunction at T=    539.0000
+T=        539.50000  Energy:  -0.1473495944E+03 -0.1927111965E-07    Norm:   0.9999508651E+00
+ Saving wavefunction at T=    539.5000
+T=        540.00000  Energy:  -0.1473495944E+03 -0.1926470636E-07    Norm:   0.9999508555E+00
+ Saving wavefunction at T=    540.0000
+T=        540.50000  Energy:  -0.1473495944E+03 -0.1926025018E-07    Norm:   0.9999508459E+00
+ Saving wavefunction at T=    540.5000
+T=        541.00000  Energy:  -0.1473495944E+03 -0.1925825442E-07    Norm:   0.9999508362E+00
+ Saving wavefunction at T=    541.0000
+T=        541.50000  Energy:  -0.1473495944E+03 -0.1925819158E-07    Norm:   0.9999508266E+00
+ Saving wavefunction at T=    541.5000
+T=        542.00000  Energy:  -0.1473495944E+03 -0.1925986461E-07    Norm:   0.9999508170E+00
+ Saving wavefunction at T=    542.0000
+T=        542.50000  Energy:  -0.1473495944E+03 -0.1926288583E-07    Norm:   0.9999508074E+00
+ Saving wavefunction at T=    542.5000
+T=        543.00000  Energy:  -0.1473495944E+03 -0.1926628481E-07    Norm:   0.9999507977E+00
+ Saving wavefunction at T=    543.0000
+T=        543.50000  Energy:  -0.1473495944E+03 -0.1926962950E-07    Norm:   0.9999507881E+00
+ Saving wavefunction at T=    543.5000
+T=        544.00000  Energy:  -0.1473495944E+03 -0.1927235277E-07    Norm:   0.9999507785E+00
+ Saving wavefunction at T=    544.0000
+T=        544.50000  Energy:  -0.1473495944E+03 -0.1927442606E-07    Norm:   0.9999507688E+00
+ Saving wavefunction at T=    544.5000
+T=        545.00000  Energy:  -0.1473495944E+03 -0.1927583691E-07    Norm:   0.9999507592E+00
+ Saving wavefunction at T=    545.0000
+T=        545.50000  Energy:  -0.1473495944E+03 -0.1927729936E-07    Norm:   0.9999507495E+00
+ Saving wavefunction at T=    545.5000
+T=        546.00000  Energy:  -0.1473495944E+03 -0.1928004801E-07    Norm:   0.9999507399E+00
+ Saving wavefunction at T=    546.0000
+T=        546.50000  Energy:  -0.1473495944E+03 -0.1928514389E-07    Norm:   0.9999507303E+00
+ Saving wavefunction at T=    546.5000
+T=        547.00000  Energy:  -0.1473495944E+03 -0.1929391346E-07    Norm:   0.9999507206E+00
+ Saving wavefunction at T=    547.0000
+T=        547.50000  Energy:  -0.1473495944E+03 -0.1930742435E-07    Norm:   0.9999507110E+00
+ Saving wavefunction at T=    547.5000
+T=        548.00000  Energy:  -0.1473495944E+03 -0.1932658368E-07    Norm:   0.9999507013E+00
+ Saving wavefunction at T=    548.0000
+T=        548.50000  Energy:  -0.1473495944E+03 -0.1935130715E-07    Norm:   0.9999506916E+00
+ Saving wavefunction at T=    548.5000
+T=        549.00000  Energy:  -0.1473495944E+03 -0.1938096228E-07    Norm:   0.9999506820E+00
+ Saving wavefunction at T=    549.0000
+T=        549.50000  Energy:  -0.1473495944E+03 -0.1941430894E-07    Norm:   0.9999506723E+00
+ Saving wavefunction at T=    549.5000
+T=        550.00000  Energy:  -0.1473495944E+03 -0.1944934472E-07    Norm:   0.9999506626E+00
+ Saving wavefunction at T=    550.0000
+T=        550.50000  Energy:  -0.1473495944E+03 -0.1948353878E-07    Norm:   0.9999506528E+00
+ Saving wavefunction at T=    550.5000
+T=        551.00000  Energy:  -0.1473495944E+03 -0.1951411823E-07    Norm:   0.9999506431E+00
+ Saving wavefunction at T=    551.0000
+T=        551.50000  Energy:  -0.1473495944E+03 -0.1953875822E-07    Norm:   0.9999506333E+00
+ Saving wavefunction at T=    551.5000
+T=        552.00000  Energy:  -0.1473495944E+03 -0.1955550709E-07    Norm:   0.9999506235E+00
+ Saving wavefunction at T=    552.0000
+T=        552.50000  Energy:  -0.1473495944E+03 -0.1956298199E-07    Norm:   0.9999506138E+00
+ Saving wavefunction at T=    552.5000
+T=        553.00000  Energy:  -0.1473495944E+03 -0.1956070350E-07    Norm:   0.9999506040E+00
+ Saving wavefunction at T=    553.0000
+T=        553.50000  Energy:  -0.1473495944E+03 -0.1954917499E-07    Norm:   0.9999505942E+00
+ Saving wavefunction at T=    553.5000
+T=        554.00000  Energy:  -0.1473495944E+03 -0.1952964925E-07    Norm:   0.9999505844E+00
+ Saving wavefunction at T=    554.0000
+T=        554.50000  Energy:  -0.1473495944E+03 -0.1950401357E-07    Norm:   0.9999505747E+00
+ Saving wavefunction at T=    554.5000
+T=        555.00000  Energy:  -0.1473495944E+03 -0.1947422162E-07    Norm:   0.9999505649E+00
+ Saving wavefunction at T=    555.0000
+T=        555.50000  Energy:  -0.1473495944E+03 -0.1944291736E-07    Norm:   0.9999505552E+00
+ Saving wavefunction at T=    555.5000
+T=        556.00000  Energy:  -0.1473495944E+03 -0.1941184894E-07    Norm:   0.9999505455E+00
+ Saving wavefunction at T=    556.0000
+T=        556.50000  Energy:  -0.1473495944E+03 -0.1938289988E-07    Norm:   0.9999505358E+00
+ Saving wavefunction at T=    556.5000
+T=        557.00000  Energy:  -0.1473495944E+03 -0.1935702705E-07    Norm:   0.9999505261E+00
+ Saving wavefunction at T=    557.0000
+T=        557.50000  Energy:  -0.1473495945E+03 -0.1933502847E-07    Norm:   0.9999505164E+00
+ Saving wavefunction at T=    557.5000
+T=        558.00000  Energy:  -0.1473495945E+03 -0.1931681515E-07    Norm:   0.9999505068E+00
+ Saving wavefunction at T=    558.0000
+T=        558.50000  Energy:  -0.1473495945E+03 -0.1930246613E-07    Norm:   0.9999504971E+00
+ Saving wavefunction at T=    558.5000
+T=        559.00000  Energy:  -0.1473495945E+03 -0.1929168332E-07    Norm:   0.9999504875E+00
+ Saving wavefunction at T=    559.0000
+T=        559.50000  Energy:  -0.1473495945E+03 -0.1928380754E-07    Norm:   0.9999504778E+00
+ Saving wavefunction at T=    559.5000
+T=        560.00000  Energy:  -0.1473495945E+03 -0.1927831673E-07    Norm:   0.9999504682E+00
+ Saving wavefunction at T=    560.0000
+T=        560.50000  Energy:  -0.1473495945E+03 -0.1927550697E-07    Norm:   0.9999504585E+00
+ Saving wavefunction at T=    560.5000
+T=        561.00000  Energy:  -0.1473495945E+03 -0.1927480133E-07    Norm:   0.9999504489E+00
+ Saving wavefunction at T=    561.0000
+T=        561.50000  Energy:  -0.1473495945E+03 -0.1927591980E-07    Norm:   0.9999504393E+00
+ Saving wavefunction at T=    561.5000
+T=        562.00000  Energy:  -0.1473495945E+03 -0.1927863276E-07    Norm:   0.9999504296E+00
+ Saving wavefunction at T=    562.0000
+T=        562.50000  Energy:  -0.1473495945E+03 -0.1928251352E-07    Norm:   0.9999504200E+00
+ Saving wavefunction at T=    562.5000
+T=        563.00000  Energy:  -0.1473495945E+03 -0.1928700484E-07    Norm:   0.9999504103E+00
+ Saving wavefunction at T=    563.0000
+T=        563.50000  Energy:  -0.1473495945E+03 -0.1929135723E-07    Norm:   0.9999504007E+00
+ Saving wavefunction at T=    563.5000
+T=        564.00000  Energy:  -0.1473495945E+03 -0.1929473099E-07    Norm:   0.9999503911E+00
+ Saving wavefunction at T=    564.0000
+T=        564.50000  Energy:  -0.1473495945E+03 -0.1929625468E-07    Norm:   0.9999503814E+00
+ Saving wavefunction at T=    564.5000
+T=        565.00000  Energy:  -0.1473495945E+03 -0.1929583769E-07    Norm:   0.9999503718E+00
+ Saving wavefunction at T=    565.0000
+T=        565.50000  Energy:  -0.1473495945E+03 -0.1929269628E-07    Norm:   0.9999503621E+00
+ Saving wavefunction at T=    565.5000
+T=        566.00000  Energy:  -0.1473495945E+03 -0.1928764515E-07    Norm:   0.9999503525E+00
+ Saving wavefunction at T=    566.0000
+T=        566.50000  Energy:  -0.1473495945E+03 -0.1928052900E-07    Norm:   0.9999503428E+00
+ Saving wavefunction at T=    566.5000
+T=        567.00000  Energy:  -0.1473495945E+03 -0.1927296533E-07    Norm:   0.9999503332E+00
+ Saving wavefunction at T=    567.0000
+T=        567.50000  Energy:  -0.1473495945E+03 -0.1926607639E-07    Norm:   0.9999503236E+00
+ Saving wavefunction at T=    567.5000
+T=        568.00000  Energy:  -0.1473495945E+03 -0.1926116155E-07    Norm:   0.9999503139E+00
+ Saving wavefunction at T=    568.0000
+T=        568.50000  Energy:  -0.1473495945E+03 -0.1925919261E-07    Norm:   0.9999503043E+00
+ Saving wavefunction at T=    568.5000
+T=        569.00000  Energy:  -0.1473495945E+03 -0.1926110648E-07    Norm:   0.9999502947E+00
+ Saving wavefunction at T=    569.0000
+T=        569.50000  Energy:  -0.1473495945E+03 -0.1926721564E-07    Norm:   0.9999502850E+00
+ Saving wavefunction at T=    569.5000
+T=        570.00000  Energy:  -0.1473495945E+03 -0.1927727062E-07    Norm:   0.9999502754E+00
+ Saving wavefunction at T=    570.0000
+T=        570.50000  Energy:  -0.1473495945E+03 -0.1929028566E-07    Norm:   0.9999502658E+00
+ Saving wavefunction at T=    570.5000
+T=        571.00000  Energy:  -0.1473495945E+03 -0.1930481018E-07    Norm:   0.9999502561E+00
+ Saving wavefunction at T=    571.0000
+T=        571.50000  Energy:  -0.1473495945E+03 -0.1931936063E-07    Norm:   0.9999502465E+00
+ Saving wavefunction at T=    571.5000
+T=        572.00000  Energy:  -0.1473495945E+03 -0.1933184037E-07    Norm:   0.9999502368E+00
+ Saving wavefunction at T=    572.0000
+T=        572.50000  Energy:  -0.1473495945E+03 -0.1934085272E-07    Norm:   0.9999502271E+00
+ Saving wavefunction at T=    572.5000
+T=        573.00000  Energy:  -0.1473495945E+03 -0.1934506379E-07    Norm:   0.9999502175E+00
+ Saving wavefunction at T=    573.0000
+T=        573.50000  Energy:  -0.1473495945E+03 -0.1934398679E-07    Norm:   0.9999502078E+00
+ Saving wavefunction at T=    573.5000
+T=        574.00000  Energy:  -0.1473495945E+03 -0.1933753669E-07    Norm:   0.9999501981E+00
+ Saving wavefunction at T=    574.0000
+T=        574.50000  Energy:  -0.1473495945E+03 -0.1932629063E-07    Norm:   0.9999501884E+00
+ Saving wavefunction at T=    574.5000
+T=        575.00000  Energy:  -0.1473495945E+03 -0.1931150741E-07    Norm:   0.9999501788E+00
+ Saving wavefunction at T=    575.0000
+T=        575.50000  Energy:  -0.1473495945E+03 -0.1929506150E-07    Norm:   0.9999501691E+00
+ Saving wavefunction at T=    575.5000
+T=        576.00000  Energy:  -0.1473495945E+03 -0.1927806108E-07    Norm:   0.9999501595E+00
+ Saving wavefunction at T=    576.0000
+T=        576.50000  Energy:  -0.1473495945E+03 -0.1926251171E-07    Norm:   0.9999501499E+00
+ Saving wavefunction at T=    576.5000
+T=        577.00000  Energy:  -0.1473495945E+03 -0.1924980508E-07    Norm:   0.9999501402E+00
+ Saving wavefunction at T=    577.0000
+T=        577.50000  Energy:  -0.1473495945E+03 -0.1924043484E-07    Norm:   0.9999501306E+00
+ Saving wavefunction at T=    577.5000
+T=        578.00000  Energy:  -0.1473495945E+03 -0.1923485160E-07    Norm:   0.9999501210E+00
+ Saving wavefunction at T=    578.0000
+T=        578.50000  Energy:  -0.1473495945E+03 -0.1923297987E-07    Norm:   0.9999501114E+00
+ Saving wavefunction at T=    578.5000
+T=        579.00000  Energy:  -0.1473495945E+03 -0.1923440264E-07    Norm:   0.9999501018E+00
+ Saving wavefunction at T=    579.0000
+T=        579.50000  Energy:  -0.1473495945E+03 -0.1923830746E-07    Norm:   0.9999500921E+00
+ Saving wavefunction at T=    579.5000
+T=        580.00000  Energy:  -0.1473495945E+03 -0.1924377436E-07    Norm:   0.9999500825E+00
+ Saving wavefunction at T=    580.0000
+T=        580.50000  Energy:  -0.1473495945E+03 -0.1925006845E-07    Norm:   0.9999500729E+00
+ Saving wavefunction at T=    580.5000
+T=        581.00000  Energy:  -0.1473495945E+03 -0.1925613883E-07    Norm:   0.9999500633E+00
+ Saving wavefunction at T=    581.0000
+T=        581.50000  Energy:  -0.1473495945E+03 -0.1926140586E-07    Norm:   0.9999500536E+00
+ Saving wavefunction at T=    581.5000
+T=        582.00000  Energy:  -0.1473495945E+03 -0.1926537365E-07    Norm:   0.9999500440E+00
+ Saving wavefunction at T=    582.0000
+T=        582.50000  Energy:  -0.1473495945E+03 -0.1926780850E-07    Norm:   0.9999500344E+00
+ Saving wavefunction at T=    582.5000
+T=        583.00000  Energy:  -0.1473495945E+03 -0.1926835244E-07    Norm:   0.9999500247E+00
+ Saving wavefunction at T=    583.0000
+T=        583.50000  Energy:  -0.1473495945E+03 -0.1926703856E-07    Norm:   0.9999500151E+00
+ Saving wavefunction at T=    583.5000
+T=        584.00000  Energy:  -0.1473495945E+03 -0.1926386001E-07    Norm:   0.9999500055E+00
+ Saving wavefunction at T=    584.0000
+T=        584.50000  Energy:  -0.1473495945E+03 -0.1925909990E-07    Norm:   0.9999499958E+00
+ Saving wavefunction at T=    584.5000
+T=        585.00000  Energy:  -0.1473495945E+03 -0.1925321043E-07    Norm:   0.9999499862E+00
+ Saving wavefunction at T=    585.0000
+T=        585.50000  Energy:  -0.1473495945E+03 -0.1924674099E-07    Norm:   0.9999499766E+00
+ Saving wavefunction at T=    585.5000
+T=        586.00000  Energy:  -0.1473495945E+03 -0.1924029188E-07    Norm:   0.9999499670E+00
+ Saving wavefunction at T=    586.0000
+T=        586.50000  Energy:  -0.1473495945E+03 -0.1923489966E-07    Norm:   0.9999499574E+00
+ Saving wavefunction at T=    586.5000
+T=        587.00000  Energy:  -0.1473495945E+03 -0.1923118508E-07    Norm:   0.9999499477E+00
+ Saving wavefunction at T=    587.0000
+T=        587.50000  Energy:  -0.1473495945E+03 -0.1922989787E-07    Norm:   0.9999499381E+00
+ Saving wavefunction at T=    587.5000
+T=        588.00000  Energy:  -0.1473495945E+03 -0.1923161687E-07    Norm:   0.9999499285E+00
+ Saving wavefunction at T=    588.0000
+T=        588.50000  Energy:  -0.1473495945E+03 -0.1923672821E-07    Norm:   0.9999499189E+00
+ Saving wavefunction at T=    588.5000
+T=        589.00000  Energy:  -0.1473495945E+03 -0.1924495414E-07    Norm:   0.9999499093E+00
+ Saving wavefunction at T=    589.0000
+T=        589.50000  Energy:  -0.1473495945E+03 -0.1925573650E-07    Norm:   0.9999498997E+00
+ Saving wavefunction at T=    589.5000
+T=        590.00000  Energy:  -0.1473495945E+03 -0.1926820818E-07    Norm:   0.9999498900E+00
+ Saving wavefunction at T=    590.0000
+T=        590.50000  Energy:  -0.1473495945E+03 -0.1928113348E-07    Norm:   0.9999498804E+00
+ Saving wavefunction at T=    590.5000
+T=        591.00000  Energy:  -0.1473495945E+03 -0.1929340625E-07    Norm:   0.9999498707E+00
+ Saving wavefunction at T=    591.0000
+T=        591.50000  Energy:  -0.1473495945E+03 -0.1930368332E-07    Norm:   0.9999498611E+00
+ Saving wavefunction at T=    591.5000
+T=        592.00000  Energy:  -0.1473495945E+03 -0.1931097090E-07    Norm:   0.9999498514E+00
+ Saving wavefunction at T=    592.0000
+T=        592.50000  Energy:  -0.1473495945E+03 -0.1931410785E-07    Norm:   0.9999498418E+00
+ Saving wavefunction at T=    592.5000
+T=        593.00000  Energy:  -0.1473495945E+03 -0.1931326177E-07    Norm:   0.9999498321E+00
+ Saving wavefunction at T=    593.0000
+T=        593.50000  Energy:  -0.1473495945E+03 -0.1930871477E-07    Norm:   0.9999498225E+00
+ Saving wavefunction at T=    593.5000
+T=        594.00000  Energy:  -0.1473495945E+03 -0.1930113460E-07    Norm:   0.9999498128E+00
+ Saving wavefunction at T=    594.0000
+T=        594.50000  Energy:  -0.1473495945E+03 -0.1929179491E-07    Norm:   0.9999498032E+00
+ Saving wavefunction at T=    594.5000
+T=        595.00000  Energy:  -0.1473495945E+03 -0.1928218204E-07    Norm:   0.9999497935E+00
+ Saving wavefunction at T=    595.0000
+T=        595.50000  Energy:  -0.1473495945E+03 -0.1927381855E-07    Norm:   0.9999497839E+00
+ Saving wavefunction at T=    595.5000
+T=        596.00000  Energy:  -0.1473495945E+03 -0.1926779584E-07    Norm:   0.9999497743E+00
+ Saving wavefunction at T=    596.0000
+T=        596.50000  Energy:  -0.1473495945E+03 -0.1926551163E-07    Norm:   0.9999497646E+00
+ Saving wavefunction at T=    596.5000
+T=        597.00000  Energy:  -0.1473495945E+03 -0.1926765021E-07    Norm:   0.9999497550E+00
+ Saving wavefunction at T=    597.0000
+T=        597.50000  Energy:  -0.1473495945E+03 -0.1927382726E-07    Norm:   0.9999497454E+00
+ Saving wavefunction at T=    597.5000
+T=        598.00000  Energy:  -0.1473495945E+03 -0.1928374832E-07    Norm:   0.9999497357E+00
+ Saving wavefunction at T=    598.0000
+T=        598.50000  Energy:  -0.1473495945E+03 -0.1929639050E-07    Norm:   0.9999497261E+00
+ Saving wavefunction at T=    598.5000
+T=        599.00000  Energy:  -0.1473495945E+03 -0.1931072482E-07    Norm:   0.9999497164E+00
+ Saving wavefunction at T=    599.0000
+T=        599.50000  Energy:  -0.1473495945E+03 -0.1932527775E-07    Norm:   0.9999497068E+00
+ Saving wavefunction at T=    599.5000
+T=        600.00000  Energy:  -0.1473495945E+03 -0.1933854239E-07    Norm:   0.9999496971E+00
+ Saving wavefunction at T=    600.0000
+    ...done prop...
+   ...saving vector...
+   ... go save vectors...
+   ... gathered orbs, now gather avector...
+   ... ok, now write
+    ...saved vectors!
+    ...end prop...
+Fri Dec 25 04:57:50 PST 2015
+    ...END MCTDHF
