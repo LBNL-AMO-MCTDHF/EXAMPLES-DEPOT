@@ -2,6 +2,12 @@
 
 &parinp
 
+notiming=0
+timingdir="timing.relax"
+timingout=100
+
+lanthresh=1d-10
+
 messflag=1
 messamount=1d-4
 

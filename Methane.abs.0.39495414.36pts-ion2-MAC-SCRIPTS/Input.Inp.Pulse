@@ -13,11 +13,11 @@ minpulsetime=1000d0
 
 &parinp
 
-energyshift=(0d0,-0.64319338E-05)
+energyshift=(0d0,-0.000006430930)
 
 notiming=0
 timingdir="timing.pulse"
-timingout=30
+timingout=100
 
 expodim=30
 maxexpodim=300
@@ -79,3 +79,5 @@ scalingstretch=6d0
 scalingtheta=0.5d0
 
 /
+
+
