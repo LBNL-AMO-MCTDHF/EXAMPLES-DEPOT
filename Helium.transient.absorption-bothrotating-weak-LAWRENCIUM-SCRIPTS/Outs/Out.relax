@@ -1,0 +1,573 @@
+Thu Dec 24 18:04:07 PST 2015
+ 
+  ****************************************************************************
+  **********************  BEGIN LBNL-AMO-MCTDHF ******************************
+  ****************************************************************************
+ 
+    Atomic/Diatomic/Cartesian Polyatomic nonadiabatic MCTDHF code
+      for ultrafast electronic and nuclear dynamics in intense laser fields
+    AMO Theory Group, Lawrence Berkeley Laboratory
+      D J Haxton, C W McCurdy, T N Rescigno, K V Lawler, J Jones, 
+      B Abeln, X Li . . .
+                              VERSION 1.10 
+        Copyright 2015 the regents of the University of California
+ 
+                This is CHMCTDH: HERM-normed ECS version.
+ 
+                PROCESSOR            1  OF            1
+ 
+ Inpfile is Input.Inp.Relax  
+ 
+  *************************  COMMAND LINE OPTIONS  ***************************
+ 
+ Reading 
+ Input.Inp.Relax                                                                
+                                                                                
+                                           
+  ****************************************************************************
+ 
+ Enforcing CMF defaults for Verlet or EXPO.
+ 
+  ****************************************************************************
+ *****************************************************************************
+ 
+ Number of states in propagation=           1
+ 
+  Parameters: electronic
+ 
+                    Number of electrons     2
+ Nuclear KE flag (nonuc_checkflag):         1
+ 
+             Henumpoints, henumelements:   10    4
+               Lbig,mbig                    4    1
+                              ECS is ON!
+                 hecelement,  heecstheta    5    0.400000000000
+    He elementsizes:   6.00000   6.00000   6.00000   6.00000
+ 
+ ************************   Parameters: config/spf    ************************  
+  
+ 
+ Doing full CI: numshells=1.  Shells:
+ Shell            1
+   1a    1b    2a    2b    3a    3b    4a    4b    5a    5b 
+  Final shell occupancy level vexcite=         999
+ 
+    Number of unfrozen spfs:      5
+    Number of frozen spfs:        0
+            Spfs start in m=     0   0   0   1  -1
+ 
+ Spfs will be restricted to their original m-values.
+ Configurations will be restricted to total M=            0
+ Configurations will be restricted to spin projection           0 /2
+  Configurations will be restricted to spin            0
+ 
+ ***********************    Initial state      ***********************   
+ 
+ Spfs will be one-electron eigfuncts.
+ 
+ Sfp Quad flag is OFF.
+ Improvednatflag is ON.
+ 
+ Avector Quad flag is OFF.
+ Avector will be obtained from diagonalization.
+ 
+ ***********************    Parameters: propagation    ***********************  
+  
+ 
+  PAR_TIMESTEP IS    1.00000000000000       LITTLESTEPS IS            1
+ 
+ Calculation will be stopped with threshold   1.000000000000000E-008 
+ ; timestep is    1.00000000000000     
+ 
+ 
+ *******  USING POLYNOMIAL MEAN FIELDS/MAGNUS A-VECTOR PREDICTOR/CORRECTOR   ***
+ ****  
+ 
+     Using nonsparse configuration routines.
+  Jacobian options:
+     Jacprojorth=           0
+     Jacsymflag=           0
+  Using EXPONENTIAL integration.
+     Expotol    =  1.000000000000000E-009
+     Maxexpodim=         300
+ 
+ Density matrix regularized with denreg= 0.100E-08
+ 
+ 
+ ****************************************************************************
+ 
+ Autosteps is            1  Autosize is        40001  Numpropsteps is 
+       40000
+ 
+ *****************************************************************************
+ 
+ 
+ 
+  Get ORbsets.  Fewer procs than orbitals.
+ 
+ ************************************
+ ********  MAIN WALKS  **************
+ ************************************
+ 
+ Go fast_newconfiglist
+ UPPER/LOWER
+           1           5
+           1           5
+ 
+ 
+ FASTNEWCONFIG: NUMBER OF CONFIGURATIONS           11
+ 
+ NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG           7           2
+ Go fast_newconfiglist, getting configurations
+      ...Done fast_newconfiglist
+ 
+ BOTWALKS /TOPWALKS          11
+           1          11          11
+ 
+ Counting walks. Singles
+ Counting walks. Doubles
+ 
+ Maximum number of
+            single walks=            6
+            double walks=           11
+   TOTAL walks:         179 maxdoublewalks*numconfig         121
+ 
+ Allocating singlewalks
+ Allocating doublewalks
+      ..done walkalloc.
+ Calculating walks.  Singles...
+ Calculating walks.  Doubles...
+ Sorting walks...
+     .... done sorting walks.
+ Counting single hops...
+ Counting double hops...
+ Getting single hops...
+ Getting double hops...
+ GOT HOPS:  
+  Single hops this processor           47  of           58
+  Double hops this processor          121  of          121
+  Single hops total           47  of           58
+  Double hops total          121  of          121
+     Max single hops            5
+     Max double hops           11
+ 
+ Go spinwalks. 
+ Doing spin projector.
+ Maximum number of spin walks=            1
+ Avg number of spin walks=   0.727272727272727     
+ Calculating spin walks.
+      ... done calculating spin walks.
+    ... go spinsets ...
+ Numspinsets this processor is            7   maxspinset size is            2
+ Getting Spinset Projectors.  Numspinsets this process is            7
+                                         maxspinsetsize is            2
+ ...done.  Eliminated            0  sets with total rank            0
+ 
+ This processor: 
+       spin sets                   7
+       spin rank                       7  of           11
+       botspin,topspin:                1           7
+       df spin rank                    7  of           11
+       botdfspin,topdfspin:            1           7
+ All processors:
+       spin rank, S^2 =   0.000000000000000E+000  is            7  out of 
+          11
+       df spin rank                    7  of           11
+ 
+ 
+ ************************************
+ ** done main walks. BIORTHO WALKS **
+ ************************************
+ 
+ Go fast_newconfiglist
+ UPPER/LOWER
+           1           5
+           1           5
+ 
+ 
+ FASTNEWCONFIG: NUMBER OF CONFIGURATIONS           11
+ 
+ NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG           7           2
+ Go fast_newconfiglist, getting configurations
+      ...Done fast_newconfiglist
+ 
+ BOTWALKS /TOPWALKS          11
+           1          11          11
+ 
+ Counting walks. Singles
+ Counting walks. Doubles
+ 
+ Maximum number of
+            single walks=            6
+            double walks=            1
+   TOTAL walks:          58 maxdoublewalks*numconfig          11
+ 
+ Allocating singlewalks
+ Allocating doublewalks
+      ..done walkalloc.
+ Calculating walks.  Singles...
+ Calculating walks.  Doubles...
+ Sorting walks...
+     .... done sorting walks.
+ Counting single hops...
+ Counting double hops...
+ Getting single hops...
+ Getting double hops...
+ GOT HOPS:  
+  Single hops this processor           47  of           58
+  Double hops this processor            0  of            0
+  Single hops total           47  of           58
+  Double hops total            0  of            0
+     Max single hops            5
+     Max double hops            1
+ 
+ Go spinwalks. 
+ Doing spin projector.
+ Maximum number of spin walks=            1
+ Avg number of spin walks=   0.727272727272727     
+ Calculating spin walks.
+      ... done calculating spin walks.
+    ... go spinsets ...
+ Numspinsets this processor is            7   maxspinset size is            2
+ Getting Spinset Projectors.  Numspinsets this process is            7
+                                         maxspinsetsize is            2
+ ...done.  Eliminated            0  sets with total rank            0
+ 
+ This processor: 
+       spin sets                   7
+       spin rank                       7  of           11
+       botspin,topspin:                1           7
+       df spin rank                    7  of           11
+       botdfspin,topdfspin:            1           7
+ All processors:
+       spin rank, S^2 =   0.000000000000000E+000  is            7  out of 
+          11
+       df spin rank                    7  of           11
+ 
+ 
+ ************************************
+ ********** DONE WALKS. *************
+ ************************************
+ 
+ Calling init_project                  8400
+ Get spfs.  Electronic dim, mval           175          35           5
+           0
+    Eigvals:
+   -1.999184589856    0.000000000000
+   -0.499999238200    0.000000000000
+   -0.499996670528    0.000000000000
+   -0.222222203837    0.000000000000
+   -0.222222119987    0.000000000000
+   -0.222221987730    0.000000000000
+   -0.124966936610    0.000000000000
+   -0.124876314674    0.000000000000
+   -0.124756467044    0.000000000000
+   -0.124671408649    0.000000000000
+ Get spfs.  Electronic dim, mval           175          35           5
+           1
+    Eigvals:
+   -0.499999238200    0.000000000000
+   -0.222222203837    0.000000000000
+   -0.222222119987    0.000000000000
+   -0.124966936610    0.000000000000
+   -0.124876314674    0.000000000000
+   -0.124756467044    0.000000000000
+   -0.095127076726    0.000000000000
+   -0.078696869825    0.000000000000
+   -0.076074481296    0.000000000000
+   -0.072892977928    0.000000000000
+ Assigning spf            5  to            1 st eigval of m=          -1 
+  ; ugvalue not fixed, is           -1
+ Assigning spf            1  to            1 st eigval of m=           0 
+  ; ugvalue not fixed, is            1
+ Assigning spf            2  to            2 nd eigval of m=           0 
+  ; ugvalue not fixed, is           -1
+ Assigning spf            3  to            3 rd eigval of m=           0 
+  ; ugvalue not fixed, is            1
+ Assigning spf            4  to            1 st eigval of m=           1 
+  ; ugvalue not fixed, is           -1
+ 
+ Ok init project.  Call get_twoe new
+ Ok called get twoe_new
+    ....Called init_project.
+ Not enough avectors loaded! will diagonalize.
+ Construct big matrix:             7
+  Call eig            7
+   -- Nonsparse eigenvals --
+     (-2.82898175672014,0.000000000000000E+000)
+     (-1.97924930399567,0.000000000000000E+000)
+     (-1.95489732147856,0.000000000000000E+000)
+     (-0.751795833009403,0.000000000000000E+000)
+     (-0.629688691610472,0.000000000000000E+000)
+     (-0.617056355998763,0.000000000000000E+000)
+     (-0.508200147403682,0.000000000000000E+000)
+ REPLACING SPFS - DENMAT EIGS
+         0.1990304881E+01
+         0.7535066280E-02
+         0.7200175053E-03
+         0.7200175053E-03
+         0.7200175053E-03
+ 
+ IN PROP: VECTOR NORM  (1.00000000000000,0.000000000000000E+000)
+          ENERGY  (-2.82898175672013,0.000000000000000E+000)
+ REPLACING SPFS - DENMAT EIGS
+         0.1990304881E+01
+         0.7535066280E-02
+         0.7200175053E-03
+         0.7200175053E-03
+         0.7200175053E-03
+ 
+T=          1.00000  Energy:  -0.2891985243E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.22E+01  0.10E-07  AVECTOR   0.10E+04  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984234095E+01
+         0.8767657928E-02
+         0.2332748991E-02
+         0.2332748991E-02
+         0.2332748991E-02
+ 
+T=          2.00000  Energy:  -0.2895956628E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.24E+00  0.10E-07  AVECTOR   0.40E-02  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984071388E+01
+         0.8080949702E-02
+         0.2615887485E-02
+         0.2615887485E-02
+         0.2615887485E-02
+ 
+T=          3.00000  Energy:  -0.2896110316E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.90E-01  0.10E-07  AVECTOR   0.15E-03  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984290807E+01
+         0.7753489705E-02
+         0.2651900942E-02
+         0.2651900942E-02
+         0.2651900942E-02
+ 
+T=          4.00000  Energy:  -0.2896137179E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.40E-01  0.10E-07  AVECTOR   0.27E-04  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984400785E+01
+         0.7606269868E-02
+         0.2664315117E-02
+         0.2664315117E-02
+         0.2664315117E-02
+ 
+T=          5.00000  Energy:  -0.2896142982E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.18E-01  0.10E-07  AVECTOR   0.58E-05  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984457099E+01
+         0.7536702142E-02
+         0.2668733111E-02
+         0.2668733111E-02
+         0.2668733111E-02
+ 
+T=          6.00000  Energy:  -0.2896144365E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.90E-02  0.10E-07  AVECTOR   0.14E-05  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984486583E+01
+         0.7502585706E-02
+         0.2670277074E-02
+         0.2670277074E-02
+         0.2670277074E-02
+ 
+T=          7.00000  Energy:  -0.2896144711E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.46E-02  0.10E-07  AVECTOR   0.35E-06  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984502157E+01
+         0.7485447172E-02
+         0.2670798674E-02
+         0.2670798674E-02
+         0.2670798674E-02
+ 
+T=          8.00000  Energy:  -0.2896144800E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.24E-02  0.10E-07  AVECTOR   0.89E-07  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984510391E+01
+         0.7476710420E-02
+         0.2670966109E-02
+         0.2670966109E-02
+         0.2670966109E-02
+ 
+T=          9.00000  Energy:  -0.2896144823E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.12E-02  0.10E-07  AVECTOR   0.23E-07  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984514735E+01
+         0.7472218686E-02
+         0.2671015334E-02
+         0.2671015334E-02
+         0.2671015334E-02
+ 
+T=         10.00000  Energy:  -0.2896144829E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.64E-03  0.10E-07  AVECTOR   0.60E-08  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984517020E+01
+         0.7469898664E-02
+         0.2671027265E-02
+         0.2671027265E-02
+         0.2671027265E-02
+ 
+T=         11.00000  Energy:  -0.2896144830E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.33E-03  0.10E-07  AVECTOR   0.16E-08  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984518217E+01
+         0.7468697587E-02
+         0.2671028569E-02
+         0.2671028569E-02
+         0.2671028569E-02
+ 
+T=         12.00000  Energy:  -0.2896144831E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.17E-03  0.10E-07  AVECTOR   0.42E-09  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984518842E+01
+         0.7468075209E-02
+         0.2671027498E-02
+         0.2671027498E-02
+         0.2671027498E-02
+ 
+T=         13.00000  Energy:  -0.2896144831E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.90E-04  0.10E-07  AVECTOR   0.11E-09  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984519168E+01
+         0.7467752655E-02
+         0.2671026321E-02
+         0.2671026321E-02
+         0.2671026321E-02
+ 
+T=         14.00000  Energy:  -0.2896144831E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.47E-04  0.10E-07  AVECTOR   0.29E-10  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984519338E+01
+         0.7467585534E-02
+         0.2671025489E-02
+         0.2671025489E-02
+         0.2671025489E-02
+ 
+T=         15.00000  Energy:  -0.2896144831E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.24E-04  0.10E-07  AVECTOR   0.77E-11  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984519426E+01
+         0.7467498989E-02
+         0.2671024979E-02
+         0.2671024979E-02
+         0.2671024979E-02
+ 
+T=         16.00000  Energy:  -0.2896144831E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.13E-04  0.10E-07  AVECTOR   0.20E-11  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984519472E+01
+         0.7467454196E-02
+         0.2671024687E-02
+         0.2671024687E-02
+         0.2671024687E-02
+ 
+T=         17.00000  Energy:  -0.2896144831E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.65E-05  0.10E-07  AVECTOR   0.54E-12  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984519495E+01
+         0.7467431026E-02
+         0.2671024525E-02
+         0.2671024525E-02
+         0.2671024525E-02
+ 
+T=         18.00000  Energy:  -0.2896144831E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.34E-05  0.10E-07  AVECTOR   0.14E-12  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984519508E+01
+         0.7467419048E-02
+         0.2671024438E-02
+         0.2671024438E-02
+         0.2671024438E-02
+ 
+T=         19.00000  Energy:  -0.2896144831E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.17E-05  0.10E-07  AVECTOR   0.44E-13  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984519514E+01
+         0.7467412859E-02
+         0.2671024392E-02
+         0.2671024392E-02
+         0.2671024392E-02
+ 
+T=         20.00000  Energy:  -0.2896144831E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.89E-06  0.10E-07  AVECTOR   0.62E-14  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984519517E+01
+         0.7467409663E-02
+         0.2671024368E-02
+         0.2671024368E-02
+         0.2671024368E-02
+ 
+T=         21.00000  Energy:  -0.2896144831E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.46E-06  0.10E-07  AVECTOR   0.36E-14  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984519519E+01
+         0.7467408013E-02
+         0.2671024355E-02
+         0.2671024355E-02
+         0.2671024355E-02
+ 
+T=         22.00000  Energy:  -0.2896144831E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.24E-06  0.10E-07  AVECTOR   0.89E-15  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984519520E+01
+         0.7467407161E-02
+         0.2671024348E-02
+         0.2671024348E-02
+         0.2671024348E-02
+ 
+T=         23.00000  Energy:  -0.2896144831E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.12E-06  0.10E-07  AVECTOR   0.27E-14  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984519520E+01
+         0.7467406722E-02
+         0.2671024345E-02
+         0.2671024345E-02
+         0.2671024345E-02
+ 
+T=         24.00000  Energy:  -0.2896144831E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.63E-07  0.10E-07  AVECTOR   0.84E-14  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984519520E+01
+         0.7467406496E-02
+         0.2671024343E-02
+         0.2671024343E-02
+         0.2671024343E-02
+ 
+T=         25.00000  Energy:  -0.2896144831E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.33E-07  0.10E-07  AVECTOR   0.27E-14  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984519521E+01
+         0.7467406379E-02
+         0.2671024342E-02
+         0.2671024342E-02
+         0.2671024342E-02
+ 
+T=         26.00000  Energy:  -0.2896144831E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.17E-07  0.10E-07  AVECTOR   0.75E-14  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.1984519521E+01
+         0.7467406319E-02
+         0.2671024342E-02
+         0.2671024342E-02
+         0.2671024342E-02
+ 
+T=         27.00000  Energy:  -0.2896144831E+01  0.0000000000E+00    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.87E-08  0.10E-07  AVECTOR   0.13E-14  0.10E-06
+ 
+    ***  CONVERGED *** 
+ 
+         -2.896144830955      0.000000000000      0.000000000000      0.000000000000
+    ***   
+ 
+    ...done prop...
+   ...saving vector...
+   ... go save vectors...
+   ... gathered orbs, now gather avector...
+   ... ok, now write
+    ...saved vectors!
+    ...end prop...
+    ...getting state expectation values etcetera...
+    ...GO finalstats.
+Thu Dec 24 18:04:08 PST 2015
+    ...END MCTDHF
+ MCTDHF STOP!

@@ -57,6 +57,8 @@ avectorfile="Bin/avector.bin.relax"
 loadspfflag=1
 spffile="Bin/spfs.bin.relax"
 
+saveflag=0
+
 diptime = 1000
 dipmodtime=2000
 

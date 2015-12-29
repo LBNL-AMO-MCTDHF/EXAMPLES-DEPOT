@@ -2,6 +2,8 @@
 1) ./Relax.Bat
 
 2) ./Helium.Tasklist.Bat
+       or
+   ./Helium.Smalltasklist.Bat to only produce plot ./gnu.abs.transient.pm3d
 
 3) ./Run.Tasks TASKS.LIST
 
@@ -10,4 +12,9 @@
 
 5) ./BigFourier.Bat
    then ./gnu.abs.bigfourier.pm3d to decompose it into photon components
+
+This is a preliminary implementation of the complex valued generalization of
+Domcke's method for wave mixing.  2D Fourier transform with respect to the
+carrier-envelope phase of co-and counter-rotating photons is produced in
+absorption.bigfourier.weak.pm3d.pdf.  Result is gauge-dependent.   v1.16    12-2015
 

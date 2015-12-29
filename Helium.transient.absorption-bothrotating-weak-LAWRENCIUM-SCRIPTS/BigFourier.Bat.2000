@@ -52,8 +52,6 @@ do
 
 	i=0
 
-##	for file in Dips/ZDipoleft.Dat.${delay}_0_002000 Dips/ZDipoleft.Dat.${delay}_??*_002000
-
 	for file in $qlist
 	do
 

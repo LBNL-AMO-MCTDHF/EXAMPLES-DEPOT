@@ -44,8 +44,8 @@ A7=0.0000001
 A8=0.00000001
 
 set xlabel "eV"
-set ylabel "IR First     Delay (cycle)     XUV First\nred=absorption  magenta=emission"
-set title "Absorption, Helium;  330as 25eV, \n 11fs FWHM 780nm, 2.7e11 W cm^{-2}"
+set ylabel "IR First     Delay (cycle)     XUV First"
+set title "Absorption, Helium;  unitless function 2 w Im[S(w)D(w)^*]\n330as 25eV, 11fs FWHM 780nm 2.7e11 W cm^{-2}"
 
 set out "absorption.bigfourier.helium.weak.pm3d.ps"
 set term post enhanced solid color 20
