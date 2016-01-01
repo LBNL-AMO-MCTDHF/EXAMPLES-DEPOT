@@ -11,13 +11,15 @@ $pulse
 
  pulsetheta=1.5707963267949d0
 
- minpulsetime=2000d0
+ minpulsetime=1000d0
 
 /
 
 
 
 $parinp
+
+energyshift=(0d0,-0.000000708732d0)
 
 numactions=1
 actions=21

@@ -3,22 +3,23 @@
 echo '
 
 set xlabel "Energy (eV)"
-set ylabel "emission/absorption\ncross section (arb units)"
+set ylabel "emission/absorption cross section (Mb)"
 
 set term unknown
 set style data lines
 
 set key top left
 
-set yrange [0.001:*]
+set yrange [0.01:*]
 
 set xrange [0:40]
 
 set logscale y
 
-plot "Dat/ZDipoleft.Dat" using (27.2114*$1):($7/($4**2+$5**2)) lt 7 lw 10 title "Z"
+plot "Dat/ZDipoleft.Dat" using (27.2114*$1):($9) lt 7 lw 10 title "Z"
 
-
+set y2range [0:*]
+replot "Dat/ZDipoleft.Dat" using (27.2114*$1):($4**2+$5**2) with points pt 7 ps 1 lt -1 title "pulse intensity" axes x1y2
 
 set term x11
 replot

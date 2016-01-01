@@ -3,26 +3,29 @@
 echo '
 
 set xlabel "Energy (eV)"
-set ylabel "emission/absorption\ncross section (arb units)"
+set ylabel "emission/absorption cross section (Mb)"
 
 set term unknown
 set style data lines
 
 set key top left
 
-set yrange [0.001:*]
+set yrange [0.01:*]
 
 set xrange [0:40]
 
 set logscale y
 
-plot "Dat/ZDipoleft.Dat000400" using (27.2114*$1):($7/($4**2+$5**2)) lt 7 lw 10 title "T=400"
+plot "Dat/ZDipoleft.Dat000200" using (27.2114*$1):($7/($4**2+$5**2)) lt 7 lw 10 title "T=200"
 
-replot "Dat/ZDipoleft.Dat001000" using (27.2114*$1):($7/($4**2+$5**2)) lt 4 lw 6 title "T=1000"
+replot "Dat/ZDipoleft.Dat000400" using (27.2114*$1):($7/($4**2+$5**2)) lt 4 lw 6 title "T=400"
 
-replot "Dat/ZDipoleft.Dat001400" using (27.2114*$1):($7/($4**2+$5**2)) lt -1 lw 2 title "T=1400"
+replot "Dat/ZDipoleft.Dat000800" using (27.2114*$1):($7/($4**2+$5**2)) lt -1 lw 2 title "T=800"
 
-replot "Dat/ZDipoleft.Dat001800" using (27.2114*$1):($7/($4**2+$5**2)) lt 2 lw 2 title "T=1800"
+replot "Dat/ZDipoleft.Dat001000" using (27.2114*$1):($7/($4**2+$5**2)) lt 2 lw 2 title "T=1000"
+
+set y2range [0:*]
+replot "Dat/ZDipoleft.Dat" using (27.2114*$1):($4**2+$5**2) with points pt 7 ps 1 lt -1 title "pulse intensity" axes x1y2
 
 set term x11
 replot
