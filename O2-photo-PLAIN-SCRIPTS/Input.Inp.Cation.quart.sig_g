@@ -3,6 +3,7 @@ $parinp
 
 mcscfnum=2
 
+writeconfiglist=1
 configlistfile="WALKS/cation.configlist.BIN.quart.sig_g"
 
 avectoroutfile="Bin/avector.bin.cation.quart.sig_g"

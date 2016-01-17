@@ -3,6 +3,7 @@ $parinp
 
 mcscfnum=3
 
+writeconfiglist=1
 configlistfile="WALKS/cation.configlist.BIN.doub.sig_u"
 
 avectoroutfile="Bin/avector.bin.cation.doub.sig_u"
