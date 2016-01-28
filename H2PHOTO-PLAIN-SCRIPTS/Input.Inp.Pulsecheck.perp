@@ -51,7 +51,7 @@ $h2parinp
 NucCharge1=1d0
 NucCharge2=1d0
 
-LBIG=6,MBIG=1
+LBIG=6,MBIG=2
 
 xinumpoints=10
 xinumelements=8

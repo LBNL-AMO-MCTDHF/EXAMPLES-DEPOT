@@ -50,7 +50,7 @@ $heparinp
 
 NucCharge1=2d0
 
-LBIG=5, MBIG=1
+LBIG=5, MBIG=2
 
 henumpoints=10
 henumelements=8
