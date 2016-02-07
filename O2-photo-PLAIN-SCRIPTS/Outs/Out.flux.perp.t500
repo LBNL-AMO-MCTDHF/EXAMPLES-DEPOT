@@ -1,4 +1,4 @@
-Sat Dec 26 16:27:44 PST 2015
+Sun Feb  7 08:23:37 PST 2016
   ****************************************************************************
   **********************  BEGIN LBNL-AMO-MCTDHF ******************************
   ****************************************************************************
@@ -20,7 +20,7 @@ Sat Dec 26 16:27:44 PST 2015
   *************************  COMMAND LINE OPTIONS  ***************************
 
  Reading Input.Inp.Fourier.perp                                                                                                                                                                                  
- Eground for autoft set to    -147.34959470203299       by command line option.
+ Eground for autoft set to    -147.34959470203600       by command line option.
   ****************************************************************************
 
  Enforcing CMF defaults for Verlet or EXPO.
@@ -163,12 +163,13 @@ rnumelements, rnumpoints:    1    3
  FASTNEWCONFIG: NUMBER OF CONFIGURATIONS         1200
 
  NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG         570           4
- Go fast_newconfiglist, getting configurations
-      ...Done fast_newconfiglist
+ Go fast_newconfiglist.  Allocating...
+    getting configurations.
 
  BOTWALKS /TOPWALKS        1200
            1        1200        1200
 
+      ...Done fast_newconfiglist
  Counting walks. Singles
         1000  out of         1200
  Counting walks. Doubles
@@ -200,103 +201,18 @@ rnumelements, rnumpoints:    1    3
      Max single hops           31
      Max double hops          283
 
- Go spinwalks. 
+ Go spinwalk init. 
+ Go get numspinwalks.
  Doing spin projector.
  Maximum number of spin walks=            3
  Avg number of spin walks=    2.1000000000000001     
+ Done spinwalk init.
  Calculating spin walks.
       ... done calculating spin walks.
     ... go spinsets ...
  Numspinsets this processor is          570   maxspinset size is            4
  Getting Spinset Projectors.  Numspinsets this process is          570
-                                         maxspinsetsize is            4
- ...done.  Eliminated            0  sets with total rank            0
-
- This processor: 
-       spin sets                 570
-       spin rank                     990  of         1200
-       botspin,topspin:                1         990
-       df spin rank                  990  of         1200
-       botdfspin,topdfspin:            1         990
- All processors:
-       spin rank, S^2 =    2.0000000000000000       is          990  out of         1200
-       df spin rank                  990  of         1200
-
-
- ************************************
- ** done main walks. BIORTHO WALKS **
- ************************************
-
- Go fast_newconfiglist
- UPPER/LOWER
-           1           2
-           1           3
-           2           4
-           2           4
-           3           5
-           3           5
-           4           6
-           4           6
-           5           7
-           5           7
-           6           8
-           6           8
-           7           9
-           7           9
-           8          10
-           9          10
-
-
- FASTNEWCONFIG: NUMBER OF CONFIGURATIONS         1200
-
- NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG         570           4
- Go fast_newconfiglist, getting configurations
-      ...Done fast_newconfiglist
-
- BOTWALKS /TOPWALKS        1200
-           1        1200        1200
-
- Counting walks. Singles
-        1000  out of         1200
- Counting walks. Doubles
-        1000  out of         1200
-
- Maximum number of
-            single walks=           46
-            double walks=            1
-   TOTAL walks:       55200 maxdoublewalks*numconfig        1200
-
- Allocating singlewalks
- Allocating doublewalks
-      ..done walkalloc.
- Calculating walks.  Singles...
-        1000  out of         1200
- Calculating walks.  Doubles...
-        1000  out of         1200
- Sorting walks...
-     .... done sorting walks.
- Counting single hops...
- Counting double hops...
- Getting single hops...
- Getting double hops...
- GOT HOPS:  
-  Single hops this processor        37200  of        55200
-  Double hops this processor            0  of            0
-  Single hops total        37200  of        55200
-  Double hops total            0  of            0
-     Max single hops           31
-     Max double hops            1
-
- Go spinwalks. 
- Doing spin projector.
- Maximum number of spin walks=            3
- Avg number of spin walks=    2.1000000000000001     
- Calculating spin walks.
-      ... done calculating spin walks.
-    ... go spinsets ...
- Numspinsets this processor is          570   maxspinset size is            4
- Getting Spinset Projectors.  Numspinsets this process is          570
-                                         maxspinsetsize is            4
+                                        maxspinsetsize is            4
  ...done.  Eliminated            0  sets with total rank            0
 
  This processor: 
@@ -319,16 +235,19 @@ rnumelements, rnumpoints:    1    3
     ...rank 1 read from file
  Loaded           10  spfs from file Bin/spfs.bin.Pulse.perp                                                                                                                                                                                 
  Calling init_project                67760
- MAX prolate_derivs asym :     8.6953125000000000     
+ Go init_project diatomic.   PSC...
+ MAX prolate_derivs asym :     656343977446958.25     
 
+    ... ok PSC. call get_twoe_new
+    Calc two electron.
+    ...done.
+    ... ok called get twoe_new
  Found all spfs I need on file.
 
  Done init_h2.
 
- Ok init project.  Call get_twoe new
-    Calc two electron.
-    ...done.
- Ok called get twoe_new
+ Done init project.
+
     ....Called init_project.
  Guess at necessary memory is  1396.387 MB
  g(tau) will be computed with all psi being read in batches
@@ -349,4 +268,5 @@ rnumelements, rnumpoints:    1    3
     ....Go ft....
     ....Go ft pulse....
     ....Done with ft....
- Stopping
+ Stopping after actions_initial
+ MCTDHF STOP!
