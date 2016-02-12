@@ -7,16 +7,19 @@ $pulse
 
  numpulses=1
  pulsetype=2
+ phaseshift=1.570796326794897d0
 
  omega2(1)=1.0657
  omega(1)=0.07853981633974d0
  omega(1)=0.10657
- omega2(1)=1.25
- omega(1)=0.125
+ omega2(1)=1.2
+ omega(1)=0.3
 
  intensity=1d-5
 
  velflag=0
+
+ minpulsetime=600
 
 /
 
@@ -24,7 +27,7 @@ $pulse
 
 $parinp
 
-finaltime=600
+energyshift=(0d0,0.410541d-7)
 
 numactions=1
 actions=15
@@ -32,8 +35,25 @@ actions=15
 fluxmofile="Flux/flux.mo.bin"
 fluxafile="Flux/flux.avec.bin"
 projfluxfile="Flux/projflux.wfn.bin"
-fluxskipmult=1
-fluxinterval=1
+numcatfiles=8
+catavectorfiles(1)="Bin/avector.bin.cation.doub.pi_g"
+catspffiles(1)="Bin/spfs.bin.cation.doub.pi_g"
+catavectorfiles(2)="Bin/avector.bin.cation.doub.pi_u"
+catspffiles(2)="Bin/spfs.bin.cation.doub.pi_u"
+catavectorfiles(3)="Bin/avector.bin.cation.doub.sig_g"
+catspffiles(3)="Bin/spfs.bin.cation.doub.sig_g"
+catavectorfiles(4)="Bin/avector.bin.cation.doub.sig_u"
+catspffiles(4)="Bin/spfs.bin.cation.doub.sig_u"
+catavectorfiles(5)="Bin/avector.bin.cation.quart.pi_g"
+catspffiles(5)="Bin/spfs.bin.cation.quart.pi_g"
+catavectorfiles(6)="Bin/avector.bin.cation.quart.pi_u"
+catspffiles(6)="Bin/spfs.bin.cation.quart.pi_u"
+catavectorfiles(7)="Bin/avector.bin.cation.quart.sig_g"
+catspffiles(7)="Bin/spfs.bin.cation.quart.sig_g"
+catavectorfiles(8)="Bin/avector.bin.cation.quart.sig_u"
+catspffiles(8)="Bin/spfs.bin.cation.quart.sig_u"
+fluxskipmult=2
+fluxinterval=2
 
 spifile="Dat/xsec.spi.dat"
 projspifile="Dat/xsec.proj.spi"
@@ -43,13 +63,15 @@ sparseconfigflag=1
 autotimestep=0.5d0
 
 loadavectorflag=1
-avectorfile="Bin/avector.bin.Pulse"
+avectorfile="Bin/avector.bin.Relax"
 loadspfflag=1
-spffile="Bin/spfs.bin.Pulse"
+spffile="Bin/spfs.bin.Relax"
+
+saveflag=0
 
 numelec=16
 
-tdflag=0
+tdflag=1
 
 nspf = 10
 
@@ -64,7 +86,7 @@ restrictms=2
 mrestrictflag=1
 mrestrictval=0
 
-par_timestep=0.5d0
+par_timestep=0.25d0
 littlesteps=5
 
 /
@@ -77,10 +99,10 @@ NucCharge2=8d0
 LBIG=10,MBIG=1
 
 xinumpoints=12
-xinumelements=7
-xicelement=6
+xinumelements=5
+xicelement=4
 xiecstheta=0.4d0
-xielementsizes=5d0,5d0,5d0,5d0,5d0,  5d0,10d0
+xielementsizes=5d0,5d0,5d0,  5d0,10d0
 
 rstart=2.282d0
 

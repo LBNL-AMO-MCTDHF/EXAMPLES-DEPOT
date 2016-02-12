@@ -1,6 +1,6 @@
 $parinp
 
-lanthresh=1d-10
+finalstatsfile="Dat/finalstats.dat.relax"
 
 avectoroutfile="Bin/avector.bin.Relax"
 spfoutfile="Bin/spfs.bin.Relax"
@@ -28,10 +28,13 @@ mrestrictval=0
 
 improvedrelaxflag=1
 improvednatflag=1
+improvedquadflag=3
+quadstarttime=30d0
+aquadstarttime=30d0
 
-par_timestep=1.0d0
+par_timestep=1d0
 
-stopthresh =  1.d-8
+stopthresh =  1.d-10
 
 /
 
@@ -46,10 +49,10 @@ NucCharge2=8d0
 LBIG=10,MBIG=1
 
 xinumpoints=12
-xinumelements=7
-xicelement=6
+xinumelements=5
+xicelement=4
 xiecstheta=0.4d0
-xielementsizes=5d0,5d0,5d0,5d0,5d0,  5d0,10d0
+xielementsizes=5d0,5d0,5d0,  5d0,10d0
 
 rstart=2.282d0
 

@@ -2,27 +2,23 @@
 1)   ./Relax.Bat
      ./RunCat.Bat
 
-2A)  ./Pulse.Bat
-3A)  ./Fourier.Bat
-4A)  ./Flux.Bat TIME
-     ./RunProjFlux.Bat TIME
+2A)  ./Fourier.Bat
+3A)  ./Flux.Bat TIME
+     ./ProjFlux.Bat TIME
 
-2B)  ./Pulse.Bat.perp
-3B)  ./Fourier.Bat.perp
-4B)  ./Flux.Bat TIME .perp
-     ./RunProjFlux.Bat TIME .perp
+2B)  ./Fourier.Bat.perp
+3B)  ./Flux.Bat TIME .perp
+     ./ProjFlux.Bat TIME .perp
 
-2C)  ./Pulse.Bat.perp.vel
-3C)  ./Fourier.Bat.perp.vel
-4C)  ./Flux.Bat TIME .perp.vel
-     ./RunProjFlux.Bat TIME .perp.vel
+2C)  ./Fourier.Bat.perp.vel
+3C)  ./Flux.Bat TIME .perp.vel
+     ./ProjFlux.Bat TIME .perp.vel
 
-2D)  ./Pulse.Bat.vel
-3D)  ./Fourier.Bat.vel
-4D)  ./Flux.Bat TIME .vel
-     ./RunProjFlux.Bat TIME .vel
+2D)  ./Fourier.Bat.vel
+3D)  ./Flux.Bat TIME .vel
+     ./ProjFlux.Bat TIME .vel
 
-5)   ./gnu.xsec
+4)   ./gnu.xsec
      ./gnu.xsec.perp
      ./gnu.proj.xsec
      ./gnu.proj.xsec.vel

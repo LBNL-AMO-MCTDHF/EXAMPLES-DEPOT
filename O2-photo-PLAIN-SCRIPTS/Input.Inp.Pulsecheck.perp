@@ -7,16 +7,17 @@ $pulse
 
  numpulses=1
  pulsetype=2
+ phaseshift=1.570796326794897d0
 
  omega2(1)=1.0657
  omega(1)=0.07853981633974d0
  omega(1)=0.10657
- omega2(1)=1.25
- omega(1)=0.125
+ omega2(1)=1.2
+ omega(1)=0.3
 
  intensity=1d-5
 
- velflag=1
+ velflag=0
 
  pulsetheta=1.5707963267949d0
 
@@ -25,6 +26,8 @@ $pulse
 
 
 $parinp
+
+energyshift=(0d0,0.410541d-7)
 
 sparseconfigflag=1
 
@@ -35,8 +38,7 @@ avectorfile="Bin/avector.bin.Relax"
 loadspfflag=1
 spffile="Bin/spfs.bin.Relax"
 
-avectoroutfile="Bin/avector.bin.Pulse.perp.vel"
-spfoutfile="Bin/spfs.bin.Pulse.perp.vel"
+saveflag=0
 
 numelec=16
 
@@ -54,7 +56,7 @@ restrictms=2
 
 mrestrictflag=0
 
-par_timestep=0.5d0
+par_timestep=0.25d0
 littlesteps=5
 
 /
@@ -67,10 +69,10 @@ NucCharge2=8d0
 LBIG=10,MBIG=2
 
 xinumpoints=12
-xinumelements=7
-xicelement=6
+xinumelements=5
+xicelement=4
 xiecstheta=0.4d0
-xielementsizes=5d0,5d0,5d0,5d0,5d0,  5d0,10d0
+xielementsizes=5d0,5d0,5d0,  5d0,10d0
 
 rstart=2.282d0
 

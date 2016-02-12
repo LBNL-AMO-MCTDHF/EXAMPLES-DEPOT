@@ -1,2 +1,2 @@
-xlow=22
-xhigh=40
+xlow=10
+xhigh=60

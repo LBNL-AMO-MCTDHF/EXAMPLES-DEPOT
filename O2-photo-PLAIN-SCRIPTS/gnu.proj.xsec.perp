@@ -6,31 +6,32 @@ set term unknown
 set xlabel "Photon Energy (ev)"
 set ylabel "Cross Section (MBarns)"
 set yrange [*:*]
-set xrange [22:43]
+set xrange [10:60]
 
 
 A=27.2114
 
-plot "Dat/xsec.spi.perp.dat.t500" using (A*$1):($3) with lines lt -1 lw 3 title "tot"
+plot "Dat/xsec.spi.perp.dat" using (A*$1):($3) with lines lt -1 lw 4 title "tot"
 
-replot  "Dat/xsec.proj.spi.perp_001_001.dat.quart.pi_g.t500" using (A*$1):($3) with lines lt 2 lw 3 title "q pi_g"
-replot  "Dat/xsec.proj.spi.perp_001_001.dat.quart.pi_u.t500" using (A*$1):($3) with lines lt 3 lw 3 title "q pi_u"
-replot  "Dat/xsec.proj.spi.perp_001_001.dat.quart.sig_g.t500" using (A*$1):($3) with lines lt 4 lw 3 title "q sig_g 1"
-replot  "Dat/xsec.proj.spi.perp_002_001.dat.quart.sig_g.t500" using (A*$1):($3) with lines lt 5 lw 3 title "q sig_g 2"
-replot  "Dat/xsec.proj.spi.perp_001_001.dat.quart.sig_u.t500" using (A*$1):($3) with lines lt 6 lw 3 title "q sig_g 1"
-replot  "Dat/xsec.proj.spi.perp_002_001.dat.quart.sig_u.t500" using (A*$1):($3) with lines lt 7 lw 3 title "q sig_g 2"
+replot  "Dat/xsec.proj.spi.perp_011_001.dat" using (A*$1):($3) with lines lt 2 lw 3 title "q pi_g"
+replot  "Dat/xsec.proj.spi.perp_012_001.dat" using (A*$1):($3) with lines lt 3 lw 3 title "q pi_u"
+replot  "Dat/xsec.proj.spi.perp_013_001.dat" using (A*$1):($3) with lines lt 4 lw 3 title "q sig_g 1"
+replot  "Dat/xsec.proj.spi.perp_014_001.dat" using (A*$1):($3) with lines lt 5 lw 3 title "q sig_g 2"
+replot  "Dat/xsec.proj.spi.perp_015_001.dat" using (A*$1):($3) with lines lt 6 lw 3 title "q sig_u 1"
+replot  "Dat/xsec.proj.spi.perp_016_001.dat" using (A*$1):($3) with lines lt 7 lw 3 title "q sig_u 2"
 
-replot  "Dat/xsec.proj.spi.perp_001_001.dat.doub.pi_g.t500" using (A*$1):($3) with points pt 7 lt 1 lw 3 title "d pi_g 1"
-replot  "Dat/xsec.proj.spi.perp_002_001.dat.doub.pi_g.t500" using (A*$1):($3) with points pt 7 lt 2 lw 3 title "d pi_g 2"
-replot  "Dat/xsec.proj.spi.perp_001_001.dat.doub.pi_u.t500" using (A*$1):($3) with points pt 7 lt 3 lw 3 title "d pi_u 1"
-replot  "Dat/xsec.proj.spi.perp_002_001.dat.doub.pi_u.t500" using (A*$1):($3) with points pt 7 lt 4 lw 3 title "d pi_u 2"
-replot  "Dat/xsec.proj.spi.perp_003_001.dat.doub.pi_u.t500" using (A*$1):($3) with points pt 7 lt 5 lw 3 title "d pi_u 3"
-replot  "Dat/xsec.proj.spi.perp_001_001.dat.doub.sig_g.t500" using (A*$1):($3) with points pt 7 lt 6 lw 3 title "d sig_g 1"
-replot  "Dat/xsec.proj.spi.perp_002_001.dat.doub.sig_g.t500" using (A*$1):($3) with points pt 7 lt 7 lw 3 title "d sig_g 2"
-replot  "Dat/xsec.proj.spi.perp_001_001.dat.doub.sig_u.t500" using (A*$1):($3) with points pt 7 lt 8 lw 3 title "d sig_g 1"
-replot  "Dat/xsec.proj.spi.perp_002_001.dat.doub.sig_u.t500" using (A*$1):($3) with points pt 7 lt 9 lw 3 title "d sig_g 2"
-replot  "Dat/xsec.proj.spi.perp_003_001.dat.doub.sig_u.t500" using (A*$1):($3) with points pt 7 lt 10 lw 3 title "d sig_g 3"
+replot  "Dat/xsec.proj.spi.perp_001_001.dat" using (A*$1):($3) with points pt 7 lt 1 lw 3 title "d pi_g 1"
+replot  "Dat/xsec.proj.spi.perp_002_001.dat" using (A*$1):($3) with points pt 7 lt 2 lw 3 title "d pi_g 2"
+replot  "Dat/xsec.proj.spi.perp_003_001.dat" using (A*$1):($3) with points pt 7 lt 3 lw 3 title "d pi_u 1"
+replot  "Dat/xsec.proj.spi.perp_004_001.dat" using (A*$1):($3) with points pt 7 lt 4 lw 3 title "d pi_u 2"
+replot  "Dat/xsec.proj.spi.perp_005_001.dat" using (A*$1):($3) with points pt 7 lt 5 lw 3 title "d pi_u 3"
+replot  "Dat/xsec.proj.spi.perp_006_001.dat" using (A*$1):($3) with points pt 7 lt 6 lw 3 title "d sig_g 1"
+replot  "Dat/xsec.proj.spi.perp_007_001.dat" using (A*$1):($3) with points pt 7 lt 7 lw 3 title "d sig_g 2"
+replot  "Dat/xsec.proj.spi.perp_008_001.dat" using (A*$1):($3) with points pt 7 lt 8 lw 3 title "d sig_u 1"
+replot  "Dat/xsec.proj.spi.perp_009_001.dat" using (A*$1):($3) with points pt 7 lt 9 lw 3 title "d sig_u 2"
+replot  "Dat/xsec.proj.spi.perp_010_001.dat" using (A*$1):($3) with points pt 7 lt 10 lw 3 title "d sig_u 3"
 
+replot  "Dat/xsec.proj.spi.perp_all_001.dat" using (A*$1):($3) with lines lt 8 lw 3 title "SUM"
 
 set term post enhanced 20 color solid
 set out "proj.xsec.o2.perp.ps"
@@ -40,5 +41,5 @@ set term x11
 set out
 replot
 
-' | gnuplot -persist
+exit' | gnuplot -persist 
 

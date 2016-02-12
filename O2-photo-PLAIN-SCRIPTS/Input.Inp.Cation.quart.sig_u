@@ -1,10 +1,6 @@
 $parinp
 
-
 mcscfnum=2
-
-writeconfiglist=1
-configlistfile="WALKS/cation.configlist.BIN.quart.sig_u"
 
 avectoroutfile="Bin/avector.bin.cation.quart.sig_u"
 spfoutfile="Bin/spfs.bin.cation.quart.sig_u"
@@ -53,10 +49,10 @@ NucCharge2=8d0
 LBIG=10,MBIG=1
 
 xinumpoints=12
-xinumelements=7
-xicelement=6
+xinumelements=5
+xicelement=4
 xiecstheta=0.4d0
-xielementsizes=5d0,5d0,5d0,5d0,5d0,  5d0,10d0
+xielementsizes=5d0,5d0,5d0,  5d0,10d0
 
 rstart=2.282d0
 

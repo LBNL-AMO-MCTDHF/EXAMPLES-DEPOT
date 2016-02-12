@@ -1,0 +1,337 @@
+Thu Feb 11 13:42:50 PST 2016
+Thu Feb 11 13:42:50 PST 2016
+Thu Feb 11 13:42:50 PST 2016
+Thu Feb 11 13:42:50 PST 2016
+Thu Feb 11 13:42:50 PST 2016
+Thu Feb 11 13:42:50 PST 2016
+Thu Feb 11 13:42:50 PST 2016
+Thu Feb 11 13:42:50 PST 2016
+Thu Feb 11 13:42:50 PST 2016
+Thu Feb 11 13:42:50 PST 2016
+ 
+  ****************************************************************************
+  **********************  BEGIN LBNL-AMO-MCTDHF ******************************
+  ****************************************************************************
+ 
+    Atomic/Diatomic/Cartesian Polyatomic nonadiabatic MCTDHF code
+      for ultrafast electronic and nuclear dynamics in intense laser fields
+    AMO Theory Group, Lawrence Berkeley Laboratory
+      D J Haxton, C W McCurdy, T N Rescigno, K V Lawler, J Jones, 
+      B Abeln, X Li . . .
+                              VERSION 1.10 
+        Copyright 2015 the regents of the University of California
+ 
+                This is CHMCTDH: HERM-normed ECS version.
+ 
+                PROCESSOR            1  OF           10
+ 
+ Inpfile is Input.Inp.Pulsecheck.perp.vel  
+ 
+  *************************  COMMAND LINE OPTIONS  ***************************
+ 
+ Reading 
+ Input.Inp.Pulsecheck.perp.vel                                                  
+                                                                                
+                                           
+  ****************************************************************************
+ 
+ Enforcing CMF defaults for Verlet or EXPO.
+ PULSE IS ON:   velocity, usual way.
+ 
+ NUMBER OF PULSES:             1
+ 
+     -----> Pulse            1  : 
+ Pulse type is 2 or 3: envelope with carrier
+    chirp:             0.000000000000000E+000
+    ramp:             0.000000000000000E+000  Hartree
+    Envelope omega:    0.300000000000000     
+    Pulse omega:        1.20000000000000     
+    Pulsestart:        0.100000000000000     
+    Pulsestrength:    (1.406582456193727E-003,0.000000000000000E+000)
+    Intensity:         1.000000000000000E-005  x 10^16 W cm^-2
+    Pulsetheta:         1.57079632679490     
+    Pulsephi:        0.000000000000000E+000
+    Pulsefinish:        10.5719755119660     
+ ---> Pulsetype 2.
+     ---> Resetting finaltime to    11.7500000000000     
+                 numpropsteps to           47
+    ... Writing pulse to file
+        ... done Writing pulse to file
+ 
+  ****************************************************************************
+ *****************************************************************************
+ 
+ Number of states in propagation=           1
+ 
+  Parameters: electronic
+ 
+                    Number of electrons    16
+ Nuclear KE flag (nonuc_checkflag):         1
+ 
+   *****  prolate spheroidal coordinate options ****
+                        bornopflag:         1
+             Xinumpoints, xinumelements:   12    5
+                              ECS is ON!
+                 xicelement,  xiecstheta    4    0.400000000000
+    Xi elementsizes:   5.00000   5.00000   5.00000   5.00000  10.00000
+      lbig,mbig          00010     00002
+ 
+ **************************   Parameters: nuclear    *************************  
+  
+ 
+   Hmass, Dmass, Reduced:     1836.15270100     1836.15270100      918.07635050
+rnumelements, rnumpoints:    1    3
+  relementsize ,  rstart:   0.00000   2.28200
+                              ECS is ON!
+                   rcelement,  rthetaecs  100    0.000000000000
+                             CAP is Off!
+                  Jvalue:    0
+                            Reducedflag:    0
+ 
+ ************************   Parameters: config/spf    ************************  
+  
+ 
+ Doing full CI: numshells=1.  Shells:
+ Shell            1
+   1a    1b    2a    2b    3a    3b    4a    4b    5a    5b    6a    6b 
+   7a    7b    8a    8b    9a    9b   10a   10b 
+  Final shell occupancy level vexcite=         999
+ 
+    Number of unfrozen spfs:     10
+    Number of frozen spfs:        0
+            Spfs start in m=     0   0   0   0   1  -1   0   1  -1   0
+ 
+ Configurations will be restricted to spin projection           2 /2
+  Configurations will be restricted to spin            2
+ 
+ ***********************    Initial state      ***********************   
+ 
+ Spfs will be loaded from files 
+ 
+ Avector will be loaded from files.  Number of files=            1
+ 
+ ***********************    Parameters: propagation    ***********************  
+  
+ 
+  PAR_TIMESTEP IS   0.250000000000000       LITTLESTEPS IS            5
+ 
+                 # of steps, final time:        47             11.75000000
+ 
+ 
+ *******  USING POLYNOMIAL MEAN FIELDS/MAGNUS A-VECTOR PREDICTOR/CORRECTOR   ***
+ ****  
+ 
+     Will use sparse configuration routines.
+           Lanczosorder is          200
+           Lanthresh is      1.000000000000000E-009
+           Aorder is                 30
+           Maxaorder is             100
+           Aerror is         1.000000000000000E-009
+  Jacobian options:
+     Jacprojorth=           0
+     Jacsymflag=           0
+  Using EXPONENTIAL integration.
+     Expotol    =  1.000000000000000E-008
+     Maxexpodim=         100
+ 
+ Density matrix regularized with denreg= 0.100E-09
+ 
+ 
+ ****************************************************************************
+ 
+ Autosteps is            2  Autosize is           24  Numpropsteps is 
+          47
+ 
+ *****************************************************************************
+ 
+ 
+ 
+ 
+ ************************************
+ ********  MAIN WALKS  **************
+ ************************************
+ 
+ Go fast_newconfiglist
+ UPPER/LOWER
+           1           2
+           1           3
+           2           4
+           2           4
+           3           5
+           3           5
+           4           6
+           4           6
+           5           7
+           5           7
+           6           8
+           6           8
+           7           9
+           7           9
+           8          10
+           9          10
+ 
+ 
+ FASTNEWCONFIG: NUMBER OF CONFIGURATIONS         1200
+ 
+ NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG         570           4
+ Go fast_newconfiglist.  Allocating...
+    getting configurations.
+ 
+ BOTWALKS /TOPWALKS        1200
+           1         119         119
+         120         239         120
+         240         356         117
+         357         477         121
+         478         598         121
+         599         716         118
+         717         839         123
+         840         957         118
+         958        1076         119
+        1077        1200         124
+ 
+      ...Done fast_newconfiglist
+ Counting walks. Singles
+ Counting walks. Doubles
+ 
+ Maximum number of
+            single walks=           46
+            double walks=         1140
+   TOTAL walks:     1423200 maxdoublewalks*numconfig     1368000
+ 
+ Allocating singlewalks
+ Allocating doublewalks
+      ..done walkalloc.
+ Calculating walks.  Singles...
+ Calculating walks.  Doubles...
+ Sorting walks...
+     .... done sorting walks.
+ Counting single hops...
+ Counting double hops...
+ Getting single hops...
+ Getting double hops...
+ GOT HOPS:  
+  Single hops this processor         3689  of         5474
+  Double hops this processor        33677  of       135660
+  Single hops total        37200  of        55200
+  Double hops total       339600  of      1368000
+     Max single hops           31
+     Max double hops          283
+ 
+ Go spinwalk init. 
+ Go get numspinwalks.
+ Doing spin projector.
+ Maximum number of spin walks=            3
+ Avg number of spin walks=    2.10000000000000     
+ Done spinwalk init.
+ Calculating spin walks.
+      ... done calculating spin walks.
+    ... go spinsets ...
+ Numspinsets this processor is           74   maxspinset size is            4
+ Getting Spinset Projectors.  Numspinsets this process is           74
+                                        maxspinsetsize is            4
+ ...done.  Eliminated            0  sets with total rank            0
+ 
+ This processor: 
+       spin sets                  74
+       spin rank                     104  of          119
+       botspin,topspin:                1         104
+       df spin rank                  104  of          119
+       botdfspin,topdfspin:            1         104
+ All processors:
+       spin rank, S^2 =    2.00000000000000       is          990  out of 
+        1200
+       df spin rank                  990  of         1200
+ 
+ 
+ ************************************
+ ********** DONE WALKS. *************
+ ************************************
+ 
+ Reading spfs.
+ Read complex spfs
+    ...rank 1 read from file
+ Loaded           10  spfs from file 
+ Bin/spfs.bin.Relax                                                             
+                                                                                
+                                           
+ Calling init_project                 48400
+ Go init_project diatomic.   PSC...
+ MAX prolate_derivs asym :     8.93554687500000     
+ 
+    ... ok PSC. call get_twoe_new
+    Calc two electron.
+    ...done.
+    ... ok called get twoe_new
+ Found all spfs I need on file.
+ 
+ Done init_h2.
+ 
+ Done init project.
+ 
+    ....Called init_project.
+ Reading avector...
+ WARNING: smaller numconfigs.        1200         392
+ Read            1  A-vectors
+ IN PROP: VECTOR NORM  (1.00000000000000,0.000000000000000E+000)
+          ENERGY  (-147.349594671229,1.416636973950888E-014)
+T=          0.25000  Energy:  -0.1473495947E+03 -0.4025480822E-13    Norm:   0.1000000000E+01
+T=          0.50000  Energy:  -0.1473495947E+03 -0.2925869386E-13    Norm:   0.1000000000E+01
+T=          0.75000  Energy:  -0.1473495947E+03 -0.4852678938E-13    Norm:   0.1000000000E+01
+T=          1.00000  Energy:  -0.1473495947E+03  0.1001400134E-13    Norm:   0.1000000000E+01
+T=          1.25000  Energy:  -0.1473495947E+03 -0.9895747199E-13    Norm:   0.1000000000E+01
+T=          1.50000  Energy:  -0.1473495947E+03 -0.1094030767E-13    Norm:   0.1000000000E+01
+T=          1.75000  Energy:  -0.1473495946E+03 -0.4267761832E-14    Norm:   0.1000000000E+01
+T=          2.00000  Energy:  -0.1473495943E+03 -0.1864291698E-13    Norm:   0.1000000000E+01
+T=          2.25000  Energy:  -0.1473495937E+03  0.7054181070E-13    Norm:   0.1000000000E+01
+T=          2.50000  Energy:  -0.1473495925E+03  0.3642851309E-13    Norm:   0.1000000000E+01
+T=          2.75000  Energy:  -0.1473495908E+03 -0.4022680586E-13    Norm:   0.1000000000E+01
+T=          3.00000  Energy:  -0.1473495891E+03  0.9807987471E-13    Norm:   0.1000000000E+01
+T=          3.25000  Energy:  -0.1473495879E+03  0.4201050756E-14    Norm:   0.1000000000E+01
+T=          3.50000  Energy:  -0.1473495877E+03  0.2257795263E-13    Norm:   0.1000000000E+01
+T=          3.75000  Energy:  -0.1473495882E+03 -0.4744458440E-13    Norm:   0.1000000000E+01
+T=          4.00000  Energy:  -0.1473495888E+03 -0.6895299820E-13    Norm:   0.1000000000E+01
+T=          4.25000  Energy:  -0.1473495881E+03 -0.3900242755E-13    Norm:   0.1000000000E+01
+T=          4.50000  Energy:  -0.1473495851E+03 -0.8459061630E-13    Norm:   0.1000000000E+01
+T=          4.75000  Energy:  -0.1473495797E+03 -0.1136603343E-12    Norm:   0.1000000000E+01
+T=          5.00000  Energy:  -0.1473495726E+03 -0.2815007818E-12    Norm:   0.1000000000E+01
+T=          5.25000  Energy:  -0.1473495655E+03 -0.4058768402E-12    Norm:   0.1000000000E+01
+T=          5.50000  Energy:  -0.1473495604E+03 -0.7060100110E-12    Norm:   0.1000000000E+01
+T=          5.75000  Energy:  -0.1473495582E+03 -0.1477591087E-11    Norm:   0.1000000000E+01
+T=          6.00000  Energy:  -0.1473495588E+03 -0.2519994621E-11    Norm:   0.1000000000E+01
+T=          6.25000  Energy:  -0.1473495609E+03 -0.4312825450E-11    Norm:   0.1000000000E+01
+T=          6.50000  Energy:  -0.1473495628E+03 -0.7264997467E-11    Norm:   0.1000000000E+01
+T=          6.75000  Energy:  -0.1473495629E+03 -0.1145966717E-10    Norm:   0.1000000000E+01
+T=          7.00000  Energy:  -0.1473495610E+03 -0.1757892619E-10    Norm:   0.1000000000E+01
+T=          7.25000  Energy:  -0.1473495575E+03 -0.2699127549E-10    Norm:   0.1000000000E+01
+T=          7.50000  Energy:  -0.1473495538E+03 -0.4103832578E-10    Norm:   0.1000000000E+01
+T=          7.75000  Energy:  -0.1473495509E+03 -0.6173280187E-10    Norm:   0.1000000000E+01
+T=          8.00000  Energy:  -0.1473495493E+03 -0.9199874858E-10    Norm:   0.9999999999E+00
+T=          8.25000  Energy:  -0.1473495490E+03 -0.1360146574E-09    Norm:   0.9999999999E+00
+T=          8.50000  Energy:  -0.1473495495E+03 -0.1988284198E-09    Norm:   0.9999999999E+00
+T=          8.75000  Energy:  -0.1473495500E+03 -0.2867565957E-09    Norm:   0.9999999998E+00
+T=          9.00000  Energy:  -0.1473495504E+03 -0.4091297702E-09    Norm:   0.9999999997E+00
+T=          9.25000  Energy:  -0.1473495505E+03 -0.5808034106E-09    Norm:   0.9999999996E+00
+T=          9.50000  Energy:  -0.1473495505E+03 -0.8200600359E-09    Norm:   0.9999999994E+00
+T=          9.75000  Energy:  -0.1473495504E+03 -0.1146402986E-08    Norm:   0.9999999992E+00
+T=         10.00000  Energy:  -0.1473495504E+03 -0.1586763925E-08    Norm:   0.9999999988E+00
+T=         10.25000  Energy:  -0.1473495503E+03 -0.2179825845E-08    Norm:   0.9999999984E+00
+T=         10.50000  Energy:  -0.1473495504E+03 -0.2973200191E-08    Norm:   0.9999999977E+00
+T=         10.75000  Energy:  -0.1473495504E+03 -0.4023461612E-08    Norm:   0.9999999969E+00
+T=         11.00000  Energy:  -0.1473495504E+03 -0.5404238921E-08    Norm:   0.9999999957E+00
+T=         11.25000  Energy:  -0.1473495504E+03 -0.7205908342E-08    Norm:   0.9999999941E+00
+T=         11.50000  Energy:  -0.1473495504E+03 -0.9537146359E-08    Norm:   0.9999999920E+00
+T=         11.75000  Energy:  -0.1473495504E+03 -0.1253102480E-07    Norm:   0.9999999892E+00
+    ...done prop...
+    ...end prop...
+Thu Feb 11 13:47:03 PST 2016
+Thu Feb 11 13:47:03 PST 2016
+Thu Feb 11 13:47:03 PST 2016
+Thu Feb 11 13:47:03 PST 2016
+Thu Feb 11 13:47:03 PST 2016
+Thu Feb 11 13:47:03 PST 2016
+Thu Feb 11 13:47:03 PST 2016
+Thu Feb 11 13:47:03 PST 2016
+Thu Feb 11 13:47:03 PST 2016
+Thu Feb 11 13:47:03 PST 2016
+    ...END MCTDHF
+ MCTDHF STOP!
