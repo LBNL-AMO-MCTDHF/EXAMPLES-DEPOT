@@ -1,5 +1,7 @@
 $parinp
 
+finalstatsfile="Dat/finalstats.dat.relax"
+
 avectoroutfile="Bin/avector.bin.relax"
 spfoutfile="Bin/spfs.bin.relax"
 
@@ -20,10 +22,12 @@ mrestrictval=0
 
 improvedrelaxflag=1
 improvednatflag=1
+improvedquadflag=2
+quadstarttime=10d0
 
 par_timestep=1d0
 
-stopthresh =  1.d-8
+stopthresh =  1.d-10
 
 /
 

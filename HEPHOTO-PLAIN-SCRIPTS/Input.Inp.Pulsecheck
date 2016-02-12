@@ -1,9 +1,10 @@
 $pulse
 
  pulsetype=2
+ phaseshift=1.570796326794897d0
 
- omega2=1d0
- omega=0.2d0
+ omega2=1.4d0
+ omega=0.35d0
 
  intensity=1d-5
 
@@ -40,7 +41,8 @@ mrestrictval=0
 
 tdflag=1
 
-par_timestep=0.05d0
+par_timestep=0.25d0
+littlesteps=5
 
 /
 

@@ -7,8 +7,8 @@ set title "Photoionization cross section He 5 orbitals"
 set term unknown
 set xlabel "Photon Energy (eV)\"
 set ylabel "Cross Section (MBarns)\"
-set yrange [*:*]
-set xrange [20:40]
+set yrange [-2:10]
+set xrange [0:60]
 
 A=27.2114
 

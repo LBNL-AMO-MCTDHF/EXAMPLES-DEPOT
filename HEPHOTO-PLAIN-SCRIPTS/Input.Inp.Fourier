@@ -1,15 +1,16 @@
 $pulse
 
  pulsetype=2
+ phaseshift=1.570796326794897d0
 
- omega2=1d0
- omega=0.2d0
+ omega2=1.4d0
+ omega=0.35d0
 
  intensity=1d-5
 
  velflag=0
 
- minpulsetime=1000
+ minpulsetime=1000d0
 
 /
 
@@ -17,13 +18,24 @@ $pulse
 
 $parinp
 
-numactions=1
-actions=15
-fluxskipmult=1
+numactions=2
+actions=15,21
+fluxskipmult=2
 fluxinterval=10
 fluxmofile="Flux/flux.mo.bin"
 fluxafile="Flux/flux.avec.bin"
 spifile="Dat/xsec.spi.dat"
+projfluxfile="Flux/projflux.wfn.bin"
+projspifile="Dat/xsec.proj.spi"
+autotimestep=1d0
+dipmodtime=100
+diptime=100
+xdipfile="Dat/XDipoleexpect.Dat"
+xdftfile="Dat/XDipoleft.Dat"
+ydipfile="Dat/YDipoleexpect.Dat"
+ydftfile="Dat/YDipoleft.Dat"
+zdipfile="Dat/ZDipoleexpect.Dat"
+zdftfile="Dat/ZDipoleft.Dat"
 
 loadavectorflag=1
 avectorfile="Bin/avector.bin.relax"
@@ -51,6 +63,7 @@ mrestrictval=0
 tdflag=1
 
 par_timestep=0.05d0
+littlesteps=1
 
 /
 
