@@ -5,8 +5,8 @@ echo '
 set term unknown
 set xlabel "Photon Energy (eV)"
 set ylabel "Cross Section (MBarns)"
-set yrange [*:*]
-set xrange [10:40]
+set yrange [*:20]
+set xrange [0:60]
 
 A=27.2114
 

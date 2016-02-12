@@ -1,0 +1,275 @@
+Thu Feb 11 19:15:44 PST 2016
+  ****************************************************************************
+  **********************  BEGIN LBNL-AMO-MCTDHF ******************************
+  ****************************************************************************
+
+    Atomic/Diatomic/Cartesian Polyatomic nonadiabatic MCTDHF code
+      for ultrafast electronic and nuclear dynamics in intense laser fields
+    AMO Theory Group, Lawrence Berkeley Laboratory
+      D J Haxton, C W McCurdy, T N Rescigno, K V Lawler, J Jones, 
+      B Abeln, X Li . . .
+                              VERSION 1.10 
+        Copyright 2015 the regents of the University of California
+
+                This is CHMCTDH: HERM-normed ECS version.
+
+                PROCESSOR            1  OF            1
+
+ Inpfile is Input.Inp.Fourier  
+
+  *************************  COMMAND LINE OPTIONS  ***************************
+
+ Reading Input.Inp.Fourier                                                                                                                                                                                       
+ Eground for autoft set to    -1.1710903768800001       by command line option.
+  ****************************************************************************
+
+ Enforcing CMF defaults for Verlet or EXPO.
+ PULSE IS ON:   length.
+
+ NUMBER OF PULSES:             1
+
+     -----> Pulse            1  : 
+ Pulse type is 2 or 3: envelope with carrier
+    chirp:              0.0000000000000000     
+    ramp:              0.0000000000000000       Hartree
+    Envelope omega:    0.34999999999999998     
+    Pulse omega:        1.3999999999999999     
+    Pulsestart:        0.10000000000000001     
+    Pulsestrength:    (  1.2056421053089092E-003,  0.0000000000000000     )
+    Intensity:          1.0000000000000001E-005  x 10^16 W cm^-2
+    Pulsetheta:         0.0000000000000000     
+    Pulsephi:         0.0000000000000000     
+    Pulsefinish:        9.0759790102565514     
+ ---> Pulsetype 2.
+  Enforcing minpulsetime =           1000.0000000000000     
+     ---> Resetting finaltime to    1000.2500000000000     
+                 numpropsteps to         4001
+    ... Writing pulse to file
+        ... done Writing pulse to file
+ Finaltime set by command line option to    1000.0000000000000     
+      numpropsteps now           4001
+      finaltime    now      1000.2500000000000     
+
+  ****************************************************************************
+ *****************************************************************************
+
+ Number of states in propagation=           1
+
+  Parameters: electronic
+
+                    Number of electrons     2
+ Nuclear KE flag (nonuc_checkflag):         1
+
+   *****  prolate spheroidal coordinate options ****
+                        bornopflag:         1
+             Xinumpoints, xinumelements:   10    8
+                              ECS is ON!
+                 xicelement,  xiecstheta    6    0.500000000000
+    Xi elementsizes:   5.00000   5.00000   5.00000   5.00000   5.00000   5.00000   8.00000  14.00000
+      lbig,mbig          00006     00001
+
+ **************************   Parameters: nuclear    *************************   
+
+   Hmass, Dmass, Reduced:     1836.15270100     1836.15270100      918.07635050
+rnumelements, rnumpoints:    1    3
+  relementsize ,  rstart:   0.00000   1.40000
+                              ECS is ON!
+                   rcelement,  rthetaecs  100    0.000000000000
+                             CAP is Off!
+                  Jvalue:    0
+                            Reducedflag:    0
+
+ ************************   Parameters: config/spf    ************************   
+
+ Doing full CI: numshells=1.  Shells:
+ Shell            1
+   1a    1b    2a    2b    3a    3b    4a    4b    5a    5b    6a    6b 
+   7a    7b 
+  Final shell occupancy level vexcite=         999
+
+    Number of unfrozen spfs:      7
+    Number of frozen spfs:        0
+            Spfs start in m=     0   0   0   1  -1   0   0
+
+ Spfs will be restricted to their original m-values.
+ Configurations will be restricted to total M=            0
+ Configurations will be restricted to spin projection           0 /2
+  Configurations will be restricted to spin            0
+
+ ***********************    Initial state      ***********************   
+
+ Spfs will be loaded from files 
+
+ Avector will be loaded from files.  Number of files=            1
+
+ ***********************    Parameters: propagation    ***********************   
+
+  PAR_TIMESTEP IS   0.25000000000000000       LITTLESTEPS IS            5
+
+                 # of steps, final time:      4001           1000.25000000
+
+
+ *******  USING POLYNOMIAL MEAN FIELDS/MAGNUS A-VECTOR PREDICTOR/CORRECTOR   *******  
+
+     Using nonsparse configuration routines.
+  Jacobian options:
+     Jacprojorth=           0
+     Jacsymflag=           0
+  Using EXPONENTIAL integration.
+     Expotol    =   1.0000000000000000E-008
+     Maxexpodim=         100
+
+ Density matrix regularized with denreg= 0.100E-09
+
+
+ ****************************************************************************
+
+ Autosteps is            4  Autosize is         1001  Numpropsteps is         4001
+
+ *****************************************************************************
+
+    ****************************************
+      SKIPPING CALCULATION!  Doing analysis.
+    ****************************************
+
+ ACTIONS:  Proj Ion Flux  
+
+ FOR IONIZATION FLUX:
+    Flux Interval            2  0.50000000000000000     
+  Get ORbsets.  Fewer procs than orbitals.
+
+ ************************************
+ ********  MAIN WALKS  **************
+ ************************************
+
+ Go fast_newconfiglist
+ UPPER/LOWER
+           1           7
+           1           7
+
+
+ FASTNEWCONFIG: NUMBER OF CONFIGURATIONS           27
+
+ NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG          16           2
+ Go fast_newconfiglist.  Allocating...
+    getting configurations.
+
+ BOTWALKS /TOPWALKS          27
+           1          27          27
+
+      ...Done fast_newconfiglist
+ Counting walks. Singles
+ Counting walks. Doubles
+
+ Maximum number of
+            single walks=           10
+            double walks=           27
+   TOTAL walks:         983 maxdoublewalks*numconfig         729
+
+ Allocating singlewalks
+ Allocating doublewalks
+      ..done walkalloc.
+ Calculating walks.  Singles...
+ Calculating walks.  Doubles...
+ Sorting walks...
+     .... done sorting walks.
+ Counting single hops...
+ Counting double hops...
+ Getting single hops...
+ Getting double hops...
+ GOT HOPS:  
+  Single hops this processor          227  of          254
+  Double hops this processor          729  of          729
+  Single hops total          227  of          254
+  Double hops total          729  of          729
+     Max single hops            9
+     Max double hops           27
+
+ Go spinwalk init. 
+ Go get numspinwalks.
+ Doing spin projector.
+ Maximum number of spin walks=            1
+ Avg number of spin walks=   0.81481481481481477     
+ Done spinwalk init.
+ Calculating spin walks.
+      ... done calculating spin walks.
+    ... go spinsets ...
+ Numspinsets this processor is           16   maxspinset size is            2
+ Getting Spinset Projectors.  Numspinsets this process is           16
+                                        maxspinsetsize is            2
+ ...done.  Eliminated            0  sets with total rank            0
+
+ This processor: 
+       spin sets                  16
+       spin rank                      16  of           27
+       botspin,topspin:                1          16
+       df spin rank                   16  of           27
+       botdfspin,topdfspin:            1          16
+ All processors:
+       spin rank, S^2 =    0.0000000000000000       is           16  out of           27
+       df spin rank                   16  of           27
+
+
+ ************************************
+ ********** DONE WALKS. *************
+ ************************************
+
+ Reading spfs.
+ Read complex spfs
+    ...rank 1 read from file
+ Loaded            7  spfs from file Bin/spfs.bin.relax                                                                                                                                                                                      
+ Calling init_project                24192
+ Go init_project diatomic.   PSC...
+ MAX prolate_derivs asym :     16.408203125000000     
+
+    ... ok PSC. call get_twoe_new
+    Calc two electron.
+    ...done.
+    ... ok called get twoe_new
+ Found all spfs I need on file.
+
+ Done init_h2.
+
+ Done init project.
+
+    ....Called init_project.
+
+    *** DOING PROJECTED FLUX. ***    
+
+ Spin adapted wave functions for propagation and projection. doing CG algebra.
+ Reading           7  Born-Oppenheimer states.
+ Reading spfs.
+ Read complex spfs
+    ...rank 1 read from file
+ Getting cation single walks
+ Max # single walks from cation state on this processor is            5
+ DONE getting proj single walks
+ Guess at necessary memory is    96.865 MB
+ g(tau) will be computed with all psi being read in batches
+ Desired amount of memory to use   500.000 MB
+ Hooray, there is enough memory, doing it all in core
+ Projected 1e- function record length is        48384
+ Computing the CrossSection for state            1 wfn           1
+ Reading ket batch            1  of            1  for state            1
+ Reading bra batch            1  of            1  for state            1
+ Computing the CrossSection for state            2 wfn           1
+ Reading ket batch            1  of            1  for state            2
+ Reading bra batch            1  of            1  for state            2
+ Computing the CrossSection for state            3 wfn           1
+ Reading ket batch            1  of            1  for state            3
+ Reading bra batch            1  of            1  for state            3
+ Computing the CrossSection for state            4 wfn           1
+ Reading ket batch            1  of            1  for state            4
+ Reading bra batch            1  of            1  for state            4
+ Computing the CrossSection for state            5 wfn           1
+ Reading ket batch            1  of            1  for state            5
+ Reading bra batch            1  of            1  for state            5
+ Computing the CrossSection for state            6 wfn           1
+ Reading ket batch            1  of            1  for state            6
+ Reading bra batch            1  of            1  for state            6
+ Computing the CrossSection for state            7 wfn           1
+ Reading ket batch            1  of            1  for state            7
+ Reading bra batch            1  of            1  for state            7
+ Taking the fourier transform of g(tau) to get cross section at T=    1000.0000000000000     
+ Cross Section acquired, cleaning and closing
+ MCTDHF STOP!

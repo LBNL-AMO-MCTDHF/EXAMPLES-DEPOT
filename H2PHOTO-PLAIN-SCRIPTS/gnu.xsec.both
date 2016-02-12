@@ -8,7 +8,7 @@ set term unknown
 set xlabel "Photon Energy (eV)"
 set ylabel "Cross Section (MBarns)"
 set yrange [*:20]
-set xrange [10:40]
+set xrange [0:60]
 
 set ytics 2
 

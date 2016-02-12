@@ -1,5 +1,0 @@
-#!/bin/bash
-
-export OMP_NUM_THREADS=2
-mpirun -n 7 --bind-to-core --cpus-per-proc 2 chmctdhf_diatom Inp=Input.Inp.Pulse |tee Outs/Out.pulse
-

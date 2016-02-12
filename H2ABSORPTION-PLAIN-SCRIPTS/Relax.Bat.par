@@ -1,5 +1,0 @@
-#!/bin/bash
-
-export OMP_NUM_THREADS=1
-mpirun -n 7 chmctdhf_diatom.mpi Inp=Input.Inp.Relax |tee Outs/Out.relax
-
