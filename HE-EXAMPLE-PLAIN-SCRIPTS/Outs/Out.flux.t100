@@ -1,4 +1,4 @@
-Fri Feb 12 17:18:11 PST 2016
+Sat Feb 13 09:28:59 PST 2016
   ****************************************************************************
   **********************  BEGIN LBNL-AMO-MCTDHF ******************************
   ****************************************************************************
@@ -60,11 +60,11 @@ Fri Feb 12 17:18:11 PST 2016
                     Number of electrons     2
  Nuclear KE flag (nonuc_checkflag):         1
 
-             Henumpoints, henumelements:   10    8
+             Henumpoints, henumelements:   10    6
                Lbig,mbig                    5    1
                               ECS is ON!
-                 hecelement,  heecstheta    6    0.500000000000
-    He elementsizes:   7.00000   7.00000   7.00000   7.00000   7.00000   7.00000  11.00000  18.00000
+                 hecelement,  heecstheta    4    0.500000000000
+    He elementsizes:   7.00000   7.00000   7.00000   7.00000  11.00000  18.00000
 
  ************************   Parameters: config/spf    ************************   
 
@@ -204,7 +204,7 @@ Fri Feb 12 17:18:11 PST 2016
  Read complex spfs
     ...rank 1 read from file
  Loaded            5  spfs from file Bin/spfs.bin.relax                                                                                                                                                                                      
- Calling init_project                20448
+ Calling init_project                15264
  Go init project atomic.
     ... call get_twoe_new
     ... called get_twoe_new
@@ -213,11 +213,11 @@ Fri Feb 12 17:18:11 PST 2016
  Done init project.
 
     ....Called init_project.
- Guess at necessary memory is    20.688 MB
+ Guess at necessary memory is    15.452 MB
  g(tau) will be computed with all psi being read in batches
  Desired amount of memory to use   500.000 MB
  Good, there is enough memory for only one batch.
- MO record length is       102240
+ MO record length is        76320
  AVEC record length is          176
  Reading ket batch            1  of            1
  Reading bra batch            1  of            1

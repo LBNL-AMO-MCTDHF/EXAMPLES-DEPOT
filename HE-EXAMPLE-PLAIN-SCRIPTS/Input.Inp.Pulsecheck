@@ -54,9 +54,9 @@ NucCharge1=2d0
 LBIG=5, MBIG=1
 
 henumpoints=10
-henumelements=8
-hecelement=6
+henumelements=6
+hecelement=4
 heecstheta=0.5d0
-heelementsizes=7d0,7d0,7d0,7d0,7d0,  7d0,11d0,18d0
+heelementsizes=7d0,7d0,7d0,  7d0,11d0,18d0
 
 /

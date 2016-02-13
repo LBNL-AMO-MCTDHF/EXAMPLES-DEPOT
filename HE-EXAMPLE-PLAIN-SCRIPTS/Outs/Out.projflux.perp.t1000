@@ -1,4 +1,4 @@
-Fri Feb 12 14:29:26 PST 2016
+Sat Feb 13 08:28:07 PST 2016
   ****************************************************************************
   **********************  BEGIN LBNL-AMO-MCTDHF ******************************
   ****************************************************************************
@@ -60,11 +60,11 @@ Fri Feb 12 14:29:26 PST 2016
                     Number of electrons     2
  Nuclear KE flag (nonuc_checkflag):         1
 
-             Henumpoints, henumelements:   10    8
+             Henumpoints, henumelements:   10    6
                Lbig,mbig                    5    2
                               ECS is ON!
-                 hecelement,  heecstheta    6    0.500000000000
-    He elementsizes:   7.00000   7.00000   7.00000   7.00000   7.00000   7.00000  11.00000  18.00000
+                 hecelement,  heecstheta    4    0.500000000000
+    He elementsizes:   7.00000   7.00000   7.00000   7.00000  11.00000  18.00000
 
  ************************   Parameters: config/spf    ************************   
 
@@ -202,7 +202,7 @@ Fri Feb 12 14:29:26 PST 2016
  Read complex spfs
     ...rank 1 read from file
  Loaded            5  spfs from file Bin/spfs.bin.relax                                                                                                                                                                                      
- Calling init_project                34080
+ Calling init_project                25440
  Go init project atomic.
     ... call get_twoe_new
     ... called get_twoe_new
@@ -222,11 +222,11 @@ Fri Feb 12 14:29:26 PST 2016
  Getting cation single walks
  Max # single walks from cation state on this processor is            5
  DONE getting proj single walks
- Guess at necessary memory is   136.456 MB
+ Guess at necessary memory is   101.862 MB
  g(tau) will be computed with all psi being read in batches
  Desired amount of memory to use   500.000 MB
  Hooray, there is enough memory, doing it all in core
- Projected 1e- function record length is        68160
+ Projected 1e- function record length is        50880
  Computing the CrossSection for state            1 wfn           1
  Reading ket batch            1  of            1  for state            1
  Reading bra batch            1  of            1  for state            1
