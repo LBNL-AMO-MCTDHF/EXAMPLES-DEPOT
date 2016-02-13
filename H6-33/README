@@ -1,0 +1,20 @@
+
+1) 
+
+./Relax.Bat
+./Cation12.Bat
+./Cation3.Bat
+
+2A)
+
+./Pulse.Bat
+./Flux.Bat 200
+./ProjFlux.Bat 200
+
+2B)
+
+./Pulse.Perp.Bat
+./Flux.Perp.Bat 200
+./ProjFlux.Perp.Bat 200
+
+

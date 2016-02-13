@@ -1,0 +1,35 @@
+#!/bin/bash
+
+echo '
+
+set xlabel "Energy (eV)"
+set ylabel "absorption cross section (Mb)"
+
+set title "Absorption H6-33 perpendicular calculation"
+
+set term unknown
+set style data lines
+
+set key top left
+
+set yrange [-5:50]
+
+set xrange [0:60]
+
+plot "Dat/ZDipoleft.Dat.perp" using (27.2114*$1):($9) lt 7 lw 10 title "Z len"
+replot "Dat/ZDipoleft.Dat.perp.vel" using (27.2114*$1):($9) lt 4 lw 7 title "Z vel"
+replot "Dat/YDipoleft.Dat.perp" using (27.2114*$1):($9) lt -1 lw 3 title "Y len"
+replot "Dat/YDipoleft.Dat.perp.vel" using (27.2114*$1):($9) lt 2 lw 2 title "Y vel"
+replot "Dat/XDipoleft.Dat.perp" using (27.2114*$1):($9) with points pt 7 ps 2 lt 2 lw 3 title "X len"
+replot "Dat/XDipoleft.Dat.perp.vel" using (27.2114*$1):($9) with points pt 7 lt -1 lw 2 title "X vel"
+
+set term x11
+replot
+
+set out "Absorption.h6-33.perp.eps"
+set term post enhanced eps solid color 28
+replot
+
+' | gnuplot -persist
+
+

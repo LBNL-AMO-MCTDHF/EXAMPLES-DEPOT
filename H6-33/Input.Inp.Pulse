@@ -1,0 +1,118 @@
+$pulse
+
+ pulsetype=2
+ phaseshift=1.570796326794897d0
+ pulsestart=0.5d0
+
+ omega2=0.798d0
+ omega=0.266d0
+
+
+ intensity=1d-3
+
+ velflag=0
+
+ minpulsetime=500d0
+
+/
+
+
+
+$parinp
+
+numactions=3
+actions=15,20,21
+
+fluxinterval=2
+fluxskipmult=2
+fluxmofile="Flux/flux.mo.bin"
+fluxafile="Flux/flux.avec.bin"
+spifile="Dat/xsec.spi.dat"
+projfluxfile="Flux/projflux.wfn.bin"
+projspifile="Dat/xsec.proj.spi"
+numcatfiles=2
+catspffiles(1)="Bin/spfs.bin.cation12"
+catavectorfiles(1)="Bin/avector.bin.cation12"
+catspffiles(2)="Bin/spfs.bin.cation3"
+catavectorfiles(2)="Bin/avector.bin.cation3"
+
+autotimestep=0.5d0
+
+numovlfiles=1
+ovlspffiles(1)="Bin/spfs.bin.relax"
+ovlavectorfiles(1)="Bin/avector.bin.relax"
+ovlspffiles(2)="Bin/spfs.bin.excited"
+ovlavectorfiles(2)="Bin/avector.bin.excited"
+outovl="Dat/Overlaps.dat"
+
+dipolesumstart=0.05d0
+dipmodtime=20
+diptime=100
+xdipfile="Dat/XDipoleexpect.Dat"
+xdftfile="Dat/XDipoleft.Dat"
+ydipfile="Dat/YDipoleexpect.Dat"
+ydftfile="Dat/YDipoleft.Dat"
+zdipfile="Dat/ZDipoleexpect.Dat"
+zdftfile="Dat/ZDipoleft.Dat"
+
+energyshift=(0d0,-0.90993057d-6)
+
+loadavectorflag=1
+avectorfile="Bin/avector.bin.relax"
+loadspfflag=1
+spffile="Bin/spfs.bin.relax"
+
+saveflag=0
+
+sparseconfigflag=1
+sparseopt=1
+
+numelec=6
+restrictms=0
+
+tdflag=1
+
+par_timestep=0.25d0
+littlesteps=5
+
+nspf=10
+
+parorbsplit=3
+
+/
+
+
+
+&sincparinp
+
+fft_batchdim=1
+fft_circbatchdim=1
+fft_mpi_inplaceflag=1
+fft_ct_paropt=1
+zke_paropt=1
+orbparlevel=2
+orbparflag=.true.
+
+numcenters=6
+nuccharges(1:6) = 1,1,1,1,1,1
+nuccharges(1:6) = 0.9d0,0.9d0,0.9d0,0.9d0,0.9d0,0.9d0
+
+centershift(1:3,1 )=  0  , 2  ,-2  
+centershift(1:3,2 )=  2  , 0  ,-2  
+centershift(1:3,3 )=  2  ,-2  , 0  
+centershift(1:3,4 )=  0  ,-2  , 2  
+centershift(1:3,5 )= -2  , 0  , 2  
+centershift(1:3,6 )= -2  , 2  , 0  
+
+numpoints=33
+spacing=1.2d0
+
+scalingflag=1
+smoothness=8d0
+scalingdistance=12d0
+scalingstretch=2d0
+scalingtheta=0.5d0
+
+/
+
+
