@@ -1,13 +1,13 @@
-Fri Feb 12 10:51:06 PST 2016
-Fri Feb 12 10:51:06 PST 2016
-Fri Feb 12 10:51:06 PST 2016
-Fri Feb 12 10:51:06 PST 2016
-Fri Feb 12 10:51:06 PST 2016
-Fri Feb 12 10:51:06 PST 2016
-Fri Feb 12 10:51:06 PST 2016
-Fri Feb 12 10:51:06 PST 2016
-Fri Feb 12 10:51:06 PST 2016
-Fri Feb 12 10:51:06 PST 2016
+Fri Feb 12 22:24:33 PST 2016
+Fri Feb 12 22:24:33 PST 2016
+Fri Feb 12 22:24:33 PST 2016
+Fri Feb 12 22:24:33 PST 2016
+Fri Feb 12 22:24:33 PST 2016
+Fri Feb 12 22:24:33 PST 2016
+Fri Feb 12 22:24:33 PST 2016
+Fri Feb 12 22:24:33 PST 2016
+Fri Feb 12 22:24:33 PST 2016
+Fri Feb 12 22:24:33 PST 2016
  
   ****************************************************************************
   **********************  BEGIN LBNL-AMO-MCTDHF ******************************
@@ -33,7 +33,7 @@ Fri Feb 12 10:51:06 PST 2016
  Input.Inp.Fourier                                                              
                                                                                 
                                            
- Eground for autoft set to    -147.349594671229       by command line option.
+ Eground for autoft set to    -147.349594643826       by command line option.
   ****************************************************************************
  
  Enforcing CMF defaults for Verlet or EXPO.
@@ -75,10 +75,10 @@ Fri Feb 12 10:51:06 PST 2016
  
    *****  prolate spheroidal coordinate options ****
                         bornopflag:         1
-             Xinumpoints, xinumelements:   12    5
+             Xinumpoints, xinumelements:   12    4
                               ECS is ON!
-                 xicelement,  xiecstheta    4    0.400000000000
-    Xi elementsizes:   5.00000   5.00000   5.00000   5.00000  10.00000
+                 xicelement,  xiecstheta    3    0.400000000000
+    Xi elementsizes:   5.00000   5.00000   5.00000  10.00000
       lbig,mbig          00010     00001
  
  **************************   Parameters: nuclear    *************************  
@@ -267,7 +267,7 @@ rnumelements, rnumpoints:    1    3
  Bin/spfs.bin.Relax                                                             
                                                                                 
                                            
- Calling init_project                 29040
+ Calling init_project                 23232
  Go init_project diatomic.   PSC...
  MAX prolate_derivs asym :     8.93554687500000     
  
@@ -349,11 +349,11 @@ rnumelements, rnumpoints:    1    3
  Getting cation single walks
  Max # single walks from cation state on this processor is            2
  DONE getting proj single walks
- Guess at necessary memory is    58.196 MB
+ Guess at necessary memory is    46.557 MB
  g(tau) will be computed with all psi being read in batches
  Desired amount of memory to use   500.000 MB
  Hooray, there is enough memory, doing it all in core
- Projected 1e- function record length is        14520
+ Projected 1e- function record length is        11616
  Computing the CrossSection for state            1 wfn           1
  Reading ket batch            1  of            1  for state            1
  Reading bra batch            1  of            1  for state            1

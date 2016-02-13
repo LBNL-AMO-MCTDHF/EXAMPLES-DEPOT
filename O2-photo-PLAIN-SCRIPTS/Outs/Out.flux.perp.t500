@@ -1,13 +1,13 @@
-Fri Feb 12 12:09:25 PST 2016
-Fri Feb 12 12:09:25 PST 2016
-Fri Feb 12 12:09:25 PST 2016
-Fri Feb 12 12:09:25 PST 2016
-Fri Feb 12 12:09:25 PST 2016
-Fri Feb 12 12:09:25 PST 2016
-Fri Feb 12 12:09:25 PST 2016
-Fri Feb 12 12:09:25 PST 2016
-Fri Feb 12 12:09:25 PST 2016
-Fri Feb 12 12:09:25 PST 2016
+Sat Feb 13 08:24:36 PST 2016
+Sat Feb 13 08:24:36 PST 2016
+Sat Feb 13 08:24:36 PST 2016
+Sat Feb 13 08:24:36 PST 2016
+Sat Feb 13 08:24:36 PST 2016
+Sat Feb 13 08:24:36 PST 2016
+Sat Feb 13 08:24:36 PST 2016
+Sat Feb 13 08:24:36 PST 2016
+Sat Feb 13 08:24:36 PST 2016
+Sat Feb 13 08:24:36 PST 2016
  
   ****************************************************************************
   **********************  BEGIN LBNL-AMO-MCTDHF ******************************
@@ -33,7 +33,7 @@ Fri Feb 12 12:09:25 PST 2016
  Input.Inp.Fourier.perp                                                         
                                                                                 
                                            
- Eground for autoft set to    -147.349594671229       by command line option.
+ Eground for autoft set to    -147.349594643826       by command line option.
   ****************************************************************************
  
  Enforcing CMF defaults for Verlet or EXPO.
@@ -75,10 +75,10 @@ Fri Feb 12 12:09:25 PST 2016
  
    *****  prolate spheroidal coordinate options ****
                         bornopflag:         1
-             Xinumpoints, xinumelements:   12    5
+             Xinumpoints, xinumelements:   12    4
                               ECS is ON!
-                 xicelement,  xiecstheta    4    0.400000000000
-    Xi elementsizes:   5.00000   5.00000   5.00000   5.00000  10.00000
+                 xicelement,  xiecstheta    3    0.400000000000
+    Xi elementsizes:   5.00000   5.00000   5.00000  10.00000
       lbig,mbig          00010     00002
  
  **************************   Parameters: nuclear    *************************  
@@ -265,7 +265,7 @@ rnumelements, rnumpoints:    1    3
  Bin/spfs.bin.Relax                                                             
                                                                                 
                                            
- Calling init_project                 48400
+ Calling init_project                 38720
  Go init_project diatomic.   PSC...
  MAX prolate_derivs asym :     8.93554687500000     
  
@@ -280,17 +280,14 @@ rnumelements, rnumpoints:    1    3
  Done init project.
  
     ....Called init_project.
- Guess at necessary memory is   504.206 MB
+ Guess at necessary memory is   407.213 MB
  g(tau) will be computed with all psi being read in batches
  Desired amount of memory to use   500.000 MB
- Batchsize is          496 /         501
- MO record length is       121000
+ Good, there is enough memory for only one batch.
+ MO record length is        96800
  AVEC record length is         4800
- Reading ket batch            1  of            2
+ Reading ket batch            1  of            1
  Reading bra batch            1  of            1
- Reading ket batch            2  of            2
- Reading bra batch            1  of            2
- Reading bra batch            2  of            2
   Taking the FT of g(tau) to get xsection at T=    500.000000000000     
     ....Go ft....
     ....Go ft pulse....
