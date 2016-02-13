@@ -5,7 +5,7 @@ echo '
 set term unknown
 set xlabel "Photon Energy (eV)"
 set ylabel "Cross Section (MBarns)"
-set yrange [*:20]
+set yrange [-2:20]
 set xrange [0:60]
 
 A=27.2114
@@ -23,6 +23,6 @@ set term x11
 set out
 replot
 
-exit' | gnuplot -persist
+' | gnuplot -persist
 
 

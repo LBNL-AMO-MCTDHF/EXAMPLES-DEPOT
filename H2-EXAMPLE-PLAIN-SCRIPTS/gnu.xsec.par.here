@@ -32,7 +32,7 @@ set out "ionization.h2.par.here.log.ps"
 replot
 
 unset logscale y
-set yrange [*:20]
+set yrange [-2:20]
 set xrange [0:60]
 
 set term x11 2
@@ -43,5 +43,5 @@ set term post enhanced 20 color solid
 set out "ionization.h2.par.here.ps"
 replot
 
-exit' | gnuplot -persist
+' | gnuplot -persist
 

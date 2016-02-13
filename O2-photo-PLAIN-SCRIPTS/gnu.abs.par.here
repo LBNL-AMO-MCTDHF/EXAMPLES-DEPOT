@@ -1,0 +1,39 @@
+#!/bin/bash
+
+echo '
+
+set title "Photoabsorption cross section O2 fixed nuclei 10 orbitals"
+
+set xlabel "Energy (eV)"
+set ylabel "absorption cross section (Mb)"
+
+set term unknown
+set style data lines
+
+set key top right
+
+set yrange [0.01:100]
+
+set xrange [0:60]
+
+set logscale y
+
+plot "Dat/ZDipoleft.Dat000100" using (27.2114*$1):($9) lt 4 lw 8 title "T=100"
+
+replot "Dat/ZDipoleft.Dat000200" using (27.2114*$1):($9) lt 2 lw 5 title "T=200"
+
+replot "Dat/ZDipoleft.Dat000500" using (27.2114*$1):($9) lt -1 lw 2 title "T=500"
+
+##  replot "Dat/ZDipoleft.Dat001000" using (27.2114*$1):($9) lt -1 lw 1 title "T=1000"
+
+
+set term x11
+replot
+
+set out "Absorption.o2.par.here.eps"
+set term post enhanced eps solid color 28
+replot
+
+' | gnuplot -persist
+
+

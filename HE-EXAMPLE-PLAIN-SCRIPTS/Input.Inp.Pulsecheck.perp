@@ -3,7 +3,7 @@ $pulse
  pulsetype=2
  phaseshift=1.570796326794897d0
 
- omega2=1.4d0
+ omega2=1.05d0
  omega=0.35d0
 
  intensity=1d-5

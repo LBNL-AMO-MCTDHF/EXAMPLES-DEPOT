@@ -13,7 +13,7 @@ $pulse
  omega(1)=0.07853981633974d0
  omega(1)=0.10657
  omega2(1)=1.2
- omega(1)=0.3
+ omega(1)=0.4
 
  intensity=1d-5
 
@@ -29,11 +29,15 @@ $parinp
 
 energyshift=(0d0,0.410541d-7)
 
-numactions=1
-actions=15
+numactions=2
+actions=15,21
 
+fluxskipmult=2
+fluxinterval=2
 fluxmofile="Flux/flux.mo.bin"
 fluxafile="Flux/flux.avec.bin"
+spifile="Dat/xsec.spi.dat"
+projspifile="Dat/xsec.proj.spi"
 projfluxfile="Flux/projflux.wfn.bin"
 numcatfiles=8
 catavectorfiles(1)="Bin/avector.bin.cation.doub.pi_g"
@@ -52,15 +56,19 @@ catavectorfiles(7)="Bin/avector.bin.cation.quart.sig_g"
 catspffiles(7)="Bin/spfs.bin.cation.quart.sig_g"
 catavectorfiles(8)="Bin/avector.bin.cation.quart.sig_u"
 catspffiles(8)="Bin/spfs.bin.cation.quart.sig_u"
-fluxskipmult=2
-fluxinterval=2
 
-spifile="Dat/xsec.spi.dat"
-projspifile="Dat/xsec.proj.spi"
+dipolesumstart=0.05d0
+autotimestep=0.5d0
+dipmodtime=200
+diptime=100
+xdipfile="Dat/XDipoleexpect.Dat"
+xdftfile="Dat/XDipoleft.Dat"
+ydipfile="Dat/YDipoleexpect.Dat"
+ydftfile="Dat/YDipoleft.Dat"
+zdipfile="Dat/ZDipoleexpect.Dat"
+zdftfile="Dat/ZDipoleft.Dat"
 
 sparseconfigflag=1
-
-autotimestep=0.5d0
 
 loadavectorflag=1
 avectorfile="Bin/avector.bin.Relax"

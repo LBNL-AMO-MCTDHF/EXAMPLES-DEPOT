@@ -5,9 +5,10 @@ echo '
 set term unknown
 set xlabel "Photon Energy (ev)"
 set ylabel "Cross Section (MBarns)"
-set yrange [*:*]
-set xrange [10:60]
+set yrange [-5:40]
+set xrange [0:60]
 
+set title "Partial photoionization O2 10 orbitals perpendicular length"
 
 A=27.2114
 
@@ -41,5 +42,5 @@ set term x11
 set out
 replot
 
-exit' | gnuplot -persist 
+' | gnuplot -persist 
 

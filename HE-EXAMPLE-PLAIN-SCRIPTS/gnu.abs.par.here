@@ -5,7 +5,7 @@ echo '
 set title "Photoabsorption cross section He 5 orbitals"
 
 set xlabel "Energy (eV)"
-set ylabel "emission/absorption\ncross section (Mb)"
+set ylabel "absorption cross section (Mb)"
 
 set term unknown
 set style data lines

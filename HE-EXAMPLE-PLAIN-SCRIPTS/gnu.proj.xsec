@@ -10,7 +10,7 @@ set ylabel "Cross Section (MBarns)"
 set yrange [*:100]
 set xrange [0:60]
 
-set title "Partial photoionization parallel polarization"
+set title "Partial photoionization Helium 5 orbitals parallel polarization"
 
 set logscale y
 
@@ -34,5 +34,5 @@ set term x11
 set out
 replot
 
-exit' | gnuplot -persist 
+' | gnuplot -persist 
 

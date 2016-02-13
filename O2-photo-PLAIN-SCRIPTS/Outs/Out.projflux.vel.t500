@@ -1,13 +1,13 @@
-Thu Feb 11 14:48:29 PST 2016
-Thu Feb 11 14:48:29 PST 2016
-Thu Feb 11 14:48:29 PST 2016
-Thu Feb 11 14:48:29 PST 2016
-Thu Feb 11 14:48:29 PST 2016
-Thu Feb 11 14:48:29 PST 2016
-Thu Feb 11 14:48:29 PST 2016
-Thu Feb 11 14:48:29 PST 2016
-Thu Feb 11 14:48:29 PST 2016
-Thu Feb 11 14:48:29 PST 2016
+Fri Feb 12 10:51:10 PST 2016
+Fri Feb 12 10:51:10 PST 2016
+Fri Feb 12 10:51:10 PST 2016
+Fri Feb 12 10:51:10 PST 2016
+Fri Feb 12 10:51:10 PST 2016
+Fri Feb 12 10:51:10 PST 2016
+Fri Feb 12 10:51:10 PST 2016
+Fri Feb 12 10:51:10 PST 2016
+Fri Feb 12 10:51:10 PST 2016
+Fri Feb 12 10:51:10 PST 2016
  
   ****************************************************************************
   **********************  BEGIN LBNL-AMO-MCTDHF ******************************
@@ -45,14 +45,14 @@ Thu Feb 11 14:48:29 PST 2016
  Pulse type is 2 or 3: envelope with carrier
     chirp:             0.000000000000000E+000
     ramp:             0.000000000000000E+000  Hartree
-    Envelope omega:    0.300000000000000     
+    Envelope omega:    0.400000000000000     
     Pulse omega:        1.20000000000000     
     Pulsestart:        0.100000000000000     
     Pulsestrength:    (1.406582456193727E-003,0.000000000000000E+000)
     Intensity:         1.000000000000000E-005  x 10^16 W cm^-2
     Pulsetheta:        0.000000000000000E+000
     Pulsephi:        0.000000000000000E+000
-    Pulsefinish:        10.5719755119660     
+    Pulsefinish:        7.95398163397448     
  ---> Pulsetype 2.
   Enforcing minpulsetime =           600.000000000000     
      ---> Resetting finaltime to    600.250000000000     

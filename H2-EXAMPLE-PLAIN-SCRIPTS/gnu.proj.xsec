@@ -7,10 +7,10 @@ echo '
 set term unknown
 set xlabel "Photon Energy (ev)"
 set ylabel "Cross Section (MBarns)"
-set yrange [0.001:100]
+set yrange [0.0001:100]
 set xrange [0:60]
 
-set title "Partial photoionization parallel polarization"
+set title "Partial photoionization H2 7 orbitals parallel polarization"
 
 set logscale y
 
@@ -36,5 +36,5 @@ set term x11
 set out
 replot
 
-exit' | gnuplot -persist 
+' | gnuplot -persist 
 

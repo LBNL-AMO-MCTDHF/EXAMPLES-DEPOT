@@ -3,7 +3,7 @@ $pulse
  pulsetype=2
  phaseshift=1.570796326794897d0
 
- omega2=1.4d0
+ omega2=1.05d0
  omega=0.35d0
 
  intensity=1d-5
@@ -18,8 +18,10 @@ $pulse
 
 $parinp
 
+
 numactions=2
 actions=15,21
+
 fluxskipmult=2
 fluxinterval=10
 fluxmofile="Flux/flux.mo.bin"
@@ -27,6 +29,8 @@ fluxafile="Flux/flux.avec.bin"
 spifile="Dat/xsec.spi.dat"
 projfluxfile="Flux/projflux.wfn.bin"
 projspifile="Dat/xsec.proj.spi"
+
+dipolesumstart=0.2d0
 autotimestep=1d0
 dipmodtime=100
 diptime=100

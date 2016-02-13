@@ -44,6 +44,6 @@ set out "ionization.he.par.here.ps"
 replot
 
 
-exit' | gnuplot -persist
+' | gnuplot -persist
 
 

@@ -25,6 +25,6 @@ set term x11
 set out
 replot
 
-exit' | gnuplot -persist
+' | gnuplot -persist
 
 

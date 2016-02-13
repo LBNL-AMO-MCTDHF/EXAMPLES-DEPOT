@@ -5,15 +5,14 @@ echo '
 set title "Photoabsorption cross section H2 fixed nuclei 7 orbitals"
 
 set xlabel "Energy (eV)"
-set ylabel "emission/absorption\ncross section (Mb)"
+set ylabel "absorption cross section (Mb)"
 
 set term unknown
 set style data lines
 
 set key top right
 
-set yrange [0.1:100]
-
+set yrange [0.01:100]
 set xrange [0:60]
 
 set logscale y
@@ -24,6 +23,22 @@ set term x11
 replot
 
 set out "Absorption.h2.par.eps"
+set term post enhanced eps solid color 28
+replot
+
+unset logscale y
+
+set xrange [0:60]
+set yrange [-2:20]
+set out
+set term x11 2
+set y2range [0:2.5]
+set y2tics 1
+set ytics nomirror
+set y2label "integrated oscillator strength"
+replot "Dat/ZDipoleft.Dat" using (27.2114*$1):($10) axes x1y2 lt 8 lw 5 title "Sum rule"
+
+set out "Absorption.h2.par.withsum.eps"
 set term post enhanced eps solid color 28
 replot
 
