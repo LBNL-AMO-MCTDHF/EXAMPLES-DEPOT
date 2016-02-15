@@ -77,10 +77,10 @@ NucCharge2=1d0
 LBIG=6,MBIG=2
 
 xinumpoints=10
-xinumelements=8
-xicelement=6
+xinumelements=7
+xicelement=5
 xiecstheta=0.5d0
-xielementsizes=5d0,5d0,5d0,5d0,5d0,  5d0,8d0,14d0
+xielementsizes=5d0,5d0,5d0,5d0,  5d0,8d0,14d0
 
 rstart=1.4d0
 

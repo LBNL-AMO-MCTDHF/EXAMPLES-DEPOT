@@ -34,6 +34,21 @@ set out "Absorption.h2.par.here.eps"
 set term post enhanced eps solid color 28
 replot
 
+
+
+
+
+unset logscale y
+set yrange [-2:40]
+set xrange [12:18]
+
+set term x11 2
+replot
+
+set out "Absorption.h2.par.nolog.ps"
+set term post enhanced solid color 24
+replot
+
 ' | gnuplot -persist
 
 
