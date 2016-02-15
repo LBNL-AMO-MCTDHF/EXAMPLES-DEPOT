@@ -1,12 +1,12 @@
-Fri Feb 12 22:03:06 PST 2016
-Fri Feb 12 22:03:06 PST 2016
-Fri Feb 12 22:03:06 PST 2016
-Fri Feb 12 22:03:06 PST 2016
-Fri Feb 12 22:03:06 PST 2016
-Fri Feb 12 22:03:06 PST 2016
-Fri Feb 12 22:03:06 PST 2016
-Fri Feb 12 22:03:06 PST 2016
-Fri Feb 12 22:03:06 PST 2016
+Sun Feb 14 18:08:48 PST 2016
+Sun Feb 14 18:08:48 PST 2016
+Sun Feb 14 18:08:48 PST 2016
+Sun Feb 14 18:08:48 PST 2016
+Sun Feb 14 18:08:48 PST 2016
+Sun Feb 14 18:08:48 PST 2016
+Sun Feb 14 18:08:48 PST 2016
+Sun Feb 14 18:08:48 PST 2016
+Sun Feb 14 18:08:48 PST 2016
  
   ****************************************************************************
   **********************  BEGIN LBNL-AMO-MCTDHF ******************************
@@ -17,7 +17,7 @@ Fri Feb 12 22:03:06 PST 2016
     AMO Theory Group, Lawrence Berkeley Laboratory
       D J Haxton, C W McCurdy, T N Rescigno, K V Lawler, J Jones, 
       B Abeln, X Li . . .
-                              VERSION 1.10 
+                              VERSION 1.21 
         Copyright 2015 the regents of the University of California
  
                 This is CHMCTDH: HERM-normed ECS version.
@@ -58,9 +58,9 @@ Fri Feb 12 22:03:06 PST 2016
                  numpropsteps to         2001
     ... Writing pulse to file
         ... done Writing pulse to file
- Finaltime set by command line option to    200.000000000000     
-      numpropsteps now            801
-      finaltime    now      200.250000000000     
+ Finaltime set by command line option to    500.000000000000     
+      numpropsteps now           2001
+      finaltime    now      500.250000000000     
  
   ****************************************************************************
  *****************************************************************************
@@ -135,7 +135,7 @@ Fri Feb 12 22:03:06 PST 2016
  
   PAR_TIMESTEP IS   0.250000000000000       LITTLESTEPS IS            5
  
-                 # of steps, final time:       801            200.25000000
+                 # of steps, final time:      2001            500.25000000
  
  
  *******  USING POLYNOMIAL MEAN FIELDS/MAGNUS A-VECTOR PREDICTOR/CORRECTOR   ***
@@ -159,8 +159,8 @@ Fri Feb 12 22:03:06 PST 2016
  
  ****************************************************************************
  
- Autosteps is            2  Autosize is          401  Numpropsteps is 
-         801
+ Autosteps is            2  Autosize is         1001  Numpropsteps is 
+        2001
  
  *****************************************************************************
  
@@ -302,7 +302,7 @@ Fri Feb 12 22:03:06 PST 2016
  Getting cation single walks
  Max # single walks from cation state on this processor is            8
  DONE getting proj single walks
- Guess at necessary memory is    51.366 MB
+ Guess at necessary memory is   128.032 MB
  g(tau) will be computed with all psi being read in batches
  Desired amount of memory to use   500.000 MB
  Hooray, there is enough memory, doing it all in core
@@ -317,6 +317,6 @@ Fri Feb 12 22:03:06 PST 2016
  Reading ket batch            1  of            1  for state            3
  Reading bra batch            1  of            1  for state            3
  Taking the fourier transform of g(tau) to get cross section at T= 
-   200.000000000000     
+   500.000000000000     
  Cross Section acquired, cleaning and closing
  MCTDHF STOP!

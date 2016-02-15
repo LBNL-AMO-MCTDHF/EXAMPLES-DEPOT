@@ -1,12 +1,12 @@
-Fri Feb 12 21:52:55 PST 2016
-Fri Feb 12 21:52:55 PST 2016
-Fri Feb 12 21:52:55 PST 2016
-Fri Feb 12 21:52:55 PST 2016
-Fri Feb 12 21:52:55 PST 2016
-Fri Feb 12 21:52:55 PST 2016
-Fri Feb 12 21:52:55 PST 2016
-Fri Feb 12 21:52:55 PST 2016
-Fri Feb 12 21:52:55 PST 2016
+Sat Feb 13 20:27:57 PST 2016
+Sat Feb 13 20:27:57 PST 2016
+Sat Feb 13 20:27:57 PST 2016
+Sat Feb 13 20:27:57 PST 2016
+Sat Feb 13 20:27:57 PST 2016
+Sat Feb 13 20:27:57 PST 2016
+Sat Feb 13 20:27:57 PST 2016
+Sat Feb 13 20:27:57 PST 2016
+Sat Feb 13 20:27:57 PST 2016
  
   ****************************************************************************
   **********************  BEGIN LBNL-AMO-MCTDHF ******************************
@@ -24,19 +24,19 @@ Fri Feb 12 21:52:55 PST 2016
  
                 PROCESSOR            1  OF            9
  
- Inpfile is Input.Inp.Pulse.perp.vel  
+ Inpfile is Input.Inp.Pulse.perp  
  
   *************************  COMMAND LINE OPTIONS  ***************************
  
  Reading 
- Input.Inp.Pulse.perp.vel                                                       
+ Input.Inp.Pulse.perp                                                           
                                                                                 
                                            
  Eground for autoft set to    -2.59095385931900       by command line option.
   ****************************************************************************
  
  Enforcing CMF defaults for Verlet or EXPO.
- PULSE IS ON:   velocity, usual way.
+ PULSE IS ON:   length.
  
  NUMBER OF PULSES:             1
  
@@ -44,23 +44,23 @@ Fri Feb 12 21:52:55 PST 2016
  Pulse type is 2 or 3: envelope with carrier
     chirp:             0.000000000000000E+000
     ramp:             0.000000000000000E+000  Hartree
-    Envelope omega:    0.418000000000000     
-    Pulse omega:        1.25400000000000     
+    Envelope omega:    0.266000000000000     
+    Pulse omega:       0.798000000000000     
     Pulsestart:        0.500000000000000     
-    Pulsestrength:    (7.771203442304427E-003,0.000000000000000E+000)
+    Pulsestrength:    (1.221189112362124E-002,0.000000000000000E+000)
     Intensity:         3.333333333333000E-004  x 10^16 W cm^-2
     Pulsetheta:        0.955316618124510     
     Pulsephi:        0.785398163397450     
-    Pulsefinish:        8.01577189854018     
+    Pulsefinish:        12.3104986977060     
  ---> Pulsetype 2.
   Enforcing minpulsetime =           500.000000000000     
      ---> Resetting finaltime to    500.250000000000     
                  numpropsteps to         2001
     ... Writing pulse to file
         ... done Writing pulse to file
- Finaltime set by command line option to    200.000000000000     
-      numpropsteps now            801
-      finaltime    now      200.250000000000     
+ Finaltime set by command line option to    500.000000000000     
+      numpropsteps now           2001
+      finaltime    now      500.250000000000     
  
   ****************************************************************************
  *****************************************************************************
@@ -135,7 +135,7 @@ Fri Feb 12 21:52:55 PST 2016
  
   PAR_TIMESTEP IS   0.250000000000000       LITTLESTEPS IS            5
  
-                 # of steps, final time:       801            200.25000000
+                 # of steps, final time:      2001            500.25000000
  
  
  *******  USING POLYNOMIAL MEAN FIELDS/MAGNUS A-VECTOR PREDICTOR/CORRECTOR   ***
@@ -159,8 +159,8 @@ Fri Feb 12 21:52:55 PST 2016
  
  ****************************************************************************
  
- Autosteps is            2  Autosize is          401  Numpropsteps is 
-         801
+ Autosteps is            2  Autosize is         1001  Numpropsteps is 
+        2001
  
  *****************************************************************************
  
@@ -283,15 +283,18 @@ Fri Feb 12 21:52:55 PST 2016
      ...filled.
      ... done get_3dpoisson.
     ....Called init_project.
- Guess at necessary memory is   349.451 MB
+ Guess at necessary memory is   871.019 MB
  g(tau) will be computed with all psi being read in batches
  Desired amount of memory to use   500.000 MB
- Good, there is enough memory for only one batch.
+ Batchsize is          287 /         501
  MO record length is      1437480
  AVEC record length is        57600
- Reading ket batch            1  of            1
+ Reading ket batch            1  of            2
  Reading bra batch            1  of            1
-  Taking the FT of g(tau) to get xsection at T=    200.000000000000     
+ Reading ket batch            2  of            2
+ Reading bra batch            1  of            2
+ Reading bra batch            2  of            2
+  Taking the FT of g(tau) to get xsection at T=    500.000000000000     
     ....Go ft....
     ....Go ft pulse....
     ....Done with ft....

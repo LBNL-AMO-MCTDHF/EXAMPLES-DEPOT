@@ -1,12 +1,12 @@
-Fri Feb 12 22:12:28 PST 2016
-Fri Feb 12 22:12:28 PST 2016
-Fri Feb 12 22:12:28 PST 2016
-Fri Feb 12 22:12:28 PST 2016
-Fri Feb 12 22:12:28 PST 2016
-Fri Feb 12 22:12:28 PST 2016
-Fri Feb 12 22:12:28 PST 2016
-Fri Feb 12 22:12:28 PST 2016
-Fri Feb 12 22:12:28 PST 2016
+Sun Feb 14 17:20:30 PST 2016
+Sun Feb 14 17:20:30 PST 2016
+Sun Feb 14 17:20:30 PST 2016
+Sun Feb 14 17:20:30 PST 2016
+Sun Feb 14 17:20:30 PST 2016
+Sun Feb 14 17:20:30 PST 2016
+Sun Feb 14 17:20:30 PST 2016
+Sun Feb 14 17:20:30 PST 2016
+Sun Feb 14 17:20:30 PST 2016
  
   ****************************************************************************
   **********************  BEGIN LBNL-AMO-MCTDHF ******************************
@@ -17,19 +17,19 @@ Fri Feb 12 22:12:28 PST 2016
     AMO Theory Group, Lawrence Berkeley Laboratory
       D J Haxton, C W McCurdy, T N Rescigno, K V Lawler, J Jones, 
       B Abeln, X Li . . .
-                              VERSION 1.10 
+                              VERSION 1.21 
         Copyright 2015 the regents of the University of California
  
                 This is CHMCTDH: HERM-normed ECS version.
  
                 PROCESSOR            1  OF            9
  
- Inpfile is Input.Inp.Pulse.perp  
+ Inpfile is Input.Inp.Pulse  
  
   *************************  COMMAND LINE OPTIONS  ***************************
  
  Reading 
- Input.Inp.Pulse.perp                                                           
+ Input.Inp.Pulse                                                                
                                                                                 
                                            
  Eground for autoft set to    -2.59095385931900       by command line option.
@@ -47,10 +47,10 @@ Fri Feb 12 22:12:28 PST 2016
     Envelope omega:    0.266000000000000     
     Pulse omega:       0.798000000000000     
     Pulsestart:        0.500000000000000     
-    Pulsestrength:    (1.221189112362124E-002,0.000000000000000E+000)
-    Intensity:         3.333333333333000E-004  x 10^16 W cm^-2
-    Pulsetheta:        0.955316618124510     
-    Pulsephi:        0.785398163397450     
+    Pulsestrength:    (2.115161588261244E-002,0.000000000000000E+000)
+    Intensity:         1.000000000000000E-003  x 10^16 W cm^-2
+    Pulsetheta:        0.000000000000000E+000
+    Pulsephi:        0.000000000000000E+000
     Pulsefinish:        12.3104986977060     
  ---> Pulsetype 2.
   Enforcing minpulsetime =           500.000000000000     
@@ -58,9 +58,9 @@ Fri Feb 12 22:12:28 PST 2016
                  numpropsteps to         2001
     ... Writing pulse to file
         ... done Writing pulse to file
- Finaltime set by command line option to    200.000000000000     
-      numpropsteps now            801
-      finaltime    now      200.250000000000     
+ Finaltime set by command line option to    500.000000000000     
+      numpropsteps now           2001
+      finaltime    now      500.250000000000     
  
   ****************************************************************************
  *****************************************************************************
@@ -135,7 +135,7 @@ Fri Feb 12 22:12:28 PST 2016
  
   PAR_TIMESTEP IS   0.250000000000000       LITTLESTEPS IS            5
  
-                 # of steps, final time:       801            200.25000000
+                 # of steps, final time:      2001            500.25000000
  
  
  *******  USING POLYNOMIAL MEAN FIELDS/MAGNUS A-VECTOR PREDICTOR/CORRECTOR   ***
@@ -159,8 +159,8 @@ Fri Feb 12 22:12:28 PST 2016
  
  ****************************************************************************
  
- Autosteps is            2  Autosize is          401  Numpropsteps is 
-         801
+ Autosteps is            2  Autosize is         1001  Numpropsteps is 
+        2001
  
  *****************************************************************************
  
@@ -168,7 +168,7 @@ Fri Feb 12 22:12:28 PST 2016
       SKIPPING CALCULATION!  Doing analysis.
     ****************************************
  
- ACTIONS:  Ion.  Flux  FT 
+ ACTIONS:  Proj Ion Flux  
  
  FOR IONIZATION FLUX:
     Flux Interval            2  0.500000000000000     
@@ -283,17 +283,40 @@ Fri Feb 12 22:12:28 PST 2016
      ...filled.
      ... done get_3dpoisson.
     ....Called init_project.
- Guess at necessary memory is   349.451 MB
+ 
+    *** DOING PROJECTED FLUX. ***    
+ 
+ Spin adapted wave functions for propagation and projection. doing CG algebra.
+ Reading           2  Born-Oppenheimer states.
+ Reading spfs.
+ Read complex spfs
+    ...rank 1 read from file
+ Getting cation single walks
+ Max # single walks from cation state on this processor is            8
+ DONE getting proj single walks
+ Spin adapted wave functions for propagation and projection. doing CG algebra.
+ Reading           1  Born-Oppenheimer states.
+ Reading spfs.
+ Read complex spfs
+    ...rank 1 read from file
+ Getting cation single walks
+ Max # single walks from cation state on this processor is            8
+ DONE getting proj single walks
+ Guess at necessary memory is   128.032 MB
  g(tau) will be computed with all psi being read in batches
  Desired amount of memory to use   500.000 MB
- Good, there is enough memory for only one batch.
- MO record length is      1437480
- AVEC record length is        57600
- Reading ket batch            1  of            1
- Reading bra batch            1  of            1
-  Taking the FT of g(tau) to get xsection at T=    200.000000000000     
-    ....Go ft....
-    ....Go ft pulse....
-    ....Done with ft....
- Stopping after actions_initial
+ Hooray, there is enough memory, doing it all in core
+ Projected 1e- function record length is       287496
+ Computing the CrossSection for state            1 wfn           1
+ Reading ket batch            1  of            1  for state            1
+ Reading bra batch            1  of            1  for state            1
+ Computing the CrossSection for state            2 wfn           1
+ Reading ket batch            1  of            1  for state            2
+ Reading bra batch            1  of            1  for state            2
+ Computing the CrossSection for state            3 wfn           1
+ Reading ket batch            1  of            1  for state            3
+ Reading bra batch            1  of            1  for state            3
+ Taking the fourier transform of g(tau) to get cross section at T= 
+   500.000000000000     
+ Cross Section acquired, cleaning and closing
  MCTDHF STOP!
