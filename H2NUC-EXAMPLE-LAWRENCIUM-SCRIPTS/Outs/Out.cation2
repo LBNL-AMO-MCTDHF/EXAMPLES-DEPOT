@@ -1,0 +1,968 @@
+Thu Feb 18 08:18:50 PST 2016
+Thu Feb 18 08:18:50 PST 2016
+Thu Feb 18 08:18:50 PST 2016
+Thu Feb 18 08:18:50 PST 2016
+ 
+  ****************************************************************************
+  **********************  BEGIN LBNL-AMO-MCTDHF ******************************
+  ****************************************************************************
+ 
+    Atomic/Diatomic/Cartesian Polyatomic nonadiabatic MCTDHF code
+      for ultrafast electronic and nuclear dynamics in intense laser fields
+    AMO Theory Group, Lawrence Berkeley Laboratory
+      D J Haxton, C W McCurdy, T N Rescigno, K V Lawler, J Jones, 
+      B Abeln, X Li . . .
+                              VERSION 1.21 
+        Copyright 2015 the regents of the University of California
+ 
+                This is CHMCTDH: HERM-normed ECS version.
+ 
+                PROCESSOR            1  OF            4
+ 
+ Inpfile is Input.Inp.Cation2  
+ CAPflag is on, setting rthetaecs to zero
+ 
+  *************************  COMMAND LINE OPTIONS  ***************************
+ 
+ Reading 
+ Input.Inp.Cation2                                                              
+                                                                                
+                                           
+  ****************************************************************************
+ 
+ Enforcing CMF defaults for Verlet or EXPO.
+ 
+  ****************************************************************************
+ *****************************************************************************
+ 
+ Number of states in propagation=           1
+ 
+  Parameters: electronic
+ 
+                    Number of electrons     1
+ Nuclear KE flag (nonuc_checkflag):         0
+ 
+   *****  prolate spheroidal coordinate options ****
+                        bornopflag:         0
+             Xinumpoints, xinumelements:   12    7
+                              ECS is ON!
+                 xicelement,  xiecstheta    6    0.400000000000
+    Xi elementsizes:   7.00000   7.00000   7.00000   7.00000   7.00000   7.00000  14.00000
+      lbig,mbig          00006     00000
+ 
+ **************************   Parameters: nuclear    *************************  
+  
+ 
+   Hmass, Dmass, Reduced:     1836.15270100     1836.15270100      918.07635050
+rnumelements, rnumpoints:    5   10
+  relementsize ,  rstart:   1.00000   0.50000
+                              ECS is ON!
+                   rcelement,  rthetaecs    4    0.000000000000
+                              CAP is ON!
+                           Capstrength:    0.01000
+                           Cappower:        2
+                Capstart (from ecs):       3.50000
+                  Jvalue:    0
+                            Reducedflag:    1
+ 
+ ************************   Parameters: config/spf    ************************  
+  
+ 
+ Doing full CI: numshells=1.  Shells:
+ Shell            1
+   1a    1b    2a    2b    3a    3b 
+  Final shell occupancy level vexcite=         999
+ 
+    Number of unfrozen spfs:      3
+    Number of frozen spfs:        0
+            Spfs start in m=     0   0   0
+ 
+ Spfs will be restricted to their original m-values.
+ Spfs will be restricted to their original parity values.
+ Configurations will be restricted to spin projection           1 /2
+  Configurations will be restricted to spin            1
+ 
+ ***********************    Initial state      ***********************   
+ 
+ Spfs will be one-electron eigfuncts.
+ 
+ Sfp Quad flag is OFF.
+ Improvednatflag is ON.
+ 
+ Avector Quad flag is ON (quadflag=1,3).
+ Avector will be loaded from files.  Number of files=            1
+ 
+ ***********************    Parameters: propagation    ***********************  
+  
+ 
+  PAR_TIMESTEP IS    1.00000000000000       LITTLESTEPS IS            1
+ 
+ Calculation will be stopped with threshold   1.000000000000000E-010 
+ ; timestep is    1.00000000000000     
+ 
+ 
+ *******  USING POLYNOMIAL MEAN FIELDS/MAGNUS A-VECTOR PREDICTOR/CORRECTOR   ***
+ ****  
+ 
+     Using nonsparse configuration routines.
+  Jacobian options:
+     Jacprojorth=           0
+     Jacsymflag=           0
+  Using EXPONENTIAL integration.
+     Expotol    =  1.000000000000000E-009
+     Maxexpodim=         300
+ 
+ Density matrix regularized with denreg= 0.100E-08
+ 
+ 
+ ****************************************************************************
+ 
+ Autosteps is            1  Autosize is        40001  Numpropsteps is 
+       40000
+ 
+ *****************************************************************************
+ 
+ 
+ 
+ 
+ ************************************
+ ********  MAIN WALKS  **************
+ ************************************
+ 
+ Go fast_newconfiglist
+ UPPER/LOWER
+           1           3
+ 
+ 
+ FASTNEWCONFIG: NUMBER OF CONFIGURATIONS            3
+ 
+ NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG           3           1
+ Go fast_newconfiglist.  Allocating...
+    getting configurations.
+ 
+ BOTWALKS /TOPWALKS           3
+           1           0           0
+           1           0           0
+           1           1           1
+           2           3           2
+ 
+      ...Done fast_newconfiglist
+ Counting walks. Singles
+ Counting walks. Doubles
+ 
+ Maximum number of
+            single walks=            3
+            double walks=            1
+   TOTAL walks:           9 maxdoublewalks*numconfig           3
+ 
+ Allocating singlewalks
+ Allocating doublewalks
+      ..done walkalloc.
+ Calculating walks.  Singles...
+ Calculating walks.  Doubles...
+ Sorting walks...
+     .... done sorting walks.
+ Counting single hops...
+ Counting double hops...
+ Getting single hops...
+ Getting double hops...
+ GOT HOPS:  
+  Single hops this processor            9  of            9
+  Double hops this processor            0  of            0
+  Single hops total            9  of            9
+  Double hops total            0  of            0
+     Max single hops            3
+     Max double hops            1
+ 
+ Go spinwalk init. 
+ Go get numspinwalks.
+ Doing spin projector.
+ Maximum number of spin walks=            0
+ Avg number of spin walks=   0.000000000000000E+000
+ Done spinwalk init.
+ Calculating spin walks.
+      ... done calculating spin walks.
+    ... go spinsets ...
+ Numspinsets this processor is            0   maxspinset size is            1
+ Getting Spinset Projectors.  Numspinsets this process is            0
+                                        maxspinsetsize is            1
+ ...done.  Eliminated            0  sets with total rank            0
+ 
+ This processor: 
+       spin sets                   0
+       spin rank                       0  of            0
+       botspin,topspin:                1           0
+       df spin rank                    0  of            0
+       botdfspin,topdfspin:            1           0
+ All processors:
+       spin rank, S^2 =   0.750000000000000       is            3  out of 
+           3
+       df spin rank                    3  of            3
+ 
+ 
+ ************************************
+ ** done main walks. BIORTHO WALKS **
+ ************************************
+ 
+ Go fast_newconfiglist
+ UPPER/LOWER
+           1           3
+ 
+ 
+ FASTNEWCONFIG: NUMBER OF CONFIGURATIONS            3
+ 
+ NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG           3           1
+ Go fast_newconfiglist.  Allocating...
+    getting configurations.
+ 
+ BOTWALKS /TOPWALKS           3
+           1           0           0
+           1           0           0
+           1           1           1
+           2           3           2
+ 
+      ...Done fast_newconfiglist
+ Counting walks. Singles
+ Counting walks. Doubles
+ 
+ Maximum number of
+            single walks=            3
+            double walks=            1
+   TOTAL walks:           9 maxdoublewalks*numconfig           3
+ 
+ Allocating singlewalks
+ Allocating doublewalks
+      ..done walkalloc.
+ Calculating walks.  Singles...
+ Calculating walks.  Doubles...
+ Sorting walks...
+     .... done sorting walks.
+ Counting single hops...
+ Counting double hops...
+ Getting single hops...
+ Getting double hops...
+ GOT HOPS:  
+  Single hops this processor            9  of            9
+  Double hops this processor            0  of            0
+  Single hops total            9  of            9
+  Double hops total            0  of            0
+     Max single hops            3
+     Max double hops            1
+ 
+ Go spinwalk init. 
+ Go get numspinwalks.
+ Doing spin projector.
+ Maximum number of spin walks=            0
+ Avg number of spin walks=   0.000000000000000E+000
+ Done spinwalk init.
+ Calculating spin walks.
+      ... done calculating spin walks.
+    ... go spinsets ...
+ Numspinsets this processor is            0   maxspinset size is            1
+ Getting Spinset Projectors.  Numspinsets this process is            0
+                                        maxspinsetsize is            1
+ ...done.  Eliminated            0  sets with total rank            0
+ 
+ This processor: 
+       spin sets                   0
+       spin rank                       0  of            0
+       botspin,topspin:                1           0
+       df spin rank                    0  of            0
+       botdfspin,topdfspin:            1           0
+ All processors:
+       spin rank, S^2 =   0.750000000000000       is            3  out of 
+           3
+       df spin rank                    3  of            3
+ 
+ 
+ ************************************
+ ********** DONE WALKS. *************
+ ************************************
+ 
+ Calling init_project                  8624
+ Go init_project diatomic.   PSC...
+ Doing CAP. 
+    ... ok PSC. call get_twoe_new
+    Calc two electron.
+    ...done.
+    ... ok called get twoe_new
+ Calculating orbitals.  Electronic dim, mval           539          77
+           7           0
+ 
+   Eigvals at R= (3.00000000000000,0.000000000000000E+000)
+   -0.577294966644    0.000000000000
+   -0.367613353438    0.000000000000
+    0.014717777620   -0.000000000000
+    0.076371167566   -0.000000000000
+    0.080573247917   -0.000000000000
+    0.171160202983    0.000000000000
+    0.194464918958    0.000000000000
+    0.198545116781    0.000000000000
+    0.205343321368   -0.000000000000
+    0.235561151618   -0.000000000000
+ Assigning spf            1  to            2 nd eigval of m=           0 
+  ; has specified ugvalue=           -1
+ Assigning spf            2  to            5 th eigval of m=           0 
+  ; has specified ugvalue=           -1
+ Assigning spf            3  to            8 th eigval of m=           0 
+  ; has specified ugvalue=           -1
+ 
+ Done init_h2.
+ 
+ Done init project.
+ 
+    ....Called init_project.
+ Reading avector...
+ Read            1  A-vectors
+ IN PROP: VECTOR NORM  (1.00000000000000,0.000000000000000E+000)
+     ... will enforce BO norms due to normboflag
+          ENERGY  (-2.635290422015131E-002,-3.446261771700631E-012)
+ REPLACING SPFS - DENMAT EIGS
+         0.9957249908E+00
+         0.4241888485E-02
+         0.3312073820E-04
+ 
+    NONSPARSEQUAD: DEV 0.34343E+00  TOL  0.10000E-08 ENERGY    -0.0422700    -0.0000000
+    NONSPARSEQUAD: DEV 0.10294E-01  TOL  0.10000E-08 ENERGY    -0.0399787    -0.0000000
+    NONSPARSEQUAD: DEV 0.72605E-04  TOL  0.10000E-08 ENERGY    -0.0394028    -0.0000000
+    NONSPARSEQUAD: DEV 0.10199E-10  TOL  0.10000E-08 ENERGY    -0.0394028    -0.0000000
+T=          1.00000  Energy:  -0.2914528257E-01 -0.3446307863E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.49E+01  0.10E-09  AVECTOR   0.10E+04  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9918557778E+00
+         0.8101644592E-02
+         0.4257762320E-04
+ 
+    NONSPARSEQUAD: DEV 0.34983E+00  TOL  0.10000E-08 ENERGY    -0.0182457    -0.0000000
+    NONSPARSEQUAD: DEV 0.34530E-01  TOL  0.10000E-08 ENERGY    -0.0397312    -0.0000000
+    NONSPARSEQUAD: DEV 0.26607E-02  TOL  0.10000E-08 ENERGY    -0.0364643    -0.0000000
+    NONSPARSEQUAD: DEV 0.42665E-05  TOL  0.10000E-08 ENERGY    -0.0363963    -0.0000000
+    NONSPARSEQUAD: DEV 0.34596E-13  TOL  0.10000E-08 ENERGY    -0.0363963    -0.0000000
+T=          2.00000  Energy:  -0.2992101330E-01 -0.3446250529E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.21E+01  0.10E-09  AVECTOR   0.78E-03  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9867321019E+00
+         0.1319493782E-01
+         0.7296031135E-04
+ 
+    NONSPARSEQUAD: DEV 0.94637E-01  TOL  0.10000E-08 ENERGY    -0.0338859    -0.0000000
+    NONSPARSEQUAD: DEV 0.36464E-02  TOL  0.10000E-08 ENERGY    -0.0399434    -0.0000000
+    NONSPARSEQUAD: DEV 0.13838E-04  TOL  0.10000E-08 ENERGY    -0.0397803    -0.0000000
+    NONSPARSEQUAD: DEV 0.14240E-11  TOL  0.10000E-08 ENERGY    -0.0397803    -0.0000000
+T=          3.00000  Energy:  -0.3483878541E-01 -0.3446011288E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.56E+00  0.10E-09  AVECTOR   0.49E-02  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9826246207E+00
+         0.1725928924E-01
+         0.1160900737E-03
+ 
+    NONSPARSEQUAD: DEV 0.87025E-01  TOL  0.10000E-08 ENERGY    -0.0367524    -0.0000000
+    NONSPARSEQUAD: DEV 0.30874E-02  TOL  0.10000E-08 ENERGY    -0.0413657    -0.0000000
+    NONSPARSEQUAD: DEV 0.80589E-05  TOL  0.10000E-08 ENERGY    -0.0412552    -0.0000000
+    NONSPARSEQUAD: DEV 0.23647E-12  TOL  0.10000E-08 ENERGY    -0.0412552    -0.0000000
+T=          4.00000  Energy:  -0.3699627495E-01 -0.3445942910E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.53E+00  0.10E-09  AVECTOR   0.22E-02  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9798748802E+00
+         0.1996499756E-01
+         0.1601222810E-03
+ 
+    NONSPARSEQUAD: DEV 0.86869E-01  TOL  0.10000E-08 ENERGY    -0.0377017    -0.0000000
+    NONSPARSEQUAD: DEV 0.29373E-02  TOL  0.10000E-08 ENERGY    -0.0419160    -0.0000000
+    NONSPARSEQUAD: DEV 0.66894E-05  TOL  0.10000E-08 ENERGY    -0.0418203    -0.0000000
+    NONSPARSEQUAD: DEV 0.12310E-12  TOL  0.10000E-08 ENERGY    -0.0418203    -0.0000000
+T=          5.00000  Energy:  -0.3780804041E-01 -0.3446257942E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.44E+00  0.10E-09  AVECTOR   0.81E-03  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9784844539E+00
+         0.2132269019E-01
+         0.1928558809E-03
+ 
+    NONSPARSEQUAD: DEV 0.86394E-01  TOL  0.10000E-08 ENERGY    -0.0380797    -0.0000000
+    NONSPARSEQUAD: DEV 0.28742E-02  TOL  0.10000E-08 ENERGY    -0.0421342    -0.0000000
+    NONSPARSEQUAD: DEV 0.61534E-05  TOL  0.10000E-08 ENERGY    -0.0420445    -0.0000000
+    NONSPARSEQUAD: DEV 0.91634E-13  TOL  0.10000E-08 ENERGY    -0.0420445    -0.0000000
+T=          6.00000  Energy:  -0.3812359559E-01 -0.3446280707E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.30E+00  0.10E-09  AVECTOR   0.32E-03  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9777444851E+00
+         0.2203775396E-01
+         0.2177608925E-03
+ 
+    NONSPARSEQUAD: DEV 0.86086E-01  TOL  0.10000E-08 ENERGY    -0.0382356    -0.0000000
+    NONSPARSEQUAD: DEV 0.28471E-02  TOL  0.10000E-08 ENERGY    -0.0422229    -0.0000000
+    NONSPARSEQUAD: DEV 0.59288E-05  TOL  0.10000E-08 ENERGY    -0.0421359    -0.0000000
+    NONSPARSEQUAD: DEV 0.80237E-13  TOL  0.10000E-08 ENERGY    -0.0421359    -0.0000000
+T=          7.00000  Energy:  -0.3824863374E-01 -0.3446025226E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.20E+00  0.10E-09  AVECTOR   0.13E-03  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9773422766E+00
+         0.2242163570E-01
+         0.2360876667E-03
+ 
+    NONSPARSEQUAD: DEV 0.85954E-01  TOL  0.10000E-08 ENERGY    -0.0382966    -0.0000000
+    NONSPARSEQUAD: DEV 0.28378E-02  TOL  0.10000E-08 ENERGY    -0.0422590    -0.0000000
+    NONSPARSEQUAD: DEV 0.58456E-05  TOL  0.10000E-08 ENERGY    -0.0421730    -0.0000000
+    NONSPARSEQUAD: DEV 0.76168E-13  TOL  0.10000E-08 ENERGY    -0.0421730    -0.0000000
+T=          8.00000  Energy:  -0.3829747032E-01 -0.3446071793E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.13E+00  0.10E-09  AVECTOR   0.49E-04  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9771249732E+00
+         0.2262604859E-01
+         0.2489781748E-03
+ 
+    NONSPARSEQUAD: DEV 0.85911E-01  TOL  0.10000E-08 ENERGY    -0.0383187    -0.0000000
+    NONSPARSEQUAD: DEV 0.28359E-02  TOL  0.10000E-08 ENERGY    -0.0422736    -0.0000000
+    NONSPARSEQUAD: DEV 0.58207E-05  TOL  0.10000E-08 ENERGY    -0.0421880    -0.0000000
+    NONSPARSEQUAD: DEV 0.74917E-13  TOL  0.10000E-08 ENERGY    -0.0421880    -0.0000000
+T=          9.00000  Energy:  -0.3831611985E-01 -0.3446211885E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.82E-01  0.10E-09  AVECTOR   0.19E-04  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9770070887E+00
+         0.2273516537E-01
+         0.2577458825E-03
+ 
+    NONSPARSEQUAD: DEV 0.85903E-01  TOL  0.10000E-08 ENERGY    -0.0383258    -0.0000000
+    NONSPARSEQUAD: DEV 0.28364E-02  TOL  0.10000E-08 ENERGY    -0.0422795    -0.0000000
+    NONSPARSEQUAD: DEV 0.58166E-05  TOL  0.10000E-08 ENERGY    -0.0421940    -0.0000000
+    NONSPARSEQUAD: DEV 0.74503E-13  TOL  0.10000E-08 ENERGY    -0.0421940    -0.0000000
+T=         10.00000  Energy:  -0.3832304781E-01 -0.3446178951E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.52E-01  0.10E-09  AVECTOR   0.69E-05  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9769420904E+00
+         0.2279432835E-01
+         0.2635812761E-03
+ 
+    NONSPARSEQUAD: DEV 0.85906E-01  TOL  0.10000E-08 ENERGY    -0.0383277    -0.0000000
+    NONSPARSEQUAD: DEV 0.28372E-02  TOL  0.10000E-08 ENERGY    -0.0422819    -0.0000000
+    NONSPARSEQUAD: DEV 0.58184E-05  TOL  0.10000E-08 ENERGY    -0.0421964    -0.0000000
+    NONSPARSEQUAD: DEV 0.74603E-13  TOL  0.10000E-08 ENERGY    -0.0421964    -0.0000000
+T=         11.00000  Energy:  -0.3832552068E-01 -0.3446220146E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.33E-01  0.10E-09  AVECTOR   0.25E-05  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9769054251E+00
+         0.2282716145E-01
+         0.2674134695E-03
+ 
+    NONSPARSEQUAD: DEV 0.85911E-01  TOL  0.10000E-08 ENERGY    -0.0383279    -0.0000000
+    NONSPARSEQUAD: DEV 0.28380E-02  TOL  0.10000E-08 ENERGY    -0.0422829    -0.0000000
+    NONSPARSEQUAD: DEV 0.58212E-05  TOL  0.10000E-08 ENERGY    -0.0421974    -0.0000000
+    NONSPARSEQUAD: DEV 0.74656E-13  TOL  0.10000E-08 ENERGY    -0.0421973    -0.0000000
+T=         12.00000  Energy:  -0.3832634368E-01 -0.3446205799E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.21E-01  0.10E-09  AVECTOR   0.82E-06  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768842368E+00
+         0.2284585329E-01
+         0.2699098813E-03
+ 
+    NONSPARSEQUAD: DEV 0.85916E-01  TOL  0.10000E-08 ENERGY    -0.0383276    -0.0000000
+    NONSPARSEQUAD: DEV 0.28386E-02  TOL  0.10000E-08 ENERGY    -0.0422833    -0.0000000
+    NONSPARSEQUAD: DEV 0.58235E-05  TOL  0.10000E-08 ENERGY    -0.0421977    -0.0000000
+    NONSPARSEQUAD: DEV 0.74747E-13  TOL  0.10000E-08 ENERGY    -0.0421977    -0.0000000
+T=         13.00000  Energy:  -0.3832657909E-01 -0.3446249791E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.13E-01  0.10E-09  AVECTOR   0.24E-06  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768717182E+00
+         0.2285675357E-01
+         0.2715282099E-03
+ 
+    NONSPARSEQUAD: DEV 0.85919E-01  TOL  0.10000E-08 ENERGY    -0.0383273    -0.0000000
+    NONSPARSEQUAD: DEV 0.28389E-02  TOL  0.10000E-08 ENERGY    -0.0422835    -0.0000000
+    NONSPARSEQUAD: DEV 0.58251E-05  TOL  0.10000E-08 ENERGY    -0.0421979    -0.0000000
+    NONSPARSEQUAD: DEV 0.74773E-13  TOL  0.10000E-08 ENERGY    -0.0421979    -0.0000000
+T=         14.00000  Energy:  -0.3832661944E-01 -0.3446157420E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.86E-02  0.10E-09  AVECTOR   0.40E-07  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768641830E+00
+         0.2286324284E-01
+         0.2725741804E-03
+ 
+    NONSPARSEQUAD: DEV 0.85921E-01  TOL  0.10000E-08 ENERGY    -0.0383270    -0.0000000
+    NONSPARSEQUAD: DEV 0.28392E-02  TOL  0.10000E-08 ENERGY    -0.0422835    -0.0000000
+    NONSPARSEQUAD: DEV 0.58262E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74750E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         15.00000  Energy:  -0.3832660429E-01 -0.3446099580E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.55E-02  0.10E-09  AVECTOR   0.15E-07  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768595800E+00
+         0.2286717106E-01
+         0.2732489440E-03
+ 
+    NONSPARSEQUAD: DEV 0.85922E-01  TOL  0.10000E-08 ENERGY    -0.0383268    -0.0000000
+    NONSPARSEQUAD: DEV 0.28393E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58269E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74835E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         16.00000  Energy:  -0.3832657985E-01 -0.3446088626E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.35E-02  0.10E-09  AVECTOR   0.24E-07  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768567365E+00
+         0.2286957984E-01
+         0.2736836928E-03
+ 
+    NONSPARSEQUAD: DEV 0.85923E-01  TOL  0.10000E-08 ENERGY    -0.0383267    -0.0000000
+    NONSPARSEQUAD: DEV 0.28394E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58274E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74775E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         17.00000  Energy:  -0.3832655921E-01 -0.3446251405E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.23E-02  0.10E-09  AVECTOR   0.21E-07  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768549651E+00
+         0.2287107130E-01
+         0.2739635501E-03
+ 
+    NONSPARSEQUAD: DEV 0.85924E-01  TOL  0.10000E-08 ENERGY    -0.0383267    -0.0000000
+    NONSPARSEQUAD: DEV 0.28395E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58277E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74889E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         18.00000  Energy:  -0.3832654450E-01 -0.3445966447E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.14E-02  0.10E-09  AVECTOR   0.15E-07  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768538550E+00
+         0.2287200144E-01
+         0.2741435763E-03
+ 
+    NONSPARSEQUAD: DEV 0.85924E-01  TOL  0.10000E-08 ENERGY    -0.0383266    -0.0000000
+    NONSPARSEQUAD: DEV 0.28395E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58278E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74812E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         19.00000  Energy:  -0.3832653477E-01 -0.3446279559E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.93E-03  0.10E-09  AVECTOR   0.97E-08  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768531561E+00
+         0.2287258458E-01
+         0.2742593170E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383266    -0.0000000
+    NONSPARSEQUAD: DEV 0.28395E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58279E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74830E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         20.00000  Energy:  -0.3832652857E-01 -0.3446305486E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.59E-03  0.10E-09  AVECTOR   0.62E-08  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768527147E+00
+         0.2287295159E-01
+         0.2743336906E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383266    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58280E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74816E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         21.00000  Energy:  -0.3832652471E-01 -0.3446304072E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.38E-03  0.10E-09  AVECTOR   0.39E-08  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768524353E+00
+         0.2287318323E-01
+         0.2743814601E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74834E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         22.00000  Energy:  -0.3832652234E-01 -0.3446114641E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.24E-03  0.10E-09  AVECTOR   0.24E-08  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768522581E+00
+         0.2287332975E-01
+         0.2744121287E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74832E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         23.00000  Energy:  -0.3832652089E-01 -0.3446068672E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.16E-03  0.10E-09  AVECTOR   0.15E-08  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768521456E+00
+         0.2287342257E-01
+         0.2744318103E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74879E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         24.00000  Energy:  -0.3832652000E-01 -0.3446382105E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.10E-03  0.10E-09  AVECTOR   0.88E-09  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768520741E+00
+         0.2287348144E-01
+         0.2744444359E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74820E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         25.00000  Energy:  -0.3832651947E-01 -0.3446026777E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.64E-04  0.10E-09  AVECTOR   0.54E-09  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768520286E+00
+         0.2287351882E-01
+         0.2744525322E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74840E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         26.00000  Energy:  -0.3832651914E-01 -0.3446051585E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.41E-04  0.10E-09  AVECTOR   0.33E-09  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519997E+00
+         0.2287354257E-01
+         0.2744577222E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74864E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         27.00000  Energy:  -0.3832651894E-01 -0.3446107345E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.26E-04  0.10E-09  AVECTOR   0.20E-09  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519813E+00
+         0.2287355766E-01
+         0.2744610480E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74883E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         28.00000  Energy:  -0.3832651882E-01 -0.3446314294E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.17E-04  0.10E-09  AVECTOR   0.12E-09  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519696E+00
+         0.2287356727E-01
+         0.2744631785E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74894E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         29.00000  Energy:  -0.3832651875E-01 -0.3446233156E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.11E-04  0.10E-09  AVECTOR   0.73E-10  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519621E+00
+         0.2287357338E-01
+         0.2744645429E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74870E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         30.00000  Energy:  -0.3832651871E-01 -0.3446074963E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.69E-05  0.10E-09  AVECTOR   0.45E-10  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519573E+00
+         0.2287357727E-01
+         0.2744654164E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74869E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         31.00000  Energy:  -0.3832651868E-01 -0.3446147145E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.44E-05  0.10E-09  AVECTOR   0.27E-10  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519543E+00
+         0.2287357974E-01
+         0.2744659755E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74800E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         32.00000  Energy:  -0.3832651866E-01 -0.3446172933E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.28E-05  0.10E-09  AVECTOR   0.17E-10  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519523E+00
+         0.2287358132E-01
+         0.2744663333E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74793E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         33.00000  Energy:  -0.3832651865E-01 -0.3446310298E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.18E-05  0.10E-09  AVECTOR   0.10E-10  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519511E+00
+         0.2287358232E-01
+         0.2744665622E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74823E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         34.00000  Energy:  -0.3832651865E-01 -0.3446076364E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.11E-05  0.10E-09  AVECTOR   0.63E-11  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519503E+00
+         0.2287358296E-01
+         0.2744667086E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74844E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         35.00000  Energy:  -0.3832651864E-01 -0.3446304741E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.73E-06  0.10E-09  AVECTOR   0.39E-11  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519498E+00
+         0.2287358337E-01
+         0.2744668022E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74800E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         36.00000  Energy:  -0.3832651864E-01 -0.3446161614E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.47E-06  0.10E-09  AVECTOR   0.24E-11  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519495E+00
+         0.2287358363E-01
+         0.2744668621E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74889E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         37.00000  Energy:  -0.3832651864E-01 -0.3446238364E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.30E-06  0.10E-09  AVECTOR   0.15E-11  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519493E+00
+         0.2287358380E-01
+         0.2744669003E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74852E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         38.00000  Energy:  -0.3832651864E-01 -0.3446237270E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.19E-06  0.10E-09  AVECTOR   0.92E-12  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519492E+00
+         0.2287358390E-01
+         0.2744669248E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74822E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         39.00000  Energy:  -0.3832651864E-01 -0.3446342769E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.12E-06  0.10E-09  AVECTOR   0.57E-12  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519491E+00
+         0.2287358397E-01
+         0.2744669404E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74794E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         40.00000  Energy:  -0.3832651864E-01 -0.3446075073E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.78E-07  0.10E-09  AVECTOR   0.36E-12  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519490E+00
+         0.2287358401E-01
+         0.2744669504E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74827E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         41.00000  Energy:  -0.3832651864E-01 -0.3445963389E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.52E-07  0.10E-09  AVECTOR   0.22E-12  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519490E+00
+         0.2287358404E-01
+         0.2744669568E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74828E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         42.00000  Energy:  -0.3832651864E-01 -0.3446190540E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.52E-07  0.10E-09  AVECTOR   0.14E-12  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519490E+00
+         0.2287358406E-01
+         0.2744669609E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74849E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         43.00000  Energy:  -0.3832651864E-01 -0.3446194739E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.62E-07  0.10E-09  AVECTOR   0.85E-13  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519490E+00
+         0.2287358407E-01
+         0.2744669634E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74822E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         44.00000  Energy:  -0.3832651864E-01 -0.3446184898E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.69E-07  0.10E-09  AVECTOR   0.57E-13  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519490E+00
+         0.2287358408E-01
+         0.2744669652E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74905E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         45.00000  Energy:  -0.3832651864E-01 -0.3446173236E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.11E-06  0.10E-09  AVECTOR   0.32E-13  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519490E+00
+         0.2287358408E-01
+         0.2744669662E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74826E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         46.00000  Energy:  -0.3832651864E-01 -0.3446092378E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.13E-06  0.10E-09  AVECTOR   0.22E-13  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519489E+00
+         0.2287358408E-01
+         0.2744669669E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74809E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         47.00000  Energy:  -0.3832651864E-01 -0.3446176236E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.14E-06  0.10E-09  AVECTOR   0.26E-14  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519489E+00
+         0.2287358409E-01
+         0.2744669670E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74872E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         48.00000  Energy:  -0.3832651864E-01 -0.3446177620E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.96E-07  0.10E-09  AVECTOR   0.16E-13  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519489E+00
+         0.2287358409E-01
+         0.2744669674E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74868E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         49.00000  Energy:  -0.3832651864E-01 -0.3446089026E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.21E-06  0.10E-09  AVECTOR   0.52E-14  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519489E+00
+         0.2287358409E-01
+         0.2744669675E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74819E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         50.00000  Energy:  -0.3832651864E-01 -0.3446281148E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.60E-07  0.10E-09  AVECTOR   0.23E-14  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519489E+00
+         0.2287358409E-01
+         0.2744669676E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74840E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         51.00000  Energy:  -0.3832651864E-01 -0.3446354460E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.50E-07  0.10E-09  AVECTOR   0.40E-14  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519489E+00
+         0.2287358409E-01
+         0.2744669678E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74839E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         52.00000  Energy:  -0.3832651864E-01 -0.3446220904E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.80E-07  0.10E-09  AVECTOR   0.11E-14  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519489E+00
+         0.2287358409E-01
+         0.2744669679E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74825E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         53.00000  Energy:  -0.3832651864E-01 -0.3446066976E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.72E-07  0.10E-09  AVECTOR   0.23E-14  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519489E+00
+         0.2287358409E-01
+         0.2744669680E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74864E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         54.00000  Energy:  -0.3832651864E-01 -0.3446313115E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.51E-07  0.10E-09  AVECTOR   0.40E-15  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519489E+00
+         0.2287358409E-01
+         0.2744669680E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74821E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         55.00000  Energy:  -0.3832651864E-01 -0.3446172495E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.41E-07  0.10E-09  AVECTOR   0.49E-15  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519489E+00
+         0.2287358409E-01
+         0.2744669681E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74823E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         56.00000  Energy:  -0.3832651864E-01 -0.3446263504E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.11E-06  0.10E-09  AVECTOR   0.49E-15  0.10E-06
+ REPLACING SPFS - DENMAT EIGS
+         0.9768519489E+00
+         0.2287358409E-01
+         0.2744669680E-03
+ 
+    NONSPARSEQUAD: DEV 0.85925E-01  TOL  0.10000E-08 ENERGY    -0.0383265    -0.0000000
+    NONSPARSEQUAD: DEV 0.28396E-02  TOL  0.10000E-08 ENERGY    -0.0422836    -0.0000000
+    NONSPARSEQUAD: DEV 0.58281E-05  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+    NONSPARSEQUAD: DEV 0.74826E-13  TOL  0.10000E-08 ENERGY    -0.0421980    -0.0000000
+T=         57.00000  Energy:  -0.3832651864E-01 -0.3446280688E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.66E-10  0.10E-09  AVECTOR   0.10E-14  0.10E-06
+ 
+    ***  CONVERGED *** 
+ 
+         -0.038326518635     -0.000000000003      0.000000000000     -0.000000000000
+    ***   
+ 
+    ...done prop...
+   ...saving vector...
+   ... go save vectors...
+   ... gathered orbs, now gather avector...
+   ... ok, now write
+    ...saved vectors!
+    ...end prop...
+    ...getting state expectation values etcetera...
+    ...GO finalstats.
+Thu Feb 18 08:18:59 PST 2016
+Thu Feb 18 08:18:59 PST 2016
+    ...END MCTDHF
+Thu Feb 18 08:18:59 PST 2016
+Thu Feb 18 08:18:59 PST 2016
+ MCTDHF STOP!

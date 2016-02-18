@@ -1,7 +1,7 @@
-Wed Feb 17 20:22:32 PST 2016
-Wed Feb 17 20:22:32 PST 2016
-Wed Feb 17 20:22:32 PST 2016
-Wed Feb 17 20:22:32 PST 2016
+Thu Feb 18 09:28:11 PST 2016
+Thu Feb 18 09:28:11 PST 2016
+Thu Feb 18 09:28:11 PST 2016
+Thu Feb 18 09:28:11 PST 2016
  
   ****************************************************************************
   **********************  BEGIN LBNL-AMO-MCTDHF ******************************
@@ -74,7 +74,7 @@ Wed Feb 17 20:22:32 PST 2016
                               ECS is ON!
                  xicelement,  xiecstheta    6    0.400000000000
     Xi elementsizes:   7.00000   7.00000   7.00000   7.00000   7.00000   7.00000  14.00000
-      lbig,mbig          00006     00000
+      lbig,mbig          00006     00001
  
  **************************   Parameters: nuclear    *************************  
   
@@ -244,7 +244,7 @@ rnumelements, rnumpoints:    5   10
  Bin/spfs.bin.relax                                                             
                                                                                 
                                            
- Calling init_project                  8624
+ Calling init_project                 25872
  Go init_project diatomic.   PSC...
  Doing CAP. 
     ... ok PSC. call get_twoe_new
@@ -269,26 +269,34 @@ rnumelements, rnumpoints:    5   10
  Getting cation single walks
  Max # single walks from cation state on this processor is            1
  DONE getting proj single walks
- Guess at necessary memory is  1519.342 MB
- g(tau) will be computed with all psi being read in batches
- Desired amount of memory to use   500.000 MB
- Batchsize is          329 /        1001
- Projected 1e- function record length is         4312
+ Spin adapted wave functions for propagation and projection. doing CG algebra.
+ Reading           1  Born-Oppenheimer states.
+ Reading spfs.
+ Read complex spfs
+    ...rank 1 read from file
+ Getting cation single walks
+ Max # single walks from cation state on this processor is            1
+ DONE getting proj single walks
+ Spin adapted wave functions for propagation and projection. doing CG algebra.
+ Reading           1  Born-Oppenheimer states.
+ Reading spfs.
+ Read complex spfs
+    ...rank 1 read from file
+ Getting cation single walks
+ Max # single walks from cation state on this processor is            1
+ DONE getting proj single walks
+ Guess at necessary memory is  4558.025 MB
+ g(tau) will be computed with all of psi in core
+ Projected 1e- function record length is        12936
  Computing the CrossSection for state            1 wfn           1
- Reading ket batch            1  of            4  for state            1
+ Reading ket batch            1  of            1  for state            1
  Reading bra batch            1  of            1  for state            1
- Reading ket batch            2  of            4  for state            1
- Reading bra batch            1  of            2  for state            1
- Reading bra batch            2  of            2  for state            1
- Reading ket batch            3  of            4  for state            1
- Reading bra batch            1  of            3  for state            1
- Reading bra batch            2  of            3  for state            1
- Reading bra batch            3  of            3  for state            1
- Reading ket batch            4  of            4  for state            1
- Reading bra batch            1  of            4  for state            1
- Reading bra batch            2  of            4  for state            1
- Reading bra batch            3  of            4  for state            1
- Reading bra batch            4  of            4  for state            1
+ Computing the CrossSection for state            2 wfn           1
+ Reading ket batch            1  of            1  for state            2
+ Reading bra batch            1  of            1  for state            2
+ Computing the CrossSection for state            3 wfn           1
+ Reading ket batch            1  of            1  for state            3
+ Reading bra batch            1  of            1  for state            3
  Taking the fourier transform of g(tau) to get cross section at T= 
    1000.00000000000     
  Cross Section acquired, cleaning and closing

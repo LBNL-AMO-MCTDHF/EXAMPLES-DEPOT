@@ -32,7 +32,7 @@ restrictms=1
 
 improvedrelaxflag=1
 improvednatflag=1
-improvedquadflag=3
+improvedquadflag=1
 quadstarttime=0
 aquadstarttime=0
 

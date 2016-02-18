@@ -19,9 +19,6 @@ $pulse
 
 $parinp
 
-invtol=1d-8
-lntol=1d-8
-
 numactions=2
 actions=15,21
 
@@ -32,13 +29,14 @@ fluxafile="Flux/flux.avec.bin.perp"
 spifile="Dat/xsec.spi.perp.dat"
 projspifile="Dat/xsec.proj.spi.perp"
 projfluxfile="Flux/projflux.wfn.bin.perp"
-numcatfiles=1
+numcatfiles=3
 catspffiles(1)="Bin/cation1.spfs.bin"
 catavectorfiles(1)="Bin/cation1.avector.bin"
 catspffiles(2)="Bin/cation2.spfs.bin"
 catavectorfiles(2)="Bin/cation2.avector.bin"
 catspffiles(3)="Bin/cation3.spfs.bin"
 catavectorfiles(3)="Bin/cation3.avector.bin"
+computeflux=0
 
 autotimestep=1d0
 dipolesumstart=0.05d0
@@ -84,7 +82,7 @@ $h2parinp
 NucCharge1=1d0
 NucCharge2=1d0
 
-LBIG=6,MBIG=2
+LBIG=6,MBIG=1
 
 xinumpoints=12
 xinumelements=7

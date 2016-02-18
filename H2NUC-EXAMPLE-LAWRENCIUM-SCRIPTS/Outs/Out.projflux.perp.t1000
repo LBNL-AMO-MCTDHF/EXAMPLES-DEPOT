@@ -1,7 +1,7 @@
-Thu Feb 18 09:23:40 PST 2016
-Thu Feb 18 09:23:40 PST 2016
-Thu Feb 18 09:23:40 PST 2016
-Thu Feb 18 09:23:40 PST 2016
+Thu Feb 18 09:23:08 PST 2016
+Thu Feb 18 09:23:08 PST 2016
+Thu Feb 18 09:23:08 PST 2016
+Thu Feb 18 09:23:08 PST 2016
  
   ****************************************************************************
   **********************  BEGIN LBNL-AMO-MCTDHF ******************************
@@ -19,13 +19,13 @@ Thu Feb 18 09:23:40 PST 2016
  
                 PROCESSOR            1  OF            4
  
- Inpfile is Input.Inp.Pulse  
+ Inpfile is Input.Inp.Pulse.perp  
  CAPflag is on, setting rthetaecs to zero
  
   *************************  COMMAND LINE OPTIONS  ***************************
  
  Reading 
- Input.Inp.Pulse                                                                
+ Input.Inp.Pulse.perp                                                           
                                                                                 
                                            
  Eground for autoft set to    -1.14746327312000       by command line option.
@@ -45,7 +45,7 @@ Thu Feb 18 09:23:40 PST 2016
     Pulsestart:        0.100000000000000     
     Pulsestrength:    (2.813164912387455E-003,0.000000000000000E+000)
     Intensity:         1.000000000000000E-005  x 10^16 W cm^-2
-    Pulsetheta:        0.000000000000000E+000
+    Pulsetheta:         1.57079632679490     
     Pulsephi:        0.000000000000000E+000
     Pulsefinish:        15.8079632679490     
  ---> Pulsetype 2.
@@ -54,9 +54,9 @@ Thu Feb 18 09:23:40 PST 2016
                  numpropsteps to         4001
     ... Writing pulse to file
         ... done Writing pulse to file
- Finaltime set by command line option to    200.000000000000     
-      numpropsteps now            801
-      finaltime    now      200.250000000000     
+ Finaltime set by command line option to    1000.00000000000     
+      numpropsteps now           4001
+      finaltime    now      1000.25000000000     
  
   ****************************************************************************
  *****************************************************************************
@@ -103,8 +103,6 @@ rnumelements, rnumpoints:    5   10
     Number of frozen spfs:        0
             Spfs start in m=     0   0   0
  
- Spfs will be restricted to their original m-values.
- Configurations will be restricted to total M=            0
  Configurations will be restricted to spin projection           0 /2
   Configurations will be restricted to spin            0
  
@@ -119,7 +117,7 @@ rnumelements, rnumpoints:    5   10
  
   PAR_TIMESTEP IS   0.250000000000000       LITTLESTEPS IS            5
  
-                 # of steps, final time:       801            200.25000000
+                 # of steps, final time:      4001           1000.25000000
  
  
  *******  USING POLYNOMIAL MEAN FIELDS/MAGNUS A-VECTOR PREDICTOR/CORRECTOR   ***
@@ -143,8 +141,8 @@ rnumelements, rnumpoints:    5   10
  
  ****************************************************************************
  
- Autosteps is            4  Autosize is          201  Numpropsteps is 
-         801
+ Autosteps is            4  Autosize is         1001  Numpropsteps is 
+        4001
  
  *****************************************************************************
  
@@ -152,7 +150,7 @@ rnumelements, rnumpoints:    5   10
       SKIPPING CALCULATION!  Doing analysis.
     ****************************************
  
- ACTIONS:  Ion.  Flux  FT 
+ ACTIONS:  Proj Ion Flux  
  
  FOR IONIZATION FLUX:
     Flux Interval            2  0.500000000000000     
@@ -258,15 +256,46 @@ rnumelements, rnumpoints:    5   10
  Done init project.
  
     ....Called init_project.
- Guess at necessary memory is    31.485 MB
+ 
+    *** DOING PROJECTED FLUX. ***    
+ 
+ Spin adapted wave functions for propagation and projection. doing CG algebra.
+ Reading           1  Born-Oppenheimer states.
+ Reading spfs.
+ Read complex spfs
+    ...rank 1 read from file
+ Getting cation single walks
+ Max # single walks from cation state on this processor is            1
+ DONE getting proj single walks
+ Spin adapted wave functions for propagation and projection. doing CG algebra.
+ Reading           1  Born-Oppenheimer states.
+ Reading spfs.
+ Read complex spfs
+    ...rank 1 read from file
+ Getting cation single walks
+ Max # single walks from cation state on this processor is            1
+ DONE getting proj single walks
+ Spin adapted wave functions for propagation and projection. doing CG algebra.
+ Reading           1  Born-Oppenheimer states.
+ Reading spfs.
+ Read complex spfs
+    ...rank 1 read from file
+ Getting cation single walks
+ Max # single walks from cation state on this processor is            1
+ DONE getting proj single walks
+ Guess at necessary memory is  4558.025 MB
  g(tau) will be computed with all of psi in core
- MO record length is        19404
- AVEC record length is         1584
- Reading ket batch            1  of            1
- Reading bra batch            1  of            1
-  Taking the FT of g(tau) to get xsection at T=    200.000000000000     
-    ....Go ft....
-    ....Go ft pulse....
-    ....Done with ft....
-   finished electronflux, stopping.
+ Projected 1e- function record length is        12936
+ Computing the CrossSection for state            1 wfn           1
+ Reading ket batch            1  of            1  for state            1
+ Reading bra batch            1  of            1  for state            1
+ Computing the CrossSection for state            2 wfn           1
+ Reading ket batch            1  of            1  for state            2
+ Reading bra batch            1  of            1  for state            2
+ Computing the CrossSection for state            3 wfn           1
+ Reading ket batch            1  of            1  for state            3
+ Reading bra batch            1  of            1  for state            3
+ Taking the fourier transform of g(tau) to get cross section at T= 
+   1000.00000000000     
+ Cross Section acquired, cleaning and closing
  MCTDHF STOP!
