@@ -1,13 +1,4 @@
-Sat Feb 13 08:24:59 PST 2016
-Sat Feb 13 08:24:59 PST 2016
-Sat Feb 13 08:24:59 PST 2016
-Sat Feb 13 08:24:59 PST 2016
-Sat Feb 13 08:24:59 PST 2016
-Sat Feb 13 08:24:59 PST 2016
-Sat Feb 13 08:24:59 PST 2016
-Sat Feb 13 08:24:59 PST 2016
-Sat Feb 13 08:24:59 PST 2016
-Sat Feb 13 08:24:59 PST 2016
+Thu Feb 18 10:42:42 PST 2016
  
   ****************************************************************************
   **********************  BEGIN LBNL-AMO-MCTDHF ******************************
@@ -18,12 +9,12 @@ Sat Feb 13 08:24:59 PST 2016
     AMO Theory Group, Lawrence Berkeley Laboratory
       D J Haxton, C W McCurdy, T N Rescigno, K V Lawler, J Jones, 
       B Abeln, X Li . . .
-                              VERSION 1.10 
+                              VERSION 1.21 
         Copyright 2015 the regents of the University of California
  
                 This is CHMCTDH: HERM-normed ECS version.
  
-                PROCESSOR            1  OF           10
+                PROCESSOR            1  OF            1
  
  Inpfile is Input.Inp.Fourier.perp.vel  
  
@@ -157,6 +148,7 @@ rnumelements, rnumpoints:    1    3
  
  FOR IONIZATION FLUX:
     Flux Interval            2  0.500000000000000     
+  Get ORbsets.  Fewer procs than orbitals.
  
  ************************************
  ********  MAIN WALKS  **************
@@ -189,20 +181,13 @@ rnumelements, rnumpoints:    1    3
     getting configurations.
  
  BOTWALKS /TOPWALKS        1200
-           1         119         119
-         120         239         120
-         240         356         117
-         357         477         121
-         478         598         121
-         599         716         118
-         717         839         123
-         840         957         118
-         958        1076         119
-        1077        1200         124
+           1        1200        1200
  
       ...Done fast_newconfiglist
  Counting walks. Singles
+        1000  out of         1200
  Counting walks. Doubles
+        1000  out of         1200
  
  Maximum number of
             single walks=           46
@@ -213,7 +198,9 @@ rnumelements, rnumpoints:    1    3
  Allocating doublewalks
       ..done walkalloc.
  Calculating walks.  Singles...
+        1000  out of         1200
  Calculating walks.  Doubles...
+        1000  out of         1200
  Sorting walks...
      .... done sorting walks.
  Counting single hops...
@@ -221,8 +208,8 @@ rnumelements, rnumpoints:    1    3
  Getting single hops...
  Getting double hops...
  GOT HOPS:  
-  Single hops this processor         3689  of         5474
-  Double hops this processor        33677  of       135660
+  Single hops this processor        37200  of        55200
+  Double hops this processor       339600  of      1368000
   Single hops total        37200  of        55200
   Double hops total       339600  of      1368000
      Max single hops           31
@@ -237,17 +224,17 @@ rnumelements, rnumpoints:    1    3
  Calculating spin walks.
       ... done calculating spin walks.
     ... go spinsets ...
- Numspinsets this processor is           74   maxspinset size is            4
- Getting Spinset Projectors.  Numspinsets this process is           74
+ Numspinsets this processor is          570   maxspinset size is            4
+ Getting Spinset Projectors.  Numspinsets this process is          570
                                         maxspinsetsize is            4
  ...done.  Eliminated            0  sets with total rank            0
  
  This processor: 
-       spin sets                  74
-       spin rank                     104  of          119
-       botspin,topspin:                1         104
-       df spin rank                  104  of          119
-       botdfspin,topdfspin:            1         104
+       spin sets                 570
+       spin rank                     990  of         1200
+       botspin,topspin:                1         990
+       df spin rank                  990  of         1200
+       botdfspin,topdfspin:            1         990
  All processors:
        spin rank, S^2 =    2.00000000000000       is          990  out of 
         1200
@@ -292,5 +279,5 @@ rnumelements, rnumpoints:    1    3
     ....Go ft....
     ....Go ft pulse....
     ....Done with ft....
- Stopping after actions_initial
+   finished electronflux, stopping.
  MCTDHF STOP!
