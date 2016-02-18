@@ -1,0 +1,106 @@
+$pulse
+
+ pulsetype=2
+
+ omega2=0.6d0
+ omega=0.2d0
+ phaseshift=1.570796326794897d0
+
+ pulsetheta=1.570796326794897d0
+
+ intensity=1d-5
+
+ velflag=0
+
+ minpulsetime=1000d0
+
+/
+
+
+$parinp
+
+invtol=1d-8
+lntol=1d-8
+
+numactions=2
+actions=15,21
+
+fluxskipmult=2
+fluxinterval=2
+fluxmofile="Flux/flux.mo.bin.perp"
+fluxafile="Flux/flux.avec.bin.perp"
+spifile="Dat/xsec.spi.perp.dat"
+projspifile="Dat/xsec.proj.spi.perp"
+projfluxfile="Flux/projflux.wfn.bin.perp"
+numcatfiles=1
+catspffiles(1)="Bin/cation1.spfs.bin"
+catavectorfiles(1)="Bin/cation1.avector.bin"
+catspffiles(2)="Bin/cation2.spfs.bin"
+catavectorfiles(2)="Bin/cation2.avector.bin"
+catspffiles(3)="Bin/cation3.spfs.bin"
+catavectorfiles(3)="Bin/cation3.avector.bin"
+
+autotimestep=1d0
+dipolesumstart=0.05d0
+dipmodtime=100
+diptime=100
+xdipfile="Dat/XDipoleexpect.Dat.perp"
+xdftfile="Dat/XDipoleft.Dat.perp"
+ydipfile="Dat/YDipoleexpect.Dat.perp"
+ydftfile="Dat/YDipoleft.Dat.perp"
+zdipfile="Dat/ZDipoleexpect.Dat.perp"
+zdftfile="Dat/ZDipoleft.Dat.perp"
+
+loadavectorflag=1
+avectorfile="Bin/avector.bin.relax"
+loadspfflag=1
+spffile="Bin/spfs.bin.relax"
+
+saveflag=0
+
+sparseconfigflag=1
+par_consplit=1
+
+numelec=2
+
+nspf=3
+
+spfrestrictflag=0
+
+restrictflag=1
+restrictms=0
+
+mrestrictflag=0
+
+tdflag=1
+
+par_timestep=0.25d0
+littlesteps=5
+
+/
+
+$h2parinp
+
+NucCharge1=1d0
+NucCharge2=1d0
+
+LBIG=6,MBIG=2
+
+xinumpoints=12
+xinumelements=7
+xicelement=6
+xiecstheta=0.4d0
+xielementsizes=7d0,7d0,7d0,7d0,7d0,  7d0,14d0
+
+bornopflag=0
+rstart=0.5d0
+rnumelements=5
+rnumpoints=10
+relementsize=1d0
+capflag=1
+rcelement=4
+capstrength=0.01d0
+cappower=2
+
+/
+
