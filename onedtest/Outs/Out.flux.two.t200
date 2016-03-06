@@ -1,0 +1,294 @@
+ 
+  ****************************************************************************
+  **********************  BEGIN LBNL-AMO-MCTDHF ******************************
+  ****************************************************************************
+ 
+    Atomic/Diatomic/Cartesian Polyatomic nonadiabatic MCTDHF code
+      for ultrafast electronic and nuclear dynamics in intense laser fields
+    AMO Theory Group, Lawrence Berkeley Laboratory
+      D J Haxton, C W McCurdy, T N Rescigno, K V Lawler, J Jones, 
+      B Abeln, X Li . . .
+                              VERSION 1.23 
+        Copyright 2016 the regents of the University of California
+ 
+                This is CHMCTDH: HERM-normed ECS version.
+ 
+                PROCESSOR            1  OF            9
+ 
+ Inpfile is Input.Inp.Twopulse  
+ 
+  *************************  COMMAND LINE OPTIONS  ***************************
+ 
+ Reading 
+ Input.Inp.Twopulse                                                             
+                                                                                
+                                           
+ Eground for autoft set to    -7.64665179325600       by command line option.
+  ****************************************************************************
+ 
+ Enforcing CMF defaults for Verlet or EXPO.
+ PULSE IS ON:   length.
+ 
+ NUMBER OF PULSES:             2
+ 
+     -----> Pulse            1  : 
+ Pulse type is 2 or 3: envelope with carrier
+    chirp:             0.000000000000000E+000
+    ramp:             0.000000000000000E+000  Hartree
+    Envelope omega:    0.500000000000000     
+    Pulse omega:        1.50000000000000     
+    Pulsestart:        0.500000000000000     
+    Pulsestrength:    (1.125265964954982E-002,0.000000000000000E+000)
+    Intensity:         1.000000000000000E-003  x 10^16 W cm^-2
+    Pulsetheta:        0.000000000000000E+000
+    Pulsephi:        0.000000000000000E+000
+    Pulsefinish:        6.78318530717959     
+ ---> Pulsetype 2.
+     -----> Pulse            2  : 
+ Pulse type is 1: single sine squared envelope
+ Omega, pulsestart, pulsefinish, pulsestrength:
+    0.031415926500    0.000000000000  100.000000114267    0.200000000000    0.000000000000
+  Enforcing minpulsetime =           500.000000000000     
+     ---> Resetting finaltime to    500.050000000000     
+                 numpropsteps to        10001
+    ... Writing pulse to file
+        ... done Writing pulse to file
+ Finaltime set by command line option to    200.000000000000     
+      numpropsteps now           4001
+      finaltime    now      200.050000000000     
+ 
+  ****************************************************************************
+ *****************************************************************************
+ 
+ Number of states in propagation=           1
+ 
+  Parameters: electronic
+ 
+                    Number of electrons     6
+ Nuclear KE flag (nonuc_checkflag):         1
+ 
+ ********  SINC DVR PARAMS ******** 
+ spacing  0.250000000000000     
+ numpoints          75
+ numcenters           5
+ nuccharge   2.00000000000000     
+ centershift  -81.0000000000000     
+ nuccharge   2.00000000000000     
+ centershift  -50.0000000000000     
+ nuccharge   2.00000000000000     
+ centershift  0.000000000000000E+000
+ nuccharge   2.00000000000000     
+ centershift   50.0000000000000     
+ nuccharge   2.00000000000000     
+ centershift   81.0000000000000     
+ orblanorder,orblanthresh         675  1.000000000000000E-008
+ nonucrepflag           0
+ orbparflag T
+ zke_paropt           0
+    --> fft_ct_paropt           0
+ fft_batchdim           1
+ fft_circbatchdim           1
+   -----  
+ NBOX            9
+ totpoints          75
+ **********************************
+ 
+ ************************   Parameters: config/spf    ************************  
+  
+ 
+ Doing full CI: numshells=1.  Shells:
+ Shell            1
+   1a    1b    2a    2b    3a    3b    4a    4b    5a    5b    6a    6b 
+   7a    7b    8a    8b    9a    9b 
+  Final shell occupancy level vexcite=         999
+ 
+    Number of unfrozen spfs:      9
+    Number of frozen spfs:        0
+            Spfs start in m=     0   0   0   0   0   0   0   0   0
+ 
+ Configurations will be restricted to spin projection           0 /2
+  Configurations will be restricted to spin            0
+ 
+ ***********************    Initial state      ***********************   
+ 
+ Spfs will be loaded from files 
+ 
+ Avector will be loaded from files.  Number of files=            1
+ 
+ ***********************    Parameters: propagation    ***********************  
+  
+ 
+  PAR_TIMESTEP IS   5.000000000000000E-002  LITTLESTEPS IS            1
+ 
+                 # of steps, final time:      4001            200.05000000
+ 
+ 
+ *******  USING POLYNOMIAL MEAN FIELDS/MAGNUS A-VECTOR PREDICTOR/CORRECTOR   ***
+ ****  
+ 
+     Will use sparse configuration routines.
+           Lanczosorder is          200
+           Lanthresh is      1.000000000000000E-009
+           Aorder is                 30
+           Maxaorder is             100
+           Aerror is         1.000000000000000E-009
+  Jacobian options:
+     Jacprojorth=           0
+     Jacsymflag=           0
+  Using EXPONENTIAL integration.
+     Expotol    =  1.000000000000000E-008
+     Maxexpodim=         100
+ 
+ Density matrix regularized with denreg= 0.100E-09
+ 
+ 
+ ****************************************************************************
+ 
+ Autosteps is           10  Autosize is          401  Numpropsteps is 
+        4001
+ 
+ *****************************************************************************
+ 
+    ****************************************
+      SKIPPING CALCULATION!  Doing analysis.
+    ****************************************
+ 
+ ACTIONS:  Ion.  Flux  FT 
+ 
+ FOR IONIZATION FLUX:
+    Flux Interval           10  0.500000000000000     
+ 
+ ************************************
+ ********  MAIN WALKS  **************
+ ************************************
+ 
+ Go fast_newconfiglist
+ UPPER/LOWER
+           1           7
+           1           7
+           2           8
+           2           8
+           3           9
+           3           9
+ 
+ 
+ FASTNEWCONFIG: NUMBER OF CONFIGURATIONS         7056
+ 
+ NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG        1554          20
+ Go fast_newconfiglist.  Allocating...
+    Allocated.  getting configurations.
+ 
+ BOTWALKS /TOPWALKS        7056
+           1         783         783
+         784        1556         773
+        1557        2348         792
+        2349        3134         786
+        3135        3918         784
+        3919        4701         783
+        4702        5483         782
+        5484        6270         787
+        6271        7056         786
+ 
+      ...Done fast_newconfiglist
+ Counting walks. Singles
+ Counting walks. Doubles
+ 
+ Maximum number of
+            single walks=           42
+            double walks=          777
+   TOTAL walks:     5778864 maxdoublewalks*numconfig     5482512
+ 
+ Allocating singlewalks
+ Allocating doublewalks
+      ..done walkalloc.
+ Calculating walks.  Singles...
+ Calculating walks.  Doubles...
+ Sorting walks...
+     .... done sorting walks.
+ Counting single hops...
+ Counting double hops...
+ Getting single hops...
+ Getting double hops...
+ GOT HOPS:  
+  Single hops this processor        28971  of        32886
+  Double hops this processor       353133  of       608391
+  Single hops total       261072  of       296352
+  Double hops total      3182256  of      5482512
+     Max single hops           37
+     Max double hops          451
+ 
+ Allocating more arrays for Slater determinants...
+      .. OK allocating.
+ Go spinwalk init. 
+ Go get numspinwalks.
+ Doing spin projector.
+ Maximum number of spin walks=            9
+ Avg number of spin walks=    4.50000000000000     
+ Done spinwalk init.
+ Calculating spin walks.
+      ... done calculating spin walks.
+    ... go spinsets ...
+ Numspinsets this processor is          265   maxspinset size is           20
+ Getting Spinset Projectors.  Numspinsets this process is          265
+                                        maxspinsetsize is           20
+ ...done.  Eliminated            0  sets with total rank            0
+ 
+ This processor: 
+       spin sets                 265
+       spin rank                     335  of          783
+       botspin,topspin:                1         335
+       df spin rank                  335  of          783
+       botdfspin,topdfspin:            1         335
+ All processors:
+       spin rank, S^2 =   0.000000000000000E+000  is         2520  out of 
+        7056
+       df spin rank                 2520  of         7056
+ 
+ 
+ ************************************
+ ********** DONE WALKS. *************
+ ************************************
+ 
+      DWWPTR Slater determinants by processor
+          1      1                 783
+          2      2                 773
+          3      3                 792
+          4      4                 786
+          5      5                 784
+          6      6                 783
+          7      7                 782
+          8      8                 787
+          9      9                 786
+ 
+ Reading spfs.
+ Read complex spfs
+    ...rank 1 read from file
+ Loaded            9  spfs from file 
+ Bin/spfs.bin.relax                                                             
+                                                                                
+                                           
+ Calling init_project                  1200
+ 
+ Go CT_INIT
+    CT_MAXPRIME IS            3
+     CT_PRIMEFACTORS ARE
+              3           3
+ Calling ct_construct...
+    ....Called ct_construct.
+ Getting scaling...
+     ....Ok got scaling.
+    ....Called init_project.
+ Guess at necessary memory is     9.378 MB
+ g(tau) will be computed with all psi being read in batches
+ Desired amount of memory to use   500.000 MB
+ Good, there is enough memory for only one batch.
+ MO record length is        24300
+ AVEC record length is        28224
+ Reading ket batch            1  of            1
+ Reading bra batch            1  of            1
+  Taking the FT of g(tau) to get xsection at T=    200.000000000000     
+    ....Go ft....
+    ....Go ft pulse....
+    ....Done with ft....
+   finished electronflux, stopping.
+ MCTDHF STOP!

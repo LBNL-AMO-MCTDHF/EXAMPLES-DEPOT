@@ -1,0 +1,40 @@
+#!/bin/bash
+
+echo '
+
+set xlabel "Energy (eV)"
+set ylabel "absorption cross section (Mb)"
+
+set title "Absorption"
+
+set term unknown
+set style data lines
+
+set key top left
+
+set yrange [-5:70]
+
+set yrange [*:*]
+
+set xrange [0:100]
+
+plot "Dat/ZDipoleft.Dat" using (27.2114*$1):($9) lt 7 lw 10 title "control"
+replot "Dat/ZDipoleft.Dat.two" using (27.2114*$1):($9) lt -1 lw 3 title "experiment"
+
+set y2range[0:6.5]
+set y2tics 1
+set ytics nomirror
+set y2label "integrated oscillator strength"
+replot "Dat/ZDipoleft.Dat" using (27.2114*$1):($10) axes x1y2 with points pt 7 ps 2 lt 4 lw 2 title "sum rule control"
+replot "Dat/ZDipoleft.Dat.two" using (27.2114*$1):($10) axes x1y2 with points pt 7 lt -1 lw 2 title "sum rule"
+
+set term x11
+replot
+
+set out "Absorption_1d_two_len.eps"
+set term post enhanced eps solid color 28
+replot
+
+' | gnuplot -persist
+
+

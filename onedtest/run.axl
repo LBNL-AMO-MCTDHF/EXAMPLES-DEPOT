@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+#SBATCH --job-name=B64-6-05
+#
+#SBATCH --qos=condo_axl  --account=lr_axl --partition=lr3 --constraint=lr3_c20
+#
+#SBATCH --nodes=15
+#
+#SBATCH -t 110:00:00
+#
+#SBATCH 
+#
+#
+
+./Pulse.Bat > /dev/null
+

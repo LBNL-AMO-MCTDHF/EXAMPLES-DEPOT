@@ -1,0 +1,123 @@
+$pulse
+
+ numpulses=2
+
+ pulsetype(1)=2
+ phaseshift(1)=1.570796326794897d0
+ pulsestart(1)=0.5d0
+ omega2(1)=1.5d0
+ omega(1)=0.5d0
+ intensity(1)=1d-3
+
+ pulsetype(2)=1
+ phaseshift(2)=0d0
+ pulsestart(2)=0d0
+ omega(2)=0.0314159265d0
+ pulsestrength(2)=0.2d0
+
+ velflag=1
+
+ minpulsetime=500d0
+
+/
+
+
+
+$parinp
+
+numactions=3
+actions=15,20,21
+
+fluxinterval=10
+fluxskipmult=2
+fluxmofile="Flux/flux.mo.bin.two.vel"
+fluxafile="Flux/flux.avec.bin.two.vel"
+spifile="Dat/xsec.spi.two.vel.dat"
+projfluxfile="Flux/projflux.wfn.bin.two.vel"
+projspifile="Dat/xsec.proj.spi.two.vel"
+numcatfiles=1
+catspffiles(1)="Bin/spfs.bin.cation"
+catavectorfiles(1)="Bin/avector.bin.cation"
+
+autotimestep=0.5d0
+
+numovlfiles=2
+ovlspffiles(1)="Bin/spfs.bin.relax"
+ovlavectorfiles(1)="Bin/avector.bin.relax"
+ovlspffiles(2)="Bin/spfs.bin.excited"
+ovlavectorfiles(2)="Bin/avector.bin.excited"
+outovl="Dat/Overlaps.two.vel.dat"
+
+dipolesumstart=0.001d0
+dipmodtime=20
+diptime=100
+xdipfile="Dat/XDipoleexpect.Dat.two.vel"
+xdftfile="Dat/XDipoleft.Dat.two.vel"
+ydipfile="Dat/YDipoleexpect.Dat.two.vel"
+ydftfile="Dat/YDipoleft.Dat.two.vel"
+zdipfile="Dat/ZDipoleexpect.Dat.two.vel"
+zdftfile="Dat/ZDipoleft.Dat.two.vel"
+
+loadavectorflag=1
+avectorfile="Bin/avector.bin.relax"
+loadspfflag=1
+spffile="Bin/spfs.bin.relax"
+
+saveflag=0
+
+sparseconfigflag=1
+par_consplit=1
+
+numelec=6
+restrictms=0
+
+tdflag=1
+
+par_timestep=0.05d0
+littlesteps=1
+
+nspf=9
+
+parorbsplit=3
+
+/
+
+
+&sinc1dparinp
+
+twostrength = 4.750d0
+harmstrength=0.000d0
+
+twotype=1
+
+toepflag=1
+
+fft_batchdim=1
+fft_circbatchdim=1
+fft_ct_paropt=0
+zke_paropt=0
+orbparflag=.true.
+
+numcenters=5
+nuccharges(1:5) = 2d0,2d0,2d0,2d0,2d0
+softness(1:5)= 2d0,1d0,1d0,1d0,2d0
+centershift(1:5)=  -162,-100,0,100,162
+
+numpoints=675
+spacing=0.31831d0
+spacing=0.25d0
+
+scalingflag=1
+smoothness=20d0
+scalingdistance=60d0
+scalingstretch=1d0
+scalingtheta=0.3d0
+
+capflag=0
+capstart=60d0
+capstrength=0.001d0
+maxcap=1d0
+
+/
+
+
