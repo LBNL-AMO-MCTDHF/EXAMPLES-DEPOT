@@ -25,8 +25,8 @@ replot "Dat/ZDipoleft.Dat000500" using (27.2114*$1):($9) lt -1 lw 1 title "T=500
 set term x11
 replot
 
-set out "Absorption_1d_conv.eps"
-set term post enhanced eps solid color 28
+set out "Absorption_1d_conv.ps"
+set term post enhanced solid color 22
 replot
 
 ' | gnuplot -persist

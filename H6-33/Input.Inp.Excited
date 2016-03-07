@@ -42,7 +42,7 @@ parorbsplit=3
 fft_batchdim=1
 fft_circbatchdim=1
 fft_mpi_inplaceflag=1
-fft_ct_paropt=1
+
 zke_paropt=1
 orbparlevel=2
 orbparflag=.true.

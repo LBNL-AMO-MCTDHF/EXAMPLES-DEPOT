@@ -18,7 +18,7 @@ set yrange [*:*]
 
 set xrange [0:100]
 
-plot "Dat/ZDipoleft.Dat.two" using (27.2114*$1):($9) lt 7 lw 10 title "length"
+plot "Dat/ZDipoleft.Dat.two" using (27.2114*$1):($9) lt 4 lw 10 title "length"
 replot "Dat/ZDipoleft.Dat.two.vel" using (27.2114*$1):($9) lt -1 lw 3 title "velocity"
 
 set y2range[0:6.5]
@@ -31,8 +31,8 @@ replot "Dat/ZDipoleft.Dat.two.vel" using (27.2114*$1):($10) axes x1y2 with point
 set term x11
 replot
 
-set out "Absorption_1d_two.eps"
-set term post enhanced eps solid color 28
+set out "Absorption_1d_two.ps"
+set term post enhanced solid color 22
 replot
 
 ' | gnuplot -persist
