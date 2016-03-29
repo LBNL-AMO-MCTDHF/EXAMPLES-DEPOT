@@ -1,0 +1,51 @@
+
+## look in finalstats.dat.cation to see which is which
+
+set term unknown
+set xlabel "Photon Energy (ev)"
+set ylabel "Theta (degrees)"
+
+pi=atan(1)*4
+
+set xrange [10:30]
+set yrange [0:180]
+
+set contour
+set cntrparam levels incremental 0,0.5,30
+
+set style data lines
+
+set title "Differential photoionization H2 1 sig_g Mb per steradian"
+
+set ticslevel 0
+set ztics 1
+set xtics 5
+set ytics 30
+
+A=27.2114
+
+# costhetas(x) = x
+
+# seven point legendre quadrature in cos(theta)
+
+ costhetas(x) = \
+  (x==1)*(-0.9491079123427585) + \
+  (x==2)*(-0.7415311855993945) + \
+  (x==3)*(-0.4058451513773972) + \
+  (x==4)*(0) + \
+  (x==5)*(0.4058451513773972) + \
+  (x==6)*(0.7415311855993945) + \
+  (x==7)*(0.9491079123427585)
+
+splot  "Dat/xsec.angproj.spi_001_001.dat" using (A*$1):(180/pi*acos(costhetas($2))):($4) lt 7 lw 2 notitle
+
+# title "1 sig_g"
+
+set term post enhanced 20 color solid
+set out "angproj.xsec.h2.ps"
+replot
+
+set term x11
+set out
+replot
+

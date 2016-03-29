@@ -23,6 +23,7 @@ $parinp
 numactions=2
 actions=15,21
 
+angularflag=1
 fluxskipmult=2
 fluxinterval=2
 fluxmofile="Flux/flux.mo.bin.perp"
