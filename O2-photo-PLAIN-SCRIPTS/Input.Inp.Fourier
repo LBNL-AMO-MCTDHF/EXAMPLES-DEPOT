@@ -40,6 +40,7 @@ spifile="Dat/xsec.spi.dat"
 projspifile="Dat/xsec.proj.spi"
 projfluxfile="Flux/projflux.wfn.bin"
 numcatfiles=8
+catfacs(1:8)=2d0,2d0,1d0,1d0,2d0,2d0,1d0,1d0
 catavectorfiles(1)="Bin/avector.bin.cation.doub.pi_g"
 catspffiles(1)="Bin/spfs.bin.cation.doub.pi_g"
 catavectorfiles(2)="Bin/avector.bin.cation.doub.pi_u"
@@ -56,6 +57,8 @@ catavectorfiles(7)="Bin/avector.bin.cation.quart.sig_g"
 catspffiles(7)="Bin/spfs.bin.cation.quart.sig_g"
 catavectorfiles(8)="Bin/avector.bin.cation.quart.sig_u"
 catspffiles(8)="Bin/spfs.bin.cation.quart.sig_u"
+fluxtsumfile="Dat/fluxtsum.dat"
+projfluxtsumfile="Dat/projfluxtsum"
 
 dipolesumstart=0.05d0
 autotimestep=0.5d0

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+mkdir Outs
+
+mpirun -n 10 --bind-to-core --cpus-per-proc 2 chmctdhf_diatom.debug Inp=Input.Inp.Relax |tee Outs/Out.relax.debug

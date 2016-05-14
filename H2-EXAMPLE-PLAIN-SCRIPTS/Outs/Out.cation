@@ -1,4 +1,3 @@
-Thu Feb 18 07:12:52 PST 2016
  
   ****************************************************************************
   **********************  BEGIN LBNL-AMO-MCTDHF ******************************
@@ -9,14 +8,14 @@ Thu Feb 18 07:12:52 PST 2016
     AMO Theory Group, Lawrence Berkeley Laboratory
       D J Haxton, C W McCurdy, T N Rescigno, K V Lawler, J Jones, 
       B Abeln, X Li . . .
-                              VERSION 1.21 
-        Copyright 2015 the regents of the University of California
+                              VERSION 1.28 
+        Copyright 2016 the regents of the University of California
  
                 This is CHMCTDH: HERM-normed ECS version.
  
                 PROCESSOR            1  OF            1
  
- Inpfile is Input.Inp.Cation  
+ Inpfile is Input.Inp.Cation 
  
   *************************  COMMAND LINE OPTIONS  ***************************
  
@@ -65,7 +64,6 @@ rnumelements, rnumpoints:    1    3
  Shell            1
    1a    1b    2a    2b    3a    3b    4a    4b    5a    5b    6a    6b 
    7a    7b 
-  Final shell occupancy level vexcite=         999
  
     Number of unfrozen spfs:      7
     Number of frozen spfs:        0
@@ -90,6 +88,8 @@ rnumelements, rnumpoints:    1    3
   
  
   PAR_TIMESTEP IS    1.00000000000000       LITTLESTEPS IS            1
+   prepropflag is            1  postpropflag is            2
+   step_flag is            2
  
  Calculation will be stopped with threshold   1.000000000000000E-010 
  ; timestep is    1.00000000000000     
@@ -106,7 +106,7 @@ rnumelements, rnumpoints:    1    3
      Expotol    =  1.000000000000000E-009
      Maxexpodim=         300
  
- Density matrix regularized with denreg= 0.100E-08
+ Density matrix regularized with denreg= 0.100E-09
  
  
  ****************************************************************************
@@ -125,7 +125,9 @@ rnumelements, rnumpoints:    1    3
  ************************************
  
  Go fast_newconfiglist
- UPPER/LOWER
+ Excitations per shell
+        13        13        14
+ Orbital ranges for each electron ::
            1           7
  
  
@@ -133,7 +135,9 @@ rnumelements, rnumpoints:    1    3
  
  NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG           7           1
  Go fast_newconfiglist.  Allocating...
-    getting configurations.
+    Allocated.  getting configurations.
+ Excitations per shell
+        13        13        14
  
  BOTWALKS /TOPWALKS           7
            1           7           7
@@ -166,6 +170,9 @@ rnumelements, rnumpoints:    1    3
      Max single hops            5
      Max double hops            1
  
+ Allocating more arrays for Slater determinants...
+      .. OK allocating.
+ Deallocating walks arrays.
  Go spinwalk init. 
  Go get numspinwalks.
  Doing spin projector.
@@ -193,11 +200,13 @@ rnumelements, rnumpoints:    1    3
  
  
  ************************************
- ** done main walks. BIORTHO WALKS **
+ **        BIORTHO WALKS           **
  ************************************
  
  Go fast_newconfiglist
- UPPER/LOWER
+ Excitations per shell
+        13        13        14
+ Orbital ranges for each electron ::
            1           7
  
  
@@ -205,7 +214,9 @@ rnumelements, rnumpoints:    1    3
  
  NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG           7           1
  Go fast_newconfiglist.  Allocating...
-    getting configurations.
+    Allocated.  getting configurations.
+ Excitations per shell
+        13        13        14
  
  BOTWALKS /TOPWALKS           7
            1           7           7
@@ -238,6 +249,9 @@ rnumelements, rnumpoints:    1    3
      Max single hops            7
      Max double hops            1
  
+ Allocating more arrays for Slater determinants...
+      .. OK allocating.
+ Deallocating walks arrays.
  Go spinwalk init. 
  Go get numspinwalks.
  Doing spin projector.
@@ -268,6 +282,11 @@ rnumelements, rnumpoints:    1    3
  ********** DONE WALKS. *************
  ************************************
  
+      DWWPTR Spin-adapted configurations by processor
+          1      1                   7
+ 
+ allocating for h2 project.... 
+     ...allocated for h2 project. 
  Calling init_project                 21168
  Go init_project diatomic.   PSC...
  MAX prolate_derivs asym :     15.6562500000000     
@@ -319,9 +338,7 @@ rnumelements, rnumpoints:    1    3
  Assigning spf            4  to            1 st eigval of m=           1 
   ; has specified ugvalue=           -1
  
- Done init_h2.
- 
- Done init project.
+ Done init h2 project.
  
     ....Called init_project.
  Not enough avectors loaded! will diagonalize.
@@ -329,12 +346,12 @@ rnumelements, rnumpoints:    1    3
   Call eig            7
    -- Nonsparse eigenvals --
      (-0.569983523889014,-6.614011777764700E-024)
-     (0.102205737897068,7.554372893525459E-019)
+     (0.102205737897067,3.793552192834181E-018)
      (0.257959727573029,1.531677286320399E-019)
      (0.257959727573029,1.531678708037077E-019)
-     (0.319407732460825,3.614836206465876E-018)
-     (0.465638162589108,1.442879226931987E-012)
-     (0.485986986781234,2.523289361209718E-012)
+     (0.319407732460825,3.273471641690079E-017)
+     (0.465638162589108,1.442878125175903E-012)
+     (0.485986986781234,2.523296297778414E-012)
  REPLACING SPFS - DENMAT EIGS
          0.1428571456E+00
          0.1428571493E+00
@@ -347,27 +364,27 @@ rnumelements, rnumpoints:    1    3
  Construct big matrix:             7
   Call eig            7
    -- Nonsparse eigenvals --
-     (-0.569983523889016,-5.443374003093214E-017)
-     (0.102205737897067,1.499882308190904E-016)
-     (0.257959727573030,1.531920270625337E-019)
-     (0.257959727573030,1.531216908610725E-019)
-     (0.319407732460826,-2.086270881448257E-016)
-     (0.465638162589109,1.442979698700855E-012)
-     (0.485986986781235,2.523067040943407E-012)
+     (-0.569983523889019,3.062753666696103E-016)
+     (0.102205737897068,-9.330361433876604E-017)
+     (0.257959727573029,1.531985023357663E-019)
+     (0.257959727573030,1.531502285922056E-019)
+     (0.319407732460826,-2.553773404174710E-016)
+     (0.465638162589109,1.443077924295736E-012)
+     (0.485986986781234,2.523223237250812E-012)
  IN PROP: VECTOR NORM  (1.00000000000000,0.000000000000000E+000)
-          ENERGY  (-0.569983523889016,-1.146734092509688E-016)
+          ENERGY  (-0.569983523889018,3.037322811164815E-016)
  IN PROP: VECTOR NORM  (1.00000000000000,0.000000000000000E+000)
-          ENERGY  (0.102205737897067,1.805951465577159E-016)
+          ENERGY  (0.102205737897068,-1.017617531819431E-016)
  IN PROP: VECTOR NORM  (1.00000000000000,0.000000000000000E+000)
-          ENERGY  (0.257959727573030,1.531920141378366E-019)
+          ENERGY  (0.257959727573029,1.531985023357663E-019)
  IN PROP: VECTOR NORM  (1.00000000000000,0.000000000000000E+000)
-          ENERGY  (0.257959727573030,1.531216779363755E-019)
+          ENERGY  (0.257959727573030,1.531502027428115E-019)
  IN PROP: VECTOR NORM  (1.00000000000000,0.000000000000000E+000)
-          ENERGY  (0.319407732460826,-2.082867833701939E-016)
+          ENERGY  (0.319407732460826,-2.553157322960555E-016)
  IN PROP: VECTOR NORM  (1.00000000000000,0.000000000000000E+000)
-          ENERGY  (0.465638162589109,1.442967322067105E-012)
+          ENERGY  (0.465638162589109,1.443006467529509E-012)
  IN PROP: VECTOR NORM  (1.00000000000000,0.000000000000000E+000)
-          ENERGY  (0.485986986781234,2.523067022775751E-012)
+          ENERGY  (0.485986986781234,2.523223664193958E-012)
  REPLACING SPFS - DENMAT EIGS
          0.1428571456E+00
          0.1428571493E+00
@@ -377,14 +394,14 @@ rnumelements, rnumpoints:    1    3
          0.1428571402E+00
          0.1428571365E+00
  
-T=          1.00000  Energy:  -0.5699835239E+00  0.8955013088E-16    Norm:   0.1000000000E+01
-T=          1.00000  Energy:   0.1022057379E+00 -0.3076252448E-15    Norm:   0.1000000000E+01
-T=          1.00000  Energy:   0.2579597276E+00  0.1110174610E-19    Norm:   0.1000000000E+01
-T=          1.00000  Energy:   0.2579597276E+00  0.1109992372E-19    Norm:   0.1000000000E+01
-T=          1.00000  Energy:   0.3194077325E+00  0.5938844340E-15    Norm:   0.1000000000E+01
-T=          1.00000  Energy:   0.4656381626E+00  0.1442985628E-11    Norm:   0.1000000000E+01
-T=          1.00000  Energy:   0.4859869868E+00  0.2523318136E-11    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.28E-12  0.10E-09  AVECTOR   0.10E+04  0.10E-06
+T=          1.00000  Energy:  -0.5699835239E+00 -0.5833997769E-15    Norm:   0.1000000000E+01
+T=          1.00000  Energy:   0.1022057379E+00 -0.2163714155E-15    Norm:   0.1000000000E+01
+T=          1.00000  Energy:   0.2579597276E+00  0.1177576905E-19    Norm:   0.1000000000E+01
+T=          1.00000  Energy:   0.2579597276E+00  0.1170445057E-19    Norm:   0.1000000000E+01
+T=          1.00000  Energy:   0.3194077325E+00  0.3675850272E-15    Norm:   0.1000000000E+01
+T=          1.00000  Energy:   0.4656381626E+00  0.1443187267E-11    Norm:   0.1000000000E+01
+T=          1.00000  Energy:   0.4859869868E+00  0.2523455595E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.26E-12  0.10E-09  AVECTOR   0.10E+04  0.10E-06
              Orbitals Converged, Avector not necessarily converged 
  REPLACING SPFS - DENMAT EIGS
          0.1428571456E+00
@@ -395,35 +412,37 @@ T=          1.00000  Energy:   0.4859869868E+00  0.2523318136E-11    Norm:   0.1
          0.1428571402E+00
          0.1428571365E+00
  
-T=          2.00000  Energy:  -0.5699835239E+00 -0.1671137453E-15    Norm:   0.1000000000E+01
-T=          2.00000  Energy:   0.1022057379E+00  0.8387445030E-20    Norm:   0.1000000000E+01
-T=          2.00000  Energy:   0.2579597276E+00 -0.3972459929E-19    Norm:   0.1000000000E+01
-T=          2.00000  Energy:   0.2579597276E+00 -0.3973161740E-19    Norm:   0.1000000000E+01
-T=          2.00000  Energy:   0.3194077325E+00  0.1669719695E-16    Norm:   0.1000000000E+01
-T=          2.00000  Energy:   0.4656381626E+00  0.1443010424E-11    Norm:   0.1000000000E+01
-T=          2.00000  Energy:   0.4859869868E+00  0.2523461168E-11    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.10E-12  0.10E-09  AVECTOR   0.23E-15  0.10E-06
+T=          2.00000  Energy:  -0.5699835239E+00  0.4332778767E-15    Norm:   0.1000000000E+01
+T=          2.00000  Energy:   0.1022057379E+00  0.3271142801E-15    Norm:   0.1000000000E+01
+T=          2.00000  Energy:   0.2579597276E+00 -0.4301920797E-19    Norm:   0.1000000000E+01
+T=          2.00000  Energy:   0.2579597276E+00 -0.4303271427E-19    Norm:   0.1000000000E+01
+T=          2.00000  Energy:   0.3194077325E+00 -0.1253742343E-15    Norm:   0.1000000000E+01
+T=          2.00000  Energy:   0.4656381626E+00  0.1442962495E-11    Norm:   0.1000000000E+01
+T=          2.00000  Energy:   0.4859869868E+00  0.2523728700E-11    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.12E-12  0.10E-09  AVECTOR   0.39E-15  0.10E-06
  
     ***  CONVERGED *** 
  
-         -0.569983523889     -0.000000000000     -0.000000000000     -0.000000000000
+         -0.569983523889      0.000000000000      0.000000000000      0.000000000000
           0.102205737897      0.000000000000      0.000000000000      0.000000000000
           0.257959727573     -0.000000000000      0.000000000000     -0.000000000000
           0.257959727573     -0.000000000000     -0.000000000000     -0.000000000000
-          0.319407732461      0.000000000000      0.000000000000     -0.000000000000
-          0.465638162589      0.000000000001      0.000000000000      0.000000000000
-          0.485986986781      0.000000000003      0.000000000000      0.000000000000
+          0.319407732461     -0.000000000000     -0.000000000000     -0.000000000000
+          0.465638162589      0.000000000001      0.000000000000     -0.000000000000
+          0.485986986781      0.000000000003     -0.000000000000      0.000000000000
     ***   
  
     ...done prop...
    ...saving vector...
-   ... go save vectors...
-   ... gathered orbs, now gather avector...
-   ... ok, now write
+   ... go save vectors...gather orbitals...
+   ... gathered orbs, now write
+   ... gathered orbs, alloc avector...
+   ... now gather avector...
+   ... ok, now write avector
     ...saved vectors!
     ...end prop...
     ...getting state expectation values etcetera...
     ...GO finalstats.
-Thu Feb 18 07:12:54 PST 2016
+Fri May 13 13:00:09 PDT 2016
     ...END MCTDHF
  MCTDHF STOP!

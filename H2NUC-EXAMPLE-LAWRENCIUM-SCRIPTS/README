@@ -1,16 +1,21 @@
 
 ./Relax.Bat
 ./Cation1.Bat
+./Cation2.Bat
+./Cation3.Bat
 ./Pulse.Bat
-./Fourier.Bat
 
 ./gnu.abs.par
+
+./Flux.Bat 1000
 ./gnu.xsec.par
+./gnu.proj.xsec
 
     or
 
 ./Pulse.Perp.Bat
 ./gnu.abs.perp
+etc.
 
 You can execute the gnu scripts while the Pulse step is running, as long as 
 it has reached T=100 atomic units.  It goes until 2000 atomic units (40fs).

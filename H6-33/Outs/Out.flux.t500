@@ -1,12 +1,3 @@
-Sun Feb 14 05:06:32 PST 2016
-Sun Feb 14 05:06:32 PST 2016
-Sun Feb 14 05:06:32 PST 2016
-Sun Feb 14 05:06:32 PST 2016
-Sun Feb 14 05:06:32 PST 2016
-Sun Feb 14 05:06:32 PST 2016
-Sun Feb 14 05:06:32 PST 2016
-Sun Feb 14 05:06:32 PST 2016
-Sun Feb 14 05:06:32 PST 2016
  
   ****************************************************************************
   **********************  BEGIN LBNL-AMO-MCTDHF ******************************
@@ -17,14 +8,14 @@ Sun Feb 14 05:06:32 PST 2016
     AMO Theory Group, Lawrence Berkeley Laboratory
       D J Haxton, C W McCurdy, T N Rescigno, K V Lawler, J Jones, 
       B Abeln, X Li . . .
-                              VERSION 1.21 
-        Copyright 2015 the regents of the University of California
+                              VERSION 1.27 
+        Copyright 2016 the regents of the University of California
  
                 This is CHMCTDH: HERM-normed ECS version.
  
                 PROCESSOR            1  OF            9
  
- Inpfile is Input.Inp.Pulse  
+ Inpfile is Input.Inp.Pulse 
  
   *************************  COMMAND LINE OPTIONS  ***************************
  
@@ -115,7 +106,6 @@ Sun Feb 14 05:06:32 PST 2016
  Shell            1
    1a    1b    2a    2b    3a    3b    4a    4b    5a    5b    6a    6b 
    7a    7b    8a    8b    9a    9b   10a   10b 
-  Final shell occupancy level vexcite=         999
  
     Number of unfrozen spfs:     10
     Number of frozen spfs:        0
@@ -134,6 +124,8 @@ Sun Feb 14 05:06:32 PST 2016
   
  
   PAR_TIMESTEP IS   0.250000000000000       LITTLESTEPS IS            5
+   prepropflag is            1  postpropflag is            2
+   step_flag is            2
  
                  # of steps, final time:      2001            500.25000000
  
@@ -168,10 +160,11 @@ Sun Feb 14 05:06:32 PST 2016
       SKIPPING CALCULATION!  Doing analysis.
     ****************************************
  
- ACTIONS:  Ion.  Flux  FT 
+ ACTIONS:  IonFlux FT     
  
  FOR IONIZATION FLUX:
     Flux Interval            2  0.500000000000000     
+    Fluxskipmult             2
   Get ORbsets.  Fewer procs than orbitals.
  
  ************************************
@@ -179,7 +172,9 @@ Sun Feb 14 05:06:32 PST 2016
  ************************************
  
  Go fast_newconfiglist
- UPPER/LOWER
+ Excitations per shell
+        14        14        20
+ Orbital ranges for each electron ::
            1           8
            1           8
            2           9
@@ -192,7 +187,9 @@ Sun Feb 14 05:06:32 PST 2016
  
  NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG        2850          20
  Go fast_newconfiglist.  Allocating...
-    getting configurations.
+    Allocated.  getting configurations.
+ Excitations per shell
+        14        14        20
  
  BOTWALKS /TOPWALKS       14400
            1        1594        1594
@@ -237,6 +234,105 @@ Sun Feb 14 05:06:32 PST 2016
      Max single hops           43
      Max double hops          610
  
+ Allocating more arrays for Slater determinants...
+      .. OK allocating.
+ Deallocating walks arrays.
+ Go spinwalk init. 
+ Go get numspinwalks.
+ Doing spin projector.
+ Maximum number of spin walks=            9
+ Avg number of spin walks=    4.90000000000000     
+ Done spinwalk init.
+ Calculating spin walks.
+      ... done calculating spin walks.
+    ... go spinsets ...
+ Numspinsets this processor is          485   maxspinset size is           20
+ Getting Spinset Projectors.  Numspinsets this process is          485
+                                        maxspinsetsize is           20
+ ...done.  Eliminated            0  sets with total rank            0
+ 
+ This processor: 
+       spin sets                 485
+       spin rank                     650  of         1594
+       botspin,topspin:                1         650
+       df spin rank                  650  of         1594
+       botdfspin,topdfspin:            1         650
+ All processors:
+       spin rank, S^2 =   0.000000000000000E+000  is         4950  out of 
+       14400
+       df spin rank                 4950  of        14400
+ 
+ 
+ ************************************
+ ** done main walks. BIORTHO WALKS **
+ ************************************
+ 
+ Go fast_newconfiglist
+ Excitations per shell
+        14        14        20
+ Orbital ranges for each electron ::
+           1           8
+           1           8
+           2           9
+           2           9
+           3          10
+           3          10
+ 
+ 
+ FASTNEWCONFIG: NUMBER OF CONFIGURATIONS        14400
+ 
+ NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG        2850          20
+ Go fast_newconfiglist.  Allocating...
+    Allocated.  getting configurations.
+ Excitations per shell
+        14        14        20
+ 
+ BOTWALKS /TOPWALKS       14400
+           1        1594        1594
+        1595        3198        1604
+        3199        4792        1594
+        4793        6394        1602
+        6395        7994        1600
+        7995        9582        1588
+        9583       11194        1612
+       11195       12789        1595
+       12790       14400        1611
+ 
+      ...Done fast_newconfiglist
+ Counting walks. Singles
+        1000  out of         1594
+ Counting walks. Doubles
+        1000  out of         1594
+ 
+ Maximum number of
+            single walks=           48
+            double walks=            1
+   TOTAL walks:      691200 maxdoublewalks*numconfig       14400
+ 
+ Allocating singlewalks
+ Allocating doublewalks
+      ..done walkalloc.
+ Calculating walks.  Singles...
+        1000  out of         1594
+ Calculating walks.  Doubles...
+        1000  out of         1594
+ Sorting walks...
+     .... done sorting walks.
+ Counting single hops...
+ Counting double hops...
+ Getting single hops...
+ Getting double hops...
+ GOT HOPS:  
+  Single hops this processor        68542  of        76512
+  Double hops this processor            0  of            0
+  Single hops total       619200  of       691200
+  Double hops total            0  of            0
+     Max single hops           43
+     Max double hops            1
+ 
+ Allocating more arrays for Slater determinants...
+      .. OK allocating.
+ Deallocating walks arrays.
  Go spinwalk init. 
  Go get numspinwalks.
  Doing spin projector.
@@ -267,6 +363,17 @@ Sun Feb 14 05:06:32 PST 2016
  ********** DONE WALKS. *************
  ************************************
  
+      DWWPTR Spin-adapted configurations by processor
+          1      1                1594
+          2      2                1604
+          3      3                1594
+          4      4                1602
+          5      5                1600
+          6      6                1588
+          7      7                1612
+          8      8                1595
+          9      9                1611
+ 
  Reading spfs.
  Read complex spfs
     ...rank 1 read from file
@@ -283,10 +390,12 @@ Sun Feb 14 05:06:32 PST 2016
      ...filled.
      ... done get_3dpoisson.
     ....Called init_project.
+ Initial allocation electronflux
  Guess at necessary memory is   871.019 MB
  g(tau) will be computed with all psi being read in batches
  Desired amount of memory to use   500.000 MB
  Batchsize is          287 /         501
+ Allocating psi arrays for electronflux
  MO record length is      1437480
  AVEC record length is        57600
  Reading ket batch            1  of            2
@@ -298,5 +407,5 @@ Sun Feb 14 05:06:32 PST 2016
     ....Go ft....
     ....Go ft pulse....
     ....Done with ft....
- Stopping after actions_initial
+   finished electronflux, stopping.
  MCTDHF STOP!

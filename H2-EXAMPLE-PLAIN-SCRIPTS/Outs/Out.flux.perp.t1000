@@ -1,4 +1,3 @@
-Thu Feb 18 08:26:27 PST 2016
  
   ****************************************************************************
   **********************  BEGIN LBNL-AMO-MCTDHF ******************************
@@ -9,14 +8,14 @@ Thu Feb 18 08:26:27 PST 2016
     AMO Theory Group, Lawrence Berkeley Laboratory
       D J Haxton, C W McCurdy, T N Rescigno, K V Lawler, J Jones, 
       B Abeln, X Li . . .
-                              VERSION 1.21 
-        Copyright 2015 the regents of the University of California
+                              VERSION 1.28 
+        Copyright 2016 the regents of the University of California
  
                 This is CHMCTDH: HERM-normed ECS version.
  
-                PROCESSOR            1  OF            1
+                PROCESSOR            1  OF            7
  
- Inpfile is Input.Inp.Fourier.perp  
+ Inpfile is Input.Inp.Fourier.perp 
  
   *************************  COMMAND LINE OPTIONS  ***************************
  
@@ -38,12 +37,12 @@ Thu Feb 18 08:26:27 PST 2016
     ramp:             0.000000000000000E+000  Hartree
     Envelope omega:    0.350000000000000     
     Pulse omega:        1.05000000000000     
-    Pulsestart:        0.100000000000000     
+    Pulsestart:        0.000000000000000E+000
     Pulsestrength:    (1.607522807078545E-003,0.000000000000000E+000)
     Intensity:         1.000000000000000E-005  x 10^16 W cm^-2
     Pulsetheta:         1.57079632679490     
     Pulsephi:        0.000000000000000E+000
-    Pulsefinish:        9.07597901025655     
+    Pulsefinish:        8.97597901025655     
  ---> Pulsetype 2.
   Enforcing minpulsetime =           1000.00000000000     
      ---> Resetting finaltime to    1000.25000000000     
@@ -91,7 +90,6 @@ rnumelements, rnumpoints:    1    3
  Shell            1
    1a    1b    2a    2b    3a    3b    4a    4b    5a    5b    6a    6b 
    7a    7b 
-  Final shell occupancy level vexcite=         999
  
     Number of unfrozen spfs:      7
     Number of frozen spfs:        0
@@ -110,6 +108,8 @@ rnumelements, rnumpoints:    1    3
   
  
   PAR_TIMESTEP IS   0.250000000000000       LITTLESTEPS IS            5
+   prepropflag is            1  postpropflag is            2
+   step_flag is            2
  
                  # of steps, final time:      4001           1000.25000000
  
@@ -139,18 +139,20 @@ rnumelements, rnumpoints:    1    3
       SKIPPING CALCULATION!  Doing analysis.
     ****************************************
  
- ACTIONS:  Ion.  Flux  FT 
+ ACTIONS:  IonFlux FT     
  
  FOR IONIZATION FLUX:
     Flux Interval            2  0.500000000000000     
-  Get ORbsets.  Fewer procs than orbitals.
+    Fluxskipmult             2
  
  ************************************
  ********  MAIN WALKS  **************
  ************************************
  
  Go fast_newconfiglist
- UPPER/LOWER
+ Excitations per shell
+        12        12        14
+ Orbital ranges for each electron ::
            1           7
            1           7
  
@@ -159,10 +161,18 @@ rnumelements, rnumpoints:    1    3
  
  NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG          28           2
  Go fast_newconfiglist.  Allocating...
-    getting configurations.
+    Allocated.  getting configurations.
+ Excitations per shell
+        12        12        14
  
  BOTWALKS /TOPWALKS          49
-           1          49          49
+           1           5           5
+           6          13           8
+          14          20           7
+          21          27           7
+          28          34           7
+          35          41           7
+          42          49           8
  
       ...Done fast_newconfiglist
  Counting walks. Singles
@@ -192,6 +202,9 @@ rnumelements, rnumpoints:    1    3
      Max single hops           13
      Max double hops           49
  
+ Allocating more arrays for Slater determinants...
+      .. OK allocating.
+ Deallocating walks arrays.
  Go spinwalk init. 
  Go get numspinwalks.
  Doing spin projector.
@@ -201,17 +214,103 @@ rnumelements, rnumpoints:    1    3
  Calculating spin walks.
       ... done calculating spin walks.
     ... go spinsets ...
- Numspinsets this processor is           28   maxspinset size is            2
- Getting Spinset Projectors.  Numspinsets this process is           28
+ Numspinsets this processor is            3   maxspinset size is            2
+ Getting Spinset Projectors.  Numspinsets this process is            3
                                         maxspinsetsize is            2
  ...done.  Eliminated            0  sets with total rank            0
  
  This processor: 
-       spin sets                  28
-       spin rank                      28  of           49
-       botspin,topspin:                1          28
+       spin sets                   3
+       spin rank                       3  of            5
+       botspin,topspin:                1           3
+       df spin rank                    3  of            5
+       botdfspin,topdfspin:            1           3
+ All processors:
+       spin rank, S^2 =   0.000000000000000E+000  is           28  out of 
+          49
        df spin rank                   28  of           49
-       botdfspin,topdfspin:            1          28
+ 
+ 
+ ************************************
+ **        BIORTHO WALKS           **
+ ************************************
+ 
+ Go fast_newconfiglist
+ Excitations per shell
+        12        12        14
+ Orbital ranges for each electron ::
+           1           7
+           1           7
+ 
+ 
+ FASTNEWCONFIG: NUMBER OF CONFIGURATIONS           49
+ 
+ NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG          28           2
+ Go fast_newconfiglist.  Allocating...
+    Allocated.  getting configurations.
+ Excitations per shell
+        12        12        14
+ 
+ BOTWALKS /TOPWALKS          49
+           1           5           5
+           6          13           8
+          14          20           7
+          21          27           7
+          28          34           7
+          35          41           7
+          42          49           8
+ 
+      ...Done fast_newconfiglist
+ Counting walks. Singles
+ Counting walks. Doubles
+ 
+ Maximum number of
+            single walks=           14
+            double walks=            1
+   TOTAL walks:         686 maxdoublewalks*numconfig          49
+ 
+ Allocating singlewalks
+ Allocating doublewalks
+      ..done walkalloc.
+ Calculating walks.  Singles...
+ Calculating walks.  Doubles...
+ Sorting walks...
+     .... done sorting walks.
+ Counting single hops...
+ Counting double hops...
+ Getting single hops...
+ Getting double hops...
+ GOT HOPS:  
+  Single hops this processor          637  of          686
+  Double hops this processor            0  of            0
+  Single hops total          637  of          686
+  Double hops total            0  of            0
+     Max single hops           13
+     Max double hops            1
+ 
+ Allocating more arrays for Slater determinants...
+      .. OK allocating.
+ Deallocating walks arrays.
+ Go spinwalk init. 
+ Go get numspinwalks.
+ Doing spin projector.
+ Maximum number of spin walks=            1
+ Avg number of spin walks=   0.857142857142857     
+ Done spinwalk init.
+ Calculating spin walks.
+      ... done calculating spin walks.
+    ... go spinsets ...
+ Numspinsets this processor is            3   maxspinset size is            2
+ Getting Spinset Projectors.  Numspinsets this process is            3
+                                        maxspinsetsize is            2
+ ...done.  Eliminated            0  sets with total rank            0
+ 
+ This processor: 
+       spin sets                   3
+       spin rank                       3  of            5
+       botspin,topspin:                1           3
+       df spin rank                    3  of            5
+       botdfspin,topdfspin:            1           3
  All processors:
        spin rank, S^2 =   0.000000000000000E+000  is           28  out of 
           49
@@ -222,6 +321,17 @@ rnumelements, rnumpoints:    1    3
  ********** DONE WALKS. *************
  ************************************
  
+      DWWPTR Spin-adapted configurations by processor
+          1      1                   5
+          2      2                   8
+          3      3                   7
+          4      4                   7
+          5      5                   7
+          6      6                   7
+          7      7                   8
+ 
+ allocating for h2 project.... 
+     ...allocated for h2 project. 
  Reading spfs.
  Read complex spfs
     ...rank 1 read from file
@@ -239,15 +349,15 @@ rnumelements, rnumpoints:    1    3
     ... ok called get twoe_new
  Found all spfs I need on file.
  
- Done init_h2.
- 
- Done init project.
+ Done init h2 project.
  
     ....Called init_project.
- Guess at necessary memory is   495.983 MB
+ Initial allocation electronflux
+ Guess at necessary memory is   494.670 MB
  g(tau) will be computed with all psi being read in batches
  Desired amount of memory to use   500.000 MB
  Good, there is enough memory for only one batch.
+ Allocating psi arrays for electronflux
  MO record length is        61740
  AVEC record length is          196
  Reading ket batch            1  of            1

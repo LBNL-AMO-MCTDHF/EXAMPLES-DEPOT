@@ -22,6 +22,8 @@ $parinp
 numactions=2
 actions=15,21
 
+angularflag=1
+angprojspifile="Dat/xsec.angproj.spi.perp"
 fluxskipmult=2
 fluxinterval=2
 fluxmofile="Flux/flux.mo.bin.perp"
@@ -36,7 +38,7 @@ catspffiles(2)="Bin/cation2.spfs.bin"
 catavectorfiles(2)="Bin/cation2.avector.bin"
 catspffiles(3)="Bin/cation3.spfs.bin"
 catavectorfiles(3)="Bin/cation3.avector.bin"
-computeflux=0
+computeflux=500
 
 autotimestep=1d0
 dipolesumstart=0.05d0

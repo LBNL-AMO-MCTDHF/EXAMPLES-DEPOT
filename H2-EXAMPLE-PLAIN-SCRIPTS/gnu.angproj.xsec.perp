@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cat gnu.angproj.xsec.perp.load | gnuplot -persist 
+

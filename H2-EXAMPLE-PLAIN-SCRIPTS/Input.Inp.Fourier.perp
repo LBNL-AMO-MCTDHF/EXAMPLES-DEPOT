@@ -24,6 +24,7 @@ numactions=2
 actions=15,21
 
 angularflag=1
+angprojspifile="Dat/xsec.angproj.spi.perp"
 fluxskipmult=2
 fluxinterval=2
 fluxmofile="Flux/flux.mo.bin.perp"
@@ -31,6 +32,9 @@ fluxafile="Flux/flux.avec.bin.perp"
 spifile="Dat/xsec.spi.perp.dat"
 projfluxfile="Flux/projflux.wfn.bin.perp"
 projspifile="Dat/xsec.proj.spi.perp"
+angprojfluxtsumfile="Dat/angprojfluxtsum.perp"
+fluxtsumfile="Dat/fluxtsum.perp.dat"
+projfluxtsumfile="Dat/projfluxtsum.perp"
 
 dipolesumstart=0.2d0
 autotimestep=1d0
