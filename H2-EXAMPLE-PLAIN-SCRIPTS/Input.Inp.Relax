@@ -31,7 +31,7 @@ maxexpodim=500
 
 par_timestep=1d0
 
-stopthresh =  1.d-10
+stopthresh =  1d-10
 
 /
 

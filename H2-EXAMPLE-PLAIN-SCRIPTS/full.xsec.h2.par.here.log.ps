@@ -1,7 +1,7 @@
 %!PS-Adobe-2.0
-%%Title: ionization.h2.par.here.log.ps
-%%Creator: gnuplot 4.6 patchlevel 0
-%%CreationDate: Fri May 13 19:32:20 2016
+%%Title: full.xsec.h2.par.here.log.ps
+%%Creator: gnuplot 4.6 patchlevel 5
+%%CreationDate: Mon Jun 20 19:39:07 2016
 %%DocumentFonts: (atend)
 %%BoundingBox: 50 50 554 770
 %%Orientation: Landscape
@@ -49,7 +49,7 @@ gnudict begin
   } if
 } def
 %
-% Gnuplot Prolog Version 4.4 (August 2010)
+% Gnuplot Prolog Version 4.6 (September 2012)
 %
 %/SuppressPDFMark true def
 %
@@ -316,7 +316,8 @@ gnudict begin
 /PatternFill {gsave /PFa [ 9 2 roll ] def
   PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
   PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
-  gsave 1 setgray fill grestore clip
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+  clip
   currentlinewidth 0.5 mul setlinewidth
   /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
   0 0 M PFa 5 get rotate PFs -2 div dup translate
@@ -456,13 +457,13 @@ systemdict /pdfmark known not {
   userdict /pdfmark systemdict /cleartomark get put
 } if
 SDict begin [
-  /Title (ionization.h2.par.here.log.ps)
+  /Title (full.xsec.h2.par.here.log.ps)
   /Subject (gnuplot plot)
-  /Creator (gnuplot 4.6 patchlevel 0)
-  /Author (djhaxton)
+  /Creator (gnuplot 4.6 patchlevel 5)
+  /Author (dhaxton)
 %  /Producer (gnuplot)
 %  /Keywords ()
-  /CreationDate (Fri May 13 19:32:20 2016)
+  /CreationDate (Mon Jun 20 19:39:07 2016)
   /DOCINFO pdfmark
 end
 } ifelse
@@ -482,6 +483,7 @@ newpath
 BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {gsave BackgroundColor C clippath fill grestore} if
 1.000 UL
 LTb
+LCb setrgbcolor
 1100 640 M
 63 0 V
 stroke
@@ -490,6 +492,7 @@ stroke
 ] -66.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1100 926 M
 31 0 V
 -31 167 R
@@ -514,6 +517,7 @@ stroke
 ] -66.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1100 1876 M
 31 0 V
 -31 167 R
@@ -538,6 +542,7 @@ stroke
 ] -66.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1100 2825 M
 31 0 V
 -31 168 R
@@ -562,6 +567,7 @@ stroke
 ] -66.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1100 3775 M
 31 0 V
 -31 167 R
@@ -586,6 +592,7 @@ stroke
 ] -66.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1100 640 M
 0 63 V
 0 3736 R
@@ -596,6 +603,7 @@ stroke
 ] -66.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 2057 640 M
 0 63 V
 0 3736 R
@@ -606,6 +614,7 @@ stroke
 ] -66.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 3013 640 M
 0 63 V
 0 3736 R
@@ -616,6 +625,7 @@ stroke
 ] -66.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 3970 640 M
 0 63 V
 0 3736 R
@@ -626,6 +636,7 @@ stroke
 ] -66.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 4926 640 M
 0 63 V
 0 3736 R
@@ -636,6 +647,7 @@ stroke
 ] -66.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 5883 640 M
 0 63 V
 0 3736 R
@@ -646,6 +658,7 @@ stroke
 ] -66.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 6839 640 M
 0 63 V
 0 3736 R
@@ -656,8 +669,10 @@ stroke
 ] -66.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1.000 UL
 LTb
+LCb setrgbcolor
 1100 4439 N
 0 -3799 V
 5739 0 V
@@ -682,9 +697,11 @@ LTb
 1.000 UP
 1.000 UL
 LTb
+LCb setrgbcolor
 % Begin plot #1
 10.000 UL
 LT6
+LC6 setrgbcolor
 LCb setrgbcolor
 5936 4276 M
 [ [(Helvetica) 200.0 0.0 true true 0 (T=100)]
@@ -769,6 +786,7 @@ LT6
 stroke
 7.000 UL
 LT3
+LC3 setrgbcolor
 LCb setrgbcolor
 5936 4076 M
 [ [(Helvetica) 200.0 0.0 true true 0 (T=200)]
@@ -922,6 +940,7 @@ stroke 5341 1834 M
 stroke
 4.000 UL
 LT1
+LC1 setrgbcolor
 LCb setrgbcolor
 5936 3876 M
 [ [(Helvetica) 200.0 0.0 true true 0 (T=500)]
@@ -1286,6 +1305,7 @@ stroke 6230 1431 M
 stroke
 1.000 UL
 LTb
+LCb setrgbcolor
 LCb setrgbcolor
 5936 3676 M
 [ [(Helvetica) 200.0 0.0 true true 0 (T=1000)]
@@ -1991,6 +2011,7 @@ stroke 6322 1365 M
 1.000 UP
 stroke
 LCb setrgbcolor
+LCb setrgbcolor
 5936 3476 M
 [ [(Helvetica) 200.0 0.0 true true 0 (Pulse intensity)]
 ] -66.7 MRshow
@@ -2070,6 +2091,7 @@ LTb
 % End plot #5
 1.000 UL
 LTb
+LCb setrgbcolor
 1100 4439 N
 0 -3799 V
 5739 0 V
@@ -2079,6 +2101,7 @@ Z stroke
 1.000 UP
 1.000 UL
 LTb
+LCb setrgbcolor
 stroke
 grestore
 end

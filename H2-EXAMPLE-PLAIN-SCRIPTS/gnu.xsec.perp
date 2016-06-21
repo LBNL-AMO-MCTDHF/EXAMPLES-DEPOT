@@ -16,7 +16,7 @@ set y2range [0:*]
 replot "Dat/xsec.spi.perp.dat" using (A*$1):($2) with points pt 7 ps 1 lt -1 title "Pulse intensity" axes x1y2
 
 set term post enhanced 20 color solid
-set out "ionization.h2.perp.ps"
+set out "full.xsec.h2.perp.ps"
 replot
 
 set term x11

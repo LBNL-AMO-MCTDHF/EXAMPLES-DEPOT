@@ -8,7 +8,7 @@
     AMO Theory Group, Lawrence Berkeley Laboratory
       D J Haxton, C W McCurdy, T N Rescigno, K V Lawler, J Jones, 
       B Abeln, X Li . . .
-                              VERSION 1.28 
+                              VERSION 1.31 
         Copyright 2016 the regents of the University of California
  
                 This is CHMCTDH: HERM-normed ECS version.
@@ -1108,6 +1108,6 @@ T=         43.00000  Energy:  -0.1464394794E+03 -0.5805973827E-07    Norm:   0.1
     ...end prop...
     ...getting state expectation values etcetera...
     ...GO finalstats.
-Fri May 13 12:51:00 PDT 2016
+Mon Jun 20 13:57:41 PDT 2016
     ...END MCTDHF
  MCTDHF STOP!

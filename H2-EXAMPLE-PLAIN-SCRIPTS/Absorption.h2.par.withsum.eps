@@ -1,7 +1,7 @@
 %!PS-Adobe-2.0 EPSF-2.0
 %%Title: Absorption.h2.par.withsum.eps
-%%Creator: gnuplot 4.6 patchlevel 0
-%%CreationDate: Fri May 13 19:32:15 2016
+%%Creator: gnuplot 4.6 patchlevel 5
+%%CreationDate: Mon Jun 20 19:39:01 2016
 %%DocumentFonts: (atend)
 %%BoundingBox: 50 50 410 302
 %%EndComments
@@ -47,7 +47,7 @@ gnudict begin
   } if
 } def
 %
-% Gnuplot Prolog Version 4.4 (August 2010)
+% Gnuplot Prolog Version 4.6 (September 2012)
 %
 %/SuppressPDFMark true def
 %
@@ -314,7 +314,8 @@ gnudict begin
 /PatternFill {gsave /PFa [ 9 2 roll ] def
   PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
   PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
-  gsave 1 setgray fill grestore clip
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+  clip
   currentlinewidth 0.5 mul setlinewidth
   /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
   0 0 M PFa 5 get rotate PFs -2 div dup translate
@@ -456,11 +457,11 @@ systemdict /pdfmark known not {
 SDict begin [
   /Title (Absorption.h2.par.withsum.eps)
   /Subject (gnuplot plot)
-  /Creator (gnuplot 4.6 patchlevel 0)
-  /Author (djhaxton)
+  /Creator (gnuplot 4.6 patchlevel 5)
+  /Author (dhaxton)
 %  /Producer (gnuplot)
 %  /Keywords ()
-  /CreationDate (Fri May 13 19:32:15 2016)
+  /CreationDate (Mon Jun 20 19:39:01 2016)
   /DOCINFO pdfmark
 end
 } ifelse
@@ -478,6 +479,7 @@ newpath
 BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {BackgroundColor C 1.000 0 0 7200.00 5040.00 BoxColFill} if
 1.000 UL
 LTb
+LCb setrgbcolor
 1204 1196 M
 63 0 V
 stroke
@@ -486,6 +488,7 @@ stroke
 ] -93.3 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1204 1947 M
 63 0 V
 stroke
@@ -494,6 +497,7 @@ stroke
 ] -93.3 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1204 2698 M
 63 0 V
 stroke
@@ -502,6 +506,7 @@ stroke
 ] -93.3 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1204 3448 M
 63 0 V
 stroke
@@ -510,6 +515,7 @@ stroke
 ] -93.3 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1204 4199 M
 63 0 V
 stroke
@@ -518,6 +524,7 @@ stroke
 ] -93.3 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1204 896 M
 0 63 V
 0 3240 R
@@ -528,6 +535,7 @@ stroke
 ] -93.3 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1961 896 M
 0 63 V
 0 3240 R
@@ -538,6 +546,7 @@ stroke
 ] -93.3 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 2717 896 M
 0 63 V
 0 3240 R
@@ -548,6 +557,7 @@ stroke
 ] -93.3 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 3474 896 M
 0 63 V
 0 3240 R
@@ -558,6 +568,7 @@ stroke
 ] -93.3 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 4230 896 M
 0 63 V
 0 3240 R
@@ -568,6 +579,7 @@ stroke
 ] -93.3 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 4987 896 M
 0 63 V
 0 3240 R
@@ -578,6 +590,7 @@ stroke
 ] -93.3 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 5743 896 M
 0 63 V
 0 3240 R
@@ -588,6 +601,7 @@ stroke
 ] -93.3 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 5743 896 M
 -63 0 V
 stroke
@@ -596,6 +610,7 @@ stroke
 ] -93.3 MLshow
 1.000 UL
 LTb
+LCb setrgbcolor
 5743 2217 M
 -63 0 V
 stroke
@@ -604,6 +619,7 @@ stroke
 ] -93.3 MLshow
 1.000 UL
 LTb
+LCb setrgbcolor
 5743 3538 M
 -63 0 V
 stroke
@@ -612,8 +628,10 @@ stroke
 ] -93.3 MLshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1.000 UL
 LTb
+LCb setrgbcolor
 1204 4199 N
 0 -3303 V
 4539 0 V
@@ -645,9 +663,11 @@ LTb
 1.000 UP
 1.000 UL
 LTb
+LCb setrgbcolor
 % Begin plot #1
 10.000 UL
 LT6
+LC6 setrgbcolor
 LCb setrgbcolor
 4504 3996 M
 [ [(Helvetica) 280.0 0.0 true true 0 (Parallel)]
@@ -1019,6 +1039,7 @@ stroke 5171 1206 M
 stroke
 5.000 UL
 LT7
+LC7 setrgbcolor
 LCb setrgbcolor
 4504 3716 M
 [ [(Helvetica) 280.0 0.0 true true 0 (Sum rule)]
@@ -1365,6 +1386,7 @@ stroke 5481 3524 M
 stroke
 1.000 UL
 LTb
+LCb setrgbcolor
 1204 4199 N
 0 -3303 V
 4539 0 V
@@ -1374,6 +1396,7 @@ Z stroke
 1.000 UP
 1.000 UL
 LTb
+LCb setrgbcolor
 stroke
 grestore
 end

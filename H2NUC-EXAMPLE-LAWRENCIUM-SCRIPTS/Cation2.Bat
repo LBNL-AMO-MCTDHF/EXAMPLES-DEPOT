@@ -1,6 +1,6 @@
 #!/bin/bash
 
-threads=10
+threads=5
 procs=4
 
 export OMP_NUM_THREADS=$threads

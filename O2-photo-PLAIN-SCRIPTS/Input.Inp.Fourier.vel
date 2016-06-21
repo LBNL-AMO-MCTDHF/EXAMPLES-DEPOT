@@ -29,8 +29,8 @@ $parinp
 
 energyshift=(0d0,0.663551d-7)
 
-numactions=2
-actions=15,21
+numactions=4
+actions=15,21,27,28
 
 fluxskipmult=2
 fluxinterval=2

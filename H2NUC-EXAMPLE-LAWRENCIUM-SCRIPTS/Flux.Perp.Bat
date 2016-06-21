@@ -10,7 +10,7 @@ energy=`grep -A 2 CONV Outs/Out.relax |tail -n 1|tr -s " "|cut -f 2 -d " "`
 
 echo "ENERGY $energy"
 
-threads=10
+threads=5
 procs=4
 
 export OMP_NUM_THREADS=$threads

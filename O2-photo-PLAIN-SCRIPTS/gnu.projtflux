@@ -1,0 +1,69 @@
+#!/bin/bash
+
+echo '
+
+set title "Partial photoionization flux O2 10 orbitals"
+
+set term unknown
+set xlabel "time(fs)"
+set ylabel "integrated flux (norm-squared)"
+set format y "%12.2e"
+
+set xrange [0.1:*]
+set logscale x
+
+# set yrange [0:*]
+
+# set yrange [1e-10:*]
+
+# set logscale y
+
+A=1.0/41.34
+
+plot "Dat/projfluxtsum_011_001.dat" using (A*$1):($2) with lines lt 2 lw 4 title "q pi_g"
+
+replot "Dat/projfluxtsum_012_001.dat" using (A*$1):($2) with lines lt 3 lw 4 title "q pi_u"
+
+replot "Dat/projfluxtsum_013_001.dat" using (A*$1):($2) with lines lt 4 lw 4 title "q sig_g 1"
+
+replot "Dat/projfluxtsum_014_001.dat" using (A*$1):($2) with lines lt 5 lw 4 title "q sig_g 2"
+
+replot "Dat/projfluxtsum_015_001.dat" using (A*$1):($2) with lines lt 6 lw 4 title "q sig_u 1"
+
+replot "Dat/projfluxtsum_016_001.dat" using (A*$1):($2) with lines lt 7 lw 4 title "q sig_u 2"
+
+
+replot "Dat/projfluxtsum_001_001.dat" using (A*$1):($2) with points pt 7 lt 1 lw 4 title "d pi_g 1"
+
+replot "Dat/projfluxtsum_002_001.dat" using (A*$1):($2) with points pt 7 lt 2 lw 4 title "d pi_g 2"
+
+replot "Dat/projfluxtsum_003_001.dat" using (A*$1):($2) with points pt 7 lt 3 lw 4 title "d pi_u 1"
+
+replot "Dat/projfluxtsum_004_001.dat" using (A*$1):($2) with points pt 7 lt 4 lw 4 title "d pi_u 2"
+
+replot "Dat/projfluxtsum_005_001.dat" using (A*$1):($2) with points pt 7 lt 5 lw 4 title "d pi_u 3"
+
+replot "Dat/projfluxtsum_006_001.dat" using (A*$1):($2) with points pt 7 lt 6 lw 4 title "d sig_g 1"
+
+replot "Dat/projfluxtsum_007_001.dat" using (A*$1):($2) with points pt 7 lt 7 lw 4 title "d sig_g 2"
+
+replot "Dat/projfluxtsum_008_001.dat" using (A*$1):($2) with points pt 7 lt 8 lw 4 title "d_sig_u 1"
+
+replot "Dat/projfluxtsum_009_001.dat" using (A*$1):($2) with points pt 7 lt 9 lw 4 title "d sig_u 2"
+
+replot "Dat/projfluxtsum_010_001.dat" using (A*$1):($2) with points pt 7 lt 10 lw 4 title "d sig_u 3"
+
+replot "Dat/fluxtsum.dat" using (A*$1):($2) with lines lt -1 lw 3 title "total"
+
+replot "Dat/projfluxtsum_all_001.dat" using (A*$1):($2) with lines lt 8 lw 2 title "sum"
+
+set term post enhanced 20 color solid
+set out "projtflux.o2.par.ps"
+replot
+
+set term x11
+set out
+replot
+
+' | gnuplot -persist
+

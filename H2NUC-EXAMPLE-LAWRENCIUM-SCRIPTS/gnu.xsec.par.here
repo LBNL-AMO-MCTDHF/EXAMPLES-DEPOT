@@ -28,7 +28,7 @@ set out
 replot
 
 set term post enhanced 20 color solid
-set out "ionization.h2nuc.par.here.log.ps"
+set out "full.xsec.h2nuc.par.here.log.ps"
 replot
 
 unset logscale y
@@ -40,7 +40,7 @@ set out
 replot
 
 set term post enhanced 20 color solid
-set out "ionization.h2nuc.par.here.ps"
+set out "full.xsec.h2nuc.par.here.ps"
 replot
 
 ' | gnuplot -persist

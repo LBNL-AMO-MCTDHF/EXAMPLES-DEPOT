@@ -1,7 +1,7 @@
 %!PS-Adobe-2.0
 %%Title: tflux.h2.par.ps
-%%Creator: gnuplot 4.6 patchlevel 0
-%%CreationDate: Fri May 13 19:32:27 2016
+%%Creator: gnuplot 4.6 patchlevel 5
+%%CreationDate: Mon Jun 20 19:39:16 2016
 %%DocumentFonts: (atend)
 %%BoundingBox: 50 50 554 770
 %%Orientation: Landscape
@@ -49,7 +49,7 @@ gnudict begin
   } if
 } def
 %
-% Gnuplot Prolog Version 4.4 (August 2010)
+% Gnuplot Prolog Version 4.6 (September 2012)
 %
 %/SuppressPDFMark true def
 %
@@ -316,7 +316,8 @@ gnudict begin
 /PatternFill {gsave /PFa [ 9 2 roll ] def
   PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
   PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
-  gsave 1 setgray fill grestore clip
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+  clip
   currentlinewidth 0.5 mul setlinewidth
   /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
   0 0 M PFa 5 get rotate PFs -2 div dup translate
@@ -458,11 +459,11 @@ systemdict /pdfmark known not {
 SDict begin [
   /Title (tflux.h2.par.ps)
   /Subject (gnuplot plot)
-  /Creator (gnuplot 4.6 patchlevel 0)
-  /Author (djhaxton)
+  /Creator (gnuplot 4.6 patchlevel 5)
+  /Author (dhaxton)
 %  /Producer (gnuplot)
 %  /Keywords ()
-  /CreationDate (Fri May 13 19:32:27 2016)
+  /CreationDate (Mon Jun 20 19:39:16 2016)
   /DOCINFO pdfmark
 end
 } ifelse
@@ -482,86 +483,97 @@ newpath
 BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {gsave BackgroundColor C clippath fill grestore} if
 1.000 UL
 LTb
+LCb setrgbcolor
 1940 640 M
 63 0 V
 stroke
 1820 640 M
-[ [(Helvetica) 200.0 0.0 true true 0 (   0.0000000)]
+[ [(Helvetica) 200.0 0.0 true true 0 (    0.00e+00)]
 ] -66.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1940 1062 M
 63 0 V
 stroke
 1820 1062 M
-[ [(Helvetica) 200.0 0.0 true true 0 (   0.0000000)]
+[ [(Helvetica) 200.0 0.0 true true 0 (    2.00e-08)]
 ] -66.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1940 1484 M
 63 0 V
 stroke
 1820 1484 M
-[ [(Helvetica) 200.0 0.0 true true 0 (   0.0000000)]
+[ [(Helvetica) 200.0 0.0 true true 0 (    4.00e-08)]
 ] -66.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1940 1906 M
 63 0 V
 stroke
 1820 1906 M
-[ [(Helvetica) 200.0 0.0 true true 0 (   0.0000001)]
+[ [(Helvetica) 200.0 0.0 true true 0 (    6.00e-08)]
 ] -66.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1940 2328 M
 63 0 V
 stroke
 1820 2328 M
-[ [(Helvetica) 200.0 0.0 true true 0 (   0.0000001)]
+[ [(Helvetica) 200.0 0.0 true true 0 (    8.00e-08)]
 ] -66.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1940 2751 M
 63 0 V
 stroke
 1820 2751 M
-[ [(Helvetica) 200.0 0.0 true true 0 (   0.0000001)]
+[ [(Helvetica) 200.0 0.0 true true 0 (    1.00e-07)]
 ] -66.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1940 3173 M
 63 0 V
 stroke
 1820 3173 M
-[ [(Helvetica) 200.0 0.0 true true 0 (   0.0000001)]
+[ [(Helvetica) 200.0 0.0 true true 0 (    1.20e-07)]
 ] -66.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1940 3595 M
 63 0 V
 stroke
 1820 3595 M
-[ [(Helvetica) 200.0 0.0 true true 0 (   0.0000001)]
+[ [(Helvetica) 200.0 0.0 true true 0 (    1.40e-07)]
 ] -66.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1940 4017 M
 63 0 V
 stroke
 1820 4017 M
-[ [(Helvetica) 200.0 0.0 true true 0 (   0.0000002)]
+[ [(Helvetica) 200.0 0.0 true true 0 (    1.60e-07)]
 ] -66.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1940 4439 M
 63 0 V
 stroke
 1820 4439 M
-[ [(Helvetica) 200.0 0.0 true true 0 (   0.0000002)]
+[ [(Helvetica) 200.0 0.0 true true 0 (    1.80e-07)]
 ] -66.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1940 640 M
 0 63 V
 0 3736 R
@@ -572,6 +584,7 @@ stroke
 ] -66.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 2243 640 M
 0 31 V
 0 3768 R
@@ -614,6 +627,7 @@ stroke
 ] -66.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 3249 640 M
 0 31 V
 0 3768 R
@@ -656,6 +670,7 @@ stroke
 ] -66.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 4256 640 M
 0 31 V
 0 3768 R
@@ -698,88 +713,100 @@ stroke
 ] -66.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 4959 640 M
 -63 0 V
 stroke
 5079 640 M
-[ [(Helvetica) 200.0 0.0 true true 0 (   0.0000000)]
+[ [(Helvetica) 200.0 0.0 true true 0 (    0.00e+00)]
 ] -66.7 MLshow
 1.000 UL
 LTb
+LCb setrgbcolor
 4959 1062 M
 -63 0 V
 stroke
 5079 1062 M
-[ [(Helvetica) 200.0 0.0 true true 0 (   0.0000002)]
+[ [(Helvetica) 200.0 0.0 true true 0 (    2.00e-07)]
 ] -66.7 MLshow
 1.000 UL
 LTb
+LCb setrgbcolor
 4959 1484 M
 -63 0 V
 stroke
 5079 1484 M
-[ [(Helvetica) 200.0 0.0 true true 0 (   0.0000004)]
+[ [(Helvetica) 200.0 0.0 true true 0 (    4.00e-07)]
 ] -66.7 MLshow
 1.000 UL
 LTb
+LCb setrgbcolor
 4959 1906 M
 -63 0 V
 stroke
 5079 1906 M
-[ [(Helvetica) 200.0 0.0 true true 0 (   0.0000006)]
+[ [(Helvetica) 200.0 0.0 true true 0 (    6.00e-07)]
 ] -66.7 MLshow
 1.000 UL
 LTb
+LCb setrgbcolor
 4959 2328 M
 -63 0 V
 stroke
 5079 2328 M
-[ [(Helvetica) 200.0 0.0 true true 0 (   0.0000008)]
+[ [(Helvetica) 200.0 0.0 true true 0 (    8.00e-07)]
 ] -66.7 MLshow
 1.000 UL
 LTb
+LCb setrgbcolor
 4959 2751 M
 -63 0 V
 stroke
 5079 2751 M
-[ [(Helvetica) 200.0 0.0 true true 0 (   0.0000010)]
+[ [(Helvetica) 200.0 0.0 true true 0 (    1.00e-06)]
 ] -66.7 MLshow
 1.000 UL
 LTb
+LCb setrgbcolor
 4959 3173 M
 -63 0 V
 stroke
 5079 3173 M
-[ [(Helvetica) 200.0 0.0 true true 0 (   0.0000012)]
+[ [(Helvetica) 200.0 0.0 true true 0 (    1.20e-06)]
 ] -66.7 MLshow
 1.000 UL
 LTb
+LCb setrgbcolor
 4959 3595 M
 -63 0 V
 stroke
 5079 3595 M
-[ [(Helvetica) 200.0 0.0 true true 0 (   0.0000014)]
+[ [(Helvetica) 200.0 0.0 true true 0 (    1.40e-06)]
 ] -66.7 MLshow
 1.000 UL
 LTb
+LCb setrgbcolor
 4959 4017 M
 -63 0 V
 stroke
 5079 4017 M
-[ [(Helvetica) 200.0 0.0 true true 0 (   0.0000016)]
+[ [(Helvetica) 200.0 0.0 true true 0 (    1.60e-06)]
 ] -66.7 MLshow
 1.000 UL
 LTb
+LCb setrgbcolor
 4959 4439 M
 -63 0 V
 stroke
 5079 4439 M
-[ [(Helvetica) 200.0 0.0 true true 0 (   0.0000018)]
+[ [(Helvetica) 200.0 0.0 true true 0 (    1.80e-06)]
 ] -66.7 MLshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1.000 UL
 LTb
+LCb setrgbcolor
 1940 4439 N
 0 -3799 V
 3019 0 V
@@ -796,7 +823,7 @@ LTb
 LCb setrgbcolor
 6738 2539 M
 currentpoint gsave translate -270 rotate 0 0 moveto
-[ [(Helvetica) 200.0 0.0 true true 0 (integrated)]
+[ [(Helvetica) 200.0 0.0 true true 0 (integrated flux \(norm-squared\))]
 ] -66.7 MCshow
 grestore
 LTb
@@ -811,9 +838,11 @@ LTb
 1.000 UP
 1.000 UL
 LTb
+LCb setrgbcolor
 % Begin plot #1
-10.000 UL
+8.000 UL
 LT6
+LC6 setrgbcolor
 LCb setrgbcolor
 4056 4276 M
 [ [(Helvetica) 200.0 0.0 true true 0 (integrand)]
@@ -1427,1015 +1456,866 @@ stroke 4228 640 M
 1 1 V
 % End plot #1
 % Begin plot #2
-1.000 UP
 stroke
-1.000 UL
+2.000 UL
 LTb
+LCb setrgbcolor
 LCb setrgbcolor
 4056 4076 M
 [ [(Helvetica) 200.0 0.0 true true 0 (integrated)]
 ] -66.7 MRshow
 LTb
-2023 640 CircleF
-2103 640 CircleF
-2170 640 CircleF
-2229 640 CircleF
-2280 640 CircleF
-2326 641 CircleF
-2368 643 CircleF
-2406 651 CircleF
-2441 669 CircleF
-2473 709 CircleF
-2503 779 CircleF
-2531 886 CircleF
-2558 1027 CircleF
-2583 1193 CircleF
-2607 1374 CircleF
-2629 1560 CircleF
-2650 1747 CircleF
-2671 1933 CircleF
-2690 2117 CircleF
-2709 2297 CircleF
-2727 2473 CircleF
-2744 2639 CircleF
-2760 2795 CircleF
-2776 2936 CircleF
-2791 3061 CircleF
-2806 3169 CircleF
-2821 3261 CircleF
-2834 3338 CircleF
-2848 3401 CircleF
-2861 3454 CircleF
-2874 3499 CircleF
-2886 3542 CircleF
-2898 3583 CircleF
-2910 3626 CircleF
-2921 3669 CircleF
-2932 3711 CircleF
-2943 3751 CircleF
-2953 3786 CircleF
-2964 3815 CircleF
-2974 3838 CircleF
-2983 3856 CircleF
-2993 3870 CircleF
-3002 3883 CircleF
-3012 3896 CircleF
-3021 3910 CircleF
-3029 3927 CircleF
-3038 3944 CircleF
-3047 3961 CircleF
-3055 3975 CircleF
-3063 3987 CircleF
-3071 3995 CircleF
-3079 4000 CircleF
-3087 4004 CircleF
-3094 4007 CircleF
-3102 4012 CircleF
-3109 4019 CircleF
-3116 4027 CircleF
-3123 4036 CircleF
-3130 4044 CircleF
-3137 4050 CircleF
-3144 4054 CircleF
-3151 4056 CircleF
-3157 4057 CircleF
-3164 4057 CircleF
-3170 4059 CircleF
-3177 4062 CircleF
-3183 4066 CircleF
-3189 4072 CircleF
-3195 4077 CircleF
-3201 4081 CircleF
-3207 4083 CircleF
-3212 4084 CircleF
-3218 4083 CircleF
-3224 4083 CircleF
-3229 4084 CircleF
-3235 4085 CircleF
-3240 4088 CircleF
-3246 4091 CircleF
-3251 4094 CircleF
-3256 4097 CircleF
-3261 4099 CircleF
-3266 4099 CircleF
-3272 4098 CircleF
-3277 4097 CircleF
-3281 4097 CircleF
-3286 4098 CircleF
-3291 4099 CircleF
-3296 4101 CircleF
-3301 4103 CircleF
-3305 4104 CircleF
-3310 4105 CircleF
-3315 4104 CircleF
-3319 4103 CircleF
-3324 4102 CircleF
-3328 4101 CircleF
-3332 4101 CircleF
-3337 4101 CircleF
-3341 4102 CircleF
-3345 4102 CircleF
-3350 4103 CircleF
-3354 4102 CircleF
-3358 4101 CircleF
-3362 4099 CircleF
-3366 4097 CircleF
-3370 4095 CircleF
-3374 4094 CircleF
-3378 4093 CircleF
-3382 4093 CircleF
-3386 4092 CircleF
-3390 4091 CircleF
-3393 4090 CircleF
-3397 4088 CircleF
-3401 4086 CircleF
-3405 4084 CircleF
-3408 4082 CircleF
-3412 4080 CircleF
-3416 4078 CircleF
-3419 4077 CircleF
-3423 4075 CircleF
-3426 4074 CircleF
-3430 4073 CircleF
-3433 4071 CircleF
-3437 4069 CircleF
-3440 4067 CircleF
-3444 4064 CircleF
-3447 4062 CircleF
-3450 4060 CircleF
-3454 4059 CircleF
-3457 4058 CircleF
-3460 4057 CircleF
-3464 4056 CircleF
-3467 4055 CircleF
-3470 4053 CircleF
-3473 4051 CircleF
-3476 4049 CircleF
-3479 4048 CircleF
-3483 4046 CircleF
-3486 4046 CircleF
-3489 4046 CircleF
-3492 4046 CircleF
-3495 4045 CircleF
-3498 4045 CircleF
-3501 4044 CircleF
-3504 4043 CircleF
-3507 4042 CircleF
-3510 4041 CircleF
-3513 4041 CircleF
-3515 4041 CircleF
-3518 4042 CircleF
-3521 4043 CircleF
-3524 4043 CircleF
-3527 4044 CircleF
-3530 4043 CircleF
-3532 4043 CircleF
-3535 4043 CircleF
-3538 4043 CircleF
-3541 4044 CircleF
-3543 4045 CircleF
-3546 4046 CircleF
-3549 4047 CircleF
-3551 4047 CircleF
-3554 4048 CircleF
-3557 4048 CircleF
-3559 4048 CircleF
-3562 4049 CircleF
-3564 4049 CircleF
-3567 4050 CircleF
-3569 4051 CircleF
-3572 4052 CircleF
-3574 4053 CircleF
-3577 4053 CircleF
-3579 4054 CircleF
-3582 4054 CircleF
-3584 4054 CircleF
-3587 4055 CircleF
-3589 4055 CircleF
-3592 4056 CircleF
-3594 4056 CircleF
-3597 4057 CircleF
-3599 4057 CircleF
-3601 4058 CircleF
-3604 4058 CircleF
-3606 4058 CircleF
-3608 4059 CircleF
-3611 4059 CircleF
-3613 4059 CircleF
-3615 4060 CircleF
-3617 4060 CircleF
-3620 4060 CircleF
-3622 4060 CircleF
-3624 4061 CircleF
-3626 4061 CircleF
-3629 4062 CircleF
-3631 4062 CircleF
-3633 4063 CircleF
-3635 4063 CircleF
-3638 4063 CircleF
-3640 4063 CircleF
-3642 4064 CircleF
-3644 4065 CircleF
-3646 4066 CircleF
-3648 4067 CircleF
-3650 4067 CircleF
-3652 4068 CircleF
-3655 4068 CircleF
-3657 4069 CircleF
-3659 4069 CircleF
-3661 4070 CircleF
-3663 4071 CircleF
-3665 4073 CircleF
-3667 4074 CircleF
-3669 4076 CircleF
-3671 4077 CircleF
-3673 4077 CircleF
-3675 4078 CircleF
-3677 4079 CircleF
-3679 4080 CircleF
-3681 4081 CircleF
-3683 4083 CircleF
-3685 4085 CircleF
-3687 4086 CircleF
-3689 4088 CircleF
-3691 4089 CircleF
-3693 4090 CircleF
-3695 4091 CircleF
-3696 4092 CircleF
-3698 4093 CircleF
-3700 4095 CircleF
-3702 4097 CircleF
-3704 4099 CircleF
-3706 4100 CircleF
-3708 4101 CircleF
-3710 4102 CircleF
-3711 4103 CircleF
-3713 4104 CircleF
-3715 4106 CircleF
-3717 4107 CircleF
-3719 4109 CircleF
-3720 4110 CircleF
-3722 4112 CircleF
-3724 4113 CircleF
-3726 4114 CircleF
-3728 4115 CircleF
-3729 4116 CircleF
-3731 4117 CircleF
-3733 4119 CircleF
-3735 4120 CircleF
-3736 4121 CircleF
-3738 4122 CircleF
-3740 4123 CircleF
-3742 4124 CircleF
-3743 4125 CircleF
-3745 4126 CircleF
-3747 4128 CircleF
-3748 4129 CircleF
-3750 4130 CircleF
-3752 4131 CircleF
-3753 4132 CircleF
-3755 4132 CircleF
-3757 4133 CircleF
-3758 4134 CircleF
-3760 4135 CircleF
-3762 4137 CircleF
-3763 4138 CircleF
-3765 4139 CircleF
-3766 4140 CircleF
-3768 4140 CircleF
-3770 4141 CircleF
-3771 4141 CircleF
-3773 4142 CircleF
-3775 4143 CircleF
-3776 4145 CircleF
-3778 4146 CircleF
-3779 4147 CircleF
-3781 4148 CircleF
-3782 4148 CircleF
-3784 4148 CircleF
-3785 4149 CircleF
-3787 4149 CircleF
-3789 4150 CircleF
-3790 4151 CircleF
-3792 4152 CircleF
-3793 4153 CircleF
-3795 4154 CircleF
-3796 4154 CircleF
-3798 4154 CircleF
-3799 4154 CircleF
-3801 4155 CircleF
-3802 4155 CircleF
-3804 4156 CircleF
-3805 4157 CircleF
-3807 4157 CircleF
-3808 4158 CircleF
-3810 4158 CircleF
-3811 4157 CircleF
-3813 4157 CircleF
-3814 4157 CircleF
-3815 4158 CircleF
-3817 4158 CircleF
-3818 4159 CircleF
-3820 4159 CircleF
-3821 4159 CircleF
-3823 4159 CircleF
-3824 4158 CircleF
-3825 4158 CircleF
-3827 4158 CircleF
-3828 4158 CircleF
-3830 4158 CircleF
-3831 4158 CircleF
-3832 4158 CircleF
-3834 4158 CircleF
-3835 4158 CircleF
-3837 4158 CircleF
-3838 4157 CircleF
-3839 4157 CircleF
-3841 4157 CircleF
-3842 4157 CircleF
-3843 4157 CircleF
-3845 4157 CircleF
-3846 4157 CircleF
-3848 4157 CircleF
-3849 4157 CircleF
-3850 4157 CircleF
-3852 4157 CircleF
-3853 4157 CircleF
-3854 4157 CircleF
-3856 4157 CircleF
-3857 4157 CircleF
-3858 4157 CircleF
-3859 4156 CircleF
-3861 4156 CircleF
-3862 4156 CircleF
-3863 4156 CircleF
-3865 4157 CircleF
-3866 4157 CircleF
-3867 4157 CircleF
-3869 4157 CircleF
-3870 4157 CircleF
-3871 4156 CircleF
-3872 4156 CircleF
-3874 4156 CircleF
-3875 4156 CircleF
-3876 4156 CircleF
-3877 4157 CircleF
-3879 4157 CircleF
-3880 4156 CircleF
-3881 4156 CircleF
-3882 4156 CircleF
-3884 4155 CircleF
-3885 4155 CircleF
-3886 4155 CircleF
-3887 4155 CircleF
-3889 4155 CircleF
-3890 4154 CircleF
-3891 4154 CircleF
-3892 4153 CircleF
-3893 4153 CircleF
-3895 4152 CircleF
-3896 4151 CircleF
-3897 4151 CircleF
-3898 4150 CircleF
-3899 4150 CircleF
-3901 4149 CircleF
-3902 4149 CircleF
-3903 4148 CircleF
-3904 4147 CircleF
-3905 4146 CircleF
-3907 4145 CircleF
-3908 4144 CircleF
-3909 4143 CircleF
-3910 4143 CircleF
-3911 4142 CircleF
-3912 4141 CircleF
-3914 4140 CircleF
-3915 4139 CircleF
-3916 4138 CircleF
-3917 4137 CircleF
-3918 4136 CircleF
-3919 4135 CircleF
-3920 4135 CircleF
-3922 4134 CircleF
-3923 4133 CircleF
-3924 4132 CircleF
-3925 4131 CircleF
-3926 4130 CircleF
-3927 4129 CircleF
-3928 4129 CircleF
-3929 4128 CircleF
-3931 4128 CircleF
-3932 4127 CircleF
-3933 4126 CircleF
-3934 4126 CircleF
-3935 4125 CircleF
-3936 4125 CircleF
-3937 4124 CircleF
-3938 4124 CircleF
-3939 4124 CircleF
-3940 4124 CircleF
-3942 4123 CircleF
-3943 4123 CircleF
-3944 4123 CircleF
-3945 4122 CircleF
-3946 4122 CircleF
-3947 4122 CircleF
-3948 4122 CircleF
-3949 4123 CircleF
-3950 4123 CircleF
-3951 4123 CircleF
-3952 4123 CircleF
-3953 4123 CircleF
-3954 4123 CircleF
-3955 4123 CircleF
-3956 4123 CircleF
-3958 4123 CircleF
-3959 4123 CircleF
-3960 4124 CircleF
-3961 4124 CircleF
-3962 4124 CircleF
-3963 4124 CircleF
-3964 4124 CircleF
-3965 4124 CircleF
-3966 4124 CircleF
-3967 4125 CircleF
-3968 4125 CircleF
-3969 4125 CircleF
-3970 4125 CircleF
-3971 4125 CircleF
-3972 4125 CircleF
-3973 4125 CircleF
-3974 4125 CircleF
-3975 4125 CircleF
-3976 4125 CircleF
-3977 4125 CircleF
-3978 4125 CircleF
-3979 4125 CircleF
-3980 4125 CircleF
-3981 4125 CircleF
-3982 4125 CircleF
-3983 4125 CircleF
-3984 4125 CircleF
-3985 4125 CircleF
-3986 4125 CircleF
-3987 4125 CircleF
-3988 4125 CircleF
-3989 4124 CircleF
-3990 4124 CircleF
-3991 4124 CircleF
-3992 4124 CircleF
-3993 4124 CircleF
-3994 4124 CircleF
-3995 4124 CircleF
-3996 4124 CircleF
-3996 4123 CircleF
-3997 4123 CircleF
-3998 4123 CircleF
-3999 4123 CircleF
-4000 4123 CircleF
-4001 4123 CircleF
-4002 4123 CircleF
-4003 4123 CircleF
-4004 4123 CircleF
-4005 4123 CircleF
-4006 4123 CircleF
-4007 4123 CircleF
-4008 4123 CircleF
-4009 4123 CircleF
-4010 4124 CircleF
-4011 4124 CircleF
-4012 4124 CircleF
-4012 4125 CircleF
-4013 4125 CircleF
-4014 4125 CircleF
-4015 4125 CircleF
-4016 4125 CircleF
-4017 4126 CircleF
-4018 4126 CircleF
-4019 4127 CircleF
-4020 4128 CircleF
-4021 4128 CircleF
-4022 4128 CircleF
-4022 4129 CircleF
-4023 4129 CircleF
-4024 4130 CircleF
-4025 4130 CircleF
-4026 4131 CircleF
-4027 4132 CircleF
-4028 4132 CircleF
-4029 4133 CircleF
-4030 4133 CircleF
-4031 4134 CircleF
-4031 4134 CircleF
-4032 4135 CircleF
-4033 4135 CircleF
-4034 4136 CircleF
-4035 4137 CircleF
-4036 4137 CircleF
-4037 4138 CircleF
-4038 4138 CircleF
-4038 4139 CircleF
-4039 4139 CircleF
-4040 4140 CircleF
-4041 4141 CircleF
-4042 4141 CircleF
-4043 4142 CircleF
-4044 4142 CircleF
-4044 4143 CircleF
-4045 4143 CircleF
-4046 4144 CircleF
-4047 4144 CircleF
-4048 4145 CircleF
-4049 4145 CircleF
-4050 4146 CircleF
-4050 4146 CircleF
-4051 4147 CircleF
-4052 4147 CircleF
-4053 4147 CircleF
-4054 4147 CircleF
-4055 4148 CircleF
-4055 4148 CircleF
-4056 4149 CircleF
-4057 4149 CircleF
-4058 4150 CircleF
-4059 4150 CircleF
-4060 4150 CircleF
-4060 4150 CircleF
-4061 4150 CircleF
-4062 4150 CircleF
-4063 4151 CircleF
-4064 4151 CircleF
-4065 4151 CircleF
-4065 4152 CircleF
-4066 4152 CircleF
-4067 4152 CircleF
-4068 4152 CircleF
-4069 4152 CircleF
-4069 4152 CircleF
-4070 4152 CircleF
-4071 4152 CircleF
-4072 4152 CircleF
-4073 4152 CircleF
-4073 4152 CircleF
-4074 4152 CircleF
-4075 4152 CircleF
-4076 4152 CircleF
-4077 4152 CircleF
-4077 4152 CircleF
-4078 4152 CircleF
-4079 4152 CircleF
-4080 4152 CircleF
-4081 4152 CircleF
-4081 4152 CircleF
-4082 4152 CircleF
-4083 4152 CircleF
-4084 4152 CircleF
-4085 4152 CircleF
-4085 4152 CircleF
-4086 4152 CircleF
-4087 4152 CircleF
-4088 4152 CircleF
-4088 4152 CircleF
-4089 4151 CircleF
-4090 4151 CircleF
-4091 4151 CircleF
-4092 4151 CircleF
-4092 4152 CircleF
-4093 4152 CircleF
-4094 4152 CircleF
-4095 4152 CircleF
-4095 4152 CircleF
-4096 4151 CircleF
-4097 4151 CircleF
-4098 4152 CircleF
-4098 4152 CircleF
-4099 4152 CircleF
-4100 4152 CircleF
-4101 4152 CircleF
-4101 4152 CircleF
-4102 4152 CircleF
-4103 4152 CircleF
-4104 4152 CircleF
-4104 4152 CircleF
-4105 4153 CircleF
-4106 4153 CircleF
-4107 4153 CircleF
-4107 4153 CircleF
-4108 4153 CircleF
-4109 4153 CircleF
-4110 4153 CircleF
-4110 4153 CircleF
-4111 4154 CircleF
-4112 4154 CircleF
-4113 4154 CircleF
-4113 4154 CircleF
-4114 4154 CircleF
-4115 4154 CircleF
-4115 4154 CircleF
-4116 4154 CircleF
-4117 4154 CircleF
-4118 4154 CircleF
-4118 4154 CircleF
-4119 4154 CircleF
-4120 4154 CircleF
-4121 4154 CircleF
-4121 4154 CircleF
-4122 4153 CircleF
-4123 4153 CircleF
-4123 4153 CircleF
-4124 4153 CircleF
-4125 4153 CircleF
-4126 4152 CircleF
-4126 4152 CircleF
-4127 4152 CircleF
-4128 4151 CircleF
-4128 4151 CircleF
-4129 4151 CircleF
-4130 4150 CircleF
-4131 4150 CircleF
-4131 4149 CircleF
-4132 4149 CircleF
-4133 4149 CircleF
-4133 4148 CircleF
-4134 4147 CircleF
-4135 4147 CircleF
-4135 4146 CircleF
-4136 4146 CircleF
-4137 4145 CircleF
-4137 4145 CircleF
-4138 4144 CircleF
-4139 4144 CircleF
-4140 4143 CircleF
-4140 4143 CircleF
-4141 4142 CircleF
-4142 4142 CircleF
-4142 4141 CircleF
-4143 4141 CircleF
-4144 4140 CircleF
-4144 4140 CircleF
-4145 4140 CircleF
-4146 4139 CircleF
-4146 4139 CircleF
-4147 4138 CircleF
-4148 4138 CircleF
-4148 4137 CircleF
-4149 4137 CircleF
-4150 4137 CircleF
-4150 4137 CircleF
-4151 4137 CircleF
-4152 4136 CircleF
-4152 4136 CircleF
-4153 4136 CircleF
-4154 4136 CircleF
-4154 4136 CircleF
-4155 4136 CircleF
-4156 4136 CircleF
-4156 4136 CircleF
-4157 4136 CircleF
-4158 4136 CircleF
-4158 4136 CircleF
-4159 4136 CircleF
-4160 4136 CircleF
-4160 4136 CircleF
-4161 4136 CircleF
-4162 4136 CircleF
-4162 4136 CircleF
-4163 4137 CircleF
-4164 4137 CircleF
-4164 4137 CircleF
-4165 4137 CircleF
-4166 4137 CircleF
-4166 4137 CircleF
-4167 4137 CircleF
-4168 4137 CircleF
-4168 4138 CircleF
-4169 4138 CircleF
-4170 4138 CircleF
-4170 4138 CircleF
-4171 4138 CircleF
-4171 4138 CircleF
-4172 4138 CircleF
-4173 4138 CircleF
-4173 4138 CircleF
-4174 4138 CircleF
-4175 4138 CircleF
-4175 4138 CircleF
-4176 4138 CircleF
-4177 4138 CircleF
-4177 4138 CircleF
-4178 4138 CircleF
-4178 4138 CircleF
-4179 4138 CircleF
-4180 4138 CircleF
-4180 4138 CircleF
-4181 4138 CircleF
-4182 4137 CircleF
-4182 4137 CircleF
-4183 4137 CircleF
-4183 4137 CircleF
-4184 4137 CircleF
-4185 4137 CircleF
-4185 4136 CircleF
-4186 4136 CircleF
-4187 4136 CircleF
-4187 4135 CircleF
-4188 4135 CircleF
-4188 4135 CircleF
-4189 4135 CircleF
-4190 4135 CircleF
-4190 4135 CircleF
-4191 4134 CircleF
-4191 4134 CircleF
-4192 4134 CircleF
-4193 4133 CircleF
-4193 4133 CircleF
-4194 4133 CircleF
-4195 4133 CircleF
-4195 4133 CircleF
-4196 4133 CircleF
-4196 4133 CircleF
-4197 4133 CircleF
-4198 4133 CircleF
-4198 4132 CircleF
-4199 4132 CircleF
-4199 4132 CircleF
-4200 4133 CircleF
-4201 4133 CircleF
-4201 4133 CircleF
-4202 4133 CircleF
-4202 4133 CircleF
-4203 4133 CircleF
-4204 4133 CircleF
-4204 4133 CircleF
-4205 4133 CircleF
-4205 4134 CircleF
-4206 4134 CircleF
-4207 4134 CircleF
-4207 4134 CircleF
-4208 4134 CircleF
-4208 4135 CircleF
-4209 4135 CircleF
-4209 4135 CircleF
-4210 4136 CircleF
-4211 4136 CircleF
-4211 4136 CircleF
-4212 4137 CircleF
-4212 4137 CircleF
-4213 4137 CircleF
-4214 4137 CircleF
-4214 4138 CircleF
-4215 4138 CircleF
-4215 4139 CircleF
-4216 4139 CircleF
-4216 4139 CircleF
-4217 4140 CircleF
-4218 4140 CircleF
-4218 4140 CircleF
-4219 4141 CircleF
-4219 4141 CircleF
-4220 4141 CircleF
-4221 4142 CircleF
-4221 4142 CircleF
-4222 4142 CircleF
-4222 4143 CircleF
-4223 4143 CircleF
-4223 4143 CircleF
-4224 4143 CircleF
-4224 4143 CircleF
-4225 4143 CircleF
-4226 4144 CircleF
-4226 4144 CircleF
-4227 4144 CircleF
-4227 4144 CircleF
-4228 4144 CircleF
-4228 4144 CircleF
-4229 4144 CircleF
-4230 4144 CircleF
-4230 4145 CircleF
-4231 4145 CircleF
-4231 4145 CircleF
-4232 4145 CircleF
-4232 4145 CircleF
-4233 4145 CircleF
-4233 4145 CircleF
-4234 4145 CircleF
-4235 4144 CircleF
-4235 4144 CircleF
-4236 4144 CircleF
-4236 4144 CircleF
-4237 4144 CircleF
-4237 4144 CircleF
-4238 4144 CircleF
-4238 4144 CircleF
-4239 4144 CircleF
-4240 4144 CircleF
-4240 4144 CircleF
-4241 4144 CircleF
-4241 4143 CircleF
-4242 4143 CircleF
-4242 4143 CircleF
-4243 4143 CircleF
-4243 4143 CircleF
-4244 4143 CircleF
-4244 4143 CircleF
-4245 4142 CircleF
-4246 4142 CircleF
-4246 4142 CircleF
-4247 4142 CircleF
-4247 4142 CircleF
-4248 4142 CircleF
-4248 4142 CircleF
-4249 4142 CircleF
-4249 4142 CircleF
-4250 4142 CircleF
-4250 4142 CircleF
-4251 4142 CircleF
-4251 4142 CircleF
-4252 4142 CircleF
-4253 4142 CircleF
-4253 4142 CircleF
-4254 4142 CircleF
-4254 4142 CircleF
-4255 4142 CircleF
-4255 4142 CircleF
-4256 4142 CircleF
-4256 4143 CircleF
-4257 4143 CircleF
-4257 4143 CircleF
-4258 4143 CircleF
-4258 4143 CircleF
-4259 4143 CircleF
-4259 4143 CircleF
-4260 4144 CircleF
-4260 4144 CircleF
-4261 4144 CircleF
-4261 4144 CircleF
-4262 4144 CircleF
-4263 4144 CircleF
-4263 4144 CircleF
-4264 4145 CircleF
-4264 4145 CircleF
-4265 4145 CircleF
-4265 4145 CircleF
-4266 4145 CircleF
-4266 4146 CircleF
-4267 4146 CircleF
-4267 4146 CircleF
-4268 4146 CircleF
-4268 4146 CircleF
-4269 4146 CircleF
-4269 4146 CircleF
-4270 4146 CircleF
-4270 4146 CircleF
-4271 4146 CircleF
-4271 4146 CircleF
-4272 4146 CircleF
-4272 4146 CircleF
-4273 4146 CircleF
-4273 4146 CircleF
-4274 4146 CircleF
-4274 4146 CircleF
-4275 4146 CircleF
-4275 4146 CircleF
-4276 4145 CircleF
-4276 4145 CircleF
-4277 4145 CircleF
-4277 4145 CircleF
-4278 4145 CircleF
-4278 4144 CircleF
-4279 4144 CircleF
-4279 4144 CircleF
-4280 4143 CircleF
-4280 4143 CircleF
-4281 4143 CircleF
-4281 4142 CircleF
-4282 4142 CircleF
-4282 4142 CircleF
-4283 4142 CircleF
-4283 4141 CircleF
-4284 4141 CircleF
-4284 4140 CircleF
-4285 4140 CircleF
-4285 4140 CircleF
-4286 4139 CircleF
-4286 4139 CircleF
-4287 4139 CircleF
-4287 4138 CircleF
-4288 4138 CircleF
-4288 4138 CircleF
-4289 4137 CircleF
-4289 4137 CircleF
-4290 4137 CircleF
-4290 4137 CircleF
-4291 4136 CircleF
-4291 4136 CircleF
-4292 4136 CircleF
-4292 4136 CircleF
-4293 4136 CircleF
-4293 4135 CircleF
-4294 4135 CircleF
-4294 4135 CircleF
-4295 4135 CircleF
-4295 4135 CircleF
-4296 4135 CircleF
-4296 4135 CircleF
-4297 4135 CircleF
-4297 4135 CircleF
-4298 4135 CircleF
-4298 4135 CircleF
-4298 4135 CircleF
-4299 4135 CircleF
-4299 4135 CircleF
-4300 4135 CircleF
-4300 4136 CircleF
-4301 4136 CircleF
-4301 4136 CircleF
-4302 4136 CircleF
-4302 4136 CircleF
-4303 4136 CircleF
-4303 4136 CircleF
-4304 4137 CircleF
-4304 4137 CircleF
-4305 4137 CircleF
-4305 4137 CircleF
-4306 4137 CircleF
-4306 4137 CircleF
-4307 4137 CircleF
-4307 4138 CircleF
-4307 4138 CircleF
-4308 4138 CircleF
-4308 4138 CircleF
-4309 4138 CircleF
-4309 4138 CircleF
-4310 4138 CircleF
-4310 4138 CircleF
-4311 4138 CircleF
-4311 4138 CircleF
-4312 4138 CircleF
-4312 4138 CircleF
-4313 4138 CircleF
-4313 4138 CircleF
-4314 4138 CircleF
-4314 4138 CircleF
-4314 4138 CircleF
-4315 4138 CircleF
-4315 4138 CircleF
-4316 4138 CircleF
-4316 4138 CircleF
-4317 4138 CircleF
-4317 4137 CircleF
-4318 4137 CircleF
-4318 4137 CircleF
-4319 4137 CircleF
-4319 4136 CircleF
-4320 4136 CircleF
-4320 4136 CircleF
-4320 4136 CircleF
-4321 4136 CircleF
-4321 4135 CircleF
-4322 4135 CircleF
-4322 4135 CircleF
-4323 4135 CircleF
-4323 4134 CircleF
-4324 4134 CircleF
-4324 4134 CircleF
-4325 4134 CircleF
-4325 4134 CircleF
-4325 4133 CircleF
-4326 4133 CircleF
-4326 4133 CircleF
-4327 4133 CircleF
-4327 4132 CircleF
-4328 4132 CircleF
-4328 4132 CircleF
-4329 4132 CircleF
-4329 4132 CircleF
-4329 4132 CircleF
-4330 4132 CircleF
-4330 4132 CircleF
-4331 4132 CircleF
-4331 4132 CircleF
-4332 4132 CircleF
-4332 4132 CircleF
-4333 4132 CircleF
-4333 4132 CircleF
-4333 4132 CircleF
-4334 4132 CircleF
-4334 4132 CircleF
-4335 4132 CircleF
-4335 4132 CircleF
-4336 4132 CircleF
-4336 4133 CircleF
-4337 4133 CircleF
-4337 4133 CircleF
-4337 4133 CircleF
-4338 4133 CircleF
-4338 4133 CircleF
-4339 4134 CircleF
-4447 4076 CircleF
+4176 4076 M
+543 0 V
+1940 640 M
+83 0 V
+80 0 V
+67 0 V
+59 0 V
+51 0 V
+46 1 V
+42 2 V
+38 8 V
+35 18 V
+32 40 V
+30 70 V
+28 107 V
+27 141 V
+25 166 V
+24 181 V
+22 186 V
+21 187 V
+21 186 V
+19 184 V
+19 180 V
+18 176 V
+17 166 V
+16 156 V
+16 141 V
+15 125 V
+15 108 V
+15 92 V
+13 77 V
+14 63 V
+13 53 V
+13 45 V
+12 43 V
+12 41 V
+12 43 V
+11 43 V
+11 42 V
+11 40 V
+10 35 V
+11 29 V
+10 23 V
+9 18 V
+10 14 V
+9 13 V
+10 13 V
+9 14 V
+8 17 V
+9 17 V
+9 17 V
+8 14 V
+8 12 V
+8 8 V
+8 5 V
+8 4 V
+7 3 V
+8 5 V
+7 7 V
+7 8 V
+7 9 V
+7 8 V
+7 6 V
+7 4 V
+7 2 V
+6 1 V
+7 0 V
+6 2 V
+7 3 V
+6 4 V
+6 6 V
+6 5 V
+6 4 V
+6 2 V
+5 1 V
+6 -1 V
+6 0 V
+5 1 V
+6 1 V
+5 3 V
+6 3 V
+5 3 V
+5 3 V
+5 2 V
+5 0 V
+6 -1 V
+5 -1 V
+4 0 V
+5 1 V
+5 1 V
+5 2 V
+5 2 V
+4 1 V
+5 1 V
+5 -1 V
+4 -1 V
+5 -1 V
+4 -1 V
+4 0 V
+5 0 V
+4 1 V
+4 0 V
+5 1 V
+4 -1 V
+4 -1 V
+stroke 3358 4101 M
+4 -2 V
+4 -2 V
+4 -2 V
+4 -1 V
+4 -1 V
+4 0 V
+4 -1 V
+4 -1 V
+3 -1 V
+4 -2 V
+4 -2 V
+4 -2 V
+3 -2 V
+4 -2 V
+4 -2 V
+3 -1 V
+4 -2 V
+3 -1 V
+4 -1 V
+3 -2 V
+4 -2 V
+3 -2 V
+4 -3 V
+3 -2 V
+3 -2 V
+4 -1 V
+3 -1 V
+3 -1 V
+4 -1 V
+3 -1 V
+3 -2 V
+3 -2 V
+3 -2 V
+3 -1 V
+4 -2 V
+3 0 V
+3 0 V
+3 0 V
+3 -1 V
+3 0 V
+3 -1 V
+3 -1 V
+3 -1 V
+3 -1 V
+3 0 V
+2 0 V
+3 1 V
+3 1 V
+3 0 V
+3 1 V
+3 -1 V
+2 0 V
+3 0 V
+3 0 V
+3 1 V
+2 1 V
+3 1 V
+3 1 V
+2 0 V
+3 1 V
+3 0 V
+2 0 V
+3 1 V
+2 0 V
+3 1 V
+2 1 V
+3 1 V
+2 1 V
+3 0 V
+2 1 V
+3 0 V
+2 0 V
+3 1 V
+2 0 V
+3 1 V
+2 0 V
+3 1 V
+2 0 V
+2 1 V
+3 0 V
+2 0 V
+2 1 V
+3 0 V
+2 0 V
+2 1 V
+2 0 V
+3 0 V
+2 0 V
+2 1 V
+2 0 V
+3 1 V
+2 0 V
+2 1 V
+2 0 V
+3 0 V
+2 0 V
+2 1 V
+2 1 V
+2 1 V
+2 1 V
+2 0 V
+2 1 V
+3 0 V
+2 1 V
+stroke 3657 4069 M
+2 0 V
+2 1 V
+2 1 V
+2 2 V
+2 1 V
+2 2 V
+2 1 V
+2 0 V
+2 1 V
+2 1 V
+2 1 V
+2 1 V
+2 2 V
+2 2 V
+2 1 V
+2 2 V
+2 1 V
+2 1 V
+2 1 V
+1 1 V
+2 1 V
+2 2 V
+2 2 V
+2 2 V
+2 1 V
+2 1 V
+2 1 V
+1 1 V
+2 1 V
+2 2 V
+2 1 V
+2 2 V
+1 1 V
+2 2 V
+2 1 V
+2 1 V
+2 1 V
+1 1 V
+2 1 V
+2 2 V
+2 1 V
+1 1 V
+2 1 V
+2 1 V
+2 1 V
+1 1 V
+2 1 V
+2 2 V
+1 1 V
+2 1 V
+2 1 V
+1 1 V
+2 0 V
+2 1 V
+1 1 V
+2 1 V
+2 2 V
+1 1 V
+2 1 V
+1 1 V
+2 0 V
+2 1 V
+1 0 V
+2 1 V
+2 1 V
+1 2 V
+2 1 V
+1 1 V
+2 1 V
+1 0 V
+2 0 V
+1 1 V
+2 0 V
+2 1 V
+1 1 V
+2 1 V
+1 1 V
+2 1 V
+1 0 V
+2 0 V
+1 0 V
+2 1 V
+1 0 V
+2 1 V
+1 1 V
+2 0 V
+1 1 V
+2 0 V
+1 -1 V
+2 0 V
+1 0 V
+1 1 V
+2 0 V
+1 1 V
+2 0 V
+1 0 V
+2 0 V
+1 -1 V
+1 0 V
+2 0 V
+1 0 V
+2 0 V
+1 0 V
+1 0 V
+stroke 3832 4158 M
+2 0 V
+1 0 V
+2 0 V
+1 -1 V
+1 0 V
+2 0 V
+1 0 V
+1 0 V
+2 0 V
+1 0 V
+2 0 V
+1 0 V
+1 0 V
+2 0 V
+1 0 V
+1 0 V
+2 0 V
+1 0 V
+1 0 V
+1 -1 V
+2 0 V
+1 0 V
+1 0 V
+2 1 V
+1 0 V
+1 0 V
+2 0 V
+1 0 V
+1 -1 V
+1 0 V
+2 0 V
+1 0 V
+1 0 V
+1 1 V
+2 0 V
+1 -1 V
+1 0 V
+1 0 V
+2 -1 V
+1 0 V
+1 0 V
+1 0 V
+2 0 V
+1 -1 V
+1 0 V
+1 -1 V
+1 0 V
+2 -1 V
+1 -1 V
+1 0 V
+1 -1 V
+1 0 V
+2 -1 V
+1 0 V
+1 -1 V
+1 -1 V
+1 -1 V
+2 -1 V
+1 -1 V
+1 -1 V
+1 0 V
+1 -1 V
+1 -1 V
+2 -1 V
+1 -1 V
+1 -1 V
+1 -1 V
+1 -1 V
+1 -1 V
+1 0 V
+2 -1 V
+1 -1 V
+1 -1 V
+1 -1 V
+1 -1 V
+1 -1 V
+1 0 V
+1 -1 V
+2 0 V
+1 -1 V
+1 -1 V
+1 0 V
+1 -1 V
+1 0 V
+1 -1 V
+1 0 V
+1 0 V
+1 0 V
+2 -1 V
+1 0 V
+1 0 V
+1 -1 V
+1 0 V
+1 0 V
+1 0 V
+1 1 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+2 0 V
+stroke 3958 4123 M
+1 0 V
+1 1 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 1 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 -1 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+0 -1 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 1 V
+1 0 V
+1 0 V
+0 1 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 1 V
+1 0 V
+1 1 V
+1 1 V
+1 0 V
+1 0 V
+0 1 V
+1 0 V
+1 1 V
+1 0 V
+1 1 V
+1 1 V
+1 0 V
+1 1 V
+1 0 V
+1 1 V
+1 1 V
+1 0 V
+1 1 V
+1 1 V
+1 0 V
+1 1 V
+1 0 V
+0 1 V
+1 0 V
+1 1 V
+1 1 V
+1 0 V
+1 1 V
+1 0 V
+0 1 V
+1 0 V
+1 1 V
+1 0 V
+1 1 V
+1 0 V
+1 1 V
+1 1 V
+1 0 V
+1 0 V
+1 0 V
+1 1 V
+1 1 V
+1 0 V
+stroke 4057 4149 M
+1 1 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 1 V
+1 0 V
+1 0 V
+0 1 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 -1 V
+1 0 V
+1 0 V
+1 0 V
+0 1 V
+1 0 V
+1 0 V
+1 0 V
+1 -1 V
+1 0 V
+1 1 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 1 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 1 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 -1 V
+1 0 V
+1 0 V
+1 0 V
+1 -1 V
+1 0 V
+1 -1 V
+1 0 V
+1 -1 V
+1 0 V
+0 -1 V
+1 0 V
+1 0 V
+0 -1 V
+1 -1 V
+1 0 V
+0 -1 V
+1 0 V
+1 -1 V
+1 -1 V
+1 0 V
+1 -1 V
+1 -1 V
+1 0 V
+0 -1 V
+1 0 V
+1 -1 V
+1 0 V
+1 -1 V
+1 -1 V
+1 0 V
+0 -1 V
+1 0 V
+1 0 V
+1 0 V
+1 -1 V
+1 0 V
+1 0 V
+stroke 4154 4136 M
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 1 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+0 1 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 -1 V
+1 0 V
+1 0 V
+1 0 V
+0 -1 V
+1 0 V
+1 0 V
+0 -1 V
+1 0 V
+1 0 V
+1 0 V
+1 -1 V
+1 0 V
+1 -1 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+0 -1 V
+1 0 V
+1 1 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+0 1 V
+1 0 V
+1 0 V
+1 0 V
+0 1 V
+1 0 V
+1 1 V
+1 0 V
+1 1 V
+1 0 V
+1 0 V
+0 1 V
+1 0 V
+0 1 V
+1 0 V
+1 1 V
+1 0 V
+1 1 V
+1 0 V
+1 1 V
+1 0 V
+0 1 V
+1 0 V
+1 0 V
+1 0 V
+1 1 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+0 1 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 -1 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+0 -1 V
+1 0 V
+1 0 V
+1 0 V
+1 -1 V
+1 0 V
+1 0 V
+stroke 4247 4142 M
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+0 1 V
+1 0 V
+1 0 V
+1 0 V
+1 1 V
+1 0 V
+1 0 V
+1 0 V
+1 1 V
+1 0 V
+1 0 V
+0 1 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 -1 V
+1 0 V
+1 0 V
+0 -1 V
+1 0 V
+1 -1 V
+1 0 V
+0 -1 V
+1 0 V
+1 0 V
+0 -1 V
+1 0 V
+0 -1 V
+1 0 V
+1 -1 V
+1 0 V
+0 -1 V
+1 0 V
+1 -1 V
+1 0 V
+1 -1 V
+1 0 V
+1 0 V
+0 -1 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+0 1 V
+1 0 V
+1 0 V
+1 0 V
+1 1 V
+1 0 V
+1 0 V
+1 0 V
+0 1 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+0 -1 V
+1 0 V
+1 0 V
+0 -1 V
+1 0 V
+1 0 V
+0 -1 V
+1 0 V
+1 0 V
+0 -1 V
+1 0 V
+1 0 V
+0 -1 V
+1 0 V
+1 0 V
+0 -1 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+1 0 V
+stroke 4335 4132 M
+1 0 V
+0 1 V
+1 0 V
+1 0 V
+1 1 V
 % End plot #2
+stroke
 1.000 UL
 LTb
+LCb setrgbcolor
 1940 4439 N
 0 -3799 V
 3019 0 V
@@ -2445,6 +2325,7 @@ Z stroke
 1.000 UP
 1.000 UL
 LTb
+LCb setrgbcolor
 stroke
 grestore
 end
