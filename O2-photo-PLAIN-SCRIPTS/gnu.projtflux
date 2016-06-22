@@ -2,7 +2,7 @@
 
 echo '
 
-set title "Partial photoionization flux O2 10 orbitals"
+set title "Partial photoionization flux O2 10 orbitals parallel"
 
 set term unknown
 set xlabel "time(fs)"

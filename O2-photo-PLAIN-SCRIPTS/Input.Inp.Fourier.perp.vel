@@ -73,6 +73,16 @@ ydftfile="Dat/YDipoleft.Dat.perp.vel"
 zdipfile="Dat/ZDipoleexpect.Dat.perp.vel"
 zdftfile="Dat/ZDipoleft.Dat.perp.vel"
 
+xophotonfile="Dat/XOPhoton.Dat.perp.vel"
+xoworkfile="Dat/XOWork.Dat.perp.vel"
+xtworkfile="Dat/XTWork.Dat.perp.vel"
+yophotonfile="Dat/YOPhoton.Dat.perp.vel"
+yoworkfile="Dat/YOWork.Dat.perp.vel"
+ytworkfile="Dat/YTWork.Dat.perp.vel"
+zophotonfile="Dat/ZOPhoton.Dat.perp.vel"
+zoworkfile="Dat/ZOWork.Dat.perp.vel"
+ztworkfile="Dat/ZTWork.Dat.perp.vel"
+
 sparseconfigflag=1
 
 loadavectorflag=1

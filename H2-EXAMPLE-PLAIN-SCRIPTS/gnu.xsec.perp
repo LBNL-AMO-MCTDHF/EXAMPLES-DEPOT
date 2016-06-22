@@ -2,6 +2,8 @@
 
 echo '
 
+set title "Photoionization cross section H2 fixed nuclei 7 orbitals"
+
 set term unknown
 set xlabel "Photon Energy (eV)"
 set ylabel "Cross Section (MBarns)"

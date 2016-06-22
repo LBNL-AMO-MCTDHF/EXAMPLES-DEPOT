@@ -47,6 +47,16 @@ ydftfile="Dat/YDipoleft.Dat.perp"
 zdipfile="Dat/ZDipoleexpect.Dat.perp"
 zdftfile="Dat/ZDipoleft.Dat.perp"
 
+xophotonfile="Dat/XOPhoton.Dat.perp"
+xoworkfile="Dat/XOWork.Dat.perp"
+xtworkfile="Dat/XTWork.Dat.perp"
+yophotonfile="Dat/YOPhoton.Dat.perp"
+yoworkfile="Dat/YOWork.Dat.perp"
+ytworkfile="Dat/YTWork.Dat.perp"
+zophotonfile="Dat/ZOPhoton.Dat.perp"
+zoworkfile="Dat/ZOWork.Dat.perp"
+ztworkfile="Dat/ZTWork.Dat.perp"
+
 loadavectorflag=1
 avectorfile="Bin/avector.bin.relax"
 loadspfflag=1
