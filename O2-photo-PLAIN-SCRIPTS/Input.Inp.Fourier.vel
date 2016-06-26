@@ -19,7 +19,7 @@ $pulse
 
  velflag=1
 
- minpulsetime=600
+ minpulsetime=500
 
 /
 
@@ -32,8 +32,8 @@ energyshift=(0d0,0.663551d-7)
 numactions=4
 actions=15,21,27,28
 
-fluxskipmult=2
-fluxinterval=2
+fluxskipmult=1
+fluxinterval=3
 fluxmofile="Flux/flux.mo.bin.vel"
 fluxafile="Flux/flux.avec.bin.vel"
 spifile="Dat/xsec.spi.vel.dat"
@@ -60,9 +60,10 @@ catspffiles(8)="Bin/spfs.bin.cation.quart.sig_u"
 fluxtsumfile="Dat/fluxtsum.vel.dat"
 projfluxtsumfile="Dat/projfluxtsum.vel"
 
-dipolesumstart=0.05d0
-autotimestep=0.5d0
-dipmodtime=200
+autotimestep=0.3d0
+
+dipolesumend=1d10
+dipmodtime=500
 diptime=100
 xdipfile="Dat/XDipoleexpect.Dat.vel"
 xdftfile="Dat/XDipoleft.Dat.vel"
@@ -107,8 +108,8 @@ restrictms=2
 mrestrictflag=1
 mrestrictval=0
 
-par_timestep=0.25d0
-littlesteps=5
+par_timestep=0.1d0
+littlesteps=3
 
 /
 

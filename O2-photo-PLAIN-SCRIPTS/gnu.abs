@@ -1,0 +1,46 @@
+#!/bin/bash
+
+echo '
+
+set title "Photoabsorption cross section O2 parallel"
+
+set xlabel "Energy (eV)"
+set ylabel "Absorption cross section (Mb)"
+
+set term unknown
+set style data lines
+
+set key top right
+
+set xrange [0:60]
+set yrange [-5:70]
+
+plot "Dat/ZDipoleft.Dat" using (27.2114*$1):($9) lt -1 lw 5 title "Length"
+replot "Dat/ZDipoleft.Dat.vel" using (27.2114*$1):($9) lt 2 lw 2 title "Velocity"
+
+set y2range [0:16.5]
+set y2tics 2
+set ytics nomirror
+set y2label "Integrated oscillator strength" rotate by 270
+replot "Dat/ZDipoleft.Dat" using (27.2114*$1):($10) axes x1y2 lt 3 lw 8 title "Sum len"
+replot "Dat/ZDipoleft.Dat.vel" using (27.2114*$1):($10) axes x1y2 lt 5 lw 2 title "Sum vel"
+
+set out "Absorption_o2.eps"
+set term post enhanced eps solid color 28
+replot
+
+set out
+set term x11 
+replot
+
+set xrange [0:*]
+set yrange [-70:70]
+
+set out
+set term x11 2
+replot
+
+
+' | gnuplot -persist
+
+

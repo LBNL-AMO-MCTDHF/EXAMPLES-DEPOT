@@ -2,7 +2,7 @@
 
 echo '
 
-set title "Photoabsorption cross section O2 fixed nuclei 10 orbitals"
+set title "Photoabsorption cross section O2 perpendicular"
 
 set xlabel "Energy (eV)"
 set ylabel "absorption cross section (Mb)"
@@ -12,35 +12,32 @@ set style data lines
 
 set key top right
 
-set yrange [0.01:100]
-
-set xrange [0:60]
-
-set logscale y
-
-plot "Dat/XDipoleft.Dat.perp" using (27.2114*$1):($9) lt 3 lw 10 title "Perpendicular"
-
-set term x11
-replot
-
-set out "Absorption.o2.perp.eps"
-set term post enhanced eps solid color 28
-replot
-
-unset logscale y
-
 set xrange [0:60]
 set yrange [-5:40]
-set out
-set term x11 2
+
+plot "Dat/XDipoleft.Dat.perp" using (27.2114*$1):($9) lt -1 lw 5 title "Length"
+replot "Dat/XDipoleft.Dat.perp.vel" using (27.2114*$1):($9) lt 2 lw 2 title "Velocity"
+
 set y2range [0:16.5]
 set y2tics 2
 set ytics nomirror
 set y2label "integrated oscillator strength"
-replot "Dat/XDipoleft.Dat.perp" using (27.2114*$1):($10) axes x1y2 lt 8 lw 5 title "Sum rule"
+replot "Dat/XDipoleft.Dat.perp" using (27.2114*$1):($10) axes x1y2 lt 3 lw 8 title "Sum len"
+replot "Dat/XDipoleft.Dat.perp.vel" using (27.2114*$1):($10) axes x1y2 lt 5 lw 2 title "Sum vel"
 
-set out "Absorption.o2.perp.withsum.eps"
+set out "Absorption_o2_perp.eps"
 set term post enhanced eps solid color 28
+replot
+
+set out
+set term x11 
+replot
+
+set xrange [0:*]
+set yrange [-40:40]
+
+set out
+set term x11 2
 replot
 
 ' | gnuplot -persist

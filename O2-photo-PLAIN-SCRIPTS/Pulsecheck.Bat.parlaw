@@ -1,3 +1,0 @@
-#!/bin/bash
-
-mpirun -n 10 --bind-to-core --cpus-per-proc 2 chmctdhf_diatom Inp=Input.Inp.Pulsecheck |tee Outs/Out.pulsecheck

@@ -1,3 +1,0 @@
-#!/bin/bash
-
-chmctdhf_diatom Inp=Input.Inp.Pulsecheck.vel |tee Outs/Out.pulsecheck.vel

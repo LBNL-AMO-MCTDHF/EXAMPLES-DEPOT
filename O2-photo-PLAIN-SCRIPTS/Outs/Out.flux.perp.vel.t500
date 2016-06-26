@@ -44,14 +44,14 @@
     Pulsephi:        0.000000000000000E+000
     Pulsefinish:        7.85398163397448     
  ---> Pulsetype 2.
-  Enforcing minpulsetime =           600.000000000000     
-     ---> Resetting finaltime to    600.250000000000     
-                 numpropsteps to         2401
+  Enforcing minpulsetime =           500.000000000000     
+     ---> Resetting finaltime to    500.100000000000     
+                 numpropsteps to         5001
     ... Writing pulse to file
         ... done Writing pulse to file
  Finaltime set by command line option to    500.000000000000     
-      numpropsteps now           2001
-      finaltime    now      500.250000000000     
+      numpropsteps now           5001
+      finaltime    now      500.100000000000     
  
   ****************************************************************************
  *****************************************************************************
@@ -107,11 +107,11 @@ rnumelements, rnumpoints:    1    3
  ***********************    Parameters: propagation    ***********************  
   
  
-  PAR_TIMESTEP IS   0.250000000000000       LITTLESTEPS IS            5
+  PAR_TIMESTEP IS   0.100000000000000       LITTLESTEPS IS            3
    prepropflag is            1  postpropflag is            2
    step_flag is            2
  
-                 # of steps, final time:      2001            500.25000000
+                 # of steps, final time:      5001            500.10000000
  
  
  *******  USING POLYNOMIAL MEAN FIELDS/MAGNUS A-VECTOR PREDICTOR/CORRECTOR   ***
@@ -135,8 +135,9 @@ rnumelements, rnumpoints:    1    3
  
  ****************************************************************************
  
- Autosteps is            2  Autosize is         1001  Numpropsteps is 
-        2001
+  Autotimestep=   0.200000000000000       Autosteps=            2  Autosize= 
+        2501
+  Numpropsteps=         5001
  
  *****************************************************************************
  
@@ -147,8 +148,8 @@ rnumelements, rnumpoints:    1    3
  ACTIONS:  IonFlux FT        
  
  FOR IONIZATION FLUX:
-    Flux Interval            2  0.500000000000000     
-    Fluxskipmult             2
+    Flux Interval            3  0.300000000000000     
+    Fluxskipmult             1
  
  ************************************
  ********  MAIN WALKS  **************
@@ -395,16 +396,23 @@ rnumelements, rnumpoints:    1    3
  
     ....Called init_project.
  Initial allocation electronflux
- Guess at necessary memory is   407.213 MB
+ Guess at necessary memory is  1355.750 MB
  g(tau) will be computed with all psi being read in batches
  Desired amount of memory to use   500.000 MB
- Good, there is enough memory for only one batch.
+ Batchsize is          615 /        1668
  Allocating psi arrays for electronflux
  MO record length is        96800
  AVEC record length is         4800
- Reading ket batch            1  of            1
+ Reading ket batch            1  of            3
  Reading bra batch            1  of            1
-  Taking the FT of g(tau) to get xsection at T=    500.000000000000     
+ Reading ket batch            2  of            3
+ Reading bra batch            1  of            2
+ Reading bra batch            2  of            2
+ Reading ket batch            3  of            3
+ Reading bra batch            1  of            3
+ Reading bra batch            2  of            3
+ Reading bra batch            3  of            3
+  Taking the FT of g(tau) to get xsection at T=    500.100000000000     
     ....Go ft....
     ....Go ft pulse....
     ....Done with ft....

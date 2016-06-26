@@ -2,30 +2,39 @@
 
 echo '
 
-set title "Photoionization flux O2 10 orbitals parallel"
+set title "Photoionization flux O2 parallel"
 
 set term unknown
 set xlabel "time(fs)"
-set ylabel "integrand"
-set y2label "integrated flux (norm-squared)"
+set ylabel "Integrand (norm-squared per Hartree)"
+set y2label "Integrated flux (norm-squared)" rotate by 270
 set ytics nomirror
 set y2tics
-set format y "%12.2e"
-set format y2 "%12.2e"
+set format y "%4.0e"
+set format y2 "%4.0e"
 
-set xrange [0.1:*]
+set key bottom right
+
+set xrange [0.01:*]
 set logscale x
 
-set yrange [0:*]
-set y2range [0:*]
+set yrange [1e-18:*]
+set y2range [1e-18:*]
+
+set logscale y
+set logscale y2
+
 
 A=1.0/41.34
 
-plot "Dat/fluxtsum.dat" using (A*$1):($4) with lines lt 7 lw 8 title "integrand"
-replot "Dat/fluxtsum.dat" using (A*$1):($2) with lines lt -1 lw 2 title "integrated" axes x1y2
+plot "Dat/fluxtsum.dat" using (A*$1):($4) with lines lt -1 lw 5 title "integrand"
+replot "Dat/fluxtsum.vel.dat" using (A*$1):($4) with lines lt 2 lw 2 title "integrand vel"
 
-set term post enhanced 20 color solid
-set out "tflux.o2.par.ps"
+replot "Dat/fluxtsum.dat" using (A*$1):($2) with lines lt 3 lw 8 title "integrated" axes x1y2
+replot "Dat/fluxtsum.vel.dat" using (A*$1):($2) with lines lt 5 lw 2 title "integrated vel" axes x1y2
+
+set term post eps enhanced 20 color solid
+set out "tflux_o2.eps"
 replot
 
 set term x11

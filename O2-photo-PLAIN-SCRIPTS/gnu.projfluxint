@@ -7,14 +7,12 @@ set title "Partial photoionization flux O2 10 orbitals parallel"
 set term unknown
 set xlabel "Photon Energy (eV)"
 set ylabel "integrated flux (norm-squared)"
-set format y "%12.2e"
+set format y "%4.0e"
 
 set xrange [0:100]
 
-# set yrange [0:*]
-
-# set yrange [1e-14:*]
-# set logscale y
+set yrange [5e-8:2e-5]
+set logscale y
 
 A=27.2114
 
