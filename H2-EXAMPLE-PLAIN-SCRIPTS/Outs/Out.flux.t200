@@ -132,8 +132,9 @@ rnumelements, rnumpoints:    1    3
  
  ****************************************************************************
  
- Autosteps is            4  Autosize is          201  Numpropsteps is 
-         801
+  Autotimestep=   0.500000000000000       Autosteps=            2  Autosize= 
+         401
+  Numpropsteps=          801
  
  *****************************************************************************
  
@@ -145,7 +146,7 @@ rnumelements, rnumpoints:    1    3
  
  FOR IONIZATION FLUX:
     Flux Interval            2  0.500000000000000     
-    Fluxskipmult             2
+    Fluxskipmult             1
  
  ************************************
  ********  MAIN WALKS  **************
@@ -355,7 +356,7 @@ rnumelements, rnumpoints:    1    3
  
     ....Called init_project.
  Initial allocation electronflux
- Guess at necessary memory is    59.605 MB
+ Guess at necessary memory is   118.914 MB
  g(tau) will be computed with all psi being read in batches
  Desired amount of memory to use   500.000 MB
  Good, there is enough memory for only one batch.

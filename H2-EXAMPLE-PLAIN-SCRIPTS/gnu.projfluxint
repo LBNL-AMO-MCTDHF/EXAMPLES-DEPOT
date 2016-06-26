@@ -7,7 +7,7 @@ set title "Partial photoionization flux H2 fixed nuclei 7 orbitals parallel"
 set term unknown
 set xlabel "Photon Energy (eV)"
 set ylabel "integrated flux (norm-squared)"
-set format y "%12.2e"
+set format y "%4.0e"
 
 set xrange [0:100]
 

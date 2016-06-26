@@ -23,7 +23,7 @@ actions=15,21,27,28
 
 angularflag=1
 angprojspifile="Dat/xsec.angproj.spi"
-fluxskipmult=2
+fluxskipmult=1
 fluxinterval=2
 fluxmofile="Flux/flux.mo.bin"
 fluxafile="Flux/flux.avec.bin"
@@ -34,9 +34,10 @@ angprojfluxtsumfile="Dat/angprojfluxtsum"
 fluxtsumfile="Dat/fluxtsum.dat"
 projfluxtsumfile="Dat/projfluxtsum"
 
-dipolesumstart=0.2d0
-autotimestep=1d0
-dipmodtime=100
+dipolesumend=1d10
+
+autotimestep=0.5d0
+dipmodtime=200
 diptime=100
 xdipfile="Dat/XDipoleexpect.Dat"
 xdftfile="Dat/XDipoleft.Dat"

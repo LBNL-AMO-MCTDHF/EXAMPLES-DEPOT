@@ -10,8 +10,8 @@ set ylabel "integrand"
 set y2label "integrated flux (norm-squared)"
 set ytics nomirror
 set y2tics
-set format y "%12.2e"
-set format y2 "%12.2e"
+set format y "%4.1e"
+set format y2 "%4.1e"
 
 set xrange [0.1:*]
 set logscale x

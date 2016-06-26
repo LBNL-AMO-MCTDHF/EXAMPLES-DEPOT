@@ -132,8 +132,9 @@ rnumelements, rnumpoints:    1    3
  
  ****************************************************************************
  
- Autosteps is            4  Autosize is         1001  Numpropsteps is 
-        4001
+  Autotimestep=   0.500000000000000       Autosteps=            2  Autosize= 
+        2001
+  Numpropsteps=         4001
  
  *****************************************************************************
  
@@ -145,7 +146,7 @@ rnumelements, rnumpoints:    1    3
  
  FOR IONIZATION FLUX:
     Flux Interval            2  0.500000000000000     
-    Fluxskipmult             2
+    Fluxskipmult             1
  
  ************************************
  ********  MAIN WALKS  **************
@@ -368,7 +369,7 @@ rnumelements, rnumpoints:    1    3
  Allocating arrays for projected flux
      ...go time loop           1
  Go double time integral
- Guess at necessary memory is    84.757 MB
+ Guess at necessary memory is   169.429 MB
  g(tau) will be computed with all psi being read in batches
  Desired amount of memory to use   500.000 MB
  Hooray, there is enough memory, doing it all in core
