@@ -10,7 +10,7 @@ set title "Absorption H6-33 linear Z polarization"
 set term unknown
 set style data lines
 
-set key top left
+set key top right
 
 set yrange [-5:70]
 
@@ -25,8 +25,8 @@ replot "Dat/ZDipoleft.Dat000500" using (27.2114*$1):($9) lt -1 lw 1 title "T=500
 set term x11
 replot
 
-set out "Absorption.h6-33.z.here.eps"
-set term post enhanced eps solid color 28
+set out "Absorption.h6-33.here.ps"
+set term post enhanced solid color 28
 replot
 
 ' | gnuplot -persist

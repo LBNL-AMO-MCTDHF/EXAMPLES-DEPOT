@@ -4,10 +4,10 @@ $pulse
  phaseshift=1.570796326794897d0
  pulsestart=0.5d0
 
- omega2=1.254d0
- omega=0.418d0
+ omega2=0.798d0
+ omega=0.266d0
 
- intensity=0.3333333333333d-3
+ intensity=1d-3
 
  velflag=1
 
@@ -19,11 +19,14 @@ $pulse
 
 $parinp
 
-numactions=3
-actions=15,20,21
+numactions=5
+actions=15,20,21,27,28
 
 fluxinterval=2
 fluxskipmult=2
+
+fluxskipmult=4
+
 fluxmofile="Flux/flux.mo.bin.vel"
 fluxafile="Flux/flux.avec.bin.vel"
 spifile="Dat/xsec.spi.vel.dat"
@@ -34,6 +37,8 @@ catspffiles(1)="Bin/spfs.bin.cation12"
 catavectorfiles(1)="Bin/avector.bin.cation12"
 catspffiles(2)="Bin/spfs.bin.cation3"
 catavectorfiles(2)="Bin/avector.bin.cation3"
+fluxtsumfile="Dat/fluxtsum.vel.dat"
+projfluxtsumfile="Dat/projfluxtsum.vel"
 
 autotimestep=0.5d0
 
@@ -44,7 +49,6 @@ ovlspffiles(2)="Bin/spfs.bin.excited"
 ovlavectorfiles(2)="Bin/avector.bin.excited"
 outovl="Dat/Overlaps.vel.dat"
 
-dipolesumstart=0.05d0
 dipmodtime=20
 diptime=100
 xdipfile="Dat/XDipoleexpect.Dat.vel"
@@ -54,7 +58,17 @@ ydftfile="Dat/YDipoleft.Dat.vel"
 zdipfile="Dat/ZDipoleexpect.Dat.vel"
 zdftfile="Dat/ZDipoleft.Dat.vel"
 
-energyshift=(0d0,-0.130696d-5)
+xophotonfile="Dat/XOPhoton.Dat.vel"
+xoworkfile="Dat/XOWork.Dat.vel"
+xtworkfile="Dat/XTWork.Dat.vel"
+yophotonfile="Dat/YOPhoton.Dat.vel"
+yoworkfile="Dat/YOWork.Dat.vel"
+ytworkfile="Dat/YTWork.Dat.vel"
+zophotonfile="Dat/ZOPhoton.Dat.vel"
+zoworkfile="Dat/ZOWork.Dat.vel"
+ztworkfile="Dat/ZTWork.Dat.vel"
+
+energyshift=(0d0,-0.90993057d-6)
 
 loadavectorflag=1
 avectorfile="Bin/avector.bin.relax"

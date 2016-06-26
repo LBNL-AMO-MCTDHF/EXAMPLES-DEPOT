@@ -2,7 +2,7 @@
 
 echo '
 
-set title "Partial photoionization H6-33 perp calculation"
+set title "Partial photoionization H6-33 perp polarization"
 
 set term unknown
 set xlabel "Photon Energy (ev)"

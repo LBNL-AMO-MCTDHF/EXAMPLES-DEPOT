@@ -5,12 +5,12 @@ echo '
 set xlabel "Energy (eV)"
 set ylabel "absorption cross section (Mb)"
 
-set title "Absorption H6-33 perpendicular calculation"
+set title "Absorption H6-33 perpendicular polarization"
 
 set term unknown
 set style data lines
 
-set key top left
+set key top right
 
 set yrange [-5:50]
 
@@ -26,8 +26,8 @@ replot "Dat/XDipoleft.Dat.perp.vel" using (27.2114*$1):($9) with points pt 7 lt 
 set term x11
 replot
 
-set out "Absorption.h6-33.perp.eps"
-set term post enhanced eps solid color 28
+set out "Absorption.h6-33.perp.ps"
+set term post enhanced solid color 28
 replot
 
 ' | gnuplot -persist

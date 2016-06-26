@@ -22,11 +22,14 @@ $pulse
 
 $parinp
 
-numactions=3
-actions=15,20,21
+numactions=5
+actions=15,20,21,27,28
 
 fluxinterval=2
 fluxskipmult=2
+
+fluxskipmult=4
+
 fluxmofile="Flux/flux.mo.bin.perp"
 fluxafile="Flux/flux.avec.bin.perp"
 spifile="Dat/xsec.spi.perp.dat"
@@ -37,6 +40,8 @@ catspffiles(1)="Bin/spfs.bin.cation12"
 catavectorfiles(1)="Bin/avector.bin.cation12"
 catspffiles(2)="Bin/spfs.bin.cation3"
 catavectorfiles(2)="Bin/avector.bin.cation3"
+fluxtsumfile="Dat/fluxtsum.perp.dat"
+projfluxtsumfile="Dat/projfluxtsum.perp"
 
 autotimestep=0.5d0
 
@@ -47,7 +52,6 @@ ovlspffiles(2)="Bin/spfs.bin.excited"
 ovlavectorfiles(2)="Bin/avector.bin.excited"
 outovl="Dat/Overlaps.perp.dat"
 
-dipolesumstart=0.05d0
 dipmodtime=20
 diptime=100
 xdipfile="Dat/XDipoleexpect.Dat.perp"
@@ -56,6 +60,16 @@ ydipfile="Dat/YDipoleexpect.Dat.perp"
 ydftfile="Dat/YDipoleft.Dat.perp"
 zdipfile="Dat/ZDipoleexpect.Dat.perp"
 zdftfile="Dat/ZDipoleft.Dat.perp"
+
+xophotonfile="Dat/XOPhoton.Dat.perp"
+xoworkfile="Dat/XOWork.Dat.perp"
+xtworkfile="Dat/XTWork.Dat.perp"
+yophotonfile="Dat/YOPhoton.Dat.perp"
+yoworkfile="Dat/YOWork.Dat.perp"
+ytworkfile="Dat/YTWork.Dat.perp"
+zophotonfile="Dat/ZOPhoton.Dat.perp"
+zoworkfile="Dat/ZOWork.Dat.perp"
+ztworkfile="Dat/ZTWork.Dat.perp"
 
 energyshift=(0d0,-0.90993057d-6)
 

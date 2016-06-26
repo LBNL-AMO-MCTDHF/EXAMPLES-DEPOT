@@ -12,7 +12,7 @@ improvedrelaxflag=2
 improvednatflag=1
 improvedquadflag=2
 quadstarttime=10d0
-lanthresh=1d-8
+lanthresh=1d-11
 
 loadspfflag=1
 spffile="Bin/spfs.bin.relax"

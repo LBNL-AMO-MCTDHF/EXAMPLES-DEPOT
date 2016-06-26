@@ -1,0 +1,43 @@
+#!/bin/bash
+
+echo '
+
+set title "Partial photoionization flux H6-33 Z polarization"
+
+set term unknown
+set xlabel "time(fs)"
+set ylabel "integrated flux (norm-squared)"
+set ytics nomirror
+set format y "%12.2e"
+
+set xrange [0.1:*]
+
+set logscale x
+
+# set yrange [1e-5:*]
+# set logscale y
+
+A=1.0/41.34
+
+plot "Dat/fluxtsum.dat" using (A*$1):($2) with lines lt -1 lw 3 title "total"
+
+replot "Dat/projfluxtsum_001_001.dat" using (A*$1):($2) with lines lt 7 lw 7 title "1"
+
+replot "Dat/projfluxtsum_002_001.dat" using (A*$1):($2) with lines lt 6 lw 5 title "2"
+
+replot "Dat/projfluxtsum_003_001.dat" using (A*$1):($2) with lines lt 5 lw 3 title "3"
+
+replot "Dat/projfluxtsum_004_001.dat" using (A*$1):($2) with lines lt 4 lw 1 title "4"
+
+replot "Dat/projfluxtsum_all_001.dat" using (A*$1):($2) with lines lt 8 lw 2 title "sum"
+
+set term post enhanced 20 color solid
+set out "projtflux.H6-33.ps"
+replot
+
+set term x11
+set out
+replot
+
+' | gnuplot -persist
+

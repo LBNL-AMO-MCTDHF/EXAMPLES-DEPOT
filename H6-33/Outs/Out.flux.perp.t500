@@ -8,7 +8,7 @@
     AMO Theory Group, Lawrence Berkeley Laboratory
       D J Haxton, C W McCurdy, T N Rescigno, K V Lawler, J Jones, 
       B Abeln, X Li . . .
-                              VERSION 1.27 
+                              VERSION 1.31 
         Copyright 2016 the regents of the University of California
  
                 This is CHMCTDH: HERM-normed ECS version.
@@ -134,7 +134,7 @@
  ****  
  
      Will use sparse configuration routines.
-           Lanczosorder is          200
+           Lanczosorder is          300
            Lanthresh is      1.000000000000000E-009
            Aorder is                 30
            Maxaorder is             100
@@ -151,8 +151,9 @@
  
  ****************************************************************************
  
- Autosteps is            2  Autosize is         1001  Numpropsteps is 
-        2001
+  Autotimestep=   0.500000000000000       Autosteps=            2  Autosize= 
+        1001
+  Numpropsteps=         2001
  
  *****************************************************************************
  
@@ -160,11 +161,11 @@
       SKIPPING CALCULATION!  Doing analysis.
     ****************************************
  
- ACTIONS:  IonFlux FT     
+ ACTIONS:  IonFlux FT        
  
  FOR IONIZATION FLUX:
     Flux Interval            2  0.500000000000000     
-    Fluxskipmult             2
+    Fluxskipmult             4
   Get ORbsets.  Fewer procs than orbitals.
  
  ************************************
@@ -264,7 +265,7 @@
  
  
  ************************************
- ** done main walks. BIORTHO WALKS **
+ **        BIORTHO WALKS           **
  ************************************
  
  Go fast_newconfiglist
@@ -391,18 +392,15 @@
      ... done get_3dpoisson.
     ....Called init_project.
  Initial allocation electronflux
- Guess at necessary memory is   871.019 MB
+ Guess at necessary memory is   436.379 MB
  g(tau) will be computed with all psi being read in batches
  Desired amount of memory to use   500.000 MB
- Batchsize is          287 /         501
+ Good, there is enough memory for only one batch.
  Allocating psi arrays for electronflux
  MO record length is      1437480
  AVEC record length is        57600
- Reading ket batch            1  of            2
+ Reading ket batch            1  of            1
  Reading bra batch            1  of            1
- Reading ket batch            2  of            2
- Reading bra batch            1  of            2
- Reading bra batch            2  of            2
   Taking the FT of g(tau) to get xsection at T=    500.000000000000     
     ....Go ft....
     ....Go ft pulse....
