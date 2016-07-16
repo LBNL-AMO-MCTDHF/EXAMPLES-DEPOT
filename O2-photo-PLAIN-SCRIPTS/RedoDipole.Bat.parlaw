@@ -5,7 +5,7 @@ export OMP_NUM_THREADS=2
 
 for ext in "" .vel .perp .perp.vel
 do
-   mpirun -n 10 --bind-to-core --cpus-per-proc 2 chmctdhf_diatom Inp=Input.Inp.Fourier$ext Act=29 |tee Outs/Out.redo$ext
+   mpirun -n 10 --bind-to-core --cpus-per-proc 2 chmctdhf_diatom Inp=Input.Inp.Fourier$ext Act=29 FluxSkip=1 |tee Outs/Out.redo$ext
 done
 
 

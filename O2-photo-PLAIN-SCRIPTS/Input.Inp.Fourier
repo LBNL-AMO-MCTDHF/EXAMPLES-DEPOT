@@ -1,7 +1,4 @@
 
-#  now - 29 ev to account for 5eV shift
-# omega=1.0657
-
 
 $pulse
 
@@ -9,17 +6,14 @@ $pulse
  pulsetype=2
  phaseshift=1.570796326794897d0
 
- omega2(1)=1.0657
- omega(1)=0.07853981633974d0
- omega(1)=0.10657
- omega2(1)=1.2
- omega(1)=0.4
+ omega2(1)=2.1d0
+ omega(1)=0.7d0
 
  intensity=1d-5
 
  velflag=0
 
- minpulsetime=500
+ minpulsetime=2000
 
 /
 
@@ -32,8 +26,8 @@ energyshift=(0d0,0.663551d-7)
 numactions=4
 actions=15,21,27,28
 
-fluxskipmult=1
-fluxinterval=3
+fluxskipmult=2
+fluxinterval=5
 fluxmofile="Flux/flux.mo.bin"
 fluxafile="Flux/flux.avec.bin"
 spifile="Dat/xsec.spi.dat"
@@ -60,10 +54,10 @@ catspffiles(8)="Bin/spfs.bin.cation.quart.sig_u"
 fluxtsumfile="Dat/fluxtsum.dat"
 projfluxtsumfile="Dat/projfluxtsum"
 
-autotimestep=0.3d0
+autotimestep=0.25d0
 
 dipolesumend=1d10
-dipmodtime=500
+dipmodtime=400
 diptime=100
 xdipfile="Dat/XDipoleexpect.Dat"
 xdftfile="Dat/XDipoleft.Dat"
@@ -108,8 +102,8 @@ restrictms=2
 mrestrictflag=1
 mrestrictval=0
 
-par_timestep=0.1d0
-littlesteps=3
+par_timestep=0.05d0
+littlesteps=1
 
 /
 

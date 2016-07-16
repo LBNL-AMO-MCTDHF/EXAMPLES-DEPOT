@@ -5,6 +5,7 @@ echo '
 set title "Integrated photoionization flux and photons absorbed O2 parallel"
 
 set term unknown
+set xlabel "Photon Energy (eV)"
 set ylabel "Integrated flux (norm-squared) or photons"
 set format y "%4.0e"
 

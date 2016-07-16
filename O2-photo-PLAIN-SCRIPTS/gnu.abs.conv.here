@@ -20,11 +20,13 @@ set logscale y
 
 plot "Dat/ZDipoleft.Dat000100" using (27.2114*$1):($9) lt 4 lw 8 title "T=100"
 
-replot "Dat/ZDipoleft.Dat000200" using (27.2114*$1):($9) lt 2 lw 5 title "T=200"
+replot "Dat/ZDipoleft.Dat000200" using (27.2114*$1):($9) lt 2 lw 7 title "T=200"
 
-replot "Dat/ZDipoleft.Dat000500" using (27.2114*$1):($9) lt -1 lw 2 title "T=500"
+replot "Dat/ZDipoleft.Dat000500" using (27.2114*$1):($9) lt -1 lw 4 title "T=500"
 
-##  replot "Dat/ZDipoleft.Dat001000" using (27.2114*$1):($9) lt -1 lw 1 title "T=1000"
+replot "Dat/ZDipoleft.Dat001000" using (27.2114*$1):($9) lt 4 lw 3 title "T=1000"
+
+replot "Dat/ZDipoleft.Dat002000" using (27.2114*$1):($9) lt 6 lw 1 title "T=2000"
 
 set term x11
 replot
@@ -32,6 +34,14 @@ replot
 set out "Absorption_o2_conv.eps"
 set term post enhanced eps solid color 28
 replot
+
+set term x11 2
+unset logscale y
+set xrange [5:20]
+
+replot
+
+
 
 ' | gnuplot -persist
 

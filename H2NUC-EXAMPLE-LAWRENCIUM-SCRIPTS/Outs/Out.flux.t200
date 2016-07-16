@@ -140,8 +140,9 @@ rnumelements, rnumpoints:    5   10
  
  ****************************************************************************
  
- Autosteps is            4  Autosize is          201  Numpropsteps is 
-         801
+  Autotimestep=    1.00000000000000       Autosteps=            4  Autosize= 
+         201
+  Numpropsteps=          801
  
  *****************************************************************************
  

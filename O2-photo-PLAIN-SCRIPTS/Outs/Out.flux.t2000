@@ -15,19 +15,19 @@
  
                 PROCESSOR            1  OF           10
  
- Inpfile is Input.Inp.Fourier.perp.vel 
+ Inpfile is Input.Inp.Fourier 
  
   *************************  COMMAND LINE OPTIONS  ***************************
  
  Reading 
- Input.Inp.Fourier.perp.vel                                                     
+ Input.Inp.Fourier                                                              
                                                                                 
                                            
- Eground for autoft set to    -147.349594643826       by command line option.
+ Eground for autoft set to    -147.349594643825       by command line option.
   ****************************************************************************
  
  Enforcing CMF defaults for Verlet or EXPO.
- PULSE IS ON:   velocity, usual way.
+ PULSE IS ON:   length.
  
  NUMBER OF PULSES:             1
  
@@ -35,23 +35,23 @@
  Pulse type is 2 or 3: envelope with carrier
     chirp:             0.000000000000000E+000
     ramp:             0.000000000000000E+000  Hartree
-    Envelope omega:    0.400000000000000     
-    Pulse omega:        1.20000000000000     
+    Envelope omega:    0.700000000000000     
+    Pulse omega:        2.10000000000000     
     Pulsestart:        0.000000000000000E+000
-    Pulsestrength:    (1.406582456193727E-003,0.000000000000000E+000)
+    Pulsestrength:    (8.037614035392727E-004,0.000000000000000E+000)
     Intensity:         1.000000000000000E-005  x 10^16 W cm^-2
-    Pulsetheta:         1.57079632679490     
+    Pulsetheta:        0.000000000000000E+000
     Pulsephi:        0.000000000000000E+000
-    Pulsefinish:        7.85398163397448     
+    Pulsefinish:        4.48798950512828     
  ---> Pulsetype 2.
-  Enforcing minpulsetime =           500.000000000000     
-     ---> Resetting finaltime to    500.100000000000     
-                 numpropsteps to         5001
+  Enforcing minpulsetime =           2000.00000000000     
+     ---> Resetting finaltime to    2000.05000000000     
+                 numpropsteps to        40001
     ... Writing pulse to file
         ... done Writing pulse to file
- Finaltime set by command line option to    500.000000000000     
-      numpropsteps now           5001
-      finaltime    now      500.100000000000     
+ Finaltime set by command line option to    2000.00000000000     
+      numpropsteps now          40001
+      finaltime    now      2000.05000000000     
  
   ****************************************************************************
  *****************************************************************************
@@ -69,7 +69,7 @@
                               ECS is ON!
                  xicelement,  xiecstheta    3    0.400000000000
     Xi elementsizes:   5.00000   5.00000   5.00000  10.00000
-      lbig,mbig          00010     00002
+      lbig,mbig          00010     00001
  
  **************************   Parameters: nuclear    *************************  
   
@@ -95,6 +95,8 @@ rnumelements, rnumpoints:    1    3
     Number of frozen spfs:        0
             Spfs start in m=     0   0   0   0   1  -1   0   1  -1   0
  
+ Spfs will be restricted to their original m-values.
+ Configurations will be restricted to total M=            0
  Configurations will be restricted to spin projection           2 /2
   Configurations will be restricted to spin            2
  
@@ -107,11 +109,11 @@ rnumelements, rnumpoints:    1    3
  ***********************    Parameters: propagation    ***********************  
   
  
-  PAR_TIMESTEP IS   0.100000000000000       LITTLESTEPS IS            3
+  PAR_TIMESTEP IS   5.000000000000000E-002  LITTLESTEPS IS            1
    prepropflag is            1  postpropflag is            2
    step_flag is            2
  
-                 # of steps, final time:      5001            500.10000000
+                 # of steps, final time:     40001           2000.05000000
  
  
  *******  USING POLYNOMIAL MEAN FIELDS/MAGNUS A-VECTOR PREDICTOR/CORRECTOR   ***
@@ -135,9 +137,9 @@ rnumelements, rnumpoints:    1    3
  
  ****************************************************************************
  
-  Autotimestep=   0.200000000000000       Autosteps=            2  Autosize= 
-        2501
-  Numpropsteps=         5001
+  Autotimestep=   0.250000000000000       Autosteps=            5  Autosize= 
+        8001
+  Numpropsteps=        40001
  
  *****************************************************************************
  
@@ -148,8 +150,8 @@ rnumelements, rnumpoints:    1    3
  ACTIONS:  IonFlux FT        
  
  FOR IONIZATION FLUX:
-    Flux Interval            3  0.300000000000000     
-    Fluxskipmult             1
+    Flux Interval            5  0.250000000000000     
+    Fluxskipmult             2
  
  ************************************
  ********  MAIN WALKS  **************
@@ -177,34 +179,34 @@ rnumelements, rnumpoints:    1    3
            9          10
  
  
- FASTNEWCONFIG: NUMBER OF CONFIGURATIONS         1200
+ FASTNEWCONFIG: NUMBER OF CONFIGURATIONS          392
  
- NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG         570           4
+ NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG         164           4
  Go fast_newconfiglist.  Allocating...
     Allocated.  getting configurations.
  Excitations per shell
          4         4        20
  
- BOTWALKS /TOPWALKS        1200
-           1         119         119
-         120         239         120
-         240         356         117
-         357         477         121
-         478         598         121
-         599         716         118
-         717         839         123
-         840         957         118
-         958        1076         119
-        1077        1200         124
+ BOTWALKS /TOPWALKS         392
+           1          37          37
+          38          76          39
+          77         115          39
+         116         154          39
+         155         195          41
+         196         234          39
+         235         273          39
+         274         310          37
+         311         348          38
+         349         392          44
  
       ...Done fast_newconfiglist
  Counting walks. Singles
  Counting walks. Doubles
  
  Maximum number of
-            single walks=           46
-            double walks=         1140
-   TOTAL walks:     1423200 maxdoublewalks*numconfig     1368000
+            single walks=           30
+            double walks=          592
+   TOTAL walks:      220400 maxdoublewalks*numconfig      232064
  
  Allocating singlewalks
  Allocating doublewalks
@@ -218,12 +220,12 @@ rnumelements, rnumpoints:    1    3
  Getting single hops...
  Getting double hops...
  GOT HOPS:  
-  Single hops this processor         3689  of         5474
-  Double hops this processor        33677  of       135660
-  Single hops total        37200  of        55200
-  Double hops total       339600  of      1368000
-     Max single hops           31
-     Max double hops          283
+  Single hops this processor          383  of          938
+  Double hops this processor         3539  of        17996
+  Single hops total         5016  of        10896
+  Double hops total        37432  of       209504
+     Max single hops           15
+     Max double hops          110
  
  Allocating more arrays for Slater determinants...
       .. OK allocating.
@@ -232,26 +234,26 @@ rnumelements, rnumpoints:    1    3
  Go get numspinwalks.
  Doing spin projector.
  Maximum number of spin walks=            3
- Avg number of spin walks=    2.10000000000000     
+ Avg number of spin walks=    2.32653061224490     
  Done spinwalk init.
  Calculating spin walks.
       ... done calculating spin walks.
     ... go spinsets ...
- Numspinsets this processor is           74   maxspinset size is            4
- Getting Spinset Projectors.  Numspinsets this process is           74
+ Numspinsets this processor is           19   maxspinset size is            4
+ Getting Spinset Projectors.  Numspinsets this process is           19
                                         maxspinsetsize is            4
  ...done.  Eliminated            0  sets with total rank            0
  
  This processor: 
-       spin sets                  74
-       spin rank                     104  of          119
-       botspin,topspin:                1         104
-       df spin rank                  104  of          119
-       botdfspin,topdfspin:            1         104
+       spin sets                  19
+       spin rank                      31  of           37
+       botspin,topspin:                1          31
+       df spin rank                   31  of           37
+       botdfspin,topdfspin:            1          31
  All processors:
-       spin rank, S^2 =    2.00000000000000       is          990  out of 
-        1200
-       df spin rank                  990  of         1200
+       spin rank, S^2 =    2.00000000000000       is          316  out of 
+         392
+       df spin rank                  316  of          392
  
  
  ************************************
@@ -280,34 +282,34 @@ rnumelements, rnumpoints:    1    3
            9          10
  
  
- FASTNEWCONFIG: NUMBER OF CONFIGURATIONS         1200
+ FASTNEWCONFIG: NUMBER OF CONFIGURATIONS          392
  
- NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG         570           4
+ NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG         164           4
  Go fast_newconfiglist.  Allocating...
     Allocated.  getting configurations.
  Excitations per shell
          4         4        20
  
- BOTWALKS /TOPWALKS        1200
-           1         119         119
-         120         239         120
-         240         356         117
-         357         477         121
-         478         598         121
-         599         716         118
-         717         839         123
-         840         957         118
-         958        1076         119
-        1077        1200         124
+ BOTWALKS /TOPWALKS         392
+           1          37          37
+          38          76          39
+          77         115          39
+         116         154          39
+         155         195          41
+         196         234          39
+         235         273          39
+         274         310          37
+         311         348          38
+         349         392          44
  
       ...Done fast_newconfiglist
  Counting walks. Singles
  Counting walks. Doubles
  
  Maximum number of
-            single walks=           46
+            single walks=           30
             double walks=            1
-   TOTAL walks:       55200 maxdoublewalks*numconfig        1200
+   TOTAL walks:       10896 maxdoublewalks*numconfig         392
  
  Allocating singlewalks
  Allocating doublewalks
@@ -321,11 +323,11 @@ rnumelements, rnumpoints:    1    3
  Getting single hops...
  Getting double hops...
  GOT HOPS:  
-  Single hops this processor         3689  of         5474
+  Single hops this processor          383  of          938
   Double hops this processor            0  of            0
-  Single hops total        37200  of        55200
+  Single hops total         5016  of        10896
   Double hops total            0  of            0
-     Max single hops           31
+     Max single hops           15
      Max double hops            1
  
  Allocating more arrays for Slater determinants...
@@ -335,26 +337,26 @@ rnumelements, rnumpoints:    1    3
  Go get numspinwalks.
  Doing spin projector.
  Maximum number of spin walks=            3
- Avg number of spin walks=    2.10000000000000     
+ Avg number of spin walks=    2.32653061224490     
  Done spinwalk init.
  Calculating spin walks.
       ... done calculating spin walks.
     ... go spinsets ...
- Numspinsets this processor is           74   maxspinset size is            4
- Getting Spinset Projectors.  Numspinsets this process is           74
+ Numspinsets this processor is           19   maxspinset size is            4
+ Getting Spinset Projectors.  Numspinsets this process is           19
                                         maxspinsetsize is            4
  ...done.  Eliminated            0  sets with total rank            0
  
  This processor: 
-       spin sets                  74
-       spin rank                     104  of          119
-       botspin,topspin:                1         104
-       df spin rank                  104  of          119
-       botdfspin,topdfspin:            1         104
+       spin sets                  19
+       spin rank                      31  of           37
+       botspin,topspin:                1          31
+       df spin rank                   31  of           37
+       botdfspin,topdfspin:            1          31
  All processors:
-       spin rank, S^2 =    2.00000000000000       is          990  out of 
-        1200
-       df spin rank                  990  of         1200
+       spin rank, S^2 =    2.00000000000000       is          316  out of 
+         392
+       df spin rank                  316  of          392
  
  
  ************************************
@@ -362,16 +364,16 @@ rnumelements, rnumpoints:    1    3
  ************************************
  
       DWWPTR Spin-adapted configurations by processor
-          1      1                 119
-          2      2                 120
-          3      3                 117
-          4      4                 121
-          5      5                 121
-          6      6                 118
-          7      7                 123
-          8      8                 118
-          9      9                 119
-         10     10                 124
+          1      1                  37
+          2      2                  39
+          3      3                  39
+          4      4                  39
+          5      5                  41
+          6      6                  39
+          7      7                  39
+          8      8                  37
+          9      9                  38
+         10     10                  44
  
  allocating for h2 project.... 
      ...allocated for h2 project. 
@@ -382,7 +384,7 @@ rnumelements, rnumpoints:    1    3
  Bin/spfs.bin.Relax                                                             
                                                                                 
                                            
- Calling init_project                 38720
+ Calling init_project                 23232
  Go init_project diatomic.   PSC...
  MAX prolate_derivs asym :     8.93554687500000     
  
@@ -396,23 +398,28 @@ rnumelements, rnumpoints:    1    3
  
     ....Called init_project.
  Initial allocation electronflux
- Guess at necessary memory is  1355.750 MB
+ Guess at necessary memory is  1909.213 MB
  g(tau) will be computed with all psi being read in batches
  Desired amount of memory to use   500.000 MB
- Batchsize is          615 /        1668
+ Batchsize is         1047 /        4001
  Allocating psi arrays for electronflux
- MO record length is        96800
- AVEC record length is         4800
- Reading ket batch            1  of            3
+ MO record length is        58080
+ AVEC record length is         1568
+ Reading ket batch            1  of            4
  Reading bra batch            1  of            1
- Reading ket batch            2  of            3
+ Reading ket batch            2  of            4
  Reading bra batch            1  of            2
  Reading bra batch            2  of            2
- Reading ket batch            3  of            3
+ Reading ket batch            3  of            4
  Reading bra batch            1  of            3
  Reading bra batch            2  of            3
  Reading bra batch            3  of            3
-  Taking the FT of g(tau) to get xsection at T=    500.100000000000     
+ Reading ket batch            4  of            4
+ Reading bra batch            1  of            4
+ Reading bra batch            2  of            4
+ Reading bra batch            3  of            4
+ Reading bra batch            4  of            4
+  Taking the FT of g(tau) to get xsection at T=    2000.00000000000     
     ....Go ft....
     ....Go ft pulse....
     ....Done with ft....

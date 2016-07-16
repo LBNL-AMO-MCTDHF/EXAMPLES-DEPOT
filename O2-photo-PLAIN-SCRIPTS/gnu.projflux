@@ -9,7 +9,7 @@ set xlabel "Photon Energy (eV)"
 set ylabel "differential flux (norm-squared per hartree)"
 set format y "%4.1e"
 
-set xrange [0:100]
+set xrange [0:180]
 
 # set yrange [0:*]
 

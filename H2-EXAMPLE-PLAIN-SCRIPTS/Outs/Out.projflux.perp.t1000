@@ -143,7 +143,7 @@ rnumelements, rnumpoints:    1    3
  ACTIONS:  ProjIonFlux FT    
  
  FOR IONIZATION FLUX:
-    Flux Interval            2  0.500000000000000     
+    Flux Interval            4   1.00000000000000     
     Fluxskipmult             1
  
  ************************************
@@ -367,7 +367,7 @@ rnumelements, rnumpoints:    1    3
  Allocating arrays for projected flux
      ...go time loop           1
  Go double time integral
- Guess at necessary memory is   282.381 MB
+ Guess at necessary memory is   141.261 MB
  g(tau) will be computed with all psi being read in batches
  Desired amount of memory to use   500.000 MB
  Hooray, there is enough memory, doing it all in core

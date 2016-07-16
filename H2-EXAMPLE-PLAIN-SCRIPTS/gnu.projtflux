@@ -12,7 +12,7 @@ set format y "%4.0e"
 set xrange [0.1:*]
 set logscale x
 
-set yrange [1e-12:*]
+set yrange [1e-14:*]
 set logscale y
 
 A=1.0/41.34

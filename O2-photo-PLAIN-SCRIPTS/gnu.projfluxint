@@ -9,9 +9,9 @@ set xlabel "Photon Energy (eV)"
 set ylabel "integrated flux (norm-squared)"
 set format y "%4.0e"
 
-set xrange [0:100]
+set xrange [0:180]
 
-set yrange [5e-8:2e-5]
+set yrange [5e-9:2e-6]
 set logscale y
 
 A=27.2114
