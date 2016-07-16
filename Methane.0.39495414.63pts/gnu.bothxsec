@@ -1,0 +1,66 @@
+#!/bin/bash
+
+echo '
+
+set title "Cross sections methane"
+
+
+set term unknown
+set xlabel "Photon Energy (eV)"
+set ylabel "Cross Section (MBarns)"
+set yrange [-5:70]
+set xrange [0:60]
+
+set style data lines
+
+A=27.2114
+
+plot "Dat/ZDipoleft.Dat" using (A*$1):($9) lt -1 lw 5 title "Abs len"
+replot "Dat.vel/ZDipoleft.Dat" using (A*$1):($9) with lines lt 2 lw 1 title "Abs vel"
+
+replot "Dat/xsec.spi.dat" using (A*$1):($3) lt 3 lw 8 title "Ion len"
+replot "Dat.vel/xsec.spi.dat" using (A*$1):($3) with lines lt 5 lw 2 title "Ion vel"
+
+set ytics nomirror
+set y2range [0:*]
+set y2label "Pulse intensity (linear scale)" rotate by 270
+replot "Dat/xsec.spi.dat" using (A*$1):($2) with lines lt -1 title "Pulse intensity" axes x1y2
+
+
+set term post eps enhanced 20 color solid
+set out "both_methane.eps"
+replot
+
+set term x11
+set out
+replot
+
+set xrange [5:*]
+set logscale x
+
+set yrange [0.01:*]
+set logscale y
+
+set term x11 2
+replot
+
+
+set term post eps enhanced 20 color solid
+set out "both_methane_log.eps"
+replot
+
+unset logscale y
+set yrange [-70:70]
+
+set out
+set term x11 3
+replot
+
+
+set term post eps enhanced 20 color solid
+set out "both_methane_nolog.eps"
+replot
+
+
+' | gnuplot -persist
+

@@ -2,32 +2,48 @@
 
 echo '
 
+set title "Photoabsorption cross section methane"
 
-set xlabel "Photon energy (eV)"
-set ylabel "absorption cross section (Mb)"
+set xlabel "Energy (eV)"
+set ylabel "Absorption cross section (Mb)"
 
 set term unknown
 set style data lines
 
+set key top right
 
+set xrange [0:60]
+set yrange [-5:70]
 
-set key top left
+plot "Dat/ZDipoleft.Dat" using (27.2114*$1):($9) lt -1 lw 3 title "Length"
+replot "Dat.vel/ZDipoleft.Dat" using (27.2114*$1):($9) lt 2 lw 1 title "Velocity"
 
-set yrange [0:60]
-set y2range [0:*]
+set y2range [0:10.5]
+set y2tics 2
+set ytics nomirror
+set y2label "Integrated oscillator strength" rotate by 270
+replot "Dat/ZDipoleft.Dat" using (27.2114*$1):($10) axes x1y2 lt 3 lw 5 title "Sum len"
+replot "Dat.vel/ZDipoleft.Dat" using (27.2114*$1):($10) axes x1y2 lt 5 lw 1 title "Sum vel"
 
-set xrange [6:26]
-
-plot "Dat/ZDipoleft.Dat" using (27.2114*$1):($9) lt 3 lw 10 notitle
-
-replot "Dat/ZDipoleft.Dat" using (27.2114*$1):(($4**2+$5**2)) with points pt 7 ps 2 lt -1 title "pulse intensity" axes x1y2
-
-set term x11
+set out "Absorption_methane.eps"
+set term post enhanced eps solid color 28
 replot
 
-set out "Absorption.ps"
-set term post enhanced solid color 20
+set out
+set term x11 
 replot
+
+set xrange [0:*]
+set yrange [-70:70]
+
+set out
+set term x11 2
+replot
+
+set out "Absorption_methane_fullrange.eps"
+set term post enhanced eps solid color 28
+replot
+
 
 ' | gnuplot -persist
 

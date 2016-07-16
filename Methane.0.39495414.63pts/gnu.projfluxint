@@ -1,0 +1,61 @@
+#!/bin/bash
+
+echo '
+
+set title "Partial photoionization flux methane"
+
+set term unknown
+
+set xlabel "Energy above ground state (eV)"
+set ylabel "integrated flux (norm-squared)"
+set ytics nomirror
+set format y "%4.1e"
+
+set key bottom right
+
+set xrange [0:100]
+
+# set yrange [0:*]
+
+set yrange [1e-8:*]
+set logscale y
+
+A=27.2114
+
+plot "Dat/xsec.spi.dat" using (A*$1):($7) with lines lt -1 lw 5 title "total"
+replot "Dat/xsec.proj.spi_001_001.dat" using (A*$1):($7) with lines lt 7 lw 7 title "T"
+replot "Dat/xsec.proj.spi_002_001.dat" using (A*$1):($7) with lines lt 6 lw 5 title "T"
+replot "Dat/xsec.proj.spi_003_001.dat" using (A*$1):($7) with lines lt 3 lw 3 title "T"
+replot "Dat/xsec.proj.spi_004_001.dat" using (A*$1):($7) with lines lt 4 lw 3 title "2s"
+replot "Dat/xsec.proj.spi_005_001.dat" using (A*$1):($7) with lines lt -1 lw 2 title "1s"
+replot "Dat/xsec.proj.spi_all_001.dat" using (A*$1):($7) with lines lt 2 lw 3 title "sum"
+
+set term post eps enhanced 20 color solid
+set out "projfluxint_methane.eps"
+replot
+
+set term x11
+set out
+replot
+
+set term unknown
+
+plot "Dat/xsec.proj.spi_001_001.dat" using (A*$1):($7) with lines lt 7 lw 7 title "T"
+replot "Dat/xsec.proj.spi_002_001.dat" using (A*$1):($7) with lines lt 6 lw 5 title "T"
+replot "Dat/xsec.proj.spi_003_001.dat" using (A*$1):($7) with lines lt 3 lw 3 title "T"
+replot "Dat/xsec.proj.spi_004_001.dat" using (A*$1):($7) with lines lt 4 lw 3 title "2s"
+replot "Dat/xsec.proj.spi_005_001.dat" using (A*$1):($7) with lines lt -1 lw 2 title "1s"
+
+set yrange [*:*]
+unset logscale y
+
+set term post eps enhanced 20 color solid
+set out "projfluxint_methane_nolog.eps"
+replot
+
+set term x11 2
+set out
+replot
+
+' | gnuplot -persist
+

@@ -1,0 +1,45 @@
+#!/bin/bash
+
+echo '
+
+set title "Photoionization flux methane"
+
+set term unknown
+set xlabel "time(fs)"
+set ylabel "Integrand (norm-squared per Hartree)"
+set y2label "Integrated flux (norm-squared)" rotate by 270
+set ytics nomirror
+set y2tics
+set format y "%4.0e"
+set format y2 "%4.0e"
+
+set key bottom right
+
+set xrange [0.01:*]
+set logscale x
+
+set yrange [1e-11:*]
+set y2range [1e-11:*]
+
+set logscale y
+set logscale y2
+
+
+A=1.0/41.34
+
+plot "Dat/fluxtsum.dat" using (A*$1):($4) with lines lt -1 lw 5 title "integrand"
+replot "Dat.vel/fluxtsum.dat" using (A*$1):($4) with lines lt 2 lw 2 title "integrand vel"
+
+replot "Dat/fluxtsum.dat" using (A*$1):($2) with lines lt 3 lw 8 title "integrated" axes x1y2
+replot "Dat.vel/fluxtsum.dat" using (A*$1):($2) with lines lt 5 lw 2 title "integrated vel" axes x1y2
+
+set term post eps enhanced 20 color solid
+set out "tflux_methane.eps"
+replot
+
+set term x11
+set out
+replot
+
+' | gnuplot -persist
+

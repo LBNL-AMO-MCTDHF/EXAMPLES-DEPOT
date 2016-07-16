@@ -1,144 +1,150 @@
-Thu Dec 24 20:48:44 PST 2015
-Thu Dec 24 20:48:44 PST 2015
-Thu Dec 24 20:48:44 PST 2015
-Thu Dec 24 20:48:44 PST 2015
-Thu Dec 24 20:48:44 PST 2015
-Thu Dec 24 20:48:44 PST 2015
-Thu Dec 24 20:48:44 PST 2015
-Thu Dec 24 20:48:44 PST 2015
-
+ 
   ****************************************************************************
   **********************  BEGIN LBNL-AMO-MCTDHF ******************************
   ****************************************************************************
-
+ 
     Atomic/Diatomic/Cartesian Polyatomic nonadiabatic MCTDHF code
       for ultrafast electronic and nuclear dynamics in intense laser fields
     AMO Theory Group, Lawrence Berkeley Laboratory
       D J Haxton, C W McCurdy, T N Rescigno, K V Lawler, J Jones, 
       B Abeln, X Li . . .
-                              VERSION 1.10 
-        Copyright 2015 the regents of the University of California
-
+                              VERSION 1.31 
+        Copyright 2016 the regents of the University of California
+ 
                 This is CHMCTDH: HERM-normed ECS version.
-
-                PROCESSOR            1  OF            8
-
- Inpfile is Input.Inp.Relax  
-
+ 
+                PROCESSOR            1  OF            7
+ 
+ Inpfile is Input.Inp.Relax 
+ 
   *************************  COMMAND LINE OPTIONS  ***************************
-
- Reading Input.Inp.Relax                                                                                                                                                                                         
+ 
+ Reading 
+ Input.Inp.Relax                                                                
+                                                                                
+                                           
   ****************************************************************************
-
+ 
  Enforcing CMF defaults for Verlet or EXPO.
-
+ 
   ****************************************************************************
  *****************************************************************************
-
+ 
  Number of states in propagation=           1
-
+ 
   Parameters: electronic
-
+ 
                     Number of electrons    10
  Nuclear KE flag (nonuc_checkflag):         1
-
+ 
  ********  SINC DVR PARAMS ******** 
- griddim,spacing           3  0.39495414000000001     
- numpoints          18          18          18
+ griddim,spacing           3  0.394954140000000     
+ numpoints          35          35           5
  numcenters           5
- nuccharge   6.0000000000000000     
- centershift  0.50000000000000000       0.50000000000000000       0.50000000000000000     
- nuccharge   1.0000000000000000     
- centershift   3.5000000000000000        3.5000000000000000        3.5000000000000000     
- nuccharge   1.0000000000000000     
- centershift  -2.5000000000000000       -2.5000000000000000        3.5000000000000000     
- nuccharge   1.0000000000000000     
- centershift  -2.5000000000000000        3.5000000000000000       -2.5000000000000000     
- nuccharge   1.0000000000000000     
- centershift   3.5000000000000000       -2.5000000000000000       -2.5000000000000000     
- orblanorder,orblanthresh         250   1.0000000000000000     
+ nuccharge   6.00000000000000     
+ centershift  0.000000000000000E+000  0.000000000000000E+000
+  0.000000000000000E+000
+ nuccharge   1.00000000000000     
+ centershift   3.00000000000000        3.00000000000000     
+   3.00000000000000     
+ nuccharge   1.00000000000000     
+ centershift  -3.00000000000000       -3.00000000000000     
+   3.00000000000000     
+ nuccharge   1.00000000000000     
+ centershift  -3.00000000000000        3.00000000000000     
+  -3.00000000000000     
+ nuccharge   1.00000000000000     
+ centershift   3.00000000000000       -3.00000000000000     
+  -3.00000000000000     
+ orblanorder,orblanthresh         500  1.000000000000000E-003
  notwoflag           0
  nonucrepflag           0
  toothnbig, toothnsmall         240          40
- orbparflag, orbparlevel T           1
+ orbparflag, orbparlevel T           3
  zke_paropt           1
- fft_mpi_inplaceflag           0
-    --> fft_ct_paropt           1
+ fft_mpi_inplaceflag           1
  fft_batchdim           1
  fft_circbatchdim           1
    -----  
- NBOX            2           2           2
- totpoints        5832
+ NBOX            1           1           7
+ totpoints        6125
  **********************************
-
- ************************   Parameters: config/spf    ************************   
-
+ 
+ ************************   Parameters: config/spf    ************************  
+  
+ 
  Doing full CI: numshells=1.  Shells:
  Shell            1
    1a    1b    2a    2b    3a    3b    4a    4b    5a    5b    6a    6b 
    7a    7b    8a    8b    9a    9b 
-  Final shell occupancy level vexcite=         999
-
+ 
     Number of unfrozen spfs:      9
     Number of frozen spfs:        0
             Spfs start in m=     0   0   0   0   0   0   0   0   0
-
+ 
  Configurations will be restricted to spin projection           0 /2
   Configurations will be restricted to spin            0
-
+ 
  ***********************    Initial state      ***********************   
-
- Spfs will be one-electron eigfuncts.
-
- Sfp Quad flag is OFF.
- Improvednatflag is ON.
-
+ 
+ Spfs will be loaded from files 
+ 
+ Spf Quad flag is ON (quadflag>1).  Start time    20.0000000000000     
+ Improvedfockflag is ON.
+ 
  Avector Quad flag is OFF.
  Avector will be obtained from diagonalization.
-
- ***********************    Parameters: propagation    ***********************   
-
-  PAR_TIMESTEP IS   0.10000000000000001       LITTLESTEPS IS            1
-
- MESSFLAG is on -- messing with spfs.  Messamount=   1.0000000000000000E-004
-
- Calculation will be stopped with threshold    9.9999999999999995E-008 ; timestep is   0.10000000000000001     
-
-
- *******  USING POLYNOMIAL MEAN FIELDS/MAGNUS A-VECTOR PREDICTOR/CORRECTOR   *******  
-
+ 
+ ***********************    Parameters: propagation    ***********************  
+  
+ 
+  PAR_TIMESTEP IS   0.100000000000000       LITTLESTEPS IS            1
+   prepropflag is            1  postpropflag is            2
+   step_flag is            2
+ 
+ Calculation will be stopped with threshold   1.000000000000000E-009 
+ ; timestep is   0.100000000000000     
+ 
+ 
+ *******  USING POLYNOMIAL MEAN FIELDS/MAGNUS A-VECTOR PREDICTOR/CORRECTOR   ***
+ ****  
+ 
      Will use sparse configuration routines.
-           Lanczosorder is          200
-           Lanthresh is       1.0000000000000000E-010
+           Lanczosorder is          300
+           Lanthresh is      1.000000000000000E-009
            Aorder is                300
            Maxaorder is             300
-           Aerror is          1.0000000000000001E-009
+           Aerror is         1.000000000000000E-009
   Jacobian options:
      Jacprojorth=           0
      Jacsymflag=           0
   Using EXPONENTIAL integration.
-     Expotol    =   1.0000000000000001E-009
+     Expotol    =  1.000000000000000E-009
      Maxexpodim=         300
-
+ 
  Density matrix regularized with denreg= 0.100E-29
-
-
+ 
+ 
  ****************************************************************************
-
- Autosteps is           10  Autosize is        40001  Numpropsteps is       400000
-
+ 
+  Autotimestep=    1.00000000000000       Autosteps=           10  Autosize= 
+       40001
+  Numpropsteps=       400000
+ 
  *****************************************************************************
-
-
-
+ 
+ 
+ 
   Get ORbsets.  Fewer procs than orbitals.
-
+ 
  ************************************
  ********  MAIN WALKS  **************
  ************************************
-
+ 
  Go fast_newconfiglist
- UPPER/LOWER
+ Excitations per shell
+         8         8        18
+ Orbital ranges for each electron ::
            1           5
            1           5
            2           6
@@ -149,41 +155,47 @@ Thu Dec 24 20:48:44 PST 2015
            4           8
            5           9
            5           9
-
-
+ 
+ 
  FASTNEWCONFIG: NUMBER OF CONFIGURATIONS        15876
-
+ 
  NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG        2907          70
- Go fast_newconfiglist, getting configurations
-      ...Done fast_newconfiglist
-
+ Go fast_newconfiglist.  Allocating...
+    Allocated.  getting configurations.
+ Excitations per shell
+         8         8        18
+ 
  BOTWALKS /TOPWALKS       15876
-           1        1983        1983
-        1984        3967        1984
-        3968        5952        1985
-        5953        7920        1968
-        7921        9896        1976
-        9897       11906        2010
-       11907       13890        1984
-       13891       15876        1986
-
+           1        2265        2265
+        2266        4533        2268
+        4534        6800        2267
+        6801        9052        2252
+        9053       11334        2282
+       11335       13606        2272
+       13607       15876        2270
+ 
+      ...Done fast_newconfiglist
  Counting walks. Singles
-        1000  out of         1983
+        1000  out of         2265
+        2000  out of         2265
  Counting walks. Doubles
-        1000  out of         1983
-
+        1000  out of         2265
+        2000  out of         2265
+ 
  Maximum number of
             single walks=           50
             double walks=         1225
    TOTAL walks:    20241900 maxdoublewalks*numconfig    19448100
-
+ 
  Allocating singlewalks
  Allocating doublewalks
       ..done walkalloc.
  Calculating walks.  Singles...
-        1000  out of         1983
+        1000  out of         2265
+        2000  out of         2265
  Calculating walks.  Doubles...
-        1000  out of         1983
+        1000  out of         2265
+        2000  out of         2265
  Sorting walks...
      .... done sorting walks.
  Counting single hops...
@@ -191,87 +203,100 @@ Thu Dec 24 20:48:44 PST 2015
  Getting single hops...
  Getting double hops...
  GOT HOPS:  
-  Single hops this processor        81303  of        99150
-  Double hops this processor      1112463  of      2429175
+  Single hops this processor        92865  of       113250
+  Double hops this processor      1270665  of      2774625
   Single hops total       650916  of       793800
   Double hops total      8906436  of     19448100
      Max single hops           41
      Max double hops          561
-
- Go spinwalks. 
+ 
+ Allocating more arrays for Slater determinants...
+      .. OK allocating.
+ Deallocating walks arrays.
+ Go spinwalk init. 
+ Go get numspinwalks.
  Doing spin projector.
  Maximum number of spin walks=           16
- Avg number of spin walks=    5.5555555555555554     
+ Avg number of spin walks=    5.55555555555556     
+ Done spinwalk init.
  Calculating spin walks.
       ... done calculating spin walks.
     ... go spinsets ...
- Numspinsets this processor is          505   maxspinset size is           70
- Getting Spinset Projectors.  Numspinsets this process is          505
-                                         maxspinsetsize is           70
+ Numspinsets this processor is          542   maxspinset size is           70
+ Getting Spinset Projectors.  Numspinsets this process is          542
+                                        maxspinsetsize is           70
  ...done.  Eliminated            0  sets with total rank            0
-
+ 
  This processor: 
-       spin sets                 505
-       spin rank                     749  of         1983
-       botspin,topspin:                1         749
-       df spin rank                  749  of         1983
-       botdfspin,topdfspin:            1         749
+       spin sets                 542
+       spin rank                     835  of         2265
+       botspin,topspin:                1         835
+       df spin rank                  835  of         2265
+       botdfspin,topdfspin:            1         835
  All processors:
-       spin rank, S^2 =    0.0000000000000000       is         5292  out of        15876
+       spin rank, S^2 =   0.000000000000000E+000  is         5292  out of 
+       15876
        df spin rank                 5292  of        15876
-
-
+ 
+ 
  ************************************
- ** done main walks. BIORTHO WALKS **
+ **         CATION WALKS           **
  ************************************
-
+ 
  Go fast_newconfiglist
- UPPER/LOWER
+ Excitations per shell
+         9         9        18
+ Orbital ranges for each electron ::
            1           5
-           1           5
+           1           6
            2           6
-           2           6
+           2           7
            3           7
-           3           7
+           3           8
            4           8
-           4           8
+           4           9
            5           9
-           5           9
-
-
+ 
+ 
  FASTNEWCONFIG: NUMBER OF CONFIGURATIONS        15876
-
- NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG        2907          70
- Go fast_newconfiglist, getting configurations
-      ...Done fast_newconfiglist
-
+ 
+ NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG        3139         126
+ Go fast_newconfiglist.  Allocating...
+    Allocated.  getting configurations.
+ Excitations per shell
+         9         9        18
+ 
  BOTWALKS /TOPWALKS       15876
-           1        1983        1983
-        1984        3967        1984
-        3968        5952        1985
-        5953        7920        1968
-        7921        9896        1976
-        9897       11906        2010
-       11907       13890        1984
-       13891       15876        1986
-
+           1        2265        2265
+        2266        4527        2262
+        4528        6803        2276
+        6804        9063        2260
+        9064       11339        2276
+       11340       13605        2266
+       13606       15876        2271
+ 
+      ...Done fast_newconfiglist
  Counting walks. Singles
-        1000  out of         1983
+        1000  out of         2265
+        2000  out of         2265
  Counting walks. Doubles
-        1000  out of         1983
-
+        1000  out of         2265
+        2000  out of         2265
+ 
  Maximum number of
-            single walks=           50
-            double walks=            1
-   TOTAL walks:      793800 maxdoublewalks*numconfig       15876
-
+            single walks=           49
+            double walks=         1152
+   TOTAL walks:    19067076 maxdoublewalks*numconfig    18289152
+ 
  Allocating singlewalks
  Allocating doublewalks
       ..done walkalloc.
  Calculating walks.  Singles...
-        1000  out of         1983
+        1000  out of         2265
+        2000  out of         2265
  Calculating walks.  Doubles...
-        1000  out of         1983
+        1000  out of         2265
+        2000  out of         2265
  Sorting walks...
      .... done sorting walks.
  Counting single hops...
@@ -279,48 +304,170 @@ Thu Dec 24 20:48:44 PST 2015
  Getting single hops...
  Getting double hops...
  GOT HOPS:  
-  Single hops this processor        81303  of        99150
+  Single hops this processor        92865  of       110985
+  Double hops this processor      1270665  of      2609280
+  Single hops total       650916  of       777924
+  Double hops total      8906436  of     18289152
+     Max single hops           41
+     Max double hops          561
+ 
+ Allocating more arrays for Slater determinants...
+      .. OK allocating.
+ Deallocating walks arrays.
+ Go spinwalk init. 
+ Go get numspinwalks.
+ Doing spin projector.
+ Maximum number of spin walks=           20
+ Avg number of spin walks=    5.55555555555556     
+ Done spinwalk init.
+ Calculating spin walks.
+      ... done calculating spin walks.
+    ... go spinsets ...
+ Numspinsets this processor is          535   maxspinset size is          126
+ Getting Spinset Projectors.  Numspinsets this process is          535
+                                        maxspinsetsize is          126
+ ...done.  Eliminated            0  sets with total rank            0
+ 
+ This processor: 
+       spin sets                 535
+       spin rank                    1324  of         2265
+       botspin,topspin:                1        1324
+       df spin rank                 1324  of         2265
+       botdfspin,topdfspin:            1        1324
+ All processors:
+       spin rank, S^2 =   0.750000000000000       is         8820  out of 
+       15876
+       df spin rank                 8820  of        15876
+ 
+ Counting cation single hops for fock
+ number of cation fock hops this processor       11325
+          number of cation fock hops total       79380
+ Getting cation single hops for fock
+ DONE getting fock cation single hops
+ 
+ ************************************
+ **        BIORTHO WALKS           **
+ ************************************
+ 
+ Go fast_newconfiglist
+ Excitations per shell
+         8         8        18
+ Orbital ranges for each electron ::
+           1           5
+           1           5
+           2           6
+           2           6
+           3           7
+           3           7
+           4           8
+           4           8
+           5           9
+           5           9
+ 
+ 
+ FASTNEWCONFIG: NUMBER OF CONFIGURATIONS        15876
+ 
+ NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG        2907          70
+ Go fast_newconfiglist.  Allocating...
+    Allocated.  getting configurations.
+ Excitations per shell
+         8         8        18
+ 
+ BOTWALKS /TOPWALKS       15876
+           1        2265        2265
+        2266        4533        2268
+        4534        6800        2267
+        6801        9052        2252
+        9053       11334        2282
+       11335       13606        2272
+       13607       15876        2270
+ 
+      ...Done fast_newconfiglist
+ Counting walks. Singles
+        1000  out of         2265
+        2000  out of         2265
+ Counting walks. Doubles
+        1000  out of         2265
+        2000  out of         2265
+ 
+ Maximum number of
+            single walks=           50
+            double walks=            1
+   TOTAL walks:      793800 maxdoublewalks*numconfig       15876
+ 
+ Allocating singlewalks
+ Allocating doublewalks
+      ..done walkalloc.
+ Calculating walks.  Singles...
+        1000  out of         2265
+        2000  out of         2265
+ Calculating walks.  Doubles...
+        1000  out of         2265
+        2000  out of         2265
+ Sorting walks...
+     .... done sorting walks.
+ Counting single hops...
+ Counting double hops...
+ Getting single hops...
+ Getting double hops...
+ GOT HOPS:  
+  Single hops this processor        92865  of       113250
   Double hops this processor            0  of            0
   Single hops total       650916  of       793800
   Double hops total            0  of            0
      Max single hops           41
      Max double hops            1
-
- Go spinwalks. 
+ 
+ Allocating more arrays for Slater determinants...
+      .. OK allocating.
+ Deallocating walks arrays.
+ Go spinwalk init. 
+ Go get numspinwalks.
  Doing spin projector.
  Maximum number of spin walks=           16
- Avg number of spin walks=    5.5555555555555554     
+ Avg number of spin walks=    5.55555555555556     
+ Done spinwalk init.
  Calculating spin walks.
       ... done calculating spin walks.
     ... go spinsets ...
- Numspinsets this processor is          505   maxspinset size is           70
- Getting Spinset Projectors.  Numspinsets this process is          505
-                                         maxspinsetsize is           70
+ Numspinsets this processor is          542   maxspinset size is           70
+ Getting Spinset Projectors.  Numspinsets this process is          542
+                                        maxspinsetsize is           70
  ...done.  Eliminated            0  sets with total rank            0
-
+ 
  This processor: 
-       spin sets                 505
-       spin rank                     749  of         1983
-       botspin,topspin:                1         749
-       df spin rank                  749  of         1983
-       botdfspin,topdfspin:            1         749
+       spin sets                 542
+       spin rank                     835  of         2265
+       botspin,topspin:                1         835
+       df spin rank                  835  of         2265
+       botdfspin,topdfspin:            1         835
  All processors:
-       spin rank, S^2 =    0.0000000000000000       is         5292  out of        15876
+       spin rank, S^2 =   0.000000000000000E+000  is         5292  out of 
+       15876
        df spin rank                 5292  of        15876
-
-
+ 
+ 
  ************************************
  ********** DONE WALKS. *************
  ************************************
-
- Calling init_project                93312
-
- Go CT_INIT
-    CT_MAXPRIME IS            2
-     CT_PRIMEFACTORS ARE
-              2
- Calling ct_construct...
-    ....Called ct_construct.
+ 
+      DWWPTR Spin-adapted configurations by processor
+          1      1                2265
+          2      2                2268
+          3      3                2267
+          4      4                2252
+          5      5                2282
+          6      6                2272
+          7      7                2270
+ 
+ Reading spfs.
+ Read complex spfs
+    ...rank 1 read from file
+ Loaded            5  spfs from file 
+ Bin/cation0.spfs.bin                                                           
+                                                                                
+                                           
+ Calling init_project                 98000
  Getting scaling...
      ....Ok got scaling.
  GO GET_3DPOISSON. calling getinverse.
@@ -328,1187 +475,1571 @@ Thu Dec 24 20:48:44 PST 2015
  filling in....
      ...filled.
      ... done get_3dpoisson.
- CALL BLOCK LAN FOR ORBS,            9  VECTORS
- FIRST ERR 0.2E+03 0.2E+03 0.2E+03 0.2E+03 0.2E+03 0.2E+03 0.2E+03 0.2E+03 0.2E+03
- MAX ERROR :    219.22190040806350        1.0000000000000000     
- FIRST ALPHA  (  19.166542309020439     ,-0.98737062441858758     )
- ENERGIES    -17.934506817581    -0.002217679883    -1.472254647928    -0.364460004092    -0.689568365735    -0.444289907267     0.183496536233    -0.636944449213     1.682825655729    -0.947879365848     2.515622651190    -1.060471537940     5.799709729106    -1.200323796758     8.511220729221    -1.277811554635     9.297517857739    -1.270826451213
- ENERGIES    -18.012086526517     0.000012948756    -6.351708080946    -0.001022727090    -6.216925463409    -0.003760143682    -5.949111649632    -0.013406886616    -2.684022309399    -0.108580245795    -2.295915019650    -0.145781308349    -0.808339661530    -0.327239239279    -0.140304906185    -0.580225997770    -0.077685500928    -0.618915106701
- ENERGIES    -18.012086603519     0.000012950178    -6.403679743075    -0.000044947292    -6.310823017504    -0.000006920023    -6.310306374231    -0.000025781527    -4.801010196645    -0.042207765919    -3.907358467654    -0.004248059800    -3.669569314928    -0.011376946815    -3.318767058326    -0.052208510733    -1.881509329838    -0.106056981959
- ENERGIES    -18.012086603518     0.000012950177    -6.423264114554    -0.000020030338    -6.310995679370     0.000000101177    -6.310994583607     0.000000064487    -6.307120228710    -0.000138412299    -4.093617514123    -0.000632489545    -3.972775856918    -0.002205529474    -3.913926251393    -0.001839698669    -3.538936312007    -0.009288606964
- ENERGIES    -18.012086603518     0.000012950177    -6.424001736590     0.000005330597    -6.310996026340     0.000000115148    -6.310996024860     0.000000115068    -6.310991343895    -0.000000092562    -4.117877511611    -0.000054290144    -4.107063083420    -0.000399128019    -4.046544274440    -0.001147768854    -3.827774264589    -0.001342284649
- ENERGIES    -18.012086603518     0.000012950177    -6.424002515339     0.000005365798    -6.310996026729     0.000000115155    -6.310996026563     0.000000115186    -6.310996021088     0.000000114942    -4.119349672518    -0.000003013753    -4.118029098663    -0.000033108107    -4.105774328404    -0.000363282781    -3.881692606455    -0.000407944352
-    checking convergence. 0.59235E-01 0.10000E+00       180
-   ERRORS  0.17E-12 0.14E-07 0.63E-10 0.34E-10 0.74E-07 0.60E-03 0.70E-02 0.73E-01 0.78E-01
- Converged.    7.8297251619065991E-002   1.0000000000000000     
+ getting IVO pot.  occupations are 
+   2.00000000000000        1.60000000000000        1.60000000000000     
+   1.60000000000000        1.60000000000000     
+ CALL BLOCK LAN FOR ORBS,            4  VECTORS
+ FIRST ERR 0.2E+03 0.2E+03 0.2E+03 0.2E+03
+ MAX ERROR :    231.222588119066       1.000000000000000E-003
+ FIRST ALPHA  (21.2642029572310,-0.787794393836346)
+ ENERGIES      0.626823193185    -0.537583781399     0.687030551383    -0.546754745125     0.706929560528    -0.585973855316     4.885323176886    -0.954047515172
+ ENERGIES      0.132843304316    -0.222460647098     0.174760402843    -0.274369524008     0.195731391762    -0.277123155161     1.041155010415    -0.814195546570
+ ENERGIES     -0.038097407714    -0.107678192440     0.011966179987    -0.145855788028     0.018156637190    -0.148308419639     0.498065770921    -0.531524248913
+ ENERGIES     -0.115435826785    -0.058978074766    -0.078758275975    -0.074882141902    -0.052413031517    -0.097672877479     0.231417227459    -0.303650911995
+ ENERGIES     -0.154528037793    -0.035942123575    -0.120896626309    -0.046365575101    -0.091391609501    -0.067643064976     0.098857439239    -0.198696488794
+ ENERGIES     -0.180300876798    -0.022042972220    -0.147454958418    -0.032337965059    -0.118408095742    -0.050296264900     0.009977331741    -0.125445967546
+ ENERGIES     -0.199696318982    -0.011393722311    -0.166225771580    -0.024527159095    -0.133314097210    -0.042930723192    -0.057154563650    -0.090017953043
+ ENERGIES     -0.212230633444    -0.006809781051    -0.178859573492    -0.018215459349    -0.141095338692    -0.039077099034    -0.105016238565    -0.067437573532
+ ENERGIES     -0.221762488837    -0.005226147787    -0.186371521392    -0.014455560206    -0.149568545311    -0.033767496553    -0.130490806087    -0.049152707858
+ ENERGIES     -0.228764115343    -0.004242483052    -0.192528989506    -0.011637227798    -0.157866897776    -0.025997520014    -0.144383620362    -0.039685539743
+ ENERGIES     -0.233283231224    -0.003643436406    -0.197350578193    -0.009548243372    -0.164358569669    -0.021305769723    -0.159066171691    -0.026115120582
+ ENERGIES     -0.235762768034    -0.003071623772    -0.200249069228    -0.007924961416    -0.178903149323    -0.015172168508    -0.165449698518    -0.016060083813
+ ENERGIES     -0.237246039036    -0.002448718286    -0.201620091042    -0.006837893892    -0.190021538338    -0.010420698437    -0.169789808162    -0.012991257289
+ ENERGIES     -0.237901957953    -0.002222517952    -0.202221342929    -0.006445821616    -0.196675355938    -0.008221007505    -0.171919863198    -0.012342756719
+ ENERGIES     -0.238109314196    -0.002233036737    -0.202454401950    -0.006205291340    -0.199851786608    -0.007441896316    -0.172671974726    -0.012580449584
+ ENERGIES     -0.238157766835    -0.002178555292    -0.202705180926    -0.006137900730    -0.201328839791    -0.006966863742    -0.172631135317    -0.012362390650
+ ENERGIES     -0.238173337867    -0.002135781941    -0.202939626429    -0.006130705259    -0.201966709616    -0.006591150862    -0.172262342252    -0.012744068996
+ ENERGIES     -0.238212119671    -0.002127265217    -0.202973681820    -0.006247290036    -0.202471434499    -0.006374470822    -0.173650865275    -0.017641920550
+ ENERGIES     -0.238239717237    -0.002129367230    -0.203010210424    -0.006204972498    -0.202691873055    -0.006287346806    -0.177049473271    -0.017301193997
+ ENERGIES     -0.238249223767    -0.002131389915    -0.203006188555    -0.006189521443    -0.202768870307    -0.006199791789    -0.179470189193    -0.016018101773
+ ENERGIES     -0.238254794956    -0.002133126052    -0.203001051995    -0.006156458988    -0.202898385495    -0.006120912547    -0.182961448188    -0.013598188016
+ ENERGIES     -0.238256960578    -0.002136268388    -0.203027742068    -0.006146052730    -0.202975648051    -0.006137230124    -0.188341959866    -0.011573067869
+ ENERGIES     -0.238255737157    -0.002136768439    -0.203045517472    -0.006175349576    -0.202996383880    -0.006159605805    -0.193091662416    -0.009777695193
+ ENERGIES     -0.238253904081    -0.002136171197    -0.203031057870    -0.006184556744    -0.203005675312    -0.006184058180    -0.196888853786    -0.008500154767
+ ENERGIES     -0.238252984849    -0.002135446879    -0.203021063671    -0.006188442905    -0.203007126623    -0.006189535439    -0.199385447387    -0.007506588673
+ ENERGIES     -0.238252685830    -0.002134870792    -0.203015729318    -0.006188393423    -0.203006810379    -0.006185955019    -0.201105266458    -0.006881071972
+ ENERGIES     -0.238252468468    -0.002134518876    -0.203015791199    -0.006191226290    -0.203009843839    -0.006183766595    -0.202272972896    -0.006458853156
+ ENERGIES     -0.238252690864    -0.002134181987    -0.203015225964    -0.006181300732    -0.203013178446    -0.006186280136    -0.202755023919    -0.006275732077
+ ENERGIES     -0.238252893275    -0.002134077794    -0.203019032732    -0.006182001478    -0.203013599374    -0.006182283787    -0.202914000865    -0.006172600564
+    checking convergence. 0.18950E-03 0.10000E-03       870
+   ERRORS  0.57E-07 0.97E-06 0.19E-05 0.14E-03
+ Converged.   1.408436331832407E-004  1.000000000000000E-003
  BL CALLED. ENERGIES: 
-           1 ( -18.012086603518014     ,  1.2950177011000763E-005)
-           2 ( -6.4240025153394109     ,  5.3657983383278060E-006)
-           3 ( -6.3109960267288860     ,  1.1515504906226536E-007)
-           4 ( -6.3109960265625187     ,  1.1518618864400810E-007)
-           5 ( -6.3109960210875773     ,  1.1494157750591150E-007)
-           6 ( -4.1193496725177070     , -3.0137525186417771E-006)
-           7 ( -4.1180290986628023     , -3.3108106658634916E-005)
-           8 ( -4.1057743284042614     , -3.6328278119549657E-004)
-           9 ( -3.8816926064554682     , -4.0794435172829735E-004)
-
+           1 (-0.238252893274851,-2.134077794089027E-003)
+           2 (-0.203019032731663,-6.182001478083679E-003)
+           3 (-0.203013599374348,-6.182283786583388E-003)
+           4 (-0.202914000864655,-6.172600564175035E-003)
+ 
     ....Called init_project.
- mess: orthog    1.5995015905350029E-015
- mess: orthog2    1.1278637897670841E-015
  Not enough avectors loaded! will diagonalize.
- FIRST ERR 0.4E+02
- MAX ERROR :    44.831571155279001        1.0000000000000000E-010
- FIRST ALPHA  ( -19.088332675107928     , -2.4316854138852931E-003)
- ENERGIES    -33.197804607050    -0.002302931417
- ENERGIES    -33.199110147715    -0.002308607687
- ENERGIES    -33.199110148412    -0.002308608209
- ENERGIES    -33.199110148412    -0.002308608209
-    checking convergence. 0.17094E-12 0.10000E-10        80
-   ERRORS  0.68E-12
- Converged.    6.8212153454927520E-013   1.0000000000000000E-010
- REPLACING SPFS - DENMAT EIGS
-         0.1999221060E+01
-         0.1995780857E+01
-         0.1994333698E+01
-         0.1994056505E+01
-         0.1993483016E+01
-         0.6403892552E-02
-         0.5942948826E-02
-         0.5565299021E-02
-         0.5212723722E-02
-
- IN PROP: VECTOR NORM  ( 0.99999999999999167     ,  0.0000000000000000     )
-          ENERGY  ( -33.199110148411904     , -2.3086082079614928E-003)
- REPLACING SPFS - DENMAT EIGS
-         0.1999221060E+01
-         0.1995780857E+01
-         0.1994333698E+01
-         0.1994056505E+01
-         0.1993483016E+01
-         0.6403892266E-02
-         0.5942948544E-02
-         0.5565298697E-02
-         0.5212723655E-02
-
-T=          0.10000  Energy:  -0.3437704605E+02 -0.6164726574E-03    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.36E+01  0.10E-06  AVECTOR   0.10E+05  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999315649E+01
-         0.1994004483E+01
-         0.1991251605E+01
-         0.1990945891E+01
-         0.1990190166E+01
-         0.9550497523E-02
-         0.8990153957E-02
-         0.8563663004E-02
-         0.7187890844E-02
-
-T=          0.20500  Energy:  -0.3495644984E+02 -0.3693267932E-03    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.26E+01  0.10E-06  AVECTOR   0.55E+01  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999478182E+01
-         0.1992020745E+01
-         0.1988526006E+01
-         0.1988187226E+01
-         0.1987336023E+01
-         0.1222349264E-01
-         0.1159332805E-01
-         0.1114182450E-01
-         0.9493172876E-02
-
-T=          0.31525  Energy:  -0.3533394279E+02 -0.2432699617E-03    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.19E+01  0.10E-06  AVECTOR   0.34E+01  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999619532E+01
-         0.1990190253E+01
-         0.1986241703E+01
-         0.1985906820E+01
-         0.1985052341E+01
-         0.1421957802E-01
-         0.1361389017E-01
-         0.1313532794E-01
-         0.1202055606E-01
-
-T=          0.43101  Energy:  -0.3559839648E+02 -0.1654182501E-03    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.14E+01  0.10E-06  AVECTOR   0.23E+01  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999714724E+01
-         0.1988802843E+01
-         0.1984466383E+01
-         0.1984150941E+01
-         0.1983353857E+01
-         0.1565435442E-01
-         0.1511582756E-01
-         0.1459448606E-01
-         0.1414658390E-01
-
-T=          0.55256  Energy:  -0.3579043487E+02 -0.1152018486E-03    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.11E+01  0.10E-06  AVECTOR   0.16E+01  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999772358E+01
-         0.1987854194E+01
-         0.1983166833E+01
-         0.1982877356E+01
-         0.1982162667E+01
-         0.1670901732E-01
-         0.1620417157E-01
-         0.1566090018E-01
-         0.1559250277E-01
-
-T=          0.68019  Energy:  -0.3593305056E+02 -0.8308540688E-04    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.82E+00  0.10E-06  AVECTOR   0.11E+01  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999806864E+01
-         0.1987206444E+01
-         0.1982222660E+01
-         0.1981961616E+01
-         0.1981334244E+01
-         0.1750795075E-01
-         0.1697746971E-01
-         0.1656904696E-01
-         0.1641370372E-01
-
-T=          0.81420  Energy:  -0.3604059959E+02 -0.6364534230E-04    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.66E+00  0.10E-06  AVECTOR   0.80E+00  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999828018E+01
-         0.1986742027E+01
-         0.1981520487E+01
-         0.1981287427E+01
-         0.1980743027E+01
-         0.1808471156E-01
-         0.1754126903E-01
-         0.1722960869E-01
-         0.1702342590E-01
-
-T=          0.95491  Energy:  -0.3612257556E+02 -0.5345051060E-04    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.54E+00  0.10E-06  AVECTOR   0.58E+00  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999841325E+01
-         0.1986389041E+01
-         0.1980983127E+01
-         0.1980775956E+01
-         0.1980306342E+01
-         0.1848061849E-01
-         0.1797716373E-01
-         0.1772868320E-01
-         0.1751774306E-01
-
-T=          1.10266  Energy:  -0.3618551941E+02 -0.5015308767E-04    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.46E+00  0.10E-06  AVECTOR   0.43E+00  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999849843E+01
-         0.1986107409E+01
-         0.1980563246E+01
-         0.1980379332E+01
-         0.1979975301E+01
-         0.1874787950E-01
-         0.1832740067E-01
-         0.1812123670E-01
-         0.1792835209E-01
-
-T=          1.25779  Energy:  -0.3623408233E+02 -0.5202854563E-04    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.39E+00  0.10E-06  AVECTOR   0.31E+00  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999855328E+01
-         0.1985875167E+01
-         0.1980232261E+01
-         0.1980069082E+01
-         0.1979721825E+01
-         0.1893042251E-01
-         0.1861162883E-01
-         0.1843266201E-01
-         0.1827162433E-01
-
-T=          1.42068  Energy:  -0.3627165546E+02 -0.5772775560E-04    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.34E+00  0.10E-06  AVECTOR   0.23E+00  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999858832E+01
-         0.1985680037E+01
-         0.1979972221E+01
-         0.1979827615E+01
-         0.1979529317E+01
-         0.1906323043E-01
-         0.1883929592E-01
-         0.1867282120E-01
-         0.1855663075E-01
-
-T=          1.59171  Energy:  -0.3630076097E+02 -0.6613906024E-04    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.29E+00  0.10E-06  AVECTOR   0.17E+00  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999861010E+01
-         0.1985514790E+01
-         0.1979770921E+01
-         0.1979643107E+01
-         0.1979387074E+01
-         0.1917514239E-01
-         0.1901795663E-01
-         0.1884233909E-01
-         0.1878766041E-01
-
-T=          1.77130  Energy:  -0.3632330472E+02 -0.7630742918E-04    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.25E+00  0.10E-06  AVECTOR   0.13E+00  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999862282E+01
-         0.1985374793E+01
-         0.1979619213E+01
-         0.1979506702E+01
-         0.1979287280E+01
-         0.1927973654E-01
-         0.1915888578E-01
-         0.1898561999E-01
-         0.1892548703E-01
-
-T=          1.95986  Energy:  -0.3634074486E+02 -0.8738466956E-04    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.22E+00  0.10E-06  AVECTOR   0.92E-01  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999862925E+01
-         0.1985256748E+01
-         0.1979509621E+01
-         0.1979411113E+01
-         0.1979223515E+01
-         0.1937045387E-01
-         0.1927010586E-01
-         0.1912897502E-01
-         0.1896654399E-01
-
-T=          2.15786  Energy:  -0.3635420769E+02 -0.9860125274E-04    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.19E+00  0.10E-06  AVECTOR   0.68E-01  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999863124E+01
-         0.1985158045E+01
-         0.1979435674E+01
-         0.1979349964E+01
-         0.1979190097E+01
-         0.1943963411E-01
-         0.1935373751E-01
-         0.1923852556E-01
-         0.1897119904E-01
-
-T=          2.36575  Energy:  -0.3636456934E+02 -0.1092578579E-03    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.17E+00  0.10E-06  AVECTOR   0.50E-01  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999863007E+01
-         0.1985076452E+01
-         0.1979391601E+01
-         0.1979317527E+01
-         0.1979181843E+01
-         0.1948593881E-01
-         0.1941177344E-01
-         0.1931707206E-01
-         0.1895478539E-01
-
-T=          2.58404  Energy:  -0.3637251462E+02 -0.1187348019E-03    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.15E+00  0.10E-06  AVECTOR   0.36E-01  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999862661E+01
-         0.1985009963E+01
-         0.1979372210E+01
-         0.1979308627E+01
-         0.1979194004E+01
-         0.1951132224E-01
-         0.1944722910E-01
-         0.1936908876E-01
-         0.1892489503E-01
-
-T=          2.81324  Energy:  -0.3637858044E+02 -0.1265138042E-03    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.13E+00  0.10E-06  AVECTOR   0.26E-01  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999862152E+01
-         0.1984956730E+01
-         0.1979372831E+01
-         0.1979318609E+01
-         0.1979222275E+01
-         0.1951883562E-01
-         0.1946354584E-01
-         0.1939897354E-01
-         0.1888604837E-01
-
-T=          3.05390  Energy:  -0.3638318831E+02 -0.1322031390E-03    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.12E+00  0.10E-06  AVECTOR   0.19E-01  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999861527E+01
-         0.1984915038E+01
-         0.1979389296E+01
-         0.1979343334E+01
-         0.1979262807E+01
-         0.1951174219E-01
-         0.1946416702E-01
-         0.1941081552E-01
-         0.1884127404E-01
-
-T=          3.30660  Energy:  -0.3638666910E+02 -0.1355566912E-03    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.11E+00  0.10E-06  AVECTOR   0.14E-01  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999860822E+01
-         0.1984883292E+01
-         0.1979417914E+01
-         0.1979379161E+01
-         0.1979312219E+01
-         0.1949316702E-01
-         0.1945233172E-01
-         0.1940831615E-01
-         0.1879277633E-01
-
-T=          3.57193  Energy:  -0.3638928224E+02 -0.1364801092E-03    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.95E-01  0.10E-06  AVECTOR   0.98E-02  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999860068E+01
-         0.1984860012E+01
-         0.1979455455E+01
-         0.1979422930E+01
-         0.1979367586E+01
-         0.1946595445E-01
-         0.1943098066E-01
-         0.1939476130E-01
-         0.1874225213E-01
-
-T=          3.85052  Energy:  -0.3639123063E+02 -0.1350217688E-03    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.85E-01  0.10E-06  AVECTOR   0.70E-02  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999859288E+01
-         0.1984843833E+01
-         0.1979499122E+01
-         0.1979471928E+01
-         0.1979426419E+01
-         0.1943261490E-01
-         0.1940271809E-01
-         0.1937302043E-01
-         0.1869105669E-01
-
-T=          4.14305  Energy:  -0.3639267247E+02 -0.1313507396E-03    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.76E-01  0.10E-06  AVECTOR   0.49E-02  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999858503E+01
-         0.1984833501E+01
-         0.1979546525E+01
-         0.1979523861E+01
-         0.1979486635E+01
-         0.1939531388E-01
-         0.1936980327E-01
-         0.1934556123E-01
-         0.1864029618E-01
-
-T=          4.45020  Energy:  -0.3639373064E+02 -0.1257268684E-03    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.67E-01  0.10E-06  AVECTOR   0.34E-02  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999857731E+01
-         0.1984827878E+01
-         0.1979595655E+01
-         0.1979576821E+01
-         0.1979546522E+01
-         0.1935588183E-01
-         0.1933415775E-01
-         0.1931447257E-01
-         0.1859088061E-01
-
-T=          4.77271  Energy:  -0.3639450016E+02 -0.1184688796E-03    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.59E-01  0.10E-06  AVECTOR   0.24E-02  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999856985E+01
-         0.1984825943E+01
-         0.1979644856E+01
-         0.1979629249E+01
-         0.1979604707E+01
-         0.1931583360E-01
-         0.1929738144E-01
-         0.1928149126E-01
-         0.1854355385E-01
-
-T=          5.11135  Energy:  -0.3639505412E+02 -0.1099253399E-03    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.52E-01  0.10E-06  AVECTOR   0.16E-02  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999856276E+01
-         0.1984826790E+01
-         0.1979692801E+01
-         0.1979679905E+01
-         0.1979660122E+01
-         0.1927639221E-01
-         0.1926077340E-01
-         0.1924803032E-01
-         0.1849891026E-01
-
-T=          5.46691  Energy:  -0.3639544845E+02 -0.1004512625E-03    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.45E-01  0.10E-06  AVECTOR   0.11E-02  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999855614E+01
-         0.1984829633E+01
-         0.1979738460E+01
-         0.1979727841E+01
-         0.1979711971E+01
-         0.1923851402E-01
-         0.1922535532E-01
-         0.1921520763E-01
-         0.1845740405E-01
-
-T=          5.84026  Energy:  -0.3639572568E+02 -0.9039097174E-04    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.39E-01  0.10E-06  AVECTOR   0.74E-03  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999855005E+01
-         0.1984833807E+01
-         0.1979781078E+01
-         0.1979772367E+01
-         0.1979759702E+01
-         0.1920291431E-01
-         0.1919189682E-01
-         0.1918387467E-01
-         0.1841935575E-01
-
-T=          6.23227  Energy:  -0.3639591793E+02 -0.8006629110E-04    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.33E-01  0.10E-06  AVECTOR   0.49E-03  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999854452E+01
-         0.1984838761E+01
-         0.1979820142E+01
-         0.1979813027E+01
-         0.1979802978E+01
-         0.1917009311E-01
-         0.1916094225E-01
-         0.1915464566E-01
-         0.1838495885E-01
-
-T=          6.64388  Energy:  -0.3639604921E+02 -0.6976844242E-04    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.28E-01  0.10E-06  AVECTOR   0.32E-03  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999853958E+01
-         0.1984844057E+01
-         0.1979855352E+01
-         0.1979849569E+01
-         0.1979841648E+01
-         0.1914036148E-01
-         0.1913283864E-01
-         0.1912792703E-01
-         0.1835428851E-01
-
-T=          7.07608  Energy:  -0.3639613738E+02 -0.5975217147E-04    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.24E-01  0.10E-06  AVECTOR   0.21E-03  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999853521E+01
-         0.1984849360E+01
-         0.1979886591E+01
-         0.1979881914E+01
-         0.1979875720E+01
-         0.1911386822E-01
-         0.1910776449E-01
-         0.1910394720E-01
-         0.1832731316E-01
-
-T=          7.52988  Energy:  -0.3639619550E+02 -0.5023121969E-04    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.20E-01  0.10E-06  AVECTOR   0.13E-03  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999853141E+01
-         0.1984854429E+01
-         0.1979913892E+01
-         0.1979910126E+01
-         0.1979905331E+01
-         0.1909062691E-01
-         0.1908575878E-01
-         0.1908278645E-01
-         0.1830390926E-01
-
-T=          8.00638  Energy:  -0.3639623303E+02 -0.4137496551E-04    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.16E-01  0.10E-06  AVECTOR   0.81E-04  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999852815E+01
-         0.1984859100E+01
-         0.1979937406E+01
-         0.1979934384E+01
-         0.1979930719E+01
-         0.1907054273E-01
-         0.1906674917E-01
-         0.1906440640E-01
-         0.1828387823E-01
-
-T=          8.50638  Energy:  -0.3639625672E+02 -0.3331131602E-04    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.13E-01  0.10E-06  AVECTOR   0.50E-04  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999852537E+01
-         0.1984863278E+01
-         0.1979957366E+01
-         0.1979954944E+01
-         0.1979952189E+01
-         0.1905344493E-01
-         0.1905058430E-01
-         0.1904868475E-01
-         0.1826697133E-01
-
-T=          9.00638  Energy:  -0.3639627080E+02 -0.2642625666E-04    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.10E-01  0.10E-06  AVECTOR   0.31E-04  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999852309E+01
-         0.1984866842E+01
-         0.1979973611E+01
-         0.1979971647E+01
-         0.1979969601E+01
-         0.1903949564E-01
-         0.1903741662E-01
-         0.1903579401E-01
-         0.1825328405E-01
-
-T=          9.50638  Energy:  -0.3639627916E+02 -0.2060890466E-04    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.84E-02  0.10E-06  AVECTOR   0.20E-04  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999852124E+01
-         0.1984869811E+01
-         0.1979986734E+01
-         0.1979985119E+01
-         0.1979983627E+01
-         0.1902820201E-01
-         0.1902677561E-01
-         0.1902531046E-01
-         0.1824229773E-01
-
-T=         10.00638  Energy:  -0.3639628410E+02 -0.1573585188E-04    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.67E-02  0.10E-06  AVECTOR   0.14E-04  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851975E+01
-         0.1984872246E+01
-         0.1979997273E+01
-         0.1979995917E+01
-         0.1979994864E+01
-         0.1901911953E-01
-         0.1901822850E-01
-         0.1901684515E-01
-         0.1823353104E-01
-
-T=         10.50638  Energy:  -0.3639628701E+02 -0.1168261045E-04    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.53E-02  0.10E-06  AVECTOR   0.10E-04  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851856E+01
-         0.1984874222E+01
-         0.1980005696E+01
-         0.1980004533E+01
-         0.1980003827E+01
-         0.1901186376E-01
-         0.1901138575E-01
-         0.1901005058E-01
-         0.1822656514E-01
-
-T=         11.00638  Energy:  -0.3639628871E+02 -0.8330744947E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.42E-02  0.10E-06  AVECTOR   0.75E-05  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851762E+01
-         0.1984875812E+01
-         0.1980012405E+01
-         0.1980011382E+01
-         0.1980010948E+01
-         0.1900614663E-01
-         0.1900587246E-01
-         0.1900462389E-01
-         0.1822104753E-01
-
-T=         11.50638  Energy:  -0.3639628969E+02 -0.5571999615E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.34E-02  0.10E-06  AVECTOR   0.59E-05  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851688E+01
-         0.1984877084E+01
-         0.1980017732E+01
-         0.1980016817E+01
-         0.1980016584E+01
-         0.1900174706E-01
-         0.1900135415E-01
-         0.1900030686E-01
-         0.1821668744E-01
-
-T=         12.00638  Energy:  -0.3639629026E+02 -0.3310231745E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.27E-02  0.10E-06  AVECTOR   0.47E-05  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851628E+01
-         0.1984878095E+01
-         0.1980021952E+01
-         0.1980021151E+01
-         0.1980021004E+01
-         0.1899831442E-01
-         0.1899772294E-01
-         0.1899688334E-01
-         0.1821324826E-01
-
-T=         12.50638  Energy:  -0.3639629057E+02 -0.1461848586E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.21E-02  0.10E-06  AVECTOR   0.38E-05  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851582E+01
-         0.1984878898E+01
-         0.1980025289E+01
-         0.1980024637E+01
-         0.1980024427E+01
-         0.1899561087E-01
-         0.1899484243E-01
-         0.1899417511E-01
-         0.1821053919E-01
-
-T=         13.00638  Energy:  -0.3639629075E+02  0.4468601752E-07    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.17E-02  0.10E-06  AVECTOR   0.30E-05  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851545E+01
-         0.1984879532E+01
-         0.1980027923E+01
-         0.1980027408E+01
-         0.1980027101E+01
-         0.1899348015E-01
-         0.1899256602E-01
-         0.1899203688E-01
-         0.1820840745E-01
-
-T=         13.50638  Energy:  -0.3639629085E+02  0.1269856746E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.13E-02  0.10E-06  AVECTOR   0.25E-05  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851516E+01
-         0.1984880032E+01
-         0.1980030000E+01
-         0.1980029595E+01
-         0.1980029202E+01
-         0.1899180195E-01
-         0.1899077048E-01
-         0.1899035127E-01
-         0.1820673131E-01
-
-T=         14.00638  Energy:  -0.3639629090E+02  0.2264332024E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.10E-02  0.10E-06  AVECTOR   0.20E-05  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851494E+01
-         0.1984880426E+01
-         0.1980031635E+01
-         0.1980031317E+01
-         0.1980030853E+01
-         0.1899048114E-01
-         0.1898935606E-01
-         0.1898902407E-01
-         0.1820541413E-01
-
-T=         14.50638  Energy:  -0.3639629093E+02  0.3070251715E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.82E-03  0.10E-06  AVECTOR   0.16E-05  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851476E+01
-         0.1984880736E+01
-         0.1980032922E+01
-         0.1980032672E+01
-         0.1980032150E+01
-         0.1898944231E-01
-         0.1898824292E-01
-         0.1898798005E-01
-         0.1820437946E-01
-
-T=         15.00638  Energy:  -0.3639629094E+02  0.3722462531E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.64E-03  0.10E-06  AVECTOR   0.13E-05  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851462E+01
-         0.1984880980E+01
-         0.1980033933E+01
-         0.1980033737E+01
-         0.1980033169E+01
-         0.1898862571E-01
-         0.1898736753E-01
-         0.1898715939E-01
-         0.1820356691E-01
-
-T=         15.50638  Energy:  -0.3639629095E+02  0.4249648186E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.51E-03  0.10E-06  AVECTOR   0.11E-05  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851451E+01
-         0.1984881171E+01
-         0.1980034728E+01
-         0.1980034574E+01
-         0.1980033969E+01
-         0.1898798407E-01
-         0.1898667947E-01
-         0.1898651467E-01
-         0.1820292889E-01
-
-T=         16.00638  Energy:  -0.3639629096E+02  0.4675331327E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.40E-03  0.10E-06  AVECTOR   0.85E-06  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851442E+01
-         0.1984881321E+01
-         0.1980035353E+01
-         0.1980035231E+01
-         0.1980034597E+01
-         0.1898748006E-01
-         0.1898613887E-01
-         0.1898600838E-01
-         0.1820242795E-01
-
-T=         16.50638  Energy:  -0.3639629097E+02  0.5018742057E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.32E-03  0.10E-06  AVECTOR   0.69E-06  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851435E+01
-         0.1984881439E+01
-         0.1980035844E+01
-         0.1980035748E+01
-         0.1980035091E+01
-         0.1898708426E-01
-         0.1898571426E-01
-         0.1898561092E-01
-         0.1820203463E-01
-
-T=         17.00638  Energy:  -0.3639629097E+02  0.5295560488E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.25E-03  0.10E-06  AVECTOR   0.55E-06  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851430E+01
-         0.1984881531E+01
-         0.1980036229E+01
-         0.1980036153E+01
-         0.1980035478E+01
-         0.1898677347E-01
-         0.1898538081E-01
-         0.1898529896E-01
-         0.1820172580E-01
-
- Vectors converged on read   9.3658589915910644E-011   1.0000000000000000E-010
-T=         17.50638  Energy:  -0.3639629098E+02  0.5518488793E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.17E-03  0.10E-06  AVECTOR   0.45E-06  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851430E+01
-         0.1984881531E+01
-         0.1980036229E+01
-         0.1980036153E+01
-         0.1980035478E+01
-         0.1898677347E-01
-         0.1898538081E-01
-         0.1898529896E-01
-         0.1820172580E-01
-
-T=         18.00638  Energy:  -0.3639629098E+02  0.5698064836E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.16E-03  0.10E-06  AVECTOR   0.36E-06  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851424E+01
-         0.1984881622E+01
-         0.1980036694E+01
-         0.1980036645E+01
-         0.1980035946E+01
-         0.1898640278E-01
-         0.1898497979E-01
-         0.1898492701E-01
-         0.1820135878E-01
-
- Vectors converged on read   5.6928886111505673E-011   1.0000000000000000E-010
-T=         18.50638  Energy:  -0.3639629099E+02  0.5842461448E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.11E-03  0.10E-06  AVECTOR   0.29E-06  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851424E+01
-         0.1984881623E+01
-         0.1980036695E+01
-         0.1980036644E+01
-         0.1980035947E+01
-         0.1898640254E-01
-         0.1898498072E-01
-         0.1898492566E-01
-         0.1820135796E-01
-
-T=         19.00638  Energy:  -0.3639629099E+02  0.5958672835E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.11E-03  0.10E-06  AVECTOR   0.23E-06  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851419E+01
-         0.1984881701E+01
-         0.1980037022E+01
-         0.1980036990E+01
-         0.1980036276E+01
-         0.1898613868E-01
-         0.1898469620E-01
-         0.1898466232E-01
-         0.1820109424E-01
-
- Vectors converged on read   3.0081013083982288E-011   1.0000000000000000E-010
-T=         19.50638  Energy:  -0.3639629100E+02  0.6052034172E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.71E-04  0.10E-06  AVECTOR   0.19E-06  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851419E+01
-         0.1984881702E+01
-         0.1980037022E+01
-         0.1980036991E+01
-         0.1980036274E+01
-         0.1898613919E-01
-         0.1898469668E-01
-         0.1898465968E-01
-         0.1820109682E-01
-
- Vectors converged on read   6.0627073994823664E-011   1.0000000000000000E-010
-T=         20.00638  Energy:  -0.3639629100E+02  0.6127066616E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.50E-04  0.10E-06  AVECTOR   0.15E-06  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851419E+01
-         0.1984881702E+01
-         0.1980037022E+01
-         0.1980036991E+01
-         0.1980036274E+01
-         0.1898613919E-01
-         0.1898469668E-01
-         0.1898465968E-01
-         0.1820109682E-01
-
- Vectors converged on read   7.6623910146668090E-011   1.0000000000000000E-010
-T=         20.50638  Energy:  -0.3639629100E+02  0.6187342387E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.36E-04  0.10E-06  AVECTOR   0.12E-06  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851419E+01
-         0.1984881702E+01
-         0.1980037023E+01
-         0.1980036990E+01
-         0.1980036274E+01
-         0.1898613955E-01
-         0.1898469701E-01
-         0.1898465920E-01
-         0.1820109676E-01
-
- Vectors converged on read   9.4259701561270514E-011   1.0000000000000000E-010
-T=         21.00638  Energy:  -0.3639629101E+02  0.6235751316E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.27E-04  0.10E-06  AVECTOR   0.97E-07  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851419E+01
-         0.1984881702E+01
-         0.1980037023E+01
-         0.1980036990E+01
-         0.1980036274E+01
-         0.1898613955E-01
-         0.1898469701E-01
-         0.1898465920E-01
-         0.1820109676E-01
-
- Vectors converged on read   9.8193547331616344E-011   1.0000000000000000E-010
-T=         21.50638  Energy:  -0.3639629101E+02  0.6274625741E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.20E-04  0.10E-06  AVECTOR   0.78E-07  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851419E+01
-         0.1984881702E+01
-         0.1980037023E+01
-         0.1980036990E+01
-         0.1980036274E+01
-         0.1898613954E-01
-         0.1898469701E-01
-         0.1898465921E-01
-         0.1820109676E-01
-
-T=         22.00638  Energy:  -0.3639629101E+02  0.6305896021E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.50E-04  0.10E-06  AVECTOR   0.63E-07  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851415E+01
-         0.1984881760E+01
-         0.1980037341E+01
-         0.1980037330E+01
-         0.1980036598E+01
-         0.1898588618E-01
-         0.1898442185E-01
-         0.1898440976E-01
-         0.1820083784E-01
-
- Vectors converged on read   1.6673925513466323E-011   1.0000000000000000E-010
-T=         22.50638  Energy:  -0.3639629101E+02  0.6330910199E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.27E-04  0.10E-06  AVECTOR   0.50E-07  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851415E+01
-         0.1984881760E+01
-         0.1980037336E+01
-         0.1980037320E+01
-         0.1980036597E+01
-         0.1898588609E-01
-         0.1898443201E-01
-         0.1898441442E-01
-         0.1820083841E-01
-
- Vectors converged on read   2.9156622963012646E-011   1.0000000000000000E-010
-T=         23.00638  Energy:  -0.3639629102E+02  0.6350970003E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.18E-04  0.10E-06  AVECTOR   0.40E-07  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851415E+01
-         0.1984881760E+01
-         0.1980037336E+01
-         0.1980037320E+01
-         0.1980036597E+01
-         0.1898588609E-01
-         0.1898443201E-01
-         0.1898441442E-01
-         0.1820083841E-01
-
- Vectors converged on read   2.9892912928148708E-011   1.0000000000000000E-010
-T=         23.50638  Energy:  -0.3639629102E+02  0.6367038608E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.12E-04  0.10E-06  AVECTOR   0.32E-07  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851415E+01
-         0.1984881760E+01
-         0.1980037336E+01
-         0.1980037320E+01
-         0.1980036597E+01
-         0.1898588609E-01
-         0.1898443201E-01
-         0.1898441442E-01
-         0.1820083841E-01
-
- Vectors converged on read   3.4503939893671629E-011   1.0000000000000000E-010
-T=         24.00638  Energy:  -0.3639629102E+02  0.6379905617E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.87E-05  0.10E-06  AVECTOR   0.26E-07  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851415E+01
-         0.1984881760E+01
-         0.1980037336E+01
-         0.1980037320E+01
-         0.1980036597E+01
-         0.1898588606E-01
-         0.1898443205E-01
-         0.1898441440E-01
-         0.1820083840E-01
-
- Vectors converged on read   3.1592816714653135E-011   1.0000000000000000E-010
-T=         24.50638  Energy:  -0.3639629102E+02  0.6390214755E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.63E-05  0.10E-06  AVECTOR   0.21E-07  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851415E+01
-         0.1984881760E+01
-         0.1980037336E+01
-         0.1980037320E+01
-         0.1980036597E+01
-         0.1898588604E-01
-         0.1898443208E-01
-         0.1898441441E-01
-         0.1820083841E-01
-
- Vectors converged on read   3.2688047254469116E-011   1.0000000000000000E-010
-T=         25.00638  Energy:  -0.3639629102E+02  0.6398480536E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.46E-05  0.10E-06  AVECTOR   0.17E-07  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851415E+01
-         0.1984881760E+01
-         0.1980037336E+01
-         0.1980037320E+01
-         0.1980036597E+01
-         0.1898588604E-01
-         0.1898443209E-01
-         0.1898441441E-01
-         0.1820083841E-01
-
- Vectors converged on read   3.9103083307659943E-011   1.0000000000000000E-010
-T=         25.50638  Energy:  -0.3639629102E+02  0.6405111079E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.34E-05  0.10E-06  AVECTOR   0.13E-07  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851415E+01
-         0.1984881760E+01
-         0.1980037336E+01
-         0.1980037320E+01
-         0.1980036597E+01
-         0.1898588604E-01
-         0.1898443209E-01
-         0.1898441441E-01
-         0.1820083841E-01
-
- Vectors converged on read   3.3081282186478325E-011   1.0000000000000000E-010
-T=         26.00638  Energy:  -0.3639629102E+02  0.6410430959E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.25E-05  0.10E-06  AVECTOR   0.11E-07  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851415E+01
-         0.1984881760E+01
-         0.1980037336E+01
-         0.1980037320E+01
-         0.1980036597E+01
-         0.1898588604E-01
-         0.1898443209E-01
-         0.1898441441E-01
-         0.1820083841E-01
-
- Vectors converged on read   3.9944578346399866E-011   1.0000000000000000E-010
-T=         26.50638  Energy:  -0.3639629102E+02  0.6414698730E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.19E-05  0.10E-06  AVECTOR   0.86E-08  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851415E+01
-         0.1984881760E+01
-         0.1980037336E+01
-         0.1980037320E+01
-         0.1980036597E+01
-         0.1898588604E-01
-         0.1898443209E-01
-         0.1898441441E-01
-         0.1820083841E-01
-
- Vectors converged on read   3.3947957342166795E-011   1.0000000000000000E-010
-T=         27.00638  Energy:  -0.3639629102E+02  0.6418121671E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.14E-05  0.10E-06  AVECTOR   0.69E-08  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851415E+01
-         0.1984881760E+01
-         0.1980037336E+01
-         0.1980037320E+01
-         0.1980036597E+01
-         0.1898588604E-01
-         0.1898443209E-01
-         0.1898441441E-01
-         0.1820083841E-01
-
- Vectors converged on read   3.5736486086421534E-011   1.0000000000000000E-010
-T=         27.50638  Energy:  -0.3639629102E+02  0.6420865921E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.11E-05  0.10E-06  AVECTOR   0.56E-08  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851415E+01
-         0.1984881761E+01
-         0.1980037336E+01
-         0.1980037320E+01
-         0.1980036597E+01
-         0.1898588620E-01
-         0.1898443239E-01
-         0.1898441417E-01
-         0.1820083827E-01
-
- Vectors converged on read   3.6586911253403046E-011   1.0000000000000000E-010
-T=         28.00638  Energy:  -0.3639629103E+02  0.6423064978E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.90E-06  0.10E-06  AVECTOR   0.45E-08  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851415E+01
-         0.1984881761E+01
-         0.1980037338E+01
-         0.1980037319E+01
-         0.1980036598E+01
-         0.1898588535E-01
-         0.1898443193E-01
-         0.1898441362E-01
-         0.1820083632E-01
-
- Vectors converged on read   3.4544935331353105E-011   1.0000000000000000E-010
-T=         28.50638  Energy:  -0.3639629103E+02  0.6424826309E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.75E-06  0.10E-06  AVECTOR   0.36E-08  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851415E+01
-         0.1984881761E+01
-         0.1980037339E+01
-         0.1980037320E+01
-         0.1980036600E+01
-         0.1898588420E-01
-         0.1898443240E-01
-         0.1898441348E-01
-         0.1820083558E-01
-
- Vectors converged on read   3.8496730477359297E-011   1.0000000000000000E-010
-T=         29.00638  Energy:  -0.3639629103E+02  0.6426236522E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.52E-06  0.10E-06  AVECTOR   0.29E-08  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851415E+01
-         0.1984881761E+01
-         0.1980037339E+01
-         0.1980037320E+01
-         0.1980036600E+01
-         0.1898588420E-01
-         0.1898443240E-01
-         0.1898441348E-01
-         0.1820083558E-01
-
- Vectors converged on read   3.3569727332067764E-011   1.0000000000000000E-010
-T=         29.50638  Energy:  -0.3639629103E+02  0.6427365329E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.40E-06  0.10E-06  AVECTOR   0.23E-08  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851415E+01
-         0.1984881761E+01
-         0.1980037339E+01
-         0.1980037320E+01
-         0.1980036600E+01
-         0.1898588420E-01
-         0.1898443240E-01
-         0.1898441348E-01
-         0.1820083558E-01
-
- Vectors converged on read   3.6685455632157310E-011   1.0000000000000000E-010
-T=         30.00638  Energy:  -0.3639629103E+02  0.6428268480E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.32E-06  0.10E-06  AVECTOR   0.18E-08  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851415E+01
-         0.1984881761E+01
-         0.1980037339E+01
-         0.1980037320E+01
-         0.1980036600E+01
-         0.1898588420E-01
-         0.1898443240E-01
-         0.1898441348E-01
-         0.1820083558E-01
-
- Vectors converged on read   3.3153886903783771E-011   1.0000000000000000E-010
-T=         30.50638  Energy:  -0.3639629103E+02  0.6428990922E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.25E-06  0.10E-06  AVECTOR   0.15E-08  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851415E+01
-         0.1984881761E+01
-         0.1980037339E+01
-         0.1980037320E+01
-         0.1980036600E+01
-         0.1898588420E-01
-         0.1898443240E-01
-         0.1898441348E-01
-         0.1820083558E-01
-
- Vectors converged on read   4.0595209032096670E-011   1.0000000000000000E-010
-T=         31.00638  Energy:  -0.3639629103E+02  0.6429568520E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.20E-06  0.10E-06  AVECTOR   0.12E-08  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851415E+01
-         0.1984881761E+01
-         0.1980037339E+01
-         0.1980037320E+01
-         0.1980036599E+01
-         0.1898588421E-01
-         0.1898443220E-01
-         0.1898441345E-01
-         0.1820083584E-01
-
- Vectors converged on read   4.0285979650291544E-011   1.0000000000000000E-010
-T=         31.50638  Energy:  -0.3639629103E+02  0.6430030321E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.16E-06  0.10E-06  AVECTOR   0.94E-09  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851415E+01
-         0.1984881761E+01
-         0.1980037339E+01
-         0.1980037320E+01
-         0.1980036599E+01
-         0.1898588421E-01
-         0.1898443220E-01
-         0.1898441345E-01
-         0.1820083584E-01
-
- Vectors converged on read   4.0140723742838266E-011   1.0000000000000000E-010
-T=         32.00638  Energy:  -0.3639629103E+02  0.6430399351E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.12E-06  0.10E-06  AVECTOR   0.75E-09  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851415E+01
-         0.1984881761E+01
-         0.1980037339E+01
-         0.1980037320E+01
-         0.1980036599E+01
-         0.1898588421E-01
-         0.1898443220E-01
-         0.1898441345E-01
-         0.1820083584E-01
-
- Vectors converged on read   4.0077753181486451E-011   1.0000000000000000E-010
-T=         32.50638  Energy:  -0.3639629103E+02  0.6430694195E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.10E-06  0.10E-06  AVECTOR   0.60E-09  0.10E+01
- REPLACING SPFS - DENMAT EIGS
-         0.1999851415E+01
-         0.1984881761E+01
-         0.1980037339E+01
-         0.1980037320E+01
-         0.1980036599E+01
-         0.1898588429E-01
-         0.1898443220E-01
-         0.1898441335E-01
-         0.1820083585E-01
-
- Vectors converged on read   4.1569108930895801E-011   1.0000000000000000E-010
-T=         33.00638  Energy:  -0.3639629103E+02  0.6430929709E-05    Norm:   0.1000000000E+01
-    STOPTEST : ORBITALS   0.78E-07  0.10E-06  AVECTOR   0.48E-09  0.10E+01
-
+ FIRST ERR 0.7E+02
+ MAX ERROR :    71.9036924036281       1.000000000000000E-009
+ FIRST ALPHA  (-23.4330322445009,-2.295578976398352E-002)
+ ENERGIES    -35.904619307486    -0.005126618734
+ ENERGIES    -36.234777111839     0.000640454567
+ ENERGIES    -36.235210759450     0.000629695118
+ ENERGIES    -36.235211032038     0.000630153462
+ ENERGIES    -36.235211031037     0.000630151910
+ ENERGIES    -36.235211031055     0.000630151917
+    checking convergence. 0.18962E-10 0.10000E-09       120
+   ERRORS  0.28E-11
+ Converged.   2.845169262192441E-012  1.000000000000000E-009
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9088743229E+01
+        -0.8232933359E+00
+        -0.4657489010E+00
+        -0.4657023216E+00
+        -0.4656433691E+00
+        -0.6957431760E-03
+        -0.6870164546E-03
+        -0.6779477015E-03
+        -0.6576179308E-03
+ 
+ FIRST ERR 0.4E-11
+ Vectors converged on read  3.994259432570288E-012  1.000000000000000E-009
+ FIRST ALPHA  (-36.2352110310573,6.301519192402226E-004)
+ Converged.   3.994259432570288E-012  1.000000000000000E-009
+ IN PROP: VECTOR NORM  (0.999999999999996,0.000000000000000E+000)
+          ENERGY  (-36.2352110310573,6.301519192260121E-004)
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9088743230E+01
+        -0.8232933363E+00
+        -0.4657489014E+00
+        -0.4657023220E+00
+        -0.4656433694E+00
+        -0.6957431528E-03
+        -0.6870164480E-03
+        -0.6779476986E-03
+        -0.6576179187E-03
+ 
+T=          0.10000  Energy:  -0.3627373209E+02  0.6840539474E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.30E+01  0.10E-08  AVECTOR   0.10E+05  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9255942315E+01
+        -0.8786305510E+00
+        -0.5172959828E+00
+        -0.5172484772E+00
+        -0.5171985845E+00
+        -0.3392287774E-02
+        -0.3384720904E-02
+        -0.3378628152E-02
+        -0.3212252269E-02
+ 
+T=          0.20500  Energy:  -0.3629377051E+02  0.7035416954E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.25E+01  0.10E-08  AVECTOR   0.19E+00  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9315166752E+01
+        -0.8982535223E+00
+        -0.5360919224E+00
+        -0.5360441146E+00
+        -0.5359919694E+00
+        -0.5652694165E-02
+        -0.5587138375E-02
+        -0.5576187188E-02
+        -0.5566560062E-02
+ 
+T=          0.31525  Energy:  -0.3631033419E+02  0.7315677889E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.21E+01  0.10E-08  AVECTOR   0.15E+00  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9345663273E+01
+        -0.9087948708E+00
+        -0.5465221791E+00
+        -0.5464779769E+00
+        -0.5464277110E+00
+        -0.7957164133E-02
+        -0.7577298618E-02
+        -0.7564401194E-02
+        -0.7552736038E-02
+ 
+T=          0.43101  Energy:  -0.3632484441E+02  0.7621259434E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.19E+01  0.10E-08  AVECTOR   0.13E+00  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9362518522E+01
+        -0.9150674868E+00
+        -0.5530114062E+00
+        -0.5529721633E+00
+        -0.5529250914E+00
+        -0.1002448711E-01
+        -0.9360144818E-02
+        -0.9346702145E-02
+        -0.9333702057E-02
+ 
+T=          0.55256  Energy:  -0.3633744607E+02  0.7893013588E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.16E+01  0.10E-08  AVECTOR   0.10E+00  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9372077577E+01
+        -0.9190029080E+00
+        -0.5573128259E+00
+        -0.5572787063E+00
+        -0.5572351680E+00
+        -0.1176907443E-01
+        -0.1088384914E-01
+        -0.1087069542E-01
+        -0.1085699548E-01
+ 
+T=          0.68019  Energy:  -0.3634813114E+02  0.8088425567E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.13E+01  0.10E-08  AVECTOR   0.84E-01  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9377667271E+01
+        -0.9215772278E+00
+        -0.5603017740E+00
+        -0.5602723559E+00
+        -0.5602323560E+00
+        -0.1316404593E-01
+        -0.1212056323E-01
+        -0.1210822457E-01
+        -0.1209439229E-01
+ 
+T=          0.81420  Energy:  -0.3635699054E+02  0.8184463139E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.11E+01  0.10E-08  AVECTOR   0.66E-01  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9381118911E+01
+        -0.9233210395E+00
+        -0.5624547545E+00
+        -0.5624293939E+00
+        -0.5623928473E+00
+        -0.1423390760E-01
+        -0.1308100955E-01
+        -0.1306978809E-01
+        -0.1305628274E-01
+ 
+T=          0.95491  Energy:  -0.3636422324E+02  0.8174738791E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.95E+00  0.10E-08  AVECTOR   0.51E-01  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9383411979E+01
+        -0.9245249446E+00
+        -0.5640389628E+00
+        -0.5640170071E+00
+        -0.5639838064E+00
+        -0.1503055737E-01
+        -0.1380231939E-01
+        -0.1379234857E-01
+        -0.1377950151E-01
+ 
+T=          1.10266  Energy:  -0.3637008207E+02  0.8063873511E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.79E+00  0.10E-08  AVECTOR   0.40E-01  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9385041265E+01
+        -0.9253481545E+00
+        -0.5652084358E+00
+        -0.5651893228E+00
+        -0.5651593411E+00
+        -0.1561256888E-01
+        -0.1433159500E-01
+        -0.1432288854E-01
+        -0.1431091302E-01
+ 
+T=          1.25779  Energy:  -0.3637482256E+02  0.7862241780E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.65E+00  0.10E-08  AVECTOR   0.31E-01  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9386242181E+01
+        -0.9258809748E+00
+        -0.5660572771E+00
+        -0.5660405581E+00
+        -0.5660136428E+00
+        -0.1603338356E-01
+        -0.1471451970E-01
+        -0.1470701535E-01
+        -0.1469602981E-01
+ 
+T=          1.42068  Energy:  -0.3637867252E+02  0.7582442650E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.54E+00  0.10E-08  AVECTOR   0.24E-01  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9387123350E+01
+        -0.9261798527E+00
+        -0.5666487174E+00
+        -0.5666340459E+00
+        -0.5666100185E+00
+        -0.1633671530E-01
+        -0.1498990673E-01
+        -0.1498350094E-01
+        -0.1497355352E-01
+ 
+T=          1.59171  Energy:  -0.3638181986E+02  0.7237410744E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.45E+00  0.10E-08  AVECTOR   0.18E-01  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9387738647E+01
+        -0.9262856736E+00
+        -0.5670301216E+00
+        -0.5670172296E+00
+        -0.5669958923E+00
+        -0.1655606881E-01
+        -0.1518824724E-01
+        -0.1518281912E-01
+        -0.1517390863E-01
+ 
+T=          1.77130  Energy:  -0.3638441215E+02  0.6839599446E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.37E+00  0.10E-08  AVECTOR   0.14E-01  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9388122551E+01
+        -0.9262323851E+00
+        -0.5672401865E+00
+        -0.5672288625E+00
+        -0.5672100058E+00
+        -0.1671606947E-01
+        -0.1533230076E-01
+        -0.1532772712E-01
+        -0.1531981912E-01
+ 
+T=          1.95986  Energy:  -0.3638656195E+02  0.6400714744E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.30E+00  0.10E-08  AVECTOR   0.11E-01  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9388305109E+01
+        -0.9260504649E+00
+        -0.5673121056E+00
+        -0.5673021768E+00
+        -0.5672855883E+00
+        -0.1683431352E-01
+        -0.1543846137E-01
+        -0.1543462509E-01
+        -0.1542766396E-01
+ 
+T=          2.15786  Energy:  -0.3638835392E+02  0.5931667053E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.25E+00  0.10E-08  AVECTOR   0.91E-02  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9388316679E+01
+        -0.9257679161E+00
+        -0.5672748351E+00
+        -0.5672661553E+00
+        -0.5672516252E+00
+        -0.1692313759E-01
+        -0.1551823647E-01
+        -0.1551503074E-01
+        -0.1550894830E-01
+ 
+T=          2.36575  Energy:  -0.3638985181E+02  0.5442572675E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.21E+00  0.10E-08  AVECTOR   0.72E-02  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9388188181E+01
+        -0.9254102561E+00
+        -0.5671535770E+00
+        -0.5671460180E+00
+        -0.5671333443E+00
+        -0.1699108684E-01
+        -0.1557955127E-01
+        -0.1557688121E-01
+        -0.1557160286E-01
+ 
+T=          2.58404  Energy:  -0.3639110424E+02  0.4942740021E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.17E+00  0.10E-08  AVECTOR   0.57E-02  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9387949850E+01
+        -0.9250002316E+00
+        -0.5669700101E+00
+        -0.5669634564E+00
+        -0.5669524476E+00
+        -0.1704404365E-01
+        -0.1562779136E-01
+        -0.1562557412E-01
+        -0.1562102316E-01
+ 
+T=          2.81324  Energy:  -0.3639214923E+02  0.4440629148E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.14E+00  0.10E-08  AVECTOR   0.46E-02  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9387629854E+01
+        -0.9245575813E+00
+        -0.5667424917E+00
+        -0.5667368374E+00
+        -0.5667273145E+00
+        -0.1708605473E-01
+        -0.1566658757E-01
+        -0.1566475172E-01
+        -0.1566085223E-01
+ 
+T=          3.05390  Energy:  -0.3639301739E+02  0.3943795449E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.12E+00  0.10E-08  AVECTOR   0.36E-02  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9387253302E+01
+        -0.9240989528E+00
+        -0.5664863002E+00
+        -0.5664814472E+00
+        -0.5664732449E+00
+        -0.1711991716E-01
+        -0.1569838322E-01
+        -0.1569686768E-01
+        -0.1569354656E-01
+ 
+T=          3.30660  Energy:  -0.3639373418E+02  0.3458834077E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.10E+00  0.10E-08  AVECTOR   0.28E-02  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9386841724E+01
+        -0.9236379789E+00
+        -0.5662139249E+00
+        -0.5662097820E+00
+        -0.5662027485E+00
+        -0.1714758356E-01
+        -0.1572483157E-01
+        -0.1572358441E-01
+        -0.1572077263E-01
+ 
+T=          3.57193  Energy:  -0.3639432133E+02  0.2991339613E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.84E-01  0.10E-08  AVECTOR   0.22E-02  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9386412966E+01
+        -0.9231854796E+00
+        -0.5659353829E+00
+        -0.5659318658E+00
+        -0.5659258629E+00
+        -0.1717043722E-01
+        -0.1574706723E-01
+        -0.1574604448E-01
+        -0.1574367789E-01
+ 
+T=          3.85052  Energy:  -0.3639479780E+02  0.2545890742E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.70E-01  0.10E-08  AVECTOR   0.17E-02  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9385981359E+01
+        -0.9227497444E+00
+        -0.5656585440E+00
+        -0.5656555751E+00
+        -0.5656504774E+00
+        -0.1718947649E-01
+        -0.1576588767E-01
+        -0.1576505218E-01
+        -0.1576307191E-01
+ 
+T=          4.14305  Energy:  -0.3639518035E+02  0.2126064210E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.59E-01  0.10E-08  AVECTOR   0.13E-02  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9385558064E+01
+        -0.9223368557E+00
+        -0.5653894431E+00
+        -0.5653869513E+00
+        -0.5653826457E+00
+        -0.1720543743E-01
+        -0.1578187224E-01
+        -0.1578119263E-01
+        -0.1577954532E-01
+ 
+T=          4.45020  Energy:  -0.3639548384E+02  0.1734477678E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.49E-01  0.10E-08  AVECTOR   0.10E-02  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9385151478E+01
+        -0.9219510199E+00
+        -0.5651325690E+00
+        -0.5651304899E+00
+        -0.5651268743E+00
+        -0.1721887512E-01
+        -0.1579545888E-01
+        -0.1579490868E-01
+        -0.1579354637E-01
+ 
+T=          4.77271  Energy:  -0.3639572146E+02  0.1372857459E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.41E-01  0.10E-08  AVECTOR   0.75E-03  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9384767657E+01
+        -0.9215948851E+00
+        -0.5648911229E+00
+        -0.5648893987E+00
+        -0.5648863816E+00
+        -0.1723021778E-01
+        -0.1580699276E-01
+        -0.1580654960E-01
+        -0.1580542969E-01
+ 
+T=          5.11135  Energy:  -0.3639590484E+02  0.1042124931E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.34E-01  0.10E-08  AVECTOR   0.55E-03  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9384410719E+01
+        -0.9212698316E+00
+        -0.5646672447E+00
+        -0.5646658236E+00
+        -0.5646633231E+00
+        -0.1723980290E-01
+        -0.1581675669E-01
+        -0.1581640168E-01
+        -0.1581548659E-01
+ 
+T=          5.46691  Energy:  -0.3639604414E+02  0.7424944982E-04    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.28E-01  0.10E-08  AVECTOR   0.40E-03  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9384083198E+01
+        -0.9209762284E+00
+        -0.5644622063E+00
+        -0.5644610426E+00
+        -0.5644589854E+00
+        -0.1724790180E-01
+        -0.1582498982E-01
+        -0.1582470702E-01
+        -0.1582396390E-01
+ 
+T=          5.84026  Energy:  -0.3639614813E+02  0.4735762610E-04    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.23E-01  0.10E-08  AVECTOR   0.29E-03  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9383786345E+01
+        -0.9207136537E+00
+        -0.5642765769E+00
+        -0.5642756304E+00
+        -0.5642739515E+00
+        -0.1725473639E-01
+        -0.1583189908E-01
+        -0.1583167504E-01
+        -0.1583107541E-01
+ 
+T=          6.23227  Energy:  -0.3639622429E+02  0.2344776442E-04    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.19E-01  0.10E-08  AVECTOR   0.20E-03  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9383520397E+01
+        -0.9204810806E+00
+        -0.5641103623E+00
+        -0.5641095979E+00
+        -0.5641082394E+00
+        -0.1726049104E-01
+        -0.1583766613E-01
+        -0.1583748954E-01
+        -0.1583700891E-01
+ 
+T=          6.64388  Energy:  -0.3639627888E+02  0.2389989400E-05    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.16E-01  0.10E-08  AVECTOR   0.14E-03  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9383284789E+01
+        -0.9202770318E+00
+        -0.5639631224E+00
+        -0.5639625096E+00
+        -0.5639614206E+00
+        -0.1726532094E-01
+        -0.1584245161E-01
+        -0.1584231303E-01
+        -0.1584193046E-01
+ 
+T=          7.07608  Energy:  -0.3639631708E+02 -0.1597729747E-04    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.13E-01  0.10E-08  AVECTOR   0.98E-04  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9383078344E+01
+        -0.9200997079E+00
+        -0.5638340713E+00
+        -0.5638335837E+00
+        -0.5638327194E+00
+        -0.1726935817E-01
+        -0.1584639791E-01
+        -0.1584628949E-01
+        -0.1584598724E-01
+ 
+T=          7.52988  Energy:  -0.3639634307E+02 -0.3183936382E-04    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.10E-01  0.10E-08  AVECTOR   0.67E-04  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382899420E+01
+        -0.9199470918E+00
+        -0.5637221625E+00
+        -0.5637217778E+00
+        -0.5637210992E+00
+        -0.1727271624E-01
+        -0.1584963101E-01
+        -0.1584954628E-01
+        -0.1584930939E-01
+ 
+T=          8.00638  Energy:  -0.3639636016E+02 -0.4539791469E-04    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.84E-02  0.10E-08  AVECTOR   0.46E-04  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382746052E+01
+        -0.9198170357E+00
+        -0.5636261626E+00
+        -0.5636258617E+00
+        -0.5636253350E+00
+        -0.1727549339E-01
+        -0.1585226192E-01
+        -0.1585219563E-01
+        -0.1585201157E-01
+ 
+T=          8.50638  Energy:  -0.3639637094E+02 -0.5685808650E-04    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.67E-02  0.10E-08  AVECTOR   0.31E-04  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382616137E+01
+        -0.9197073962E+00
+        -0.5635447633E+00
+        -0.5635445299E+00
+        -0.5635441261E+00
+        -0.1727777422E-01
+        -0.1585438713E-01
+        -0.1585433507E-01
+        -0.1585419339E-01
+ 
+T=          9.00638  Energy:  -0.3639637715E+02 -0.6603714673E-04    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.53E-02  0.10E-08  AVECTOR   0.22E-04  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382512220E+01
+        -0.9196198668E+00
+        -0.5634795160E+00
+        -0.5634793343E+00
+        -0.5634790252E+00
+        -0.1727957805E-01
+        -0.1585604857E-01
+        -0.1585600710E-01
+        -0.1585589819E-01
+ 
+T=          9.50638  Energy:  -0.3639638056E+02 -0.7338777313E-04    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.43E-02  0.10E-08  AVECTOR   0.16E-04  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382428883E+01
+        -0.9195498460E+00
+        -0.5634271139E+00
+        -0.5634269719E+00
+        -0.5634267357E+00
+        -0.1728100096E-01
+        -0.1585734695E-01
+        -0.1585731346E-01
+        -0.1585722985E-01
+ 
+T=         10.00638  Energy:  -0.3639638228E+02 -0.7927348901E-04    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.34E-02  0.10E-08  AVECTOR   0.12E-04  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382361990E+01
+        -0.9194937814E+00
+        -0.5633850048E+00
+        -0.5633848934E+00
+        -0.5633847131E+00
+        -0.1728212276E-01
+        -0.1585836149E-01
+        -0.1585833413E-01
+        -0.1585827001E-01
+ 
+T=         10.50638  Energy:  -0.3639638301E+02 -0.8398594080E-04    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.27E-02  0.10E-08  AVECTOR   0.95E-05  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382308282E+01
+        -0.9194488699E+00
+        -0.5633511634E+00
+        -0.5633510757E+00
+        -0.5633509383E+00
+        -0.1728300736E-01
+        -0.1585915432E-01
+        -0.1585913178E-01
+        -0.1585908265E-01
+ 
+T=         11.00638  Energy:  -0.3639638317E+02 -0.8775895344E-04    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.22E-02  0.10E-08  AVECTOR   0.76E-05  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382265159E+01
+        -0.9194128829E+00
+        -0.5633239687E+00
+        -0.5633238996E+00
+        -0.5633237949E+00
+        -0.1728370529E-01
+        -0.1585977409E-01
+        -0.1585975540E-01
+        -0.1585971780E-01
+ 
+T=         11.50638  Energy:  -0.3639638302E+02 -0.9077988411E-04    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.17E-02  0.10E-08  AVECTOR   0.60E-05  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382230539E+01
+        -0.9193840426E+00
+        -0.5633021190E+00
+        -0.5633020643E+00
+        -0.5633019848E+00
+        -0.1728425629E-01
+        -0.1586025881E-01
+        -0.1586024326E-01
+        -0.1586021449E-01
+ 
+T=         12.00638  Energy:  -0.3639638273E+02 -0.9319878180E-04    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.14E-02  0.10E-08  AVECTOR   0.49E-05  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382202749E+01
+        -0.9193609278E+00
+        -0.5632845673E+00
+        -0.5632845238E+00
+        -0.5632844635E+00
+        -0.1728469162E-01
+        -0.1586063814E-01
+        -0.1586062517E-01
+        -0.1586060317E-01
+ 
+T=         12.50638  Energy:  -0.3639638237E+02 -0.9513577121E-04    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.11E-02  0.10E-08  AVECTOR   0.39E-05  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382180445E+01
+        -0.9193424013E+00
+        -0.5632704709E+00
+        -0.5632704364E+00
+        -0.5632703907E+00
+        -0.1728503579E-01
+        -0.1586093518E-01
+        -0.1586092435E-01
+        -0.1586090755E-01
+ 
+T=         13.00638  Energy:  -0.3639638201E+02 -0.9668699664E-04    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.89E-03  0.10E-08  AVECTOR   0.32E-05  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382162547E+01
+        -0.9193275523E+00
+        -0.5632591521E+00
+        -0.5632591245E+00
+        -0.5632590900E+00
+        -0.1728530808E-01
+        -0.1586116794E-01
+        -0.1586115891E-01
+        -0.1586114607E-01
+ 
+T=         13.50638  Energy:  -0.3639638168E+02 -0.9792939964E-04    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.72E-03  0.10E-08  AVECTOR   0.26E-05  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382148186E+01
+        -0.9193156511E+00
+        -0.5632500652E+00
+        -0.5632500432E+00
+        -0.5632500171E+00
+        -0.1728552362E-01
+        -0.1586135046E-01
+        -0.1586134293E-01
+        -0.1586133313E-01
+ 
+ Vectors converged on read  7.672626761088720E-010  1.000000000000000E-009
+T=         14.00638  Energy:  -0.3639638137E+02 -0.9892440912E-04    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.52E-03  0.10E-08  AVECTOR   0.21E-05  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382135252E+01
+        -0.9193057131E+00
+        -0.5632424002E+00
+        -0.5632423770E+00
+        -0.5632423531E+00
+        -0.1728543310E-01
+        -0.1586125882E-01
+        -0.1586125152E-01
+        -0.1586124149E-01
+ 
+T=         14.50638  Energy:  -0.3639638111E+02 -0.9972187624E-04    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.48E-03  0.10E-08  AVECTOR   0.17E-05  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382127004E+01
+        -0.9192984027E+00
+        -0.5632368272E+00
+        -0.5632368129E+00
+        -0.5632367977E+00
+        -0.1728578397E-01
+        -0.1586156102E-01
+        -0.1586155584E-01
+        -0.1586154985E-01
+ 
+ Vectors converged on read  4.279465648521813E-010  1.000000000000000E-009
+T=         15.00638  Energy:  -0.3639638088E+02 -0.1003604628E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.34E-03  0.10E-08  AVECTOR   0.14E-05  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382118929E+01
+        -0.9192921063E+00
+        -0.5632319681E+00
+        -0.5632319527E+00
+        -0.5632319386E+00
+        -0.1728571185E-01
+        -0.1586148790E-01
+        -0.1586148300E-01
+        -0.1586147659E-01
+ 
+ Vectors converged on read  9.686955615527022E-010  1.000000000000000E-009
+T=         15.50638  Energy:  -0.3639638068E+02 -0.1008721912E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.25E-03  0.10E-08  AVECTOR   0.11E-05  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382112389E+01
+        -0.9192870577E+00
+        -0.5632280446E+00
+        -0.5632280263E+00
+        -0.5632280131E+00
+        -0.1728568384E-01
+        -0.1586146030E-01
+        -0.1586145549E-01
+        -0.1586144900E-01
+ 
+T=         16.00638  Energy:  -0.3639638052E+02 -0.1012824884E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.27E-03  0.10E-08  AVECTOR   0.88E-06  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382108740E+01
+        -0.9192834823E+00
+        -0.5632253522E+00
+        -0.5632253445E+00
+        -0.5632253376E+00
+        -0.1728601232E-01
+        -0.1586173759E-01
+        -0.1586173462E-01
+        -0.1586173163E-01
+ 
+ Vectors converged on read  2.083418622454068E-010  1.000000000000000E-009
+T=         16.50638  Energy:  -0.3639638039E+02 -0.1016109367E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.19E-03  0.10E-08  AVECTOR   0.71E-06  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382104771E+01
+        -0.9192802955E+00
+        -0.5632228983E+00
+        -0.5632228893E+00
+        -0.5632228826E+00
+        -0.1728595670E-01
+        -0.1586168337E-01
+        -0.1586167757E-01
+        -0.1586167664E-01
+ 
+ Vectors converged on read  4.256525804119601E-010  1.000000000000000E-009
+T=         17.00638  Energy:  -0.3639638028E+02 -0.1018741391E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.14E-03  0.10E-08  AVECTOR   0.57E-06  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382101491E+01
+        -0.9192777142E+00
+        -0.5632208922E+00
+        -0.5632208814E+00
+        -0.5632208749E+00
+        -0.1728593582E-01
+        -0.1586166199E-01
+        -0.1586165628E-01
+        -0.1586165526E-01
+ 
+ Vectors converged on read  6.010636642052700E-010  1.000000000000000E-009
+T=         17.50638  Energy:  -0.3639638019E+02 -0.1020850924E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.10E-03  0.10E-08  AVECTOR   0.46E-06  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382098843E+01
+        -0.9192756579E+00
+        -0.5632192861E+00
+        -0.5632192738E+00
+        -0.5632192673E+00
+        -0.1728592758E-01
+        -0.1586165404E-01
+        -0.1586164838E-01
+        -0.1586164731E-01
+ 
+ Vectors converged on read  7.539106483163037E-010  1.000000000000000E-009
+T=         18.00638  Energy:  -0.3639638011E+02 -0.1022541961E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.78E-04  0.10E-08  AVECTOR   0.37E-06  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382096735E+01
+        -0.9192740289E+00
+        -0.5632180101E+00
+        -0.5632179964E+00
+        -0.5632179898E+00
+        -0.1728592406E-01
+        -0.1586165115E-01
+        -0.1586164550E-01
+        -0.1586164441E-01
+ 
+ Vectors converged on read  8.638549423538343E-010  1.000000000000000E-009
+T=         18.50638  Energy:  -0.3639638005E+02 -0.1023897678E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.60E-04  0.10E-08  AVECTOR   0.30E-06  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382095068E+01
+        -0.9192727409E+00
+        -0.5632169992E+00
+        -0.5632169846E+00
+        -0.5632169776E+00
+        -0.1728592239E-01
+        -0.1586165015E-01
+        -0.1586164452E-01
+        -0.1586164340E-01
+ 
+ Vectors converged on read  9.725550160503711E-010  1.000000000000000E-009
+T=         19.00638  Energy:  -0.3639638000E+02 -0.1024984604E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.47E-04  0.10E-08  AVECTOR   0.24E-06  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382093752E+01
+        -0.9192717232E+00
+        -0.5632161992E+00
+        -0.5632161838E+00
+        -0.5632161766E+00
+        -0.1728592145E-01
+        -0.1586164984E-01
+        -0.1586164423E-01
+        -0.1586164310E-01
+ 
+T=         19.50638  Energy:  -0.3639637996E+02 -0.1025856958E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.12E-03  0.10E-08  AVECTOR   0.19E-06  0.10E+01
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382093630E+01
+        -0.9192711426E+00
+        -0.5632158296E+00
+        -0.5632158267E+00
+        -0.5632158253E+00
+        -0.1728619731E-01
+        -0.1586187117E-01
+        -0.1586186998E-01
+        -0.1586186933E-01
+ 
+ Vectors converged on read  8.788391207080373E-011  1.000000000000000E-009
+T=         20.00638  Energy:  -0.3639637993E+02 -0.1026552782E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.65E-04  0.10E-08  AVECTOR   0.15E-06  0.10E+01
+ setting jacsymflag=1 for orbital quad
+    Quad orbitals: Deviation is       3.053008320405023E-005
+    Quad orbitals: Deviation is now   1.091799970207272E-005
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382092982E+01
+        -0.9192704952E+00
+        -0.5632153494E+00
+        -0.5632153460E+00
+        -0.5632153440E+00
+        -0.1728615707E-01
+        -0.1586182892E-01
+        -0.1586182786E-01
+        -0.1586182710E-01
+ 
+ Vectors converged on read  1.622336905100356E-010  1.000000000000000E-009
+T=         20.50638  Energy:  -0.3639637984E+02 -0.1028296393E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.83E-04  0.10E-08  AVECTOR   0.39E-06  0.10E+01
+    Quad orbitals: Deviation is       1.084620310105333E-005
+    Quad orbitals: Deviation is now   3.959073037739535E-006
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382090730E+01
+        -0.9192687605E+00
+        -0.5632139754E+00
+        -0.5632139698E+00
+        -0.5632139664E+00
+        -0.1728614782E-01
+        -0.1586182022E-01
+        -0.1586181913E-01
+        -0.1586181837E-01
+ 
+ Vectors converged on read  1.733761630093548E-010  1.000000000000000E-009
+T=         21.00638  Energy:  -0.3639637981E+02 -0.1028926032E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.88E-04  0.10E-08  AVECTOR   0.14E-06  0.10E+01
+    Quad orbitals: Deviation is       4.011265816187722E-006
+    Quad orbitals: Deviation is now   1.456541866972683E-006
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382090162E+01
+        -0.9192682970E+00
+        -0.5632136064E+00
+        -0.5632136006E+00
+        -0.5632135971E+00
+        -0.1728614456E-01
+        -0.1586181696E-01
+        -0.1586181587E-01
+        -0.1586181511E-01
+ 
+ Vectors converged on read  2.123990273976117E-010  1.000000000000000E-009
+T=         21.50638  Energy:  -0.3639637979E+02 -0.1029189119E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.51E-04  0.10E-08  AVECTOR   0.62E-07  0.10E+01
+    Quad orbitals: Deviation is       1.612478203716925E-006
+    Quad orbitals: Deviation is now   5.885741293976094E-007
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089959E+01
+        -0.9192680506E+00
+        -0.5632134268E+00
+        -0.5632134210E+00
+        -0.5632134174E+00
+        -0.1728613361E-01
+        -0.1586180567E-01
+        -0.1586180462E-01
+        -0.1586180384E-01
+ 
+ Vectors converged on read  2.383079811696568E-010  1.000000000000000E-009
+T=         22.00638  Energy:  -0.3639637979E+02 -0.1029296668E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.29E-04  0.10E-08  AVECTOR   0.24E-07  0.10E+01
+    Quad orbitals: Deviation is       7.452100568386076E-007
+    Quad orbitals: Deviation is now   2.719684403834419E-007
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089766E+01
+        -0.9192679025E+00
+        -0.5632133184E+00
+        -0.5632133126E+00
+        -0.5632133092E+00
+        -0.1728613153E-01
+        -0.1586180292E-01
+        -0.1586180207E-01
+        -0.1586180103E-01
+ 
+ Vectors converged on read  2.505927342089825E-010  1.000000000000000E-009
+T=         22.50638  Energy:  -0.3639637979E+02 -0.1029337317E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.17E-04  0.10E-08  AVECTOR   0.88E-08  0.10E+01
+    Quad orbitals: Deviation is       4.002439028382008E-007
+    Quad orbitals: Deviation is now   1.457245267497074E-007
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089667E+01
+        -0.9192678203E+00
+        -0.5632132572E+00
+        -0.5632132515E+00
+        -0.5632132480E+00
+        -0.1728613157E-01
+        -0.1586180269E-01
+        -0.1586180185E-01
+        -0.1586180080E-01
+ 
+ Vectors converged on read  2.712898491990470E-010  1.000000000000000E-009
+T=         23.00638  Energy:  -0.3639637979E+02 -0.1029352776E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.11E-04  0.10E-08  AVECTOR   0.34E-08  0.10E+01
+    Quad orbitals: Deviation is       2.370415235740735E-007
+    Quad orbitals: Deviation is now   8.634320292239705E-008
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089610E+01
+        -0.9192677748E+00
+        -0.5632132233E+00
+        -0.5632132175E+00
+        -0.5632132141E+00
+        -0.1728613187E-01
+        -0.1586180278E-01
+        -0.1586180194E-01
+        -0.1586180090E-01
+ 
+ Vectors converged on read  2.700628458502822E-010  1.000000000000000E-009
+T=         23.50638  Energy:  -0.3639637979E+02 -0.1029359246E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.67E-05  0.10E-08  AVECTOR   0.14E-08  0.10E+01
+    Quad orbitals: Deviation is       1.475230656219354E-007
+    Quad orbitals: Deviation is now   5.380914827393144E-008
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089580E+01
+        -0.9192677497E+00
+        -0.5632132044E+00
+        -0.5632131987E+00
+        -0.5632131953E+00
+        -0.1728613214E-01
+        -0.1586180291E-01
+        -0.1586180208E-01
+        -0.1586180103E-01
+ 
+ Vectors converged on read  2.694196175116430E-010  1.000000000000000E-009
+T=         24.00638  Energy:  -0.3639637979E+02 -0.1029362039E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.43E-05  0.10E-08  AVECTOR   0.60E-09  0.10E+01
+    Quad orbitals: Deviation is       9.398715212711614E-008
+    Quad orbitals: Deviation is now   3.430170245300815E-008
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089562E+01
+        -0.9192677351E+00
+        -0.5632131934E+00
+        -0.5632131877E+00
+        -0.5632131843E+00
+        -0.1728613234E-01
+        -0.1586180301E-01
+        -0.1586180218E-01
+        -0.1586180113E-01
+ 
+ Vectors converged on read  2.818753893293509E-010  1.000000000000000E-009
+T=         24.50638  Energy:  -0.3639637979E+02 -0.1029363194E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.28E-05  0.10E-08  AVECTOR   0.24E-09  0.10E+01
+    Quad orbitals: Deviation is       6.031287282222845E-008
+    Quad orbitals: Deviation is now   2.200293614341725E-008
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089552E+01
+        -0.9192677259E+00
+        -0.5632131865E+00
+        -0.5632131808E+00
+        -0.5632131774E+00
+        -0.1728613247E-01
+        -0.1586180308E-01
+        -0.1586180225E-01
+        -0.1586180120E-01
+ 
+ Vectors converged on read  2.757532452578912E-010  1.000000000000000E-009
+T=         25.00638  Energy:  -0.3639637979E+02 -0.1029363546E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.18E-05  0.10E-08  AVECTOR   0.71E-10  0.10E+01
+    Quad orbitals: Deviation is       3.879629649945139E-008
+    Quad orbitals: Deviation is now   1.413282536645328E-008
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089545E+01
+        -0.9192677202E+00
+        -0.5632131821E+00
+        -0.5632131765E+00
+        -0.5632131731E+00
+        -0.1728613256E-01
+        -0.1586180312E-01
+        -0.1586180229E-01
+        -0.1586180124E-01
+ 
+ Vectors converged on read  2.825277616413738E-010  1.000000000000000E-009
+T=         25.50638  Energy:  -0.3639637979E+02 -0.1029363635E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.11E-05  0.10E-08  AVECTOR   0.18E-10  0.10E+01
+    Quad orbitals: Deviation is       2.500698383957405E-008
+    Quad orbitals: Deviation is now   9.092795676619317E-009
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089541E+01
+        -0.9192677166E+00
+        -0.5632131794E+00
+        -0.5632131738E+00
+        -0.5632131703E+00
+        -0.1728613261E-01
+        -0.1586180315E-01
+        -0.1586180232E-01
+        -0.1586180127E-01
+ 
+ Vectors converged on read  2.741499087410468E-010  1.000000000000000E-009
+T=         26.00638  Energy:  -0.3639637979E+02 -0.1029363676E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.74E-06  0.10E-08  AVECTOR   0.83E-11  0.10E+01
+    Quad orbitals: Deviation is       1.614087515089987E-008
+    Quad orbitals: Deviation is now   5.885874550279409E-009
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089538E+01
+        -0.9192677144E+00
+        -0.5632131777E+00
+        -0.5632131720E+00
+        -0.5632131686E+00
+        -0.1728613265E-01
+        -0.1586180317E-01
+        -0.1586180234E-01
+        -0.1586180129E-01
+ 
+ Vectors converged on read  2.792218882731123E-010  1.000000000000000E-009
+T=         26.50638  Energy:  -0.3639637979E+02 -0.1029363682E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.48E-06  0.10E-08  AVECTOR   0.26E-11  0.10E+01
+    Quad orbitals: Deviation is       1.043941799835679E-008
+    Quad orbitals: Deviation is now   3.802471481847025E-009
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089536E+01
+        -0.9192677129E+00
+        -0.5632131766E+00
+        -0.5632131710E+00
+        -0.5632131676E+00
+        -0.1728613267E-01
+        -0.1586180318E-01
+        -0.1586180235E-01
+        -0.1586180130E-01
+ 
+ Vectors converged on read  2.782037517693159E-010  1.000000000000000E-009
+T=         27.00638  Energy:  -0.3639637979E+02 -0.1029363682E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.31E-06  0.10E-08  AVECTOR   0.11E-11  0.10E+01
+    Quad orbitals: Deviation is       6.754882931266939E-009
+    Quad orbitals: Deviation is now   2.458066213453703E-009
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089535E+01
+        -0.9192677120E+00
+        -0.5632131759E+00
+        -0.5632131703E+00
+        -0.5632131669E+00
+        -0.1728613269E-01
+        -0.1586180319E-01
+        -0.1586180236E-01
+        -0.1586180131E-01
+ 
+ Vectors converged on read  2.859412212565903E-010  1.000000000000000E-009
+T=         27.50638  Energy:  -0.3639637979E+02 -0.1029363680E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.20E-06  0.10E-08  AVECTOR   0.11E-11  0.10E+01
+    Quad orbitals: Deviation is       4.373193396315348E-009
+    Quad orbitals: Deviation is now   1.589723849639613E-009
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089534E+01
+        -0.9192677114E+00
+        -0.5632131755E+00
+        -0.5632131698E+00
+        -0.5632131664E+00
+        -0.1728613270E-01
+        -0.1586180319E-01
+        -0.1586180236E-01
+        -0.1586180131E-01
+ 
+ Vectors converged on read  2.767383546187828E-010  1.000000000000000E-009
+T=         28.00638  Energy:  -0.3639637979E+02 -0.1029363678E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.13E-06  0.10E-08  AVECTOR   0.88E-12  0.10E+01
+    Quad orbitals: Deviation is       2.833934726141595E-009
+    Quad orbitals: Deviation is now   1.034183579210498E-009
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089534E+01
+        -0.9192677110E+00
+        -0.5632131752E+00
+        -0.5632131695E+00
+        -0.5632131661E+00
+        -0.1728613270E-01
+        -0.1586180319E-01
+        -0.1586180236E-01
+        -0.1586180131E-01
+ 
+ Vectors converged on read  2.783078461315413E-010  1.000000000000000E-009
+T=         28.50638  Energy:  -0.3639637979E+02 -0.1029363676E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.84E-07  0.10E-08  AVECTOR   0.69E-12  0.10E+01
+    Quad orbitals: Deviation is       1.839487229279207E-009
+    Quad orbitals: Deviation is now   6.710838355436396E-010
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089534E+01
+        -0.9192677108E+00
+        -0.5632131750E+00
+        -0.5632131693E+00
+        -0.5632131659E+00
+        -0.1728613271E-01
+        -0.1586180320E-01
+        -0.1586180236E-01
+        -0.1586180132E-01
+ 
+ Vectors converged on read  2.771469675629140E-010  1.000000000000000E-009
+T=         29.00638  Energy:  -0.3639637979E+02 -0.1029363675E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.55E-07  0.10E-08  AVECTOR   0.61E-12  0.10E+01
+    Quad orbitals: Deviation is       1.194991615358290E-009
+    Quad orbitals: Deviation is now   4.356614949426380E-010
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089534E+01
+        -0.9192677106E+00
+        -0.5632131749E+00
+        -0.5632131692E+00
+        -0.5632131658E+00
+        -0.1728613271E-01
+        -0.1586180320E-01
+        -0.1586180237E-01
+        -0.1586180132E-01
+ 
+ Vectors converged on read  2.805519676368696E-010  1.000000000000000E-009
+T=         29.50638  Energy:  -0.3639637979E+02 -0.1029363675E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.35E-07  0.10E-08  AVECTOR   0.33E-12  0.10E+01
+    Quad orbitals: Deviation is       7.792664190623825E-010
+    Quad orbitals: Deviation is now   2.838209824148370E-010
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089533E+01
+        -0.9192677105E+00
+        -0.5632131748E+00
+        -0.5632131691E+00
+        -0.5632131657E+00
+        -0.1728613271E-01
+        -0.1586180320E-01
+        -0.1586180237E-01
+        -0.1586180132E-01
+ 
+ Vectors converged on read  2.794921750866488E-010  1.000000000000000E-009
+T=         30.00638  Energy:  -0.3639637979E+02 -0.1029363674E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.23E-07  0.10E-08  AVECTOR   0.25E-12  0.10E+01
+    Quad orbitals: Deviation is       5.111008193477515E-010
+    Quad orbitals: Deviation is now   1.858885156990370E-010
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089533E+01
+        -0.9192677104E+00
+        -0.5632131747E+00
+        -0.5632131691E+00
+        -0.5632131657E+00
+        -0.1728613271E-01
+        -0.1586180320E-01
+        -0.1586180237E-01
+        -0.1586180132E-01
+ 
+ Vectors converged on read  2.756647914764076E-010  1.000000000000000E-009
+T=         30.50638  Energy:  -0.3639637979E+02 -0.1029363673E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.15E-07  0.10E-08  AVECTOR   0.34E-12  0.10E+01
+    Quad orbitals: Deviation is       3.407556328117116E-010
+    Quad orbitals: Deviation is now   1.239695633991462E-010
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089533E+01
+        -0.9192677104E+00
+        -0.5632131747E+00
+        -0.5632131691E+00
+        -0.5632131657E+00
+        -0.1728613271E-01
+        -0.1586180320E-01
+        -0.1586180237E-01
+        -0.1586180132E-01
+ 
+ Vectors converged on read  2.817052735946655E-010  1.000000000000000E-009
+T=         31.00638  Energy:  -0.3639637979E+02 -0.1029363674E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.97E-08  0.10E-08  AVECTOR   0.14E-12  0.10E+01
+    Quad orbitals: Deviation is       2.317896588659976E-010
+    Quad orbitals: Deviation is now   8.454240703024357E-011
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089533E+01
+        -0.9192677104E+00
+        -0.5632131747E+00
+        -0.5632131690E+00
+        -0.5632131656E+00
+        -0.1728613272E-01
+        -0.1586180320E-01
+        -0.1586180237E-01
+        -0.1586180132E-01
+ 
+ Vectors converged on read  2.820689755980859E-010  1.000000000000000E-009
+T=         31.50638  Energy:  -0.3639637979E+02 -0.1029363674E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.63E-08  0.10E-08  AVECTOR   0.57E-12  0.10E+01
+    Quad orbitals: Deviation is       1.628429247232575E-010
+    Quad orbitals: Deviation is now   5.925405250061378E-011
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089533E+01
+        -0.9192677104E+00
+        -0.5632131747E+00
+        -0.5632131690E+00
+        -0.5632131656E+00
+        -0.1728613272E-01
+        -0.1586180320E-01
+        -0.1586180237E-01
+        -0.1586180132E-01
+ 
+ Vectors converged on read  2.873031126505605E-010  1.000000000000000E-009
+T=         32.00638  Energy:  -0.3639637979E+02 -0.1029363673E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.41E-08  0.10E-08  AVECTOR   0.34E-12  0.10E+01
+    Quad orbitals: Deviation is       1.283693018651157E-010
+    Quad orbitals: Deviation is now   4.657895975426400E-011
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089533E+01
+        -0.9192677103E+00
+        -0.5632131747E+00
+        -0.5632131690E+00
+        -0.5632131656E+00
+        -0.1728613272E-01
+        -0.1586180320E-01
+        -0.1586180237E-01
+        -0.1586180132E-01
+ 
+ Vectors converged on read  2.761554867587765E-010  1.000000000000000E-009
+T=         32.50638  Energy:  -0.3639637979E+02 -0.1029363673E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.27E-08  0.10E-08  AVECTOR   0.14E-12  0.10E+01
+    Quad orbitals: Deviation is       9.469042166904050E-011
+    Quad orbitals: Deviation is now   3.403867649959629E-011
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089533E+01
+        -0.9192677103E+00
+        -0.5632131747E+00
+        -0.5632131690E+00
+        -0.5632131656E+00
+        -0.1728613272E-01
+        -0.1586180320E-01
+        -0.1586180237E-01
+        -0.1586180132E-01
+ 
+ Vectors converged on read  2.871040404799462E-010  1.000000000000000E-009
+T=         33.00638  Energy:  -0.3639637979E+02 -0.1029363673E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.18E-08  0.10E-08  AVECTOR   0.31E-12  0.10E+01
+    Quad orbitals: Deviation is       8.646001889768267E-011
+    Quad orbitals: Deviation is now   3.106823147256951E-011
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089533E+01
+        -0.9192677103E+00
+        -0.5632131747E+00
+        -0.5632131690E+00
+        -0.5632131656E+00
+        -0.1728613272E-01
+        -0.1586180320E-01
+        -0.1586180237E-01
+        -0.1586180132E-01
+ 
+ Vectors converged on read  2.821685326360682E-010  1.000000000000000E-009
+T=         33.50638  Energy:  -0.3639637979E+02 -0.1029363674E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.12E-08  0.10E-08  AVECTOR   0.20E-12  0.10E+01
+    Quad orbitals: Deviation is       5.208856682301444E-011
+    Quad orbitals: Deviation is now   1.847775519254739E-011
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089533E+01
+        -0.9192677103E+00
+        -0.5632131747E+00
+        -0.5632131690E+00
+        -0.5632131656E+00
+        -0.1728613272E-01
+        -0.1586180320E-01
+        -0.1586180237E-01
+        -0.1586180132E-01
+ 
+ Vectors converged on read  2.791178913996633E-010  1.000000000000000E-009
+T=         34.00638  Energy:  -0.3639637979E+02 -0.1029363674E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.42E-07  0.10E-08  AVECTOR   0.33E-12  0.10E+01
+    Quad orbitals: Deviation is       2.356960186268724E-009
+    Quad orbitals: Deviation is now   8.592116394403153E-010
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089533E+01
+        -0.9192677104E+00
+        -0.5632131747E+00
+        -0.5632131691E+00
+        -0.5632131654E+00
+        -0.1728613277E-01
+        -0.1586180331E-01
+        -0.1586180237E-01
+        -0.1586180120E-01
+ 
+ Vectors converged on read  2.733609224434586E-010  1.000000000000000E-009
+T=         34.50638  Energy:  -0.3639637979E+02 -0.1029363674E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.24E-07  0.10E-08  AVECTOR   0.73E-12  0.10E+01
+    Quad orbitals: Deviation is       1.061477510780280E-009
+    Quad orbitals: Deviation is now   3.868729829531940E-010
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089533E+01
+        -0.9192677103E+00
+        -0.5632131747E+00
+        -0.5632131690E+00
+        -0.5632131654E+00
+        -0.1728613281E-01
+        -0.1586180327E-01
+        -0.1586180237E-01
+        -0.1586180114E-01
+ 
+ Vectors converged on read  2.840064925531238E-010  1.000000000000000E-009
+T=         35.00638  Energy:  -0.3639637979E+02 -0.1029363672E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.12E-07  0.10E-08  AVECTOR   0.37E-12  0.10E+01
+    Quad orbitals: Deviation is       4.115631973256019E-010
+    Quad orbitals: Deviation is now   1.498841601131681E-010
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089533E+01
+        -0.9192677103E+00
+        -0.5632131746E+00
+        -0.5632131689E+00
+        -0.5632131654E+00
+        -0.1728613281E-01
+        -0.1586180327E-01
+        -0.1586180238E-01
+        -0.1586180114E-01
+ 
+ Vectors converged on read  2.745893954957770E-010  1.000000000000000E-009
+T=         35.50638  Energy:  -0.3639637979E+02 -0.1029363672E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.62E-08  0.10E-08  AVECTOR   0.30E-12  0.10E+01
+    Quad orbitals: Deviation is       1.765889752555293E-010
+    Quad orbitals: Deviation is now   6.430238112899866E-011
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089533E+01
+        -0.9192677103E+00
+        -0.5632131746E+00
+        -0.5632131689E+00
+        -0.5632131653E+00
+        -0.1728613281E-01
+        -0.1586180327E-01
+        -0.1586180238E-01
+        -0.1586180114E-01
+ 
+ Vectors converged on read  2.844329579731348E-010  1.000000000000000E-009
+T=         36.00638  Energy:  -0.3639637979E+02 -0.1029363671E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.35E-08  0.10E-08  AVECTOR   0.32E-12  0.10E+01
+    Quad orbitals: Deviation is       9.069063639602689E-011
+    Quad orbitals: Deviation is now   3.300107126107015E-011
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089533E+01
+        -0.9192677103E+00
+        -0.5632131746E+00
+        -0.5632131689E+00
+        -0.5632131653E+00
+        -0.1728613281E-01
+        -0.1586180327E-01
+        -0.1586180238E-01
+        -0.1586180114E-01
+ 
+ Vectors converged on read  2.777255088945867E-010  1.000000000000000E-009
+T=         36.50638  Energy:  -0.3639637979E+02 -0.1029363674E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.19E-06  0.10E-08  AVECTOR   0.72E-12  0.10E+01
+    Quad orbitals: Deviation is       1.720876634197762E-008
+    Quad orbitals: Deviation is now   6.278392380833146E-009
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089541E+01
+        -0.9192677113E+00
+        -0.5632131770E+00
+        -0.5632131719E+00
+        -0.5632131663E+00
+        -0.1728613273E-01
+        -0.1586180355E-01
+        -0.1586180262E-01
+        -0.1586180020E-01
+ 
+ Vectors converged on read  2.853131381396767E-010  1.000000000000000E-009
+T=         37.00638  Energy:  -0.3639637979E+02 -0.1029363679E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.16E-06  0.10E-08  AVECTOR   0.12E-11  0.10E+01
+    Quad orbitals: Deviation is       6.796151943014565E-009
+    Quad orbitals: Deviation is now   2.480102739004197E-009
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089540E+01
+        -0.9192677114E+00
+        -0.5632131771E+00
+        -0.5632131719E+00
+        -0.5632131664E+00
+        -0.1728613263E-01
+        -0.1586180354E-01
+        -0.1586180259E-01
+        -0.1586180025E-01
+ 
+ Vectors converged on read  2.859128323963921E-010  1.000000000000000E-009
+T=         37.50638  Energy:  -0.3639637979E+02 -0.1029363680E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.74E-07  0.10E-08  AVECTOR   0.20E-12  0.10E+01
+    Quad orbitals: Deviation is       2.666810463423784E-009
+    Quad orbitals: Deviation is now   9.725022755962744E-010
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089540E+01
+        -0.9192677114E+00
+        -0.5632131771E+00
+        -0.5632131719E+00
+        -0.5632131664E+00
+        -0.1728613263E-01
+        -0.1586180354E-01
+        -0.1586180259E-01
+        -0.1586180025E-01
+ 
+ Vectors converged on read  2.741923361735327E-010  1.000000000000000E-009
+T=         38.00638  Energy:  -0.3639637979E+02 -0.1029363681E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.34E-07  0.10E-08  AVECTOR   0.23E-12  0.10E+01
+    Quad orbitals: Deviation is       1.081697189005372E-009
+    Quad orbitals: Deviation is now   3.943214917911060E-010
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089540E+01
+        -0.9192677114E+00
+        -0.5632131771E+00
+        -0.5632131719E+00
+        -0.5632131664E+00
+        -0.1728613262E-01
+        -0.1586180353E-01
+        -0.1586180258E-01
+        -0.1586180025E-01
+ 
+ Vectors converged on read  2.870868171105235E-010  1.000000000000000E-009
+T=         38.50638  Energy:  -0.3639637979E+02 -0.1029363682E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.16E-07  0.10E-08  AVECTOR   0.37E-12  0.10E+01
+    Quad orbitals: Deviation is       4.625851413380123E-010
+    Quad orbitals: Deviation is now   1.686501133509174E-010
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089540E+01
+        -0.9192677114E+00
+        -0.5632131771E+00
+        -0.5632131719E+00
+        -0.5632131664E+00
+        -0.1728613262E-01
+        -0.1586180353E-01
+        -0.1586180258E-01
+        -0.1586180025E-01
+ 
+ Vectors converged on read  2.895442371490863E-010  1.000000000000000E-009
+T=         39.00638  Energy:  -0.3639637979E+02 -0.1029363682E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.79E-08  0.10E-08  AVECTOR   0.36E-12  0.10E+01
+    Quad orbitals: Deviation is       2.162145411103158E-010
+    Quad orbitals: Deviation is now   7.872029288379046E-011
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089540E+01
+        -0.9192677114E+00
+        -0.5632131771E+00
+        -0.5632131719E+00
+        -0.5632131664E+00
+        -0.1728613262E-01
+        -0.1586180353E-01
+        -0.1586180258E-01
+        -0.1586180025E-01
+ 
+ Vectors converged on read  2.789645410899911E-010  1.000000000000000E-009
+T=         39.50638  Energy:  -0.3639637979E+02 -0.1029363682E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.17E-07  0.10E-08  AVECTOR   0.43E-12  0.10E+01
+    Quad orbitals: Deviation is       9.890459959344658E-010
+    Quad orbitals: Deviation is now   3.599739094232701E-010
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089540E+01
+        -0.9192677113E+00
+        -0.5632131770E+00
+        -0.5632131718E+00
+        -0.5632131663E+00
+        -0.1728613261E-01
+        -0.1586180349E-01
+        -0.1586180276E-01
+        -0.1586180018E-01
+ 
+ Vectors converged on read  2.852672385670123E-010  1.000000000000000E-009
+T=         40.00638  Energy:  -0.3639637979E+02 -0.1029363682E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.97E-08  0.10E-08  AVECTOR   0.88E-13  0.10E+01
+    Quad orbitals: Deviation is       3.834179973188702E-010
+    Quad orbitals: Deviation is now   1.399171815406945E-010
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089540E+01
+        -0.9192677113E+00
+        -0.5632131770E+00
+        -0.5632131718E+00
+        -0.5632131663E+00
+        -0.1728613261E-01
+        -0.1586180349E-01
+        -0.1586180276E-01
+        -0.1586180018E-01
+ 
+ Vectors converged on read  2.818455955383071E-010  1.000000000000000E-009
+T=         40.50638  Energy:  -0.3639637979E+02 -0.1029363682E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.49E-08  0.10E-08  AVECTOR   0.23E-12  0.10E+01
+    Quad orbitals: Deviation is       1.563834508703029E-010
+    Quad orbitals: Deviation is now   5.690454440383337E-011
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089540E+01
+        -0.9192677113E+00
+        -0.5632131770E+00
+        -0.5632131718E+00
+        -0.5632131663E+00
+        -0.1728613261E-01
+        -0.1586180349E-01
+        -0.1586180276E-01
+        -0.1586180018E-01
+ 
+ Vectors converged on read  2.810251805487081E-010  1.000000000000000E-009
+T=         41.00638  Energy:  -0.3639637979E+02 -0.1029363681E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.25E-08  0.10E-08  AVECTOR   0.31E-12  0.10E+01
+    Quad orbitals: Deviation is       7.437943841191876E-011
+    Quad orbitals: Deviation is now   2.671722142620604E-011
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089540E+01
+        -0.9192677113E+00
+        -0.5632131770E+00
+        -0.5632131718E+00
+        -0.5632131663E+00
+        -0.1728613261E-01
+        -0.1586180349E-01
+        -0.1586180276E-01
+        -0.1586180018E-01
+ 
+ Vectors converged on read  2.769131257549857E-010  1.000000000000000E-009
+T=         41.50638  Energy:  -0.3639637979E+02 -0.1029363681E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.20E-08  0.10E-08  AVECTOR   0.10E-12  0.10E+01
+    Quad orbitals: Deviation is       1.370504820884735E-010
+    Quad orbitals: Deviation is now   4.986686145159948E-011
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089540E+01
+        -0.9192677113E+00
+        -0.5632131770E+00
+        -0.5632131718E+00
+        -0.5632131663E+00
+        -0.1728613261E-01
+        -0.1586180349E-01
+        -0.1586180276E-01
+        -0.1586180018E-01
+ 
+ Vectors converged on read  2.859360479352567E-010  1.000000000000000E-009
+T=         42.00638  Energy:  -0.3639637979E+02 -0.1029363681E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.13E-08  0.10E-08  AVECTOR   0.10E-12  0.10E+01
+    Quad orbitals: Deviation is       6.069301132749543E-011
+    Quad orbitals: Deviation is now   2.174817399250759E-011
+ REPLACING SPFS - GENERALIZED FOCK EIGS
+        -0.9382089540E+01
+        -0.9192677113E+00
+        -0.5632131770E+00
+        -0.5632131718E+00
+        -0.5632131663E+00
+        -0.1728613261E-01
+        -0.1586180349E-01
+        -0.1586180276E-01
+        -0.1586180018E-01
+ 
+ Vectors converged on read  2.772149209660532E-010  1.000000000000000E-009
+T=         42.50638  Energy:  -0.3639637979E+02 -0.1029363681E-03    Norm:   0.1000000000E+01
+    STOPTEST : ORBITALS   0.81E-09  0.10E-08  AVECTOR   0.48E-13  0.10E+01
+ 
     ***  CONVERGED *** 
-
-        -36.396291026594      0.000006430930     -0.000000000052      0.000000000236
+ 
+        -36.396379785426     -0.000102936368     -0.000000000000      0.000000000000
     ***   
-
+ 
     ...done prop...
    ...saving vector...
-   ... go save vectors...
-   ... gathered orbs, now gather avector...
-   ... ok, now write
+   ... go save vectors...gather orbitals...
+   ... gathered orbs, now write
+   ... gathered orbs, alloc avector...
+   ... now gather avector...
+   ... ok, now write avector
     ...saved vectors!
     ...end prop...
     ...getting state expectation values etcetera...
     ...GO finalstats.
-Thu Dec 24 21:11:48 PST 2015
-Thu Dec 24 21:11:48 PST 2015
-Thu Dec 24 21:11:48 PST 2015
-Thu Dec 24 21:11:48 PST 2015
-Thu Dec 24 21:11:48 PST 2015
-Thu Dec 24 21:11:48 PST 2015
-Thu Dec 24 21:11:48 PST 2015
-Thu Dec 24 21:11:48 PST 2015
+Wed Jun 29 08:05:36 PDT 2016
     ...END MCTDHF
  MCTDHF STOP!

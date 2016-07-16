@@ -1,18 +1,21 @@
 
 
-Having difficulty getting these coming out as nice as the paper.  05-05-2015
+Methane calculation 63 points
 
+Perform another calculation with velocity gauge and copy that Dat to Dat.vel for full plotting
 
-1) ./RUNME.BAT.RELAX
+./Relax.Bat
+./Cation0.Bat
+./Cation.Bat
+./Holecat.Bat
+./Pulse.Bat
 
-2) ./RUNME.BAT.PULSE
+Then 
 
-3) ./gnu.abs.here after t=300
-   or ./gnu.abs   after t=50
+./Flux.Bat 500
+./ProjFlux.Bat 500
 
-you may also
+You may also redo the absorption calculation
 
-./gnu.Pulse
-./gnu.PulseFT
-
+./RedoDipole.Bat
 

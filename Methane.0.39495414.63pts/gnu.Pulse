@@ -20,9 +20,11 @@ replot \"Dat/Pulse.Daty\" using 1:2 lw 4 title \"y\"
 replot \"Dat/Pulse.Datz\" using 1:2 lw 4 title \"z\"
 set term x11
 replot
+
 set out \"pulse.ps\"
 set term post enhanced color solid 20
 replot
+
 " | gnuplot -persist &
 
 

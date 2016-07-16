@@ -1,0 +1,598 @@
+ 
+  ****************************************************************************
+  **********************  BEGIN LBNL-AMO-MCTDHF ******************************
+  ****************************************************************************
+ 
+    Atomic/Diatomic/Cartesian Polyatomic nonadiabatic MCTDHF code
+      for ultrafast electronic and nuclear dynamics in intense laser fields
+    AMO Theory Group, Lawrence Berkeley Laboratory
+      D J Haxton, C W McCurdy, T N Rescigno, K V Lawler, J Jones, 
+      B Abeln, X Li . . .
+                              VERSION 1.31 
+        Copyright 2016 the regents of the University of California
+ 
+                This is CHMCTDH: HERM-normed ECS version.
+ 
+                PROCESSOR            1  OF           63
+ 
+ Inpfile is Input.Inp.Pulse 
+ 
+  *************************  COMMAND LINE OPTIONS  ***************************
+ 
+ Reading 
+ Input.Inp.Pulse                                                                
+                                                                                
+                                           
+ Eground for autoft set to    -36.3963340163530       by command line option.
+  ****************************************************************************
+ 
+ Enforcing CMF defaults for Verlet or EXPO.
+ PULSE IS ON:   length.
+ 
+ NUMBER OF PULSES:             1
+ 
+     -----> Pulse            1  : 
+ Pulse type is 2 or 3: envelope with carrier
+    chirp:             0.000000000000000E+000
+    ramp:             0.000000000000000E+000  Hartree
+    Envelope omega:    0.200000000000000     
+    Pulse omega:       0.600000000000000     
+    Pulsestart:        0.000000000000000E+000
+    Pulsestrength:    (8.896008556812384E-004,0.000000000000000E+000)
+    Intensity:         1.000000000000000E-006  x 10^16 W cm^-2
+    Pulsetheta:        0.000000000000000E+000
+    Pulsephi:        0.000000000000000E+000
+    Pulsefinish:        15.7079632679490     
+ ---> Pulsetype 2.
+  Enforcing minpulsetime =           500.000000000000     
+     ---> Resetting finaltime to    500.050000000000     
+                 numpropsteps to        10001
+    ... Writing pulse to file
+        ... done Writing pulse to file
+ Finaltime set by command line option to    500.000000000000     
+      numpropsteps now          10001
+      finaltime    now      500.050000000000     
+ 
+  ****************************************************************************
+ *****************************************************************************
+ 
+ Number of states in propagation=           1
+ 
+  Parameters: electronic
+ 
+                    Number of electrons    10
+ Nuclear KE flag (nonuc_checkflag):         1
+ 
+ ********  SINC DVR PARAMS ******** 
+ griddim,spacing           3  0.394954140000000     
+ numpoints          63          63           1
+ numcenters           5
+ nuccharge   6.00000000000000     
+ centershift  0.000000000000000E+000  0.000000000000000E+000
+  0.000000000000000E+000
+ nuccharge   1.00000000000000     
+ centershift   3.00000000000000        3.00000000000000     
+   3.00000000000000     
+ nuccharge   1.00000000000000     
+ centershift  -3.00000000000000       -3.00000000000000     
+   3.00000000000000     
+ nuccharge   1.00000000000000     
+ centershift  -3.00000000000000        3.00000000000000     
+  -3.00000000000000     
+ nuccharge   1.00000000000000     
+ centershift   3.00000000000000       -3.00000000000000     
+  -3.00000000000000     
+ orblanorder,orblanthresh         500  1.000000000000000E-004
+ notwoflag           0
+ nonucrepflag           0
+ toothnbig, toothnsmall         240          40
+ orbparflag, orbparlevel T           3
+ zke_paropt           1
+ fft_mpi_inplaceflag           1
+ fft_batchdim           1
+ fft_circbatchdim           1
+   -----  
+ NBOX            1           1          63
+ totpoints        3969
+ **********************************
+ 
+ ************************   Parameters: config/spf    ************************  
+  
+ 
+ Doing full CI: numshells=1.  Shells:
+ Shell            1
+   1a    1b    2a    2b    3a    3b    4a    4b    5a    5b    6a    6b 
+   7a    7b    8a    8b    9a    9b 
+ 
+    Number of unfrozen spfs:      9
+    Number of frozen spfs:        0
+            Spfs start in m=     0   0   0   0   0   0   0   0   0
+ 
+ Configurations will be restricted to spin projection           0 /2
+  Configurations will be restricted to spin            0
+ 
+ ***********************    Initial state      ***********************   
+ 
+ Spfs will be loaded from files 
+ 
+ Avector will be loaded from files.  Number of files=            1
+ 
+ ***********************    Parameters: propagation    ***********************  
+  
+ 
+  PAR_TIMESTEP IS   5.000000000000000E-002  LITTLESTEPS IS            1
+   prepropflag is            1  postpropflag is            2
+   step_flag is            2
+ 
+                 # of steps, final time:     10001            500.05000000
+ 
+ 
+ *******  USING POLYNOMIAL MEAN FIELDS/MAGNUS A-VECTOR PREDICTOR/CORRECTOR   ***
+ ****  
+ 
+     Will use sparse configuration routines.
+           Lanczosorder is          300
+           Lanthresh is      1.000000000000000E-009
+           Aorder is                 30
+           Maxaorder is             100
+           Aerror is         1.000000000000000E-009
+  Jacobian options:
+     Jacprojorth=           0
+     Jacsymflag=           0
+  Using EXPONENTIAL integration.
+     Expotol    =  1.000000000000000E-008
+     Maxexpodim=         300
+ 
+ Density matrix regularized with denreg= 0.100E-29
+ 
+ 
+ ****************************************************************************
+ 
+  Autotimestep=   0.500000000000000       Autosteps=           10  Autosize= 
+        1001
+  Numpropsteps=        10001
+ 
+ *****************************************************************************
+ 
+    ****************************************
+      SKIPPING CALCULATION!  Doing analysis.
+    ****************************************
+ 
+ ACTIONS:  ProjIonFlux FT    
+ 
+ FOR IONIZATION FLUX:
+    Flux Interval           10  0.500000000000000     
+    Fluxskipmult             1
+ 
+ ************************************
+ ********  MAIN WALKS  **************
+ ************************************
+ 
+ Go fast_newconfiglist
+ Excitations per shell
+         8         8        18
+ Orbital ranges for each electron ::
+           1           5
+           1           5
+           2           6
+           2           6
+           3           7
+           3           7
+           4           8
+           4           8
+           5           9
+           5           9
+ 
+ 
+ FASTNEWCONFIG: NUMBER OF CONFIGURATIONS        15876
+ 
+ NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG        2907          70
+ Go fast_newconfiglist.  Allocating...
+    Allocated.  getting configurations.
+ Excitations per shell
+         8         8        18
+ 
+ BOTWALKS /TOPWALKS       15876
+           1         247         247
+         248         503         256
+         504         755         252
+         756        1003         248
+        1004        1255         252
+        1256        1509         254
+        1510        1763         254
+        1764        2015         252
+        2016        2265         250
+        2266        2505         240
+        2506        2769         264
+        2770        3019         250
+        3020        3275         256
+        3276        3525         250
+        3526        3779         254
+        3780        4031         252
+        4032        4283         252
+        4284        4533         250
+        4534        4787         254
+        4788        5036         249
+        5037        5286         250
+        5287        5542         256
+        5543        5792         250
+        5793        6030         238
+        6031        6298         268
+        6299        6546         248
+        6547        6800         254
+        6801        7054         254
+        7055        7306         252
+        7307        7554         248
+        7555        7808         254
+        7809        8050         242
+        8051        8314         264
+        8315        8566         252
+        8567        8804         238
+        8805        9052         248
+        9053        9322         270
+        9323        9570         248
+        9571        9806         236
+        9807       10076         270
+       10077       10322         246
+       10323       10582         260
+       10583       10830         248
+       10831       11084         254
+       11085       11334         250
+       11335       11586         252
+       11587       11842         256
+       11843       12082         240
+       12083       12328         246
+       12329       12594         266
+       12595       12848         254
+       12849       13102         254
+       13103       13354         252
+       13355       13606         252
+       13607       13858         252
+       13859       14109         251
+       14110       14357         248
+       14358       14607         250
+       14608       14865         258
+       14866       15115         250
+       15116       15371         256
+       15372       15619         248
+       15620       15876         257
+ 
+      ...Done fast_newconfiglist
+ Counting walks. Singles
+ Counting walks. Doubles
+ 
+ Maximum number of
+            single walks=           50
+            double walks=         1225
+   TOTAL walks:    20241900 maxdoublewalks*numconfig    19448100
+ 
+ Allocating singlewalks
+ Allocating doublewalks
+      ..done walkalloc.
+ Calculating walks.  Singles...
+ Calculating walks.  Doubles...
+ Sorting walks...
+     .... done sorting walks.
+ Counting single hops...
+ Counting double hops...
+ Getting single hops...
+ Getting double hops...
+ GOT HOPS:  
+  Single hops this processor        10127  of        12350
+  Double hops this processor       138567  of       302575
+  Single hops total       650916  of       793800
+  Double hops total      8906436  of     19448100
+     Max single hops           41
+     Max double hops          561
+ 
+ Allocating more arrays for Slater determinants...
+      .. OK allocating.
+ Deallocating walks arrays.
+ Go spinwalk init. 
+ Go get numspinwalks.
+ Doing spin projector.
+ Maximum number of spin walks=           16
+ Avg number of spin walks=    5.55555555555556     
+ Done spinwalk init.
+ Calculating spin walks.
+      ... done calculating spin walks.
+    ... go spinsets ...
+ Numspinsets this processor is           97   maxspinset size is           70
+ Getting Spinset Projectors.  Numspinsets this process is           97
+                                        maxspinsetsize is           70
+ ...done.  Eliminated            0  sets with total rank            0
+ 
+ This processor: 
+       spin sets                  97
+       spin rank                     114  of          247
+       botspin,topspin:                1         114
+       df spin rank                  114  of          247
+       botdfspin,topdfspin:            1         114
+ All processors:
+       spin rank, S^2 =   0.000000000000000E+000  is         5292  out of 
+       15876
+       df spin rank                 5292  of        15876
+ 
+ 
+ ************************************
+ **        BIORTHO WALKS           **
+ ************************************
+ 
+ Go fast_newconfiglist
+ Excitations per shell
+         8         8        18
+ Orbital ranges for each electron ::
+           1           5
+           1           5
+           2           6
+           2           6
+           3           7
+           3           7
+           4           8
+           4           8
+           5           9
+           5           9
+ 
+ 
+ FASTNEWCONFIG: NUMBER OF CONFIGURATIONS        15876
+ 
+ NUMSPINBLOCKS, MAXSPINBLOCKSIZE FASTCONFIG        2907          70
+ Go fast_newconfiglist.  Allocating...
+    Allocated.  getting configurations.
+ Excitations per shell
+         8         8        18
+ 
+ BOTWALKS /TOPWALKS       15876
+           1         247         247
+         248         503         256
+         504         755         252
+         756        1003         248
+        1004        1255         252
+        1256        1509         254
+        1510        1763         254
+        1764        2015         252
+        2016        2265         250
+        2266        2505         240
+        2506        2769         264
+        2770        3019         250
+        3020        3275         256
+        3276        3525         250
+        3526        3779         254
+        3780        4031         252
+        4032        4283         252
+        4284        4533         250
+        4534        4787         254
+        4788        5036         249
+        5037        5286         250
+        5287        5542         256
+        5543        5792         250
+        5793        6030         238
+        6031        6298         268
+        6299        6546         248
+        6547        6800         254
+        6801        7054         254
+        7055        7306         252
+        7307        7554         248
+        7555        7808         254
+        7809        8050         242
+        8051        8314         264
+        8315        8566         252
+        8567        8804         238
+        8805        9052         248
+        9053        9322         270
+        9323        9570         248
+        9571        9806         236
+        9807       10076         270
+       10077       10322         246
+       10323       10582         260
+       10583       10830         248
+       10831       11084         254
+       11085       11334         250
+       11335       11586         252
+       11587       11842         256
+       11843       12082         240
+       12083       12328         246
+       12329       12594         266
+       12595       12848         254
+       12849       13102         254
+       13103       13354         252
+       13355       13606         252
+       13607       13858         252
+       13859       14109         251
+       14110       14357         248
+       14358       14607         250
+       14608       14865         258
+       14866       15115         250
+       15116       15371         256
+       15372       15619         248
+       15620       15876         257
+ 
+      ...Done fast_newconfiglist
+ Counting walks. Singles
+ Counting walks. Doubles
+ 
+ Maximum number of
+            single walks=           50
+            double walks=            1
+   TOTAL walks:      793800 maxdoublewalks*numconfig       15876
+ 
+ Allocating singlewalks
+ Allocating doublewalks
+      ..done walkalloc.
+ Calculating walks.  Singles...
+ Calculating walks.  Doubles...
+ Sorting walks...
+     .... done sorting walks.
+ Counting single hops...
+ Counting double hops...
+ Getting single hops...
+ Getting double hops...
+ GOT HOPS:  
+  Single hops this processor        10127  of        12350
+  Double hops this processor            0  of            0
+  Single hops total       650916  of       793800
+  Double hops total            0  of            0
+     Max single hops           41
+     Max double hops            1
+ 
+ Allocating more arrays for Slater determinants...
+      .. OK allocating.
+ Deallocating walks arrays.
+ Go spinwalk init. 
+ Go get numspinwalks.
+ Doing spin projector.
+ Maximum number of spin walks=           16
+ Avg number of spin walks=    5.55555555555556     
+ Done spinwalk init.
+ Calculating spin walks.
+      ... done calculating spin walks.
+    ... go spinsets ...
+ Numspinsets this processor is           97   maxspinset size is           70
+ Getting Spinset Projectors.  Numspinsets this process is           97
+                                        maxspinsetsize is           70
+ ...done.  Eliminated            0  sets with total rank            0
+ 
+ This processor: 
+       spin sets                  97
+       spin rank                     114  of          247
+       botspin,topspin:                1         114
+       df spin rank                  114  of          247
+       botdfspin,topdfspin:            1         114
+ All processors:
+       spin rank, S^2 =   0.000000000000000E+000  is         5292  out of 
+       15876
+       df spin rank                 5292  of        15876
+ 
+ 
+ ************************************
+ ********** DONE WALKS. *************
+ ************************************
+ 
+      DWWPTR Spin-adapted configurations by processor
+          1      1                 247
+          2      2                 256
+          3      3                 252
+          4      4                 248
+          5      5                 252
+          6      6                 254
+          7      7                 254
+          8      8                 252
+          9      9                 250
+         10     10                 240
+         11     11                 264
+         12     12                 250
+         13     13                 256
+         14     14                 250
+         15     15                 254
+         16     16                 252
+         17     17                 252
+         18     18                 250
+         19     19                 254
+         20     20                 249
+         21     21                 250
+         22     22                 256
+         23     23                 250
+         24     24                 238
+         25     25                 268
+         26     26                 248
+         27     27                 254
+         28     28                 254
+         29     29                 252
+         30     30                 248
+         31     31                 254
+         32     32                 242
+         33     33                 264
+         34     34                 252
+         35     35                 238
+         36     36                 248
+         37     37                 270
+         38     38                 248
+         39     39                 236
+         40     40                 270
+         41     41                 246
+         42     42                 260
+         43     43                 248
+         44     44                 254
+         45     45                 250
+         46     46                 252
+         47     47                 256
+         48     48                 240
+         49     49                 246
+         50     50                 266
+         51     51                 254
+         52     52                 254
+         53     53                 252
+         54     54                 252
+         55     55                 252
+         56     56                 251
+         57     57                 248
+         58     58                 250
+         59     59                 258
+         60     60                 250
+         61     61                 256
+         62     62                 248
+         63     63                 257
+ 
+ Reading spfs.
+ Read complex spfs
+    ...rank 1 read from file
+ Loaded            9  spfs from file 
+ Bin/spfs.bin.relax                                                             
+                                                                                
+                                           
+ Calling init_project                 63504
+ Getting scaling...
+     ....Ok got scaling.
+ GO GET_3DPOISSON. calling getinverse.
+      ...getting potential...
+ filling in....
+     ...filled.
+     ... done get_3dpoisson.
+    ....Called init_project.
+ 
+    *** DOING PROJECTED FLUX. ***    
+ 
+ Spin adapted wave functions for propagation and projection. doing CG algebra.
+ Reading           4  Born-Oppenheimer states.
+ Reading spfs.
+ Read complex spfs
+    ...rank 1 read from file
+ Getting cation single walks
+ Max # single walks from cation state on this processor is            5
+ DONE getting proj single walks
+ Spin adapted wave functions for propagation and projection. doing CG algebra.
+ Reading           1  Born-Oppenheimer states.
+ Reading spfs.
+ Read complex spfs
+    ...rank 1 read from file
+ Getting cation single walks
+ Max # single walks from cation state on this processor is            5
+ DONE getting proj single walks
+ Allocating arrays for projected flux
+     ...go time loop           1
+     ...go time loop           2
+ Go double time integral
+ Guess at necessary memory is   254.270 MB
+ g(tau) will be computed with all psi being read in batches
+ Desired amount of memory to use   500.000 MB
+ Hooray, there is enough memory, doing it all in core
+ Projected 1e- function record length is      2000376
+ Computing the CrossSection for state            1 wfn           1
+ Reading ket batch            1  of            1  for state            1
+ Reading bra batch            1  of            1  for state            1
+ Computing the CrossSection for state            2 wfn           1
+ Reading ket batch            1  of            1  for state            2
+ Reading bra batch            1  of            1  for state            2
+ Computing the CrossSection for state            3 wfn           1
+ Reading ket batch            1  of            1  for state            3
+ Reading bra batch            1  of            1  for state            3
+ Computing the CrossSection for state            4 wfn           1
+ Reading ket batch            1  of            1  for state            4
+ Reading bra batch            1  of            1  for state            4
+ Computing the CrossSection for state            5 wfn           1
+ Reading ket batch            1  of            1  for state            5
+ Reading bra batch            1  of            1  for state            5
+ Taking the fourier transform of g(tau) to get cross section at T= 
+   500.000000000000     
+ Cross Section acquired, cleaning and closing
+ MCTDHF STOP!

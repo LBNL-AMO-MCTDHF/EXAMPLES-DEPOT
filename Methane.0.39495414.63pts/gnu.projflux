@@ -1,0 +1,45 @@
+#!/bin/bash
+
+echo '
+
+set title "Partial photoionization flux methane"
+
+set term unknown
+set xlabel "Energy above ground state (eV)"
+set ylabel "differential flux (norm-squared per hartree)"
+set ytics nomirror
+set format y "%4.0e"
+
+set key top right
+
+set xrange [1:100]
+set logscale x
+
+set yrange [1e-10:*]
+set logscale y
+
+A=27.2114
+
+plot "Dat/xsec.spi.dat" using (A*$1):($5) with lines lt -1 lw 5 title "total"
+replot "Dat/xsec.proj.spi_001_001.dat" using (A*$1):($5) with lines lt 7 lw 7 title "T"
+replot "Dat/xsec.proj.spi_002_001.dat" using (A*$1):($5) with lines lt 6 lw 5 title "T"
+replot "Dat/xsec.proj.spi_003_001.dat" using (A*$1):($5) with lines lt 3 lw 3 title "T"
+replot "Dat/xsec.proj.spi_004_001.dat" using (A*$1):($5) with lines lt 4 lw 3 title "2s"
+replot "Dat/xsec.proj.spi_005_001.dat" using (A*$1):($5) with lines lt -1 lw 2 title "1s"
+replot "Dat/xsec.proj.spi_all_001.dat" using (A*$1):($5) with lines lt 2 lw 3 title "sum"
+
+set ytics nomirror
+set y2range [0:*]
+set y2label "Pulse intensity (linear scale)" rotate by 270
+replot "Dat/xsec.spi.dat" using (A*$1):($2) with lines lt -1 title "Pulse intensity" axes x1y2
+
+set term post eps enhanced 20 color solid
+set out "projflux_methane.eps"
+replot
+
+set term x11
+set out
+replot
+
+' | gnuplot -persist
+

@@ -1,0 +1,59 @@
+#!/bin/bash
+
+echo '
+
+set title "Partial photoionization flux methane"
+
+set term unknown
+set xlabel "time(fs)"
+set ylabel "integrated flux (norm-squared)"
+set ytics nomirror
+set format y "%4.1e"
+
+set xrange [0.1:*]
+
+set logscale x
+
+set yrange [1e-8:*]
+set logscale y
+
+A=1.0/41.34
+
+plot "Dat/fluxtsum.dat" using (A*$1):($2) with lines lt -1 lw 5 title "total"
+replot "Dat/projfluxtsum_001_001.dat" using (A*$1):($2) with lines lt 7 lw 7 title "T"
+replot "Dat/projfluxtsum_002_001.dat" using (A*$1):($2) with lines lt 6 lw 5 title "T"
+replot "Dat/projfluxtsum_003_001.dat" using (A*$1):($2) with lines lt 3 lw 3 title "T"
+replot "Dat/projfluxtsum_004_001.dat" using (A*$1):($2) with lines lt 4 lw 3 title "2s"
+replot "Dat/projfluxtsum_005_001.dat" using (A*$1):($2) with lines lt -1 lw 2 title "1s"
+replot "Dat/projfluxtsum_all_001.dat" using (A*$1):($2) with lines lt 2 lw 3 title "sum"
+
+set term post eps enhanced 20 color solid
+set out "projtflux_methane.eps"
+replot
+
+set term x11
+set out
+replot
+
+set term unknown
+
+plot "Dat/projfluxtsum_001_001.dat" using (A*$1):($2) with lines lt 7 lw 7 title "T"
+replot "Dat/projfluxtsum_002_001.dat" using (A*$1):($2) with lines lt 6 lw 5 title "T"
+replot "Dat/projfluxtsum_003_001.dat" using (A*$1):($2) with lines lt 3 lw 3 title "T"
+replot "Dat/projfluxtsum_004_001.dat" using (A*$1):($2) with lines lt 4 lw 3 title "2s"
+replot "Dat/projfluxtsum_005_001.dat" using (A*$1):($2) with lines lt -1 lw 2 title "1s"
+
+set yrange [*:*]
+unset logscale y
+
+set term post eps enhanced 20 color solid
+set out "projtflux_methane_nolog.eps"
+replot
+
+set term x11 2
+set out
+replot
+
+
+' | gnuplot -persist
+

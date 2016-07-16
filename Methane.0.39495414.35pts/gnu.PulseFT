@@ -21,9 +21,11 @@ replot \"Dat/Pulseft.Datz\" using (27.2114*\$1):(\$4**2+\$5**2) lw 4 title \"z\"
 
 set term x11
 replot
+
 set out \"pulseft.ps\"
 set term post enhanced color solid 20
 replot
+
 " | gnuplot -persist &
 
 
