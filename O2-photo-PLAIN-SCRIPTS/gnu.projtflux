@@ -54,8 +54,8 @@ replot "Dat/fluxtsum.dat" using (A*$1):($2) with lines lt -1 lw 3 title "total"
 
 replot "Dat/projfluxtsum_all_001.dat" using (A*$1):($2) with lines lt 8 lw 2 title "sum"
 
-set term post enhanced 20 color solid
-set out "projtflux.o2.par.ps"
+set term post eps enhanced 20 color solid
+set out "projtflux_o2_par.eps"
 replot
 
 set term x11

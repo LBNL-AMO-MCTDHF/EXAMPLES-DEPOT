@@ -5,7 +5,7 @@ echo '
 set title "Photoionization flux and photons absorbed O2 parallel"
 
 set term unknown
-set xlabel "Photon Energy (eV)"
+set xlabel "Energy above ground state (eV)"
 set ylabel "Photons or flux (norm-squared) per Hartree"
 set ytics nomirror
 

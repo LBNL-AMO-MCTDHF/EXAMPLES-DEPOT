@@ -5,7 +5,7 @@ echo '
 set title "Partial photoionization flux O2 10 orbitals parallel"
 
 set term unknown
-set xlabel "Photon Energy (eV)"
+set xlabel "Energy above ground state (eV)"
 set ylabel "integrated flux (norm-squared)"
 set format y "%4.0e"
 
@@ -55,8 +55,8 @@ replot "Dat/xsec.spi.dat" using (A*$1):($7) with lines lt -1 lw 3 title "total"
 
 replot "Dat/xsec.proj.spi_all_001.dat" using (A*$1):($7) with lines lt 8 lw 2 title "sum"
 
-set term post enhanced 20 color solid
-set out "projfluxint.o2.par.ps"
+set term post eps enhanced 20 color solid
+set out "projfluxint_o2_par.eps"
 replot
 
 set term x11
