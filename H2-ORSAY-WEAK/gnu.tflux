@@ -1,0 +1,36 @@
+#!/bin/bash
+
+echo '
+
+set title "Photoionization flux H2 fixed nuclei 5 orbitals parallel"
+
+set term unknown
+set xlabel "time(fs)"
+set ylabel "integrand"
+set y2label "integrated flux (norm-squared)"
+set ytics nomirror
+set y2tics
+set format y "%4.1e"
+set format y2 "%4.1e"
+
+set xrange [0.1:*]
+set logscale x
+
+set yrange [0:*]
+set y2range [0:*]
+
+A=1.0/41.34
+
+plot "Dat/fluxtsum.dat" using (A*$1):($4) with lines lt 7 lw 8 title "integrand"
+replot "Dat/fluxtsum.dat" using (A*$1):($2) with lines lt -1 lw 2 title "integrated" axes x1y2
+
+set term post enhanced 20 color solid eps
+set out "tflux.h2.par.eps"
+replot
+
+set term x11
+set out
+replot
+
+' | gnuplot -persist
+

@@ -1,0 +1,46 @@
+#!/bin/bash
+
+echo '
+
+set title "Partial photoionization flux H2 fixed nuclei 5 orbitals parallel"
+
+set term unknown
+set xlabel "Photon Energy (eV)"
+set ylabel "differential flux (norm-squared per hartree)"
+set format y "%4.0e"
+
+set xrange [0:100]
+
+set yrange [1e-14:*]
+set logscale y
+
+A=27.2114
+
+plot "Dat/xsec.proj.spi_001_001.dat" using (A*$1):($5) with lines lt 7 lw 10 title "1"
+
+replot "Dat/xsec.proj.spi_002_001.dat" using (A*$1):($5) with lines lt 6 lw 9 title "2"
+
+replot "Dat/xsec.proj.spi_003_001.dat" using (A*$1):($5) with lines lt 5 lw 8 title "3"
+
+replot "Dat/xsec.proj.spi_004_001.dat" using (A*$1):($5) with lines lt 4 lw 7 title "4"
+
+replot "Dat/xsec.proj.spi_005_001.dat" using (A*$1):($5) with lines lt 3 lw 6 title "5"
+
+replot "Dat/xsec.proj.spi_006_001.dat" using (A*$1):($5) with lines lt 2 lw 5 title "6"
+
+replot "Dat/xsec.proj.spi_007_001.dat" using (A*$1):($5) with lines lt 1 lw 4 title "7"
+
+replot "Dat/xsec.spi.dat" using (A*$1):($5) with lines lt -1 lw 3 title "total"
+
+replot "Dat/xsec.proj.spi_all_001.dat" using (A*$1):($5) with lines lt 8 lw 2 title "sum"
+
+set term post enhanced 20 color solid eps
+set out "projflux.h2.par.eps"
+replot
+
+set term x11
+set out
+replot
+
+' | gnuplot -persist
+
