@@ -1,0 +1,124 @@
+$pulse
+
+ pulsetype=2
+ phaseshift=1.570796326794897d0
+ phaseshift=0d0
+
+ omega2=1.05d0
+ omega=0.35d0
+
+ intensity=1d0
+
+ velflag=0
+
+ minpulsetime=500d0
+
+/
+
+  (These are other inputs that can be put in $parinp)
+  (They are not used here, outside of namelist input)
+  angularflag=1
+  angprojspifile="Dat/xsec.angproj.spi"
+  angprojfluxtsumfile="Dat/angprojfluxtsum"
+
+  eground needed for action 1 autocorrelation
+  also needed for photoionization but Flux.Bat greps it automatically
+
+
+$parinp
+
+eground =     -1.170069832889d0
+
+notiming=1
+dendatfile="Dat/denmat.eigs.dat"
+
+numactions=8
+actions=1,2,4,15,20,21,27,28
+
+autotimestep=0.5d0
+autostart = -1
+
+fluxskipmult=1
+fluxinterval=4
+fluxmofile="Flux/flux.mo.bin"
+fluxafile="Flux/flux.avec.bin"
+spifile="Dat/xsec.spi.dat"
+projfluxfile="Flux/projflux.wfn.bin"
+projspifile="Dat/xsec.proj.spi"
+fluxtsumfile="Dat/fluxtsum.dat"
+projfluxtsumfile="Dat/projfluxtsum"
+
+numovlfiles=2
+ovlspffiles(1)="Bin/spfs.bin.relax"
+ovlavectorfiles(1)="Bin/avector.bin.relax"
+ovlspffiles(2)="Bin/spfs.bin.states"
+ovlavectorfiles(2)="Bin/avector.bin.states"
+outovl="Dat/Overlaps.dat"
+
+dipmodtime=200
+diptime=100
+xdipfile="Dat/XDipoleexpect.Dat"
+xdftfile="Dat/XDipoleft.Dat"
+ydipfile="Dat/YDipoleexpect.Dat"
+ydftfile="Dat/YDipoleft.Dat"
+zdipfile="Dat/ZDipoleexpect.Dat"
+zdftfile="Dat/ZDipoleft.Dat"
+
+xophotonfile="Dat/XOPhoton.Dat"
+xoworkfile="Dat/XOWork.Dat"
+xtworkfile="Dat/XTWork.Dat"
+yophotonfile="Dat/YOPhoton.Dat"
+yoworkfile="Dat/YOWork.Dat"
+ytworkfile="Dat/YTWork.Dat"
+zophotonfile="Dat/ZOPhoton.Dat"
+zoworkfile="Dat/ZOWork.Dat"
+ztworkfile="Dat/ZTWork.Dat"
+
+loadavectorflag=1
+avectorfile="Bin/avector.bin.relax"
+loadspfflag=1
+spffile="Bin/spfs.bin.relax"
+
+saveflag=0
+
+sparseconfigflag=0
+
+numelec=2
+
+nspf=5
+
+spfrestrictflag=1
+
+spfmvals =  0, 0, 0, 1,-1,    0, 0
+
+restrictflag=1
+restrictms=0
+
+mrestrictflag=1
+mrestrictval=0
+
+tdflag=1
+
+par_timestep=0.25d0
+littlesteps=5
+
+/
+
+$h2parinp
+
+NucCharge1=1d0
+NucCharge2=1d0
+
+LBIG=6,MBIG=1
+
+xinumpoints=10
+xinumelements=7
+xicelement=5
+xiecstheta=0.5d0
+xielementsizes=5d0,5d0,5d0,5d0,  5d0,8d0,14d0
+
+rstart=1.4d0
+
+/
+    
+

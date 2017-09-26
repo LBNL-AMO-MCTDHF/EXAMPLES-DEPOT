@@ -11,25 +11,32 @@ $pulse
 
  velflag=0
 
- minpulsetime=1000d0
+ minpulsetime=500d0
 
 /
 
-(These are other inputs that can be put in $parinp)
-(They are not used here, outside of namelist input)
-angularflag=1
-angprojspifile="Dat/xsec.angproj.spi"
-angprojfluxtsumfile="Dat/angprojfluxtsum"
+  (These are other inputs that can be put in $parinp)
+  (They are not used here, outside of namelist input)
+  angularflag=1
+  angprojspifile="Dat/xsec.angproj.spi"
+  angprojfluxtsumfile="Dat/angprojfluxtsum"
+
+  eground needed for action 1 autocorrelation
+  also needed for photoionization but Flux.Bat greps it automatically
+
 
 $parinp
+
+eground =     -1.170069832889d0
 
 notiming=1
 dendatfile="Dat/denmat.eigs.dat"
 
-numactions=6
-actions=1,4,15,21,27,28
+numactions=8
+actions=1,2,4,15,20,21,27,28
 
-autostart=-200
+autotimestep=0.5d0
+autostart = -1
 
 fluxskipmult=1
 fluxinterval=4
@@ -41,9 +48,13 @@ projspifile="Dat/xsec.proj.spi"
 fluxtsumfile="Dat/fluxtsum.dat"
 projfluxtsumfile="Dat/projfluxtsum"
 
-dipolesumend=1d10
+numovlfiles=2
+ovlspffiles(1)="Bin/spfs.bin.relax"
+ovlavectorfiles(1)="Bin/avector.bin.relax"
+ovlspffiles(2)="Bin/spfs.bin.states"
+ovlavectorfiles(2)="Bin/avector.bin.states"
+outovl="Dat/Overlaps.dat"
 
-autotimestep=0.5d0
 dipmodtime=200
 diptime=100
 xdipfile="Dat/XDipoleexpect.Dat"
@@ -109,3 +120,5 @@ xielementsizes=5d0,5d0,5d0,5d0,  5d0,8d0,14d0
 rstart=1.4d0
 
 /
+    
+

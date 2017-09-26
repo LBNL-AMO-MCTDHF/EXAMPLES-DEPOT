@@ -1,0 +1,17 @@
+
+./Relax.Bat
+./Cation.Bat
+
+   then
+
+./Fourier.Bat
+
+The calculation will run until T=1000, but you can analyze it beforehand, e.g. if T=100 has been reached, then in a separate window you can run
+
+./Flux.Bat 100
+./ProjFlux.Bat 100
+./gnu.xsec
+./gnu.proj.xsec
+./gnu.abs
+./gnu.both
+

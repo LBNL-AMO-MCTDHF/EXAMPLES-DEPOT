@@ -1,0 +1,50 @@
+#!/bin/bash
+
+echo '
+
+set title "H2: overlaps "
+
+set term unknown
+
+set style data lines
+
+set ylabel "|overlap|^2"
+
+set format y "10^{%T}"
+
+set xlabel "Time(au)"
+
+set key bottom right
+
+set logscale y
+set yrange [1e-10:*]
+
+plot "Dat/Overlaps.dat" lt 1 lw 10 title "X (1 sigma_g)"
+replot "Dat/Overlaps.dat" using 1:3 lt 3 lw 7 title "1 sigma_u"
+replot "Dat/Overlaps.dat" using 1:4 lt 4 lw 4 title "2 sigma_g"
+
+set term x11
+replot
+
+set term post enhanced 24 eps solid color
+
+set out "Overlaps.eps"
+replot
+
+unset logscale y
+set format y "%5.2f"
+set yrange [*:*]
+
+set out
+set term x11 2
+plot "Dat/Overlaps.dat" lt 1 lw 10 title "X (1 sigma_g)"
+
+set term post enhanced 24 eps solid color
+set out "Xoverlap.eps"
+replot
+
+
+' |gnuplot -persist
+
+
+

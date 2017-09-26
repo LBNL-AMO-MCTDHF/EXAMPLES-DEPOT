@@ -1,0 +1,29 @@
+#!/bin/bash
+
+echo '
+
+set term x11
+set format y "%11.6f"
+set style data lines
+
+set xrange [*:30]
+set yrange [*:*]
+set xlabel "Energy (eV)"
+set title "Fourier transform of autocorrelation function and its integral"
+set ylabel "Norm-squared per hartree / integrated norm-squared"
+
+set logscale y
+
+A=27.2114
+
+plot "Dat/Corrft.dat" using (A*$1):2 with linespoints lt 3 pt 7 ps 1.5 title "Length gauge FT"
+replot "Dat/Corrft.dat" using (A*$1):4 with lines lt 1 lw 2 title "Length gauge FT integral"
+
+## replot "Dat/Corrft.dat.vel" using (A*$1):2 with points lt 3 pt 7 ps 1.5 title "Velocity gauge"
+
+set out "corrft.eps"
+set term post enhanced color solid 20 eps
+replot
+
+' |gnuplot -persist
+
