@@ -16,10 +16,10 @@ set logscale y
 
 A=27.2114
 
-plot "Dat/Corrft.dat" using (A*$1):2 with linespoints lt 3 pt 7 ps 1.5 title "Length gauge FT"
-replot "Dat/Corrft.dat" using (A*$1):4 with lines lt 1 lw 2 title "Length gauge FT integral"
+plot "Dat/Corrft.Dat" using (A*$1):2 with linespoints lt 3 pt 7 ps 1.5 title "Length gauge FT"
+replot "Dat/Corrft.Dat" using (A*$1):4 with lines lt 1 lw 2 title "Length gauge FT integral"
 
-## replot "Dat/Corrft.dat.vel" using (A*$1):2 with points lt 3 pt 7 ps 1.5 title "Velocity gauge"
+## replot "Dat/Corrft.Dat.vel" using (A*$1):2 with points lt 3 pt 7 ps 1.5 title "Velocity gauge"
 
 set out "corrft.eps"
 set term post enhanced color solid 20 eps

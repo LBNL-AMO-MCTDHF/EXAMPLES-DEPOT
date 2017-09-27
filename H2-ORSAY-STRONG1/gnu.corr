@@ -12,9 +12,9 @@ set xlabel "Time (au)"
 set ylabel "Abs(Autocorrelation(t))"
 set title "Absolute value of autocorrelation function"
 
-plot "Dat/Correlation.dat" using 1:(sqrt($2**2+$3**2)) with points lt 1 pt 7 ps 1.5 title "Length gauge"
+plot "Dat/Correlation.Dat" using 1:(sqrt($2**2+$3**2)) with points lt 1 pt 7 ps 1.5 title "Length gauge"
 
-## replot "Dat/Correlation.dat.vel" using 1:(sqrt($2**2+$3**2)) with points lt 3 pt 7 ps 1.5 title "Velocity gauge"
+## replot "Dat/Correlation.Dat.vel" using 1:(sqrt($2**2+$3**2)) with points lt 3 pt 7 ps 1.5 title "Velocity gauge"
 
 set out "corr.eps"
 set term post enhanced color solid 20 eps
