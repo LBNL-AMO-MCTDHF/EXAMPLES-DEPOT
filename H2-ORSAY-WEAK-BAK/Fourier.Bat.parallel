@@ -1,5 +1,0 @@
-#!/bin/bash
-
-export OMP_NUM_THREADS=1
-mpirun -n 5 chmctdhf_diatom Inp=Input.Inp.Fourier |tee Outs/Out.fourier
-
